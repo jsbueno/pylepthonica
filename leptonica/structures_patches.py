@@ -44,13 +44,13 @@ def _getitem(getter, obj, index):
 def _len(self):
     return self.n
 
-#FIXME: this  maybe can be automatized
+#FIXME: this  maybe can be automated
 
-def get_cloner_destrutor(type_):
+def get_cloner_destructor(type_):
     name = type.__name__.lower()
     cloner_name = name + "Clone"
-    destrutor_name = name + "Destroy"
-    return getattr(functions, cloner_name, None), getattr(functions, destrutor_name, None)
+    destructor_name = name + "Destroy"
+    return getattr(functions, cloner_name, None), getattr(functions, destructor_name, None)
 
 def property_wrapper_factory(old_property, ref_type):
     """Wraps a previous object property - (that used
@@ -62,7 +62,7 @@ def property_wrapper_factory(old_property, ref_type):
        ATM there is no setter - we will come to that when needed. 
        (probably PIXCMAP in PIX objects)
     """
-    cloner, destrutor = get_cloner_destrutor(ref_type)
+    cloner, destructor = get_cloner_destructor(ref_type)
     def new_getter(self):
         b_ = old_property.__get__(self, self.__class__)
         obj = ref_type(from_address=ctypes.cast(b_, ctypes.c_void_p))
@@ -99,16 +99,16 @@ def property_wrapper_factory(old_property, ref_type):
     return property(new_getter, new_setter)
 
 # TODO: 
-# build these wrappers straight into the genrated classes
+# build these wrappers straight into the generated classes
 def rewrap_leptonica_fields():
     """This function looks into all Python objects defined in 
-    leptonica structures, and for each field (atttribute) that
-    holds a referene to another leptonica object (in the original C,
+    leptonica structures, and for each field (attribute) that
+    holds a reference to another leptonica object (in the original C,
     a simple pointer), rewrapps the access to this field on
     the high level class so that an actual Python instance
     of the equivalent object can be used to get/set the field
     
-    These higher level acessors also take care of the reference counting
+    These higher level accessors also take care of the reference counting
     """
     for cls_name in structures.__dict__.keys():
         #Filter only the pairs for low level/high level structures:
@@ -125,7 +125,7 @@ def rewrap_leptonica_fields():
                 continue
             #now, this field 
             # which is already a generated property
-            #should be wrapped with a new property fot the high level access
+            #should be wrapped with a new property for the high level access
             prop_cls = structures.__dict__[type_name[4:]]
             setattr(hi_cls, f_name,
                 property_wrapper_factory(getattr(hi_cls, f_name), prop_cls))
@@ -153,7 +153,7 @@ structures.SARRAY.__len__ = _len
 
 def make_sequence(cls, field_name):
     cls_name = cls.__name__
-    cloner, destrutor = get_cloner_destrutor(cls)
+    cloner, destructor = get_cloner_destructor(cls)
     elem_type_name = dict(getattr(getattr(structures, "_" + cls_name),
         "_fields_"))[field_name].__name__[len("LP_LP__"):]
     elem_type = getattr(structures, elem_type_name)

@@ -111,7 +111,7 @@ def separate_comments(in_list):
 def parse_structs(code):
     """
     This can't parse generic C structs - it depends of a 
-    specifc formating as the one found on leptonica 1.6
+    specific formatting as the one found on leptonica 1.6
     source files:
     no nested structs are allowed
     structs are always named
@@ -302,7 +302,7 @@ class LeptonObject(object):
                 name = field[0]
                 content = getattr(self, name)
                 if isinstance(content, LeptonObject):
-                    # Add an identation level for nested objects:
+                    # Add an indentation level for nested objects:
                     content = "\\n    ".join(repr(content).split("\\n") )
                 rendered_fields.append("    %%s: %%s" %% (name, content))
             repr_ += ",\\n".join(rendered_fields)
@@ -323,8 +323,8 @@ class LeptonObject(object):
             return
         from leptonica_functions import functions
         if self._needs_del and hasattr(functions, cls.__name__.lower() + "Destroy"):
-            destrutor = getattr(functions, cls.__name__.lower() + "Destroy")
-            destrutor(ctypes.c_void_p(ctypes.addressof(self._address_)))
+            destructor = getattr(functions, cls.__name__.lower() + "Destroy")
+            destructor(ctypes.c_void_p(ctypes.addressof(self._address_)))
 
 def property_factory(raw_structure, field_name):
     return  property(lambda s: getattr(
@@ -394,7 +394,7 @@ def main(file_names):
     structs = {}
     for file_name in file_names:
         structs.update(parse_file(lepton_source_dir + file_name))
-    # we are not reading the typedefs, just  infering the typedefs from
+    # we are not reading the typedefs, just inferring the typedefs from
     # the structure name, and there are  a few exceptions:
     irregular_names = (("BBUFFER", "BYTEBUFFER"), 
         ("DLLIST", "DOUBLELINKEDLIST"), 
