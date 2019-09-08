@@ -19,7 +19,7 @@
 
 """
 This file parses the various enums in Leptonica's Header files
-and make them available as convenient Python objects that can
+and makes them available as convenient Python objects that can
 be used by name in function calls
 """
 import os
@@ -40,7 +40,7 @@ def get_comment_before(text, index):
 
 def extract_enums(text):
     # Finds each enum block and up to 2 optional
-    # comment blocks preceeding it
+    # comment blocks preceding it
     # I mean -- this should be the reguklar expression for it, but it is simply failing
     # (as in IT DOES NOT WORK - it keeps being too greedy to retrieve the C comments
     # before the enums)

@@ -4,16 +4,16 @@ pyleptonica
 This is a thin ctypes wrapper over the Leptonica
 library. (http://www.leptonica.org)
 Almost all functions are exposed to Python, correctly anotated, and data
-structures used in Leptonica are available as classes from Python. 
+structures used in Leptonica are available as classes from Python.
 
 This Library is licensed under the Lesser GNU Public License Version 3 or Later.
 
 Leptonica data structures are available as authomaticaly generated Python objects,
-transparently calling Leptonica's constructors and Destrutors when those
+transparently calling Leptonica's constructors and destructors when those
 exist.
 
-Threfore for a new image object (represented in Leptonica as a "PIX" structure). 
-one just jave to do:
+Therefore for a new image object (represented in Leptonica as a "PIX" structure).
+one just has to do:
 image = leptonica.PIX(640, 480,32)
 This will have the same effect than manually calling the constructor as in:
 
@@ -22,9 +22,9 @@ image = leptonica.functions.pixCreate(640,480,32)
 
 It transposes Leptonica's extensive inline documentation to Python's docstrings,
 so it is possible to check for help and parameter types
-from the Python interpreter, using pydoc or from an IDE. 
+from the Python interpreter, using pydoc or from an IDE.
 
-However, whenever a function takes pointers or arrays of pointers as 
+However, whenever a function takes pointers or arrays of pointers as
 parameters, these will have to be created by hand using ctypes
 facilities before calling the functions. (Except for pointers
 to Leptonica data structures: these are translated into fairly high-level
@@ -32,24 +32,24 @@ Python objects).
 
 This is on an already usable stage, although one might expect some API changes and
 inclusion of more "pure python" utility functions. The main behavior of
-the Leptonica objetcs should remain the same.
+the Leptonica objects should remain the same.
 
 To run it, you might not need to have Leptonica source files:
 I versioned the generated files as well so that most people just have
-to copy the .py files around. If you want to hack the code, or generate 
+to copy the .py files around. If you want to hack the code, or generate
 wrappers for other versions of Leptonica, you have to execute
 the leptonica_header_parser.py, leptonica_function_parser.py and
 leptonica_enum_parser.py as stand alone programs, after tunning a
 config.py from the config_remplate.py file.
 
-There are at this time, two utility functions to convert 
+There are at this time, two utility functions to convert
 Leptonica images to and from Python Imaging Library (PIL) Images.
 
 Also, although I have not tested this under windows or Mac OS-- it
-probably need some tweaks to run (mostly finding the correct libraries 
+probably need some tweaks to run (mostly finding the correct libraries
 with ctypes) - but otherwise it should plainly work.
 
 Have fun!
 
-  js 
+  js
   -><-

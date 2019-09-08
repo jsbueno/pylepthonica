@@ -55,7 +55,7 @@ class LeptonObject(object):
                 name = field[0]
                 content = getattr(self, name)
                 if isinstance(content, LeptonObject):
-                    # Add an identation level for nested objects:
+                    # Add an indentation level for nested objects:
                     content = "\n    ".join(repr(content).split("\n") )
                 rendered_fields.append("    %s: %s" % (name, content))
             repr_ += ",\n".join(rendered_fields)
@@ -76,8 +76,8 @@ class LeptonObject(object):
             return
         from leptonica_functions import functions
         if self._needs_del and hasattr(functions, cls.__name__.lower() + "Destroy"):
-            destrutor = getattr(functions, cls.__name__.lower() + "Destroy")
-            destrutor(ctypes.c_void_p(ctypes.addressof(self._address_)))
+            destructor = getattr(functions, cls.__name__.lower() + "Destroy")
+            destructor(ctypes.c_void_p(ctypes.addressof(self._address_)))
 
 def property_factory(raw_structure, field_name):
     return  property(lambda s: getattr(

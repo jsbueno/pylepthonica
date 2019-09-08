@@ -129,7 +129,7 @@ def parse_prototype(prototype_text):
         try:
             data_type, name = token.rsplit(None,1)
         except Exception, error:
-            sys.stderr.write("Unexpected preample/function declaration."
+            sys.stderr.write("Unexpected preamble/function declaration."
                 + " Parsing error:\n\n%s\n" % prototype_text)
             raise
         parameters.append((data_type.strip(), name.strip()))

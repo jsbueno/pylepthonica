@@ -5643,7 +5643,7 @@ class numabasic(object):
           directly on the bare array of the numa.
       (2) Very important: for L_NOCOPY, any writes to the array
           will be in the numa.  Do not write beyond the size of
-          the count field, because it will not be accessable
+          the count field, because it will not be accessible
           from the numa!  If necessary, be sure to set the count
           field to a larger number (such as the alloc size)
           BEFORE calling this function.  Creating with numaMakeConstant()
@@ -7358,7 +7358,7 @@ class numafunc1(object):
   Notes:
       (1) The sizes of na1 and na2 must be equal.
       (2) nad can only null or equal to na1.
-      (3) To add a constant to a numa, or to multipy a numa by
+      (3) To add a constant to a numa, or to multiply a numa by
           a constant, use numaTransform().
 
 
@@ -11127,7 +11127,7 @@ class affine(object):
       done in-place and word parallel; arbitrary scaling is
       mostly pixel-wise.
 
-      Suppose that we are tranforming image 1 to correspond to image 2.
+      Suppose that we are transforming image 1 to correspond to image 2.
       We have a set of three points, describing the coordinate space
       embedded in image 1, and we need to transform image 1 until
       those three points exactly correspond to the new coordinate space
@@ -18014,7 +18014,7 @@ class colorquant2(object):
          of the subdivided dimensions and helps a low-count color
          far from the subdivision boundary to better express itself.
      (2a) One can also ask if the boundary should be moved even
-         farther into the longer side.  This is feasable if we have
+         farther into the longer side.  This is feasible if we have
          a method for doing extra subdivisions on the high count
          vboxes.  And we do (see (3)).
      (3) To make sure that the boxes are subdivided toward equal
@@ -18921,7 +18921,7 @@ class colorquant1(object):
       (5) Unpopulated level 2 octcubes are represented in the colormap
           by their centers.  This, of course, has no effect unless
           dithering is used for the output image.
-      (6) The depth of pixd is the minumum required to suppport the
+      (6) The depth of pixd is the minimum required to support the
           number of colors found at @level; namely, 2, 4 or 8.
       (7) This function works particularly well on images such as maps,
           where there are a relatively small number of well-populated
@@ -25466,7 +25466,7 @@ class kernel(object):
           normalized and un-normalized convolution will be the same
           as when convolving with pixConvolve() using the full kernel.
       (3) The trick for the un-normalized convolution is to have the
-          product of the two kernel elemets at (cx,cy) be equal to max,
+          product of the two kernel elements at (cx,cy) be equal to max,
           not max**2.  That's why the max for kely is 1.0.  If instead
           we use sqrt(max) for both, the results are slightly less
           accurate, when compared to using the full kernel in
@@ -29292,7 +29292,7 @@ class scale(object):
   pixels.  Subsmpling removes entire columns and rows, so the edge is
   not blurred.  However, there are two reasons for not doing this.
   First, it moves edges, so that a straight line at a large angle to
-  both horizontal and vertical will have noticable kinks where
+  both horizontal and vertical will have noticeable kinks where
   horizontal and vertical rasters are removed.  Second, although it
   is very fast, you get good results on sharp edges by applying
   a sharpening filter.
@@ -32580,7 +32580,7 @@ class colormap(object):
       Input:  cmap
               index
               &rval, &gval, &bval, &aval (<return> each color value)
-      Return: 0 if OK, 1 if not accessable (caller should check)
+      Return: 0 if OK, 1 if not accessible (caller should check)
 
 
         """
@@ -32901,7 +32901,7 @@ class colormap(object):
       Input:  cmap
               index
               &val32 (<return> 32-bit rgba color value)
-      Return: 0 if OK, 1 if not accessable (caller should check)
+      Return: 0 if OK, 1 if not accessible (caller should check)
 
 
         """
@@ -33227,7 +33227,7 @@ class colormap(object):
       Input:  cmap
               index
               &val32 (<return> 32-bit rgb color value)
-      Return: 0 if OK, 1 if not accessable (caller should check)
+      Return: 0 if OK, 1 if not accessible (caller should check)
 
   Notes:
       (1) The returned alpha channel value is 255.
@@ -33353,7 +33353,7 @@ class colormap(object):
       Input:  cmap
               index
               &rval, &gval, &bval (<return> each color value)
-      Return: 0 if OK, 1 if not accessable (caller should check)
+      Return: 0 if OK, 1 if not accessible (caller should check)
 
 
         """
@@ -33664,7 +33664,7 @@ class colormap(object):
               index
               rval, gval, bval (colormap entry to be reset; each number
                                 is in range [0, ... 255])
-      Return: 0 if OK, 1 if not accessable (caller should check)
+      Return: 0 if OK, 1 if not accessible (caller should check)
 
   Notes:
       (1) This resets sets the color of an entry that has already
@@ -34982,7 +34982,7 @@ class affinecompose(object):
              v' = Av
           where v and v' are 1x3 column vectors in the form
              v = [x, y, 1]^    (^ denotes transpose)
-          and the affine tranlation matrix is
+          and the affine translation matrix is
              A = [ 1   0   tx
                    0   1   ty
                    0   0    1  ]
@@ -42422,7 +42422,7 @@ class skew(object):
       Input:  pixs  (1 bpp)
               &angle   (<return> angle required to deskew, in degrees)
               &conf    (<return> confidence value is ratio max/min scores)
-      Return: 0 if OK, 1 on error or if angle measurment not valid
+      Return: 0 if OK, 1 on error or if angle measurement not valid
 
   Notes:
       (1) This is a simple high-level interface, that uses default
@@ -42475,7 +42475,7 @@ class skew(object):
               sweepdelta   (angle increment of sweep; in degrees)
               minbsdelta   (min binary search increment angle; in degrees)
               pivot  (L_SHEAR_ABOUT_CORNER, L_SHEAR_ABOUT_CENTER)
-      Return: 0 if OK, 1 on error or if angle measurment not valid
+      Return: 0 if OK, 1 on error or if angle measurement not valid
 
   Notes:
       (1) See notes in pixFindSkewSweepAndSearchScore().
@@ -42565,7 +42565,7 @@ class skew(object):
               sweeprange   (half the full range, assumed about 0; in degrees)
               sweepdelta   (angle increment of sweep; in degrees)
               minbsdelta   (min binary search increment angle; in degrees)
-      Return: 0 if OK, 1 on error or if angle measurment not valid
+      Return: 0 if OK, 1 on error or if angle measurement not valid
 
   Notes:
       (1) This finds the skew angle, doing first a sweep through a set
@@ -42609,7 +42609,7 @@ class skew(object):
               reduction  (factor = 1, 2, 4 or 8)
               sweeprange   (half the full range; assumed about 0; in degrees)
               sweepdelta   (angle increment of sweep; in degrees)
-      Return: 0 if OK, 1 on error or if angle measurment not valid
+      Return: 0 if OK, 1 on error or if angle measurement not valid
 
   Notes:
       (1) This examines the 'score' for skew angles with equal intervals.
@@ -42727,7 +42727,7 @@ class skew(object):
                             in degrees)
               sweepdelta   (angle increment of sweep; in degrees)
               minbsdelta   (min binary search increment angle; in degrees)
-      Return: 0 if OK, 1 on error or if angle measurment not valid
+      Return: 0 if OK, 1 on error or if angle measurement not valid
 
   Notes:
       (1) This finds the skew angle, doing first a sweep through a set
@@ -48583,7 +48583,7 @@ class pix1(object):
                     or null on error
 
   Notes:
-      (1) Must set pad bits to avoid reading unitialized data, because
+      (1) Must set pad bits to avoid reading uninitialized data, because
           some optimized routines (e.g., pixConnComp()) read from pad bits.
 
 
@@ -53626,7 +53626,7 @@ class heap(object):
     from the head of the array and added to the end of the array.
     When an item is removed from the head, the item at the end
     of the array is moved to the head.  When items are either
-    added or removed, it is usually necesary to swap array items
+    added or removed, it is usually necessary to swap array items
     to restore the heap order.  It is guaranteed that the number
     of swaps does not exceed log(n).
 
@@ -57553,7 +57553,7 @@ class fpix2(object):
       Return: 0 if OK; 1 on error.
 
   Notes:
-      (1) This is similiar in structure to pixRasterop(), except
+      (1) This is similar in structure to pixRasterop(), except
           it only allows copying from the source into the destination.
           For that reason, no op code is necessary.  Additionally,
           all pixels are 32 bit words (float values), which makes
@@ -63378,7 +63378,7 @@ class utils(object):
       (8) Set @usetime = @usepid = 1 when
           (a) more than one process is writing and reading temp files, or
           (b) multiple threads from a single process call this function, or
-          (c) there is the possiblity of an attack where the intruder
+          (c) there is the possibility of an attack where the intruder
               is logged onto the server and might try to guess filenames.
 
 
@@ -65110,7 +65110,7 @@ class selgen(object):
         line.  As another example, if you have 7 added pixels and a
         distance of 2, you can use a runlength up to 5 to guarantee
         that the miss element is recorded.  We give a warning if the
-        contraint does not guarantee a miss element outside the
+        constraint does not guarantee a miss element outside the
         image proper.
     (5) The input pix, as extended by the extra pixels on selected sides,
         can optionally be returned.  For debugging, call
@@ -65886,7 +65886,7 @@ class baseline(object):
   Notes:
       (1) This function allows deskew of a page whose skew changes
           approximately linearly with vertical position.  It uses
-          a projective tranform that in effect does a differential
+          a projective transform that in effect does a differential
           shear about the LHS of the page, and makes all text lines
           horizontal.
       (2) The origin of the keystoning can be either a cheap document
@@ -67092,7 +67092,7 @@ class edge(object):
               size >= @minjump, normalized to the length of the side
             * reversals/length: (rpl) the number of peak <--> valley
               reversals, using @minreverse as a minimum deviation of
-              the peak or valley from its preceeding extremum,
+              the peak or valley from its preceding extremum,
               normalized to the length of the side
       (2) The input pix should be a single connected component, but
           this is not required.
@@ -69842,7 +69842,7 @@ class sarray(object):
       (4) It is assumed that the page number is contained within
           the basename (the filename without directory or extension).
           @numpre is the number of characters in the basename
-          preceeding the actual page number; @numpost is the number
+          preceding the actual page number; @numpost is the number
           following the page number, up to either the end of the
           basename or a ".", whichever comes first.
       (5) This is useful when all filenames contain numbers that are
@@ -73255,7 +73255,7 @@ class writefile(object):
           Default on Unix is xzgv.
       (2) Images with dimensions larger than MAX_DISPLAY_WIDTH or
           MAX_DISPLAY_HEIGHT are downscaled to fit those constraints.
-          This is particulary important for displaying 1 bpp images
+          This is particularly important for displaying 1 bpp images
           with xv, because xv automatically downscales large images
           by subsampling, which looks poor.  For 1 bpp, we use
           scale-to-gray to get decent-looking anti-aliased images.
@@ -76358,7 +76358,7 @@ class binarize(object):
           that use background normalization with other techniques.
       (3) Sauvola binarization computes a local threshold based on
           the local average and square average.  It takes two constants:
-          the window size for the measurment at each pixel and a
+          the window size for the measurement at each pixel and a
           parameter that determines the amount of normalized local
           standard deviation to subtract from the local average value.
       (4) pixThresholdByCC() uses the numbers of 4 and 8 connected
@@ -78659,7 +78659,7 @@ class blend(object):
           need not be the same size.
       (2) Each pixel in pixb is multiplied by 'factor' divided by 255, and
           clipped to the range [0 ... 1].  This gives the fade fraction
-          to be appied to pixs.  Fade either to white (L_BLEND_TO_WHITE)
+          to be applied to pixs.  Fade either to white (L_BLEND_TO_WHITE)
           or to black (L_BLEND_TO_BLACK).
 
 
