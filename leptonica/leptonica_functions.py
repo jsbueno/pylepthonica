@@ -1,6 +1,7 @@
 
 #coding: utf-8
 
+import sys
 import ctypes
 from leptonica_structures import *
 import leptonica_structures as structs
@@ -141,7 +142,7 @@ class pixconv(object):
         leptonica.pixConvertTo8.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvertTo8.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertTo8 not exported " +
+        sys.stderr.write("Warning - function pixConvertTo8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -183,7 +184,7 @@ class pixconv(object):
         leptonica.pixConvertTo1BySampling.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixConvertTo1BySampling.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertTo1BySampling not exported " +
+        sys.stderr.write("Warning - function pixConvertTo1BySampling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -215,7 +216,7 @@ class pixconv(object):
         leptonica.pixConvertRGBToColormap.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvertRGBToColormap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertRGBToColormap not exported " +
+        sys.stderr.write("Warning - function pixConvertRGBToColormap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -262,7 +263,7 @@ class pixconv(object):
         leptonica.pixConvert8To16.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvert8To16.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert8To16 not exported " +
+        sys.stderr.write("Warning - function pixConvert8To16 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -295,7 +296,7 @@ class pixconv(object):
         leptonica.pixConvertRGBToGrayFast.argtypes = [ctypes.c_void_p]
         leptonica.pixConvertRGBToGrayFast.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertRGBToGrayFast not exported " +
+        sys.stderr.write("Warning - function pixConvertRGBToGrayFast not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -327,7 +328,7 @@ class pixconv(object):
         leptonica.pixConvert16To8.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvert16To8.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert16To8 not exported " +
+        sys.stderr.write("Warning - function pixConvert16To8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -357,7 +358,7 @@ class pixconv(object):
         leptonica.pixAddAlphaTo1bpp.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixAddAlphaTo1bpp.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddAlphaTo1bpp not exported " +
+        sys.stderr.write("Warning - function pixAddAlphaTo1bpp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -393,7 +394,7 @@ class pixconv(object):
         leptonica.pixConvert1To16.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint16, ctypes.c_uint16]
         leptonica.pixConvert1To16.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert1To16 not exported " +
+        sys.stderr.write("Warning - function pixConvert1To16 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -428,7 +429,7 @@ class pixconv(object):
         leptonica.pixConvertRGBToGraySatBoost.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvertRGBToGraySatBoost.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertRGBToGraySatBoost not exported " +
+        sys.stderr.write("Warning - function pixConvertRGBToGraySatBoost not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -473,7 +474,7 @@ class pixconv(object):
         leptonica.pixConvertTo32.argtypes = [ctypes.c_void_p]
         leptonica.pixConvertTo32.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertTo32 not exported " +
+        sys.stderr.write("Warning - function pixConvertTo32 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -515,7 +516,7 @@ class pixconv(object):
         leptonica.pixConvert2To8.argtypes = [ctypes.c_void_p, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_int32]
         leptonica.pixConvert2To8.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert2To8 not exported " +
+        sys.stderr.write("Warning - function pixConvert2To8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -566,7 +567,7 @@ class pixconv(object):
         leptonica.pixConvertGrayToColormap8.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvertGrayToColormap8.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertGrayToColormap8 not exported " +
+        sys.stderr.write("Warning - function pixConvertGrayToColormap8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -605,7 +606,7 @@ class pixconv(object):
         leptonica.pixConvertToSubpixelRGB.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32]
         leptonica.pixConvertToSubpixelRGB.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertToSubpixelRGB not exported " +
+        sys.stderr.write("Warning - function pixConvertToSubpixelRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -653,7 +654,7 @@ class pixconv(object):
         leptonica.pixConvert1To32.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_uint32]
         leptonica.pixConvert1To32.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert1To32 not exported " +
+        sys.stderr.write("Warning - function pixConvert1To32 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -688,7 +689,7 @@ class pixconv(object):
         leptonica.pixConvertTo8Color.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvertTo8Color.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertTo8Color not exported " +
+        sys.stderr.write("Warning - function pixConvertTo8Color not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -725,7 +726,7 @@ class pixconv(object):
         leptonica.pixConvert1To8.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_ubyte, ctypes.c_ubyte]
         leptonica.pixConvert1To8.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert1To8 not exported " +
+        sys.stderr.write("Warning - function pixConvert1To8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -770,7 +771,7 @@ class pixconv(object):
         leptonica.pixConvert1To2Cmap.argtypes = [ctypes.c_void_p]
         leptonica.pixConvert1To2Cmap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert1To2Cmap not exported " +
+        sys.stderr.write("Warning - function pixConvert1To2Cmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -797,7 +798,7 @@ class pixconv(object):
         leptonica.pixConvert1To4.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixConvert1To4.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert1To4 not exported " +
+        sys.stderr.write("Warning - function pixConvert1To4 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -834,7 +835,7 @@ class pixconv(object):
         leptonica.pixConvertColorToSubpixelRGB.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32]
         leptonica.pixConvertColorToSubpixelRGB.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertColorToSubpixelRGB not exported " +
+        sys.stderr.write("Warning - function pixConvertColorToSubpixelRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -880,7 +881,7 @@ class pixconv(object):
         leptonica.pixConvertTo8BySampling.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixConvertTo8BySampling.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertTo8BySampling not exported " +
+        sys.stderr.write("Warning - function pixConvertTo8BySampling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -912,7 +913,7 @@ class pixconv(object):
         leptonica.pixConvertForPSWrap.argtypes = [ctypes.c_void_p]
         leptonica.pixConvertForPSWrap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertForPSWrap not exported " +
+        sys.stderr.write("Warning - function pixConvertForPSWrap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -945,7 +946,7 @@ class pixconv(object):
         leptonica.pixConvert1To2.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixConvert1To2.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert1To2 not exported " +
+        sys.stderr.write("Warning - function pixConvert1To2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -982,7 +983,7 @@ class pixconv(object):
         leptonica.pixConvertRGBToGray.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.pixConvertRGBToGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertRGBToGray not exported " +
+        sys.stderr.write("Warning - function pixConvertRGBToGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1014,7 +1015,7 @@ class pixconv(object):
         leptonica.pixConvert1To4Cmap.argtypes = [ctypes.c_void_p]
         leptonica.pixConvert1To4Cmap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert1To4Cmap not exported " +
+        sys.stderr.write("Warning - function pixConvert1To4Cmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1041,7 +1042,7 @@ class pixconv(object):
         leptonica.pixConvertTo16.argtypes = [ctypes.c_void_p]
         leptonica.pixConvertTo16.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertTo16 not exported " +
+        sys.stderr.write("Warning - function pixConvertTo16 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1070,7 +1071,7 @@ class pixconv(object):
         leptonica.pixConvert32To24.argtypes = [ctypes.c_void_p]
         leptonica.pixConvert32To24.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert32To24 not exported " +
+        sys.stderr.write("Warning - function pixConvert32To24 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1097,7 +1098,7 @@ class pixconv(object):
         leptonica.pixConvert24To32.argtypes = [ctypes.c_void_p]
         leptonica.pixConvert24To32.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert24To32 not exported " +
+        sys.stderr.write("Warning - function pixConvert24To32 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1134,7 +1135,7 @@ class pixconv(object):
         leptonica.pixRemoveColormap.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixRemoveColormap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRemoveColormap not exported " +
+        sys.stderr.write("Warning - function pixRemoveColormap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1179,7 +1180,7 @@ class pixconv(object):
         leptonica.pixConvertRGBToLuminance.argtypes = [ctypes.c_void_p]
         leptonica.pixConvertRGBToLuminance.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertRGBToLuminance not exported " +
+        sys.stderr.write("Warning - function pixConvertRGBToLuminance not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1206,7 +1207,7 @@ class pixconv(object):
         leptonica.pixAddGrayColormap8.argtypes = [ctypes.c_void_p]
         leptonica.pixAddGrayColormap8.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixAddGrayColormap8 not exported " +
+        sys.stderr.write("Warning - function pixAddGrayColormap8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1233,7 +1234,7 @@ class pixconv(object):
         leptonica.pixConvertTo1.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvertTo1.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertTo1 not exported " +
+        sys.stderr.write("Warning - function pixConvertTo1 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1266,7 +1267,7 @@ class pixconv(object):
         leptonica.pixColorizeGray.argtypes = [ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32]
         leptonica.pixColorizeGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixColorizeGray not exported " +
+        sys.stderr.write("Warning - function pixColorizeGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1299,7 +1300,7 @@ class pixconv(object):
         leptonica.pixConvertTo32BySampling.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvertTo32BySampling.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertTo32BySampling not exported " +
+        sys.stderr.write("Warning - function pixConvertTo32BySampling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1329,7 +1330,7 @@ class pixconv(object):
         leptonica.pixAddMinimalGrayColormap8.argtypes = [ctypes.c_void_p]
         leptonica.pixAddMinimalGrayColormap8.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddMinimalGrayColormap8 not exported " +
+        sys.stderr.write("Warning - function pixAddMinimalGrayColormap8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1358,7 +1359,7 @@ class pixconv(object):
         leptonica.pixRemoveColormapGeneral.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRemoveColormapGeneral.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRemoveColormapGeneral not exported " +
+        sys.stderr.write("Warning - function pixRemoveColormapGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1395,7 +1396,7 @@ class pixconv(object):
         leptonica.pixThreshold8.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixThreshold8.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixThreshold8 not exported " +
+        sys.stderr.write("Warning - function pixThreshold8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1444,7 +1445,7 @@ class pixconv(object):
         leptonica.pixRemoveAlpha.argtypes = [ctypes.c_void_p]
         leptonica.pixRemoveAlpha.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRemoveAlpha not exported " +
+        sys.stderr.write("Warning - function pixRemoveAlpha not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1472,7 +1473,7 @@ class pixconv(object):
         leptonica.pixConvertGrayToSubpixelRGB.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32]
         leptonica.pixConvertGrayToSubpixelRGB.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertGrayToSubpixelRGB not exported " +
+        sys.stderr.write("Warning - function pixConvertGrayToSubpixelRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1520,7 +1521,7 @@ class pixconv(object):
         leptonica.pixConvertRGBToGrayMinMax.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvertRGBToGrayMinMax.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertRGBToGrayMinMax not exported " +
+        sys.stderr.write("Warning - function pixConvertRGBToGrayMinMax not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1550,7 +1551,7 @@ class pixconv(object):
         leptonica.pixConvertTo8Or32.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixConvertTo8Or32.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertTo8Or32 not exported " +
+        sys.stderr.write("Warning - function pixConvertTo8Or32 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1587,7 +1588,7 @@ class pixconv(object):
         leptonica.pixConvertGrayToColormap.argtypes = [ctypes.c_void_p]
         leptonica.pixConvertGrayToColormap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertGrayToColormap not exported " +
+        sys.stderr.write("Warning - function pixConvertGrayToColormap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1625,7 +1626,7 @@ class pixconv(object):
         leptonica.pixConvert4To8.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvert4To8.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert4To8 not exported " +
+        sys.stderr.write("Warning - function pixConvert4To8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1666,7 +1667,7 @@ class pixconv(object):
         leptonica.pixUnpackBinary.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixUnpackBinary.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixUnpackBinary not exported " +
+        sys.stderr.write("Warning - function pixUnpackBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1701,7 +1702,7 @@ class pixconv(object):
         leptonica.pixConvertGrayToFalseColor.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.pixConvertGrayToFalseColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertGrayToFalseColor not exported " +
+        sys.stderr.write("Warning - function pixConvertGrayToFalseColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1734,7 +1735,7 @@ class pixconv(object):
         leptonica.pixConvertLossless.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvertLossless.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertLossless not exported " +
+        sys.stderr.write("Warning - function pixConvertLossless not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1768,7 +1769,7 @@ class pixconv(object):
         leptonica.pixQuantizeIfFewColors.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixQuantizeIfFewColors.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixQuantizeIfFewColors not exported " +
+        sys.stderr.write("Warning - function pixQuantizeIfFewColors not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1817,7 +1818,7 @@ class pixconv(object):
         leptonica.pixConvert8To32.argtypes = [ctypes.c_void_p]
         leptonica.pixConvert8To32.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvert8To32 not exported " +
+        sys.stderr.write("Warning - function pixConvert8To32 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1883,7 +1884,7 @@ class paintcmap(object):
         leptonica.pixColorGrayRegionsCmap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixColorGrayRegionsCmap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixColorGrayRegionsCmap not exported " +
+        sys.stderr.write("Warning - function pixColorGrayRegionsCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1931,7 +1932,7 @@ class paintcmap(object):
         leptonica.pixSetMaskedCmap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSetMaskedCmap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetMaskedCmap not exported " +
+        sys.stderr.write("Warning - function pixSetMaskedCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -1976,7 +1977,7 @@ class paintcmap(object):
         leptonica.pixColorGrayCmap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixColorGrayCmap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixColorGrayCmap not exported " +
+        sys.stderr.write("Warning - function pixColorGrayCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2035,7 +2036,7 @@ class paintcmap(object):
         leptonica.addColorizedGrayToCmap.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.addColorizedGrayToCmap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function addColorizedGrayToCmap not exported " +
+        sys.stderr.write("Warning - function addColorizedGrayToCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2085,7 +2086,7 @@ class paintcmap(object):
         leptonica.pixSetSelectCmap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSetSelectCmap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetSelectCmap not exported " +
+        sys.stderr.write("Warning - function pixSetSelectCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2133,7 +2134,7 @@ class paintcmap(object):
         leptonica.pixSetSelectMaskedCmap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSetSelectMaskedCmap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetSelectMaskedCmap not exported " +
+        sys.stderr.write("Warning - function pixSetSelectMaskedCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2263,7 +2264,7 @@ class graphics(object):
         leptonica.pixFillPolygon.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixFillPolygon.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFillPolygon not exported " +
+        sys.stderr.write("Warning - function pixFillPolygon not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2300,7 +2301,7 @@ class graphics(object):
         leptonica.generatePtaBox.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.generatePtaBox.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaBox not exported " +
+        sys.stderr.write("Warning - function generatePtaBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2330,7 +2331,7 @@ class graphics(object):
         leptonica.pixRenderPolyline.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRenderPolyline.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderPolyline not exported " +
+        sys.stderr.write("Warning - function pixRenderPolyline not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2364,7 +2365,7 @@ class graphics(object):
         leptonica.fpixRenderContours.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.fpixRenderContours.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixRenderContours not exported " +
+        sys.stderr.write("Warning - function fpixRenderContours not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2398,7 +2399,7 @@ class graphics(object):
         leptonica.pixRenderBox.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRenderBox.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderBox not exported " +
+        sys.stderr.write("Warning - function pixRenderBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2428,7 +2429,7 @@ class graphics(object):
         leptonica.generatePtaHashBox.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.generatePtaHashBox.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaHashBox not exported " +
+        sys.stderr.write("Warning - function generatePtaHashBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2465,7 +2466,7 @@ class graphics(object):
         leptonica.generatePtaFilledCircle.argtypes = [ctypes.c_int32]
         leptonica.generatePtaFilledCircle.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaFilledCircle not exported " +
+        sys.stderr.write("Warning - function generatePtaFilledCircle not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2496,7 +2497,7 @@ class graphics(object):
         leptonica.generatePtaaBoxa.argtypes = [ctypes.c_void_p]
         leptonica.generatePtaaBoxa.restype = lambda address: PTAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaaBoxa not exported " +
+        sys.stderr.write("Warning - function generatePtaaBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2526,7 +2527,7 @@ class graphics(object):
         leptonica.pixRenderContours.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRenderContours.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderContours not exported " +
+        sys.stderr.write("Warning - function pixRenderContours not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2561,7 +2562,7 @@ class graphics(object):
         leptonica.pixRenderBoxaArb.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte]
         leptonica.pixRenderBoxaArb.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderBoxaArb not exported " +
+        sys.stderr.write("Warning - function pixRenderBoxaArb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2593,7 +2594,7 @@ class graphics(object):
         leptonica.pixRenderBoxa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRenderBoxa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderBoxa not exported " +
+        sys.stderr.write("Warning - function pixRenderBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2623,7 +2624,7 @@ class graphics(object):
         leptonica.pixRenderPolylineBlend.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRenderPolylineBlend.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderPolylineBlend not exported " +
+        sys.stderr.write("Warning - function pixRenderPolylineBlend not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2662,7 +2663,7 @@ class graphics(object):
         leptonica.locatePtRadially.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_double, ctypes.c_double, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.locatePtRadially.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function locatePtRadially not exported " +
+        sys.stderr.write("Warning - function locatePtRadially not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2695,7 +2696,7 @@ class graphics(object):
         leptonica.generatePtaWideLine.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.generatePtaWideLine.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaWideLine not exported " +
+        sys.stderr.write("Warning - function generatePtaWideLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2725,7 +2726,7 @@ class graphics(object):
         leptonica.pixRenderPlotFromNuma.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixRenderPlotFromNuma.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderPlotFromNuma not exported " +
+        sys.stderr.write("Warning - function pixRenderPlotFromNuma not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2766,7 +2767,7 @@ class graphics(object):
         leptonica.generatePtaLine.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.generatePtaLine.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaLine not exported " +
+        sys.stderr.write("Warning - function generatePtaLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2797,7 +2798,7 @@ class graphics(object):
         leptonica.generatePtaaHashBoxa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.generatePtaaHashBoxa.restype = lambda address: PTAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaaHashBoxa not exported " +
+        sys.stderr.write("Warning - function generatePtaaHashBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2837,7 +2838,7 @@ class graphics(object):
         leptonica.pixRenderLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRenderLine.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderLine not exported " +
+        sys.stderr.write("Warning - function pixRenderLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2871,7 +2872,7 @@ class graphics(object):
         leptonica.generatePtaBoxa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.generatePtaBoxa.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaBoxa not exported " +
+        sys.stderr.write("Warning - function generatePtaBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2905,7 +2906,7 @@ class graphics(object):
         leptonica.convertPtaLineTo4cc.argtypes = [ctypes.c_void_p]
         leptonica.convertPtaLineTo4cc.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function convertPtaLineTo4cc not exported " +
+        sys.stderr.write("Warning - function convertPtaLineTo4cc not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2936,7 +2937,7 @@ class graphics(object):
         leptonica.generatePtaPolyline.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.generatePtaPolyline.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaPolyline not exported " +
+        sys.stderr.write("Warning - function generatePtaPolyline not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -2966,7 +2967,7 @@ class graphics(object):
         leptonica.pixRenderRandomCmapPtaa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRenderRandomCmapPtaa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderRandomCmapPtaa not exported " +
+        sys.stderr.write("Warning - function pixRenderRandomCmapPtaa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3014,7 +3015,7 @@ class graphics(object):
         leptonica.pixRenderPolylineArb.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_int32]
         leptonica.pixRenderPolylineArb.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderPolylineArb not exported " +
+        sys.stderr.write("Warning - function pixRenderPolylineArb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3050,7 +3051,7 @@ class graphics(object):
         leptonica.makePlotPtaFromNuma.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.makePlotPtaFromNuma.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function makePlotPtaFromNuma not exported " +
+        sys.stderr.write("Warning - function makePlotPtaFromNuma not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3090,7 +3091,7 @@ class graphics(object):
         leptonica.pixRenderBoxaBlend.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_float, ctypes.c_int32]
         leptonica.pixRenderBoxaBlend.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderBoxaBlend not exported " +
+        sys.stderr.write("Warning - function pixRenderBoxaBlend not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3127,7 +3128,7 @@ class graphics(object):
         leptonica.pixRenderHashBoxBlend.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.pixRenderHashBoxBlend.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderHashBoxBlend not exported " +
+        sys.stderr.write("Warning - function pixRenderHashBoxBlend not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3168,7 +3169,7 @@ class graphics(object):
         leptonica.fpixAutoRenderContours.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.fpixAutoRenderContours.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixAutoRenderContours not exported " +
+        sys.stderr.write("Warning - function fpixAutoRenderContours not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3200,7 +3201,7 @@ class graphics(object):
         leptonica.pixRenderHashBoxArb.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRenderHashBoxArb.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderHashBoxArb not exported " +
+        sys.stderr.write("Warning - function pixRenderHashBoxArb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3238,7 +3239,7 @@ class graphics(object):
         leptonica.pixRenderHashBoxaBlend.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.pixRenderHashBoxaBlend.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderHashBoxaBlend not exported " +
+        sys.stderr.write("Warning - function pixRenderHashBoxaBlend not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3279,7 +3280,7 @@ class graphics(object):
         leptonica.generatePtaLineFromPt.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_double, ctypes.c_double]
         leptonica.generatePtaLineFromPt.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaLineFromPt not exported " +
+        sys.stderr.write("Warning - function generatePtaLineFromPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3313,7 +3314,7 @@ class graphics(object):
         leptonica.pixRenderLineArb.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte]
         leptonica.pixRenderLineArb.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderLineArb not exported " +
+        sys.stderr.write("Warning - function pixRenderLineArb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3349,7 +3350,7 @@ class graphics(object):
         leptonica.pixRenderPolygon.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixRenderPolygon.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderPolygon not exported " +
+        sys.stderr.write("Warning - function pixRenderPolygon not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3386,7 +3387,7 @@ class graphics(object):
         leptonica.pixRenderLineBlend.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_float]
         leptonica.pixRenderLineBlend.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderLineBlend not exported " +
+        sys.stderr.write("Warning - function pixRenderLineBlend not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3424,7 +3425,7 @@ class graphics(object):
         leptonica.pixRenderPlotFromNumaGen.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixRenderPlotFromNumaGen.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderPlotFromNumaGen not exported " +
+        sys.stderr.write("Warning - function pixRenderPlotFromNumaGen not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3469,7 +3470,7 @@ class graphics(object):
         leptonica.pixRenderPta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixRenderPta.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderPta not exported " +
+        sys.stderr.write("Warning - function pixRenderPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3507,7 +3508,7 @@ class graphics(object):
         leptonica.pixRenderHashBox.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRenderHashBox.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderHashBox not exported " +
+        sys.stderr.write("Warning - function pixRenderHashBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3543,7 +3544,7 @@ class graphics(object):
         leptonica.generatePtaHashBoxa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.generatePtaHashBoxa.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaHashBoxa not exported " +
+        sys.stderr.write("Warning - function generatePtaHashBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3586,7 +3587,7 @@ class graphics(object):
         leptonica.pixRenderBoxArb.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte]
         leptonica.pixRenderBoxArb.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderBoxArb not exported " +
+        sys.stderr.write("Warning - function pixRenderBoxArb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3618,7 +3619,7 @@ class graphics(object):
         leptonica.pixRenderPtaArb.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte]
         leptonica.pixRenderPtaArb.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderPtaArb not exported " +
+        sys.stderr.write("Warning - function pixRenderPtaArb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3658,7 +3659,7 @@ class graphics(object):
         leptonica.pixRenderPtaBlend.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_float]
         leptonica.pixRenderPtaBlend.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderPtaBlend not exported " +
+        sys.stderr.write("Warning - function pixRenderPtaBlend not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3692,7 +3693,7 @@ class graphics(object):
         leptonica.makePlotPtaFromNumaGen.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.makePlotPtaFromNumaGen.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function makePlotPtaFromNumaGen not exported " +
+        sys.stderr.write("Warning - function makePlotPtaFromNumaGen not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3741,7 +3742,7 @@ class graphics(object):
         leptonica.generatePtaFilledSquare.argtypes = [ctypes.c_int32]
         leptonica.generatePtaFilledSquare.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generatePtaFilledSquare not exported " +
+        sys.stderr.write("Warning - function generatePtaFilledSquare not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3770,7 +3771,7 @@ class graphics(object):
         leptonica.pixRenderBoxBlend.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_ubyte, ctypes.c_float]
         leptonica.pixRenderBoxBlend.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRenderBoxBlend not exported " +
+        sys.stderr.write("Warning - function pixRenderBoxBlend not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3860,7 +3861,7 @@ class morphapp(object):
         leptonica.pixCentroid.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCentroid.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCentroid not exported " +
+        sys.stderr.write("Warning - function pixCentroid not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3896,7 +3897,7 @@ class morphapp(object):
         leptonica.pixSeedfillMorph.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSeedfillMorph.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfillMorph not exported " +
+        sys.stderr.write("Warning - function pixSeedfillMorph not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3933,7 +3934,7 @@ class morphapp(object):
         leptonica.pixUnionOfMorphOps.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixUnionOfMorphOps.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixUnionOfMorphOps not exported " +
+        sys.stderr.write("Warning - function pixUnionOfMorphOps not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -3962,7 +3963,7 @@ class morphapp(object):
         leptonica.pixDisplayMatchedPattern.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixDisplayMatchedPattern.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayMatchedPattern not exported " +
+        sys.stderr.write("Warning - function pixDisplayMatchedPattern not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4011,7 +4012,7 @@ class morphapp(object):
         leptonica.pixSelectiveConnCompFill.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSelectiveConnCompFill.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSelectiveConnCompFill not exported " +
+        sys.stderr.write("Warning - function pixSelectiveConnCompFill not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4041,7 +4042,7 @@ class morphapp(object):
         leptonica.pixFastTophat.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixFastTophat.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFastTophat not exported " +
+        sys.stderr.write("Warning - function pixFastTophat not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4088,7 +4089,7 @@ class morphapp(object):
         leptonica.pixaCentroids.argtypes = [ctypes.c_void_p]
         leptonica.pixaCentroids.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaCentroids not exported " +
+        sys.stderr.write("Warning - function pixaCentroids not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4118,7 +4119,7 @@ class morphapp(object):
         leptonica.pixTophat.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixTophat.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixTophat not exported " +
+        sys.stderr.write("Warning - function pixTophat not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4157,7 +4158,7 @@ class morphapp(object):
         leptonica.pixaMorphSequenceByComponent.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaMorphSequenceByComponent.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaMorphSequenceByComponent not exported " +
+        sys.stderr.write("Warning - function pixaMorphSequenceByComponent not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4195,7 +4196,7 @@ class morphapp(object):
         leptonica.pixIntersectionOfMorphOps.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixIntersectionOfMorphOps.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixIntersectionOfMorphOps not exported " +
+        sys.stderr.write("Warning - function pixIntersectionOfMorphOps not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4224,7 +4225,7 @@ class morphapp(object):
         leptonica.pixRunHistogramMorph.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRunHistogramMorph.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRunHistogramMorph not exported " +
+        sys.stderr.write("Warning - function pixRunHistogramMorph not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4254,7 +4255,7 @@ class morphapp(object):
         leptonica.pixMorphSequenceByRegion.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixMorphSequenceByRegion.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMorphSequenceByRegion not exported " +
+        sys.stderr.write("Warning - function pixMorphSequenceByRegion not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4304,7 +4305,7 @@ class morphapp(object):
         leptonica.pixHDome.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixHDome.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixHDome not exported " +
+        sys.stderr.write("Warning - function pixHDome not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4370,7 +4371,7 @@ class morphapp(object):
         leptonica.pixMorphSequenceByComponent.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixMorphSequenceByComponent.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMorphSequenceByComponent not exported " +
+        sys.stderr.write("Warning - function pixMorphSequenceByComponent not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4414,7 +4415,7 @@ class morphapp(object):
         leptonica.pixMorphSequenceMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixMorphSequenceMasked.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMorphSequenceMasked not exported " +
+        sys.stderr.write("Warning - function pixMorphSequenceMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4450,7 +4451,7 @@ class morphapp(object):
         leptonica.pixExtractBoundary.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixExtractBoundary.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixExtractBoundary not exported " +
+        sys.stderr.write("Warning - function pixExtractBoundary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4480,7 +4481,7 @@ class morphapp(object):
         leptonica.pixaMorphSequenceByRegion.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaMorphSequenceByRegion.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaMorphSequenceByRegion not exported " +
+        sys.stderr.write("Warning - function pixaMorphSequenceByRegion not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4522,7 +4523,7 @@ class morphapp(object):
         leptonica.pixRemoveMatchedPattern.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRemoveMatchedPattern.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRemoveMatchedPattern not exported " +
+        sys.stderr.write("Warning - function pixRemoveMatchedPattern not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4566,7 +4567,7 @@ class morphapp(object):
         leptonica.pixMorphGradient.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixMorphGradient.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMorphGradient not exported " +
+        sys.stderr.write("Warning - function pixMorphGradient not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4750,7 +4751,7 @@ class numabasic(object):
         leptonica.numa2dGetIValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.numa2dGetIValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numa2dGetIValue not exported " +
+        sys.stderr.write("Warning - function numa2dGetIValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4782,7 +4783,7 @@ class numabasic(object):
         leptonica.numaaWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaaWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaWrite not exported " +
+        sys.stderr.write("Warning - function numaaWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4807,7 +4808,7 @@ class numabasic(object):
         leptonica.numaaReplaceNuma.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.numaaReplaceNuma.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaReplaceNuma not exported " +
+        sys.stderr.write("Warning - function numaaReplaceNuma not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4840,7 +4841,7 @@ class numabasic(object):
         leptonica.numaGetCount.argtypes = [ctypes.c_void_p]
         leptonica.numaGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetCount not exported " +
+        sys.stderr.write("Warning - function numaGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4864,7 +4865,7 @@ class numabasic(object):
         leptonica.numaaTruncate.argtypes = [ctypes.c_void_p]
         leptonica.numaaTruncate.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaTruncate not exported " +
+        sys.stderr.write("Warning - function numaaTruncate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4893,7 +4894,7 @@ class numabasic(object):
         leptonica.numaaGetPtrArray.argtypes = [ctypes.c_void_p]
         leptonica.numaaGetPtrArray.restype = ctypes.c_void_p
     except AttributeError:
-        os.stderr.write("Warning - function numaaGetPtrArray not exported " +
+        sys.stderr.write("Warning - function numaaGetPtrArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4936,7 +4937,7 @@ class numabasic(object):
         leptonica.numaaGetCount.argtypes = [ctypes.c_void_p]
         leptonica.numaaGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaGetCount not exported " +
+        sys.stderr.write("Warning - function numaaGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4960,7 +4961,7 @@ class numabasic(object):
         leptonica.numaClone.argtypes = [ctypes.c_void_p]
         leptonica.numaClone.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaClone not exported " +
+        sys.stderr.write("Warning - function numaClone not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -4984,7 +4985,7 @@ class numabasic(object):
         leptonica.numaaRead.argtypes = [ctypes.c_void_p]
         leptonica.numaaRead.restype = lambda address: NUMAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaaRead not exported " +
+        sys.stderr.write("Warning - function numaaRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5008,7 +5009,7 @@ class numabasic(object):
         leptonica.numaCreateFromFArray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.numaCreateFromFArray.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaCreateFromFArray not exported " +
+        sys.stderr.write("Warning - function numaCreateFromFArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5041,7 +5042,7 @@ class numabasic(object):
         leptonica.numaCopy.argtypes = [ctypes.c_void_p]
         leptonica.numaCopy.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaCopy not exported " +
+        sys.stderr.write("Warning - function numaCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5065,7 +5066,7 @@ class numabasic(object):
         leptonica.numa2dGetNuma.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.numa2dGetNuma.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numa2dGetNuma not exported " +
+        sys.stderr.write("Warning - function numa2dGetNuma not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5096,7 +5097,7 @@ class numabasic(object):
         leptonica.numa2dAddNumber.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.numa2dAddNumber.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numa2dAddNumber not exported " +
+        sys.stderr.write("Warning - function numa2dAddNumber not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5126,7 +5127,7 @@ class numabasic(object):
         leptonica.numaEmpty.argtypes = [ctypes.c_void_p]
         leptonica.numaEmpty.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaEmpty not exported " +
+        sys.stderr.write("Warning - function numaEmpty not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5155,7 +5156,7 @@ class numabasic(object):
         leptonica.numa2dGetFValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.numa2dGetFValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numa2dGetFValue not exported " +
+        sys.stderr.write("Warning - function numa2dGetFValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5187,7 +5188,7 @@ class numabasic(object):
         leptonica.numaAddNumber.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.numaAddNumber.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaAddNumber not exported " +
+        sys.stderr.write("Warning - function numaAddNumber not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5213,7 +5214,7 @@ class numabasic(object):
         leptonica.numaGetIValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.numaGetIValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetIValue not exported " +
+        sys.stderr.write("Warning - function numaGetIValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5245,7 +5246,7 @@ class numabasic(object):
         leptonica.numaaGetNumberCount.argtypes = [ctypes.c_void_p]
         leptonica.numaaGetNumberCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaGetNumberCount not exported " +
+        sys.stderr.write("Warning - function numaaGetNumberCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5270,7 +5271,7 @@ class numabasic(object):
         leptonica.numa2dCreate.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.numa2dCreate.restype = lambda address: NUMA2D(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numa2dCreate not exported " +
+        sys.stderr.write("Warning - function numa2dCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5304,7 +5305,7 @@ class numabasic(object):
         leptonica.numaaGetValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaaGetValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaGetValue not exported " +
+        sys.stderr.write("Warning - function numaaGetValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5336,7 +5337,7 @@ class numabasic(object):
         leptonica.numaSetValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.numaSetValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaSetValue not exported " +
+        sys.stderr.write("Warning - function numaSetValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5364,7 +5365,7 @@ class numabasic(object):
         leptonica.numaReplaceNumber.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.numaReplaceNumber.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaReplaceNumber not exported " +
+        sys.stderr.write("Warning - function numaReplaceNumber not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5392,7 +5393,7 @@ class numabasic(object):
         leptonica.numaGetParameters.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetParameters.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetParameters not exported " +
+        sys.stderr.write("Warning - function numaGetParameters not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5420,7 +5421,7 @@ class numabasic(object):
         leptonica.numaWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaWriteStream not exported " +
+        sys.stderr.write("Warning - function numaWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5445,7 +5446,7 @@ class numabasic(object):
         leptonica.numaShiftValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.numaShiftValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaShiftValue not exported " +
+        sys.stderr.write("Warning - function numaShiftValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5473,7 +5474,7 @@ class numabasic(object):
         leptonica.numaInsertNumber.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.numaInsertNumber.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaInsertNumber not exported " +
+        sys.stderr.write("Warning - function numaInsertNumber not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5508,7 +5509,7 @@ class numabasic(object):
         leptonica.numaGetIArray.argtypes = [ctypes.c_void_p]
         leptonica.numaGetIArray.restype = ctypes.POINTER(ctypes.c_int32)
     except AttributeError:
-        os.stderr.write("Warning - function numaGetIArray not exported " +
+        sys.stderr.write("Warning - function numaGetIArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5543,7 +5544,7 @@ class numabasic(object):
         leptonica.numaaExtendArray.argtypes = [ctypes.c_void_p]
         leptonica.numaaExtendArray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaExtendArray not exported " +
+        sys.stderr.write("Warning - function numaaExtendArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5567,7 +5568,7 @@ class numabasic(object):
         leptonica.numaaGetNumaCount.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaaGetNumaCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaGetNumaCount not exported " +
+        sys.stderr.write("Warning - function numaaGetNumaCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5593,7 +5594,7 @@ class numabasic(object):
         leptonica.numaHashCreate.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.numaHashCreate.restype = lambda address: NUMAHASH(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaHashCreate not exported " +
+        sys.stderr.write("Warning - function numaHashCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5622,7 +5623,7 @@ class numabasic(object):
         leptonica.numaGetFArray.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaGetFArray.restype = ctypes.POINTER(ctypes.c_float)
     except AttributeError:
-        os.stderr.write("Warning - function numaGetFArray not exported " +
+        sys.stderr.write("Warning - function numaGetFArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5661,7 +5662,7 @@ class numabasic(object):
         leptonica.numaCreateFromIArray.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaCreateFromIArray.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaCreateFromIArray not exported " +
+        sys.stderr.write("Warning - function numaCreateFromIArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5693,7 +5694,7 @@ class numabasic(object):
         leptonica.numaaCreateFull.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.numaaCreateFull.restype = lambda address: NUMAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaaCreateFull not exported " +
+        sys.stderr.write("Warning - function numaaCreateFull not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5725,7 +5726,7 @@ class numabasic(object):
         leptonica.numaGetFValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.numaGetFValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetFValue not exported " +
+        sys.stderr.write("Warning - function numaGetFValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5757,7 +5758,7 @@ class numabasic(object):
         leptonica.numaCreate.argtypes = [ctypes.c_int32]
         leptonica.numaCreate.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaCreate not exported " +
+        sys.stderr.write("Warning - function numaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5781,7 +5782,7 @@ class numabasic(object):
         leptonica.numaConvertToSarray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.numaConvertToSarray.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaConvertToSarray not exported " +
+        sys.stderr.write("Warning - function numaConvertToSarray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5819,7 +5820,7 @@ class numabasic(object):
         leptonica.numaaCreate.argtypes = [ctypes.c_int32]
         leptonica.numaaCreate.restype = lambda address: NUMAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaaCreate not exported " +
+        sys.stderr.write("Warning - function numaaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5844,7 +5845,7 @@ class numabasic(object):
         leptonica.numaaAddNuma.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaaAddNuma.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaAddNuma not exported " +
+        sys.stderr.write("Warning - function numaaAddNuma not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5872,7 +5873,7 @@ class numabasic(object):
         leptonica.numaChangeRefcount.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaChangeRefcount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaChangeRefcount not exported " +
+        sys.stderr.write("Warning - function numaChangeRefcount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5898,7 +5899,7 @@ class numabasic(object):
         leptonica.numa2dGetCount.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.numa2dGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numa2dGetCount not exported " +
+        sys.stderr.write("Warning - function numa2dGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5927,7 +5928,7 @@ class numabasic(object):
         leptonica.numaaAddNumber.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.numaaAddNumber.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaAddNumber not exported " +
+        sys.stderr.write("Warning - function numaaAddNumber not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5958,7 +5959,7 @@ class numabasic(object):
         leptonica.numaHashDestroy.argtypes = [ctypes.c_void_p]
         leptonica.numaHashDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function numaHashDestroy not exported " +
+        sys.stderr.write("Warning - function numaHashDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -5982,7 +5983,7 @@ class numabasic(object):
         leptonica.numaRemoveNumber.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaRemoveNumber.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaRemoveNumber not exported " +
+        sys.stderr.write("Warning - function numaRemoveNumber not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6013,7 +6014,7 @@ class numabasic(object):
         leptonica.numaaWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaaWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaWriteStream not exported " +
+        sys.stderr.write("Warning - function numaaWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6038,7 +6039,7 @@ class numabasic(object):
         leptonica.numaaReadStream.argtypes = [ctypes.c_void_p]
         leptonica.numaaReadStream.restype = lambda address: NUMAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaaReadStream not exported " +
+        sys.stderr.write("Warning - function numaaReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6062,7 +6063,7 @@ class numabasic(object):
         leptonica.numaDestroy.argtypes = [ctypes.c_void_p]
         leptonica.numaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function numaDestroy not exported " +
+        sys.stderr.write("Warning - function numaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6090,7 +6091,7 @@ class numabasic(object):
         leptonica.numaReadStream.argtypes = [ctypes.c_void_p]
         leptonica.numaReadStream.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaReadStream not exported " +
+        sys.stderr.write("Warning - function numaReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6114,7 +6115,7 @@ class numabasic(object):
         leptonica.numaSetCount.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaSetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaSetCount not exported " +
+        sys.stderr.write("Warning - function numaSetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6147,7 +6148,7 @@ class numabasic(object):
         leptonica.numaaGetNuma.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.numaaGetNuma.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaaGetNuma not exported " +
+        sys.stderr.write("Warning - function numaaGetNuma not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6175,7 +6176,7 @@ class numabasic(object):
         leptonica.numaWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaWrite not exported " +
+        sys.stderr.write("Warning - function numaWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6200,7 +6201,7 @@ class numabasic(object):
         leptonica.numaaDestroy.argtypes = [ctypes.c_void_p]
         leptonica.numaaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function numaaDestroy not exported " +
+        sys.stderr.write("Warning - function numaaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6224,7 +6225,7 @@ class numabasic(object):
         leptonica.numaRead.argtypes = [ctypes.c_void_p]
         leptonica.numaRead.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaRead not exported " +
+        sys.stderr.write("Warning - function numaRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6248,7 +6249,7 @@ class numabasic(object):
         leptonica.numaSetParameters.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.numaSetParameters.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaSetParameters not exported " +
+        sys.stderr.write("Warning - function numaSetParameters not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6278,7 +6279,7 @@ class numabasic(object):
         leptonica.numaHashAdd.argtypes = [ctypes.c_void_p, ctypes.c_uint32, ctypes.c_float]
         leptonica.numaHashAdd.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaHashAdd not exported " +
+        sys.stderr.write("Warning - function numaHashAdd not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6306,7 +6307,7 @@ class numabasic(object):
         leptonica.numaGetRefcount.argtypes = [ctypes.c_void_p]
         leptonica.numaGetRefcount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetRefcount not exported " +
+        sys.stderr.write("Warning - function numaGetRefcount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6330,7 +6331,7 @@ class numabasic(object):
         leptonica.numa2dDestroy.argtypes = [ctypes.c_void_p]
         leptonica.numa2dDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function numa2dDestroy not exported " +
+        sys.stderr.write("Warning - function numa2dDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6354,7 +6355,7 @@ class numabasic(object):
         leptonica.numaCopyParameters.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaCopyParameters.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaCopyParameters not exported " +
+        sys.stderr.write("Warning - function numaCopyParameters not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6380,7 +6381,7 @@ class numabasic(object):
         leptonica.numaHashGetNuma.argtypes = [ctypes.c_void_p, ctypes.c_uint32]
         leptonica.numaHashGetNuma.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaHashGetNuma not exported " +
+        sys.stderr.write("Warning - function numaHashGetNuma not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6507,7 +6508,7 @@ class numafunc1(object):
         leptonica.numaGetMax.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetMax.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetMax not exported " +
+        sys.stderr.write("Warning - function numaGetMax not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6535,7 +6536,7 @@ class numafunc1(object):
         leptonica.numaLogicalOp.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaLogicalOp.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaLogicalOp not exported " +
+        sys.stderr.write("Warning - function numaLogicalOp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6575,7 +6576,7 @@ class numafunc1(object):
         leptonica.numaRemoveBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.numaRemoveBorder.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaRemoveBorder not exported " +
+        sys.stderr.write("Warning - function numaRemoveBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6602,7 +6603,7 @@ class numafunc1(object):
         leptonica.numaSortGeneral.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.numaSortGeneral.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaSortGeneral not exported " +
+        sys.stderr.write("Warning - function numaSortGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6669,7 +6670,7 @@ class numafunc1(object):
         leptonica.numaMakeThresholdIndicator.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.numaMakeThresholdIndicator.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaMakeThresholdIndicator not exported " +
+        sys.stderr.write("Warning - function numaMakeThresholdIndicator not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6703,7 +6704,7 @@ class numafunc1(object):
         leptonica.numaSortIndexAutoSelect.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaSortIndexAutoSelect.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaSortIndexAutoSelect not exported " +
+        sys.stderr.write("Warning - function numaSortIndexAutoSelect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6733,7 +6734,7 @@ class numafunc1(object):
         leptonica.numaGetRankValue.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.numaGetRankValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetRankValue not exported " +
+        sys.stderr.write("Warning - function numaGetRankValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6780,7 +6781,7 @@ class numafunc1(object):
         leptonica.numaGetBinSortIndex.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaGetBinSortIndex.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaGetBinSortIndex not exported " +
+        sys.stderr.write("Warning - function numaGetBinSortIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6816,7 +6817,7 @@ class numafunc1(object):
         leptonica.numaHasOnlyIntegers.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.numaHasOnlyIntegers.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaHasOnlyIntegers not exported " +
+        sys.stderr.write("Warning - function numaHasOnlyIntegers not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6848,7 +6849,7 @@ class numafunc1(object):
         leptonica.numaClipToInterval.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.numaClipToInterval.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaClipToInterval not exported " +
+        sys.stderr.write("Warning - function numaClipToInterval not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6881,7 +6882,7 @@ class numafunc1(object):
         leptonica.numaInterpolateEqxInterval.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaInterpolateEqxInterval.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaInterpolateEqxInterval not exported " +
+        sys.stderr.write("Warning - function numaInterpolateEqxInterval not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6933,7 +6934,7 @@ class numafunc1(object):
         leptonica.numaSubsample.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaSubsample.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaSubsample not exported " +
+        sys.stderr.write("Warning - function numaSubsample not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6959,7 +6960,7 @@ class numafunc1(object):
         leptonica.numaUniformSampling.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaUniformSampling.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaUniformSampling not exported " +
+        sys.stderr.write("Warning - function numaUniformSampling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -6989,7 +6990,7 @@ class numafunc1(object):
         leptonica.numaAddSpecifiedBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.numaAddSpecifiedBorder.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaAddSpecifiedBorder not exported " +
+        sys.stderr.write("Warning - function numaAddSpecifiedBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7018,7 +7019,7 @@ class numafunc1(object):
         leptonica.numaChooseSortType.argtypes = [ctypes.c_void_p]
         leptonica.numaChooseSortType.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaChooseSortType not exported " +
+        sys.stderr.write("Warning - function numaChooseSortType not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7047,7 +7048,7 @@ class numafunc1(object):
         leptonica.numaAddToNumber.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.numaAddToNumber.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaAddToNumber not exported " +
+        sys.stderr.write("Warning - function numaAddToNumber not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7082,7 +7083,7 @@ class numafunc1(object):
         leptonica.numaLowPassIntervals.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.numaLowPassIntervals.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaLowPassIntervals not exported " +
+        sys.stderr.write("Warning - function numaLowPassIntervals not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7115,7 +7116,7 @@ class numafunc1(object):
         leptonica.numaInvertMap.argtypes = [ctypes.c_void_p]
         leptonica.numaInvertMap.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaInvertMap not exported " +
+        sys.stderr.write("Warning - function numaInvertMap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7144,7 +7145,7 @@ class numafunc1(object):
         leptonica.numaInterpolateArbxVal.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p]
         leptonica.numaInterpolateArbxVal.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaInterpolateArbxVal not exported " +
+        sys.stderr.write("Warning - function numaInterpolateArbxVal not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7184,7 +7185,7 @@ class numafunc1(object):
         leptonica.numaSortByIndex.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaSortByIndex.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaSortByIndex not exported " +
+        sys.stderr.write("Warning - function numaSortByIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7210,7 +7211,7 @@ class numafunc1(object):
         leptonica.numaGetEdgeValues.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetEdgeValues.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetEdgeValues not exported " +
+        sys.stderr.write("Warning - function numaGetEdgeValues not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7243,7 +7244,7 @@ class numafunc1(object):
         leptonica.numaGetMedian.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetMedian.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetMedian not exported " +
+        sys.stderr.write("Warning - function numaGetMedian not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7273,7 +7274,7 @@ class numafunc1(object):
         leptonica.numaGetSpanValues.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetSpanValues.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetSpanValues not exported " +
+        sys.stderr.write("Warning - function numaGetSpanValues not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7303,7 +7304,7 @@ class numafunc1(object):
         leptonica.numaIsSorted.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.numaIsSorted.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaIsSorted not exported " +
+        sys.stderr.write("Warning - function numaIsSorted not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7336,7 +7337,7 @@ class numafunc1(object):
         leptonica.numaArithOp.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaArithOp.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaArithOp not exported " +
+        sys.stderr.write("Warning - function numaArithOp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7373,7 +7374,7 @@ class numafunc1(object):
         leptonica.numaGetSumOnInterval.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.numaGetSumOnInterval.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetSumOnInterval not exported " +
+        sys.stderr.write("Warning - function numaGetSumOnInterval not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7403,7 +7404,7 @@ class numafunc1(object):
         leptonica.numaGetBinnedMedian.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetBinnedMedian.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetBinnedMedian not exported " +
+        sys.stderr.write("Warning - function numaGetBinnedMedian not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7435,7 +7436,7 @@ class numafunc1(object):
         leptonica.numaaFlattenToNuma.argtypes = [ctypes.c_void_p]
         leptonica.numaaFlattenToNuma.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaaFlattenToNuma not exported " +
+        sys.stderr.write("Warning - function numaaFlattenToNuma not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7466,7 +7467,7 @@ class numafunc1(object):
         leptonica.numaAddBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.numaAddBorder.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaAddBorder not exported " +
+        sys.stderr.write("Warning - function numaAddBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7495,7 +7496,7 @@ class numafunc1(object):
         leptonica.numaIntegrateInterval.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p]
         leptonica.numaIntegrateInterval.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaIntegrateInterval not exported " +
+        sys.stderr.write("Warning - function numaIntegrateInterval not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7535,7 +7536,7 @@ class numafunc1(object):
         leptonica.numaGetMode.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetMode.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetMode not exported " +
+        sys.stderr.write("Warning - function numaGetMode not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7569,7 +7570,7 @@ class numafunc1(object):
         leptonica.numaSort.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaSort.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaSort not exported " +
+        sys.stderr.write("Warning - function numaSort not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7602,7 +7603,7 @@ class numafunc1(object):
         leptonica.numaJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.numaJoin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaJoin not exported " +
+        sys.stderr.write("Warning - function numaJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7637,7 +7638,7 @@ class numafunc1(object):
         leptonica.numaMakeDelta.argtypes = [ctypes.c_void_p]
         leptonica.numaMakeDelta.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaMakeDelta not exported " +
+        sys.stderr.write("Warning - function numaMakeDelta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7662,7 +7663,7 @@ class numafunc1(object):
         leptonica.numaInvert.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaInvert.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaInvert not exported " +
+        sys.stderr.write("Warning - function numaInvert not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7695,7 +7696,7 @@ class numafunc1(object):
         leptonica.numaaJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.numaaJoin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaJoin not exported " +
+        sys.stderr.write("Warning - function numaaJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7730,7 +7731,7 @@ class numafunc1(object):
         leptonica.numaInterpolateEqxVal.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p]
         leptonica.numaInterpolateEqxVal.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaInterpolateEqxVal not exported " +
+        sys.stderr.write("Warning - function numaInterpolateEqxVal not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7778,7 +7779,7 @@ class numafunc1(object):
         leptonica.numaDifferentiateInterval.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaDifferentiateInterval.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaDifferentiateInterval not exported " +
+        sys.stderr.write("Warning - function numaDifferentiateInterval not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7820,7 +7821,7 @@ class numafunc1(object):
         leptonica.numaGetMedianVariation.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetMedianVariation.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetMedianVariation not exported " +
+        sys.stderr.write("Warning - function numaGetMedianVariation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7856,7 +7857,7 @@ class numafunc1(object):
         leptonica.numaThresholdEdges.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.numaThresholdEdges.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaThresholdEdges not exported " +
+        sys.stderr.write("Warning - function numaThresholdEdges not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7899,7 +7900,7 @@ class numafunc1(object):
         leptonica.numaGetSortIndex.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaGetSortIndex.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaGetSortIndex not exported " +
+        sys.stderr.write("Warning - function numaGetSortIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7926,7 +7927,7 @@ class numafunc1(object):
         leptonica.numaPseudorandomSequence.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.numaPseudorandomSequence.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaPseudorandomSequence not exported " +
+        sys.stderr.write("Warning - function numaPseudorandomSequence not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7958,7 +7959,7 @@ class numafunc1(object):
         leptonica.numaMakeSequence.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_int32]
         leptonica.numaMakeSequence.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaMakeSequence not exported " +
+        sys.stderr.write("Warning - function numaMakeSequence not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -7986,7 +7987,7 @@ class numafunc1(object):
         leptonica.numaFitMax.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaFitMax.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaFitMax not exported " +
+        sys.stderr.write("Warning - function numaFitMax not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8036,7 +8037,7 @@ class numafunc1(object):
         leptonica.numaSortPair.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaSortPair.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaSortPair not exported " +
+        sys.stderr.write("Warning - function numaSortPair not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8071,7 +8072,7 @@ class numafunc1(object):
         leptonica.numaSortAutoSelect.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaSortAutoSelect.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaSortAutoSelect not exported " +
+        sys.stderr.write("Warning - function numaSortAutoSelect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8101,7 +8102,7 @@ class numafunc1(object):
         leptonica.numaSimilar.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p]
         leptonica.numaSimilar.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaSimilar not exported " +
+        sys.stderr.write("Warning - function numaSimilar not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8136,7 +8137,7 @@ class numafunc1(object):
         leptonica.numaMakeAbsValue.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaMakeAbsValue.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaMakeAbsValue not exported " +
+        sys.stderr.write("Warning - function numaMakeAbsValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8163,7 +8164,7 @@ class numafunc1(object):
         leptonica.numaGetMin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetMin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetMin not exported " +
+        sys.stderr.write("Warning - function numaGetMin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8191,7 +8192,7 @@ class numafunc1(object):
         leptonica.numaGetNonzeroRange.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetNonzeroRange.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetNonzeroRange not exported " +
+        sys.stderr.write("Warning - function numaGetNonzeroRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8221,7 +8222,7 @@ class numafunc1(object):
         leptonica.numaMakeConstant.argtypes = [ctypes.c_float, ctypes.c_int32]
         leptonica.numaMakeConstant.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaMakeConstant not exported " +
+        sys.stderr.write("Warning - function numaMakeConstant not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8248,7 +8249,7 @@ class numafunc1(object):
         leptonica.numaBinSort.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaBinSort.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaBinSort not exported " +
+        sys.stderr.write("Warning - function numaBinSort not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8282,7 +8283,7 @@ class numafunc1(object):
         leptonica.numaReverse.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaReverse.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaReverse not exported " +
+        sys.stderr.write("Warning - function numaReverse not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8313,7 +8314,7 @@ class numafunc1(object):
         leptonica.numaInterpolateArbxInterval.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaInterpolateArbxInterval.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaInterpolateArbxInterval not exported " +
+        sys.stderr.write("Warning - function numaInterpolateArbxInterval not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8364,7 +8365,7 @@ class numafunc1(object):
         leptonica.numaGetSum.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetSum.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetSum not exported " +
+        sys.stderr.write("Warning - function numaGetSum not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8390,7 +8391,7 @@ class numafunc1(object):
         leptonica.numaGetCountRelativeToZero.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.numaGetCountRelativeToZero.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetCountRelativeToZero not exported " +
+        sys.stderr.write("Warning - function numaGetCountRelativeToZero not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8418,7 +8419,7 @@ class numafunc1(object):
         leptonica.numaGetPartialSums.argtypes = [ctypes.c_void_p]
         leptonica.numaGetPartialSums.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaGetPartialSums not exported " +
+        sys.stderr.write("Warning - function numaGetPartialSums not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8448,7 +8449,7 @@ class numafunc1(object):
         leptonica.numaRandomPermutation.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaRandomPermutation.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaRandomPermutation not exported " +
+        sys.stderr.write("Warning - function numaRandomPermutation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8562,7 +8563,7 @@ class numafunc2(object):
         leptonica.numaCountReversals.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaCountReversals.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaCountReversals not exported " +
+        sys.stderr.write("Warning - function numaCountReversals not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8597,7 +8598,7 @@ class numafunc2(object):
         leptonica.numaErode.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaErode.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaErode not exported " +
+        sys.stderr.write("Warning - function numaErode not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8634,7 +8635,7 @@ class numafunc2(object):
         leptonica.numaClose.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaClose.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaClose not exported " +
+        sys.stderr.write("Warning - function numaClose not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8670,7 +8671,7 @@ class numafunc2(object):
         leptonica.numaNormalizeHistogram.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.numaNormalizeHistogram.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaNormalizeHistogram not exported " +
+        sys.stderr.write("Warning - function numaNormalizeHistogram not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8698,7 +8699,7 @@ class numafunc2(object):
         leptonica.numaRebinHistogram.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaRebinHistogram.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaRebinHistogram not exported " +
+        sys.stderr.write("Warning - function numaRebinHistogram not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8724,7 +8725,7 @@ class numafunc2(object):
         leptonica.numaCrossingsByPeaks.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.numaCrossingsByPeaks.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaCrossingsByPeaks not exported " +
+        sys.stderr.write("Warning - function numaCrossingsByPeaks not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8756,7 +8757,7 @@ class numafunc2(object):
         leptonica.numaEvalBestHaarParameters.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaEvalBestHaarParameters.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaEvalBestHaarParameters not exported " +
+        sys.stderr.write("Warning - function numaEvalBestHaarParameters not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8818,7 +8819,7 @@ class numafunc2(object):
         leptonica.numaMakeHistogramAuto.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaMakeHistogramAuto.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaMakeHistogramAuto not exported " +
+        sys.stderr.write("Warning - function numaMakeHistogramAuto not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8857,7 +8858,7 @@ class numafunc2(object):
         leptonica.numaDiscretizeRankAndIntensity.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaDiscretizeRankAndIntensity.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaDiscretizeRankAndIntensity not exported " +
+        sys.stderr.write("Warning - function numaDiscretizeRankAndIntensity not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8908,7 +8909,7 @@ class numafunc2(object):
         leptonica.numaGetHistogramStatsOnInterval.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetHistogramStatsOnInterval.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetHistogramStatsOnInterval not exported " +
+        sys.stderr.write("Warning - function numaGetHistogramStatsOnInterval not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8957,7 +8958,7 @@ class numafunc2(object):
         leptonica.numaOpen.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaOpen.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaOpen not exported " +
+        sys.stderr.write("Warning - function numaOpen not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -8987,7 +8988,7 @@ class numafunc2(object):
         leptonica.numaMakeHistogramClipped.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.numaMakeHistogramClipped.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaMakeHistogramClipped not exported " +
+        sys.stderr.write("Warning - function numaMakeHistogramClipped not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9025,7 +9026,7 @@ class numafunc2(object):
         leptonica.numaGetRankBinValues.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetRankBinValues.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetRankBinValues not exported " +
+        sys.stderr.write("Warning - function numaGetRankBinValues not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9062,7 +9063,7 @@ class numafunc2(object):
         leptonica.numaGetStatsUsingHistogram.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetStatsUsingHistogram.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetStatsUsingHistogram not exported " +
+        sys.stderr.write("Warning - function numaGetStatsUsingHistogram not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9134,7 +9135,7 @@ class numafunc2(object):
         leptonica.numaGetHistogramStats.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaGetHistogramStats.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaGetHistogramStats not exported " +
+        sys.stderr.write("Warning - function numaGetHistogramStats not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9179,7 +9180,7 @@ class numafunc2(object):
         leptonica.numaDilate.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaDilate.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaDilate not exported " +
+        sys.stderr.write("Warning - function numaDilate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9209,7 +9210,7 @@ class numafunc2(object):
         leptonica.numaCrossingsByThreshold.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.numaCrossingsByThreshold.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaCrossingsByThreshold not exported " +
+        sys.stderr.write("Warning - function numaCrossingsByThreshold not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9241,7 +9242,7 @@ class numafunc2(object):
         leptonica.numaEarthMoverDistance.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaEarthMoverDistance.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaEarthMoverDistance not exported " +
+        sys.stderr.write("Warning - function numaEarthMoverDistance not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9284,7 +9285,7 @@ class numafunc2(object):
         leptonica.numaWindowedVariance.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaWindowedVariance.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaWindowedVariance not exported " +
+        sys.stderr.write("Warning - function numaWindowedVariance not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9324,7 +9325,7 @@ class numafunc2(object):
         leptonica.numaWindowedStats.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaWindowedStats.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaWindowedStats not exported " +
+        sys.stderr.write("Warning - function numaWindowedStats not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9376,7 +9377,7 @@ class numafunc2(object):
         leptonica.numaConvertToInt.argtypes = [ctypes.c_void_p]
         leptonica.numaConvertToInt.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaConvertToInt not exported " +
+        sys.stderr.write("Warning - function numaConvertToInt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9401,7 +9402,7 @@ class numafunc2(object):
         leptonica.numaWindowedMeanSquare.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaWindowedMeanSquare.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaWindowedMeanSquare not exported " +
+        sys.stderr.write("Warning - function numaWindowedMeanSquare not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9431,7 +9432,7 @@ class numafunc2(object):
         leptonica.numaHistogramGetRankFromVal.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p]
         leptonica.numaHistogramGetRankFromVal.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaHistogramGetRankFromVal not exported " +
+        sys.stderr.write("Warning - function numaHistogramGetRankFromVal not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9471,7 +9472,7 @@ class numafunc2(object):
         leptonica.numaSplitDistribution.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaSplitDistribution.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaSplitDistribution not exported " +
+        sys.stderr.write("Warning - function numaSplitDistribution not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9543,7 +9544,7 @@ class numafunc2(object):
         leptonica.numaEvalHaarSum.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_void_p]
         leptonica.numaEvalHaarSum.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaEvalHaarSum not exported " +
+        sys.stderr.write("Warning - function numaEvalHaarSum not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9595,7 +9596,7 @@ class numafunc2(object):
         leptonica.numaHistogramGetValFromRank.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p]
         leptonica.numaHistogramGetValFromRank.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaHistogramGetValFromRank not exported " +
+        sys.stderr.write("Warning - function numaHistogramGetValFromRank not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9635,7 +9636,7 @@ class numafunc2(object):
         leptonica.numaFindPeaks.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.numaFindPeaks.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaFindPeaks not exported " +
+        sys.stderr.write("Warning - function numaFindPeaks not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9670,7 +9671,7 @@ class numafunc2(object):
         leptonica.numaTransform.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.numaTransform.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaTransform not exported " +
+        sys.stderr.write("Warning - function numaTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9703,7 +9704,7 @@ class numafunc2(object):
         leptonica.numaWindowedMean.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaWindowedMean.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaWindowedMean not exported " +
+        sys.stderr.write("Warning - function numaWindowedMean not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9733,7 +9734,7 @@ class numafunc2(object):
         leptonica.numaFindExtrema.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.numaFindExtrema.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaFindExtrema not exported " +
+        sys.stderr.write("Warning - function numaFindExtrema not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9775,7 +9776,7 @@ class numafunc2(object):
         leptonica.numaSelectCrossingThreshold.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p]
         leptonica.numaSelectCrossingThreshold.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaSelectCrossingThreshold not exported " +
+        sys.stderr.write("Warning - function numaSelectCrossingThreshold not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9819,7 +9820,7 @@ class numafunc2(object):
         leptonica.numaMakeHistogram.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaMakeHistogram.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaMakeHistogram not exported " +
+        sys.stderr.write("Warning - function numaMakeHistogram not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9864,7 +9865,7 @@ class numafunc2(object):
         leptonica.numaMakeRankFromHistogram.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.numaMakeRankFromHistogram.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaMakeRankFromHistogram not exported " +
+        sys.stderr.write("Warning - function numaMakeRankFromHistogram not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -9972,7 +9973,7 @@ class gplot(object):
         leptonica.gplotSimpleN.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.gplotSimpleN.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotSimpleN not exported " +
+        sys.stderr.write("Warning - function gplotSimpleN not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10011,7 +10012,7 @@ class gplot(object):
         leptonica.gplotAddPlot.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.gplotAddPlot.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotAddPlot not exported " +
+        sys.stderr.write("Warning - function gplotAddPlot not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10060,7 +10061,7 @@ class gplot(object):
         leptonica.gplotGenCommandFile.argtypes = [ctypes.c_void_p]
         leptonica.gplotGenCommandFile.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotGenCommandFile not exported " +
+        sys.stderr.write("Warning - function gplotGenCommandFile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10084,7 +10085,7 @@ class gplot(object):
         leptonica.gplotRead.argtypes = [ctypes.c_void_p]
         leptonica.gplotRead.restype = lambda address: GPLOT(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function gplotRead not exported " +
+        sys.stderr.write("Warning - function gplotRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10108,7 +10109,7 @@ class gplot(object):
         leptonica.gplotMakeOutput.argtypes = [ctypes.c_void_p]
         leptonica.gplotMakeOutput.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotMakeOutput not exported " +
+        sys.stderr.write("Warning - function gplotMakeOutput not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10141,7 +10142,7 @@ class gplot(object):
         leptonica.gplotCreate.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.gplotCreate.restype = lambda address: GPLOT(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function gplotCreate not exported " +
+        sys.stderr.write("Warning - function gplotCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10179,7 +10180,7 @@ class gplot(object):
         leptonica.gplotSimpleXY1.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.gplotSimpleXY1.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotSimpleXY1 not exported " +
+        sys.stderr.write("Warning - function gplotSimpleXY1 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10220,7 +10221,7 @@ class gplot(object):
         leptonica.gplotSetScaling.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.gplotSetScaling.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotSetScaling not exported " +
+        sys.stderr.write("Warning - function gplotSetScaling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10251,7 +10252,7 @@ class gplot(object):
         leptonica.gplotSimpleXY2.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.gplotSimpleXY2.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotSimpleXY2 not exported " +
+        sys.stderr.write("Warning - function gplotSimpleXY2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10294,7 +10295,7 @@ class gplot(object):
         leptonica.gplotSimpleXYN.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.gplotSimpleXYN.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotSimpleXYN not exported " +
+        sys.stderr.write("Warning - function gplotSimpleXYN not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10335,7 +10336,7 @@ class gplot(object):
         leptonica.gplotDestroy.argtypes = [ctypes.c_void_p]
         leptonica.gplotDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function gplotDestroy not exported " +
+        sys.stderr.write("Warning - function gplotDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10359,7 +10360,7 @@ class gplot(object):
         leptonica.gplotGenDataFiles.argtypes = [ctypes.c_void_p]
         leptonica.gplotGenDataFiles.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotGenDataFiles not exported " +
+        sys.stderr.write("Warning - function gplotGenDataFiles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10383,7 +10384,7 @@ class gplot(object):
         leptonica.gplotSimple1.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.gplotSimple1.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotSimple1 not exported " +
+        sys.stderr.write("Warning - function gplotSimple1 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10421,7 +10422,7 @@ class gplot(object):
         leptonica.gplotSimple2.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.gplotSimple2.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotSimple2 not exported " +
+        sys.stderr.write("Warning - function gplotSimple2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10461,7 +10462,7 @@ class gplot(object):
         leptonica.gplotWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.gplotWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gplotWrite not exported " +
+        sys.stderr.write("Warning - function gplotWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10503,7 +10504,7 @@ class colorseg(object):
         leptonica.pixColorSegment.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixColorSegment.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixColorSegment not exported " +
+        sys.stderr.write("Warning - function pixColorSegment not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10586,7 +10587,7 @@ class colorseg(object):
         leptonica.pixColorSegmentCluster.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixColorSegmentCluster.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixColorSegmentCluster not exported " +
+        sys.stderr.write("Warning - function pixColorSegmentCluster not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10625,7 +10626,7 @@ class colorseg(object):
         leptonica.pixColorSegmentRemoveColors.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixColorSegmentRemoveColors.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixColorSegmentRemoveColors not exported " +
+        sys.stderr.write("Warning - function pixColorSegmentRemoveColors not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10662,7 +10663,7 @@ class colorseg(object):
         leptonica.pixColorSegmentClean.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixColorSegmentClean.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixColorSegmentClean not exported " +
+        sys.stderr.write("Warning - function pixColorSegmentClean not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10698,7 +10699,7 @@ class colorseg(object):
         leptonica.pixAssignToNearestColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixAssignToNearestColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixAssignToNearestColor not exported " +
+        sys.stderr.write("Warning - function pixAssignToNearestColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10780,7 +10781,7 @@ class webpio(object):
         leptonica.pixWriteMemWebP.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixWriteMemWebP.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteMemWebP not exported " +
+        sys.stderr.write("Warning - function pixWriteMemWebP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10820,7 +10821,7 @@ class webpio(object):
         leptonica.pixWriteStreamWebP.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixWriteStreamWebP.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStreamWebP not exported " +
+        sys.stderr.write("Warning - function pixWriteStreamWebP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10855,7 +10856,7 @@ class webpio(object):
         leptonica.readHeaderWebP.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.readHeaderWebP.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function readHeaderWebP not exported " +
+        sys.stderr.write("Warning - function readHeaderWebP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10885,7 +10886,7 @@ class webpio(object):
         leptonica.readHeaderMemWebP.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.readHeaderMemWebP.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function readHeaderMemWebP not exported " +
+        sys.stderr.write("Warning - function readHeaderMemWebP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10917,7 +10918,7 @@ class webpio(object):
         leptonica.pixReadStreamWebP.argtypes = [ctypes.c_void_p]
         leptonica.pixReadStreamWebP.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadStreamWebP not exported " +
+        sys.stderr.write("Warning - function pixReadStreamWebP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10941,7 +10942,7 @@ class webpio(object):
         leptonica.pixReadMemWebP.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
         leptonica.pixReadMemWebP.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadMemWebP not exported " +
+        sys.stderr.write("Warning - function pixReadMemWebP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -10977,7 +10978,7 @@ class webpio(object):
         leptonica.pixWriteWebP.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixWriteWebP.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteWebP not exported " +
+        sys.stderr.write("Warning - function pixWriteWebP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11217,7 +11218,7 @@ class affine(object):
         leptonica.pixAffineSequential.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixAffineSequential.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAffineSequential not exported " +
+        sys.stderr.write("Warning - function pixAffineSequential not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11265,7 +11266,7 @@ class affine(object):
         leptonica.pixAffinePtaColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixAffinePtaColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAffinePtaColor not exported " +
+        sys.stderr.write("Warning - function pixAffinePtaColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11295,7 +11296,7 @@ class affine(object):
         leptonica.pixAffineSampledPta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixAffineSampledPta.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAffineSampledPta not exported " +
+        sys.stderr.write("Warning - function pixAffineSampledPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11344,7 +11345,7 @@ class affine(object):
         leptonica.pixAffineSampled.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixAffineSampled.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAffineSampled not exported " +
+        sys.stderr.write("Warning - function pixAffineSampled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11379,7 +11380,7 @@ class affine(object):
         leptonica.affineXformSampledPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.affineXformSampledPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function affineXformSampledPt not exported " +
+        sys.stderr.write("Warning - function affineXformSampledPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11413,7 +11414,7 @@ class affine(object):
         leptonica.gaussjordan.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.gaussjordan.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function gaussjordan not exported " +
+        sys.stderr.write("Warning - function gaussjordan not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11451,7 +11452,7 @@ class affine(object):
         leptonica.pixAffineColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixAffineColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAffineColor not exported " +
+        sys.stderr.write("Warning - function pixAffineColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11479,7 +11480,7 @@ class affine(object):
         leptonica.linearInterpolatePixelColor.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_uint32, ctypes.c_void_p]
         leptonica.linearInterpolatePixelColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function linearInterpolatePixelColor not exported " +
+        sys.stderr.write("Warning - function linearInterpolatePixelColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11522,7 +11523,7 @@ class affine(object):
         leptonica.pixAffinePta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixAffinePta.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAffinePta not exported " +
+        sys.stderr.write("Warning - function pixAffinePta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11556,7 +11557,7 @@ class affine(object):
         leptonica.affineXformPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.affineXformPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function affineXformPt not exported " +
+        sys.stderr.write("Warning - function affineXformPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11590,7 +11591,7 @@ class affine(object):
         leptonica.linearInterpolatePixelGray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p]
         leptonica.linearInterpolatePixelGray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function linearInterpolatePixelGray not exported " +
+        sys.stderr.write("Warning - function linearInterpolatePixelGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11632,7 +11633,7 @@ class affine(object):
         leptonica.pixAffinePtaGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_ubyte]
         leptonica.pixAffinePtaGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAffinePtaGray not exported " +
+        sys.stderr.write("Warning - function pixAffinePtaGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11662,7 +11663,7 @@ class affine(object):
         leptonica.pixAffine.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixAffine.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAffine not exported " +
+        sys.stderr.write("Warning - function pixAffine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11694,7 +11695,7 @@ class affine(object):
         leptonica.pixAffinePtaWithAlpha.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixAffinePtaWithAlpha.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAffinePtaWithAlpha not exported " +
+        sys.stderr.write("Warning - function pixAffinePtaWithAlpha not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11758,7 +11759,7 @@ class affine(object):
         leptonica.affineInvertXform.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.affineInvertXform.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function affineInvertXform not exported " +
+        sys.stderr.write("Warning - function affineInvertXform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11806,7 +11807,7 @@ class affine(object):
         leptonica.getAffineXformCoeffs.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.getAffineXformCoeffs.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function getAffineXformCoeffs not exported " +
+        sys.stderr.write("Warning - function getAffineXformCoeffs not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11895,7 +11896,7 @@ class affine(object):
         leptonica.pixAffineGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_ubyte]
         leptonica.pixAffineGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAffineGray not exported " +
+        sys.stderr.write("Warning - function pixAffineGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -11953,7 +11954,7 @@ class viewfiles(object):
         leptonica.pixHtmlViewer.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixHtmlViewer.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixHtmlViewer not exported " +
+        sys.stderr.write("Warning - function pixHtmlViewer not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12085,7 +12086,7 @@ class pixafunc2(object):
         leptonica.convertToNUpPixa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.convertToNUpPixa.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function convertToNUpPixa not exported " +
+        sys.stderr.write("Warning - function convertToNUpPixa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12126,7 +12127,7 @@ class pixafunc2(object):
         leptonica.pixaDisplayLinearly.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixaDisplayLinearly.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaDisplayLinearly not exported " +
+        sys.stderr.write("Warning - function pixaDisplayLinearly not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12170,7 +12171,7 @@ class pixafunc2(object):
         leptonica.pixaDisplayTiledInRows.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaDisplayTiledInRows.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaDisplayTiledInRows not exported " +
+        sys.stderr.write("Warning - function pixaDisplayTiledInRows not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12229,7 +12230,7 @@ class pixafunc2(object):
         leptonica.pixaDisplayTiled.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaDisplayTiled.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaDisplayTiled not exported " +
+        sys.stderr.write("Warning - function pixaDisplayTiled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12272,7 +12273,7 @@ class pixafunc2(object):
         leptonica.pixaaDisplayByPixa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaaDisplayByPixa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaDisplayByPixa not exported " +
+        sys.stderr.write("Warning - function pixaaDisplayByPixa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12310,7 +12311,7 @@ class pixafunc2(object):
         leptonica.pixaDisplayOnLattice.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaDisplayOnLattice.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaDisplayOnLattice not exported " +
+        sys.stderr.write("Warning - function pixaDisplayOnLattice not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12353,7 +12354,7 @@ class pixafunc2(object):
         leptonica.pixaaDisplayTiledAndScaled.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaaDisplayTiledAndScaled.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaDisplayTiledAndScaled not exported " +
+        sys.stderr.write("Warning - function pixaaDisplayTiledAndScaled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12397,7 +12398,7 @@ class pixafunc2(object):
         leptonica.convertToNUpFiles.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.convertToNUpFiles.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertToNUpFiles not exported " +
+        sys.stderr.write("Warning - function convertToNUpFiles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12447,7 +12448,7 @@ class pixafunc2(object):
         leptonica.pixaConvertTo8Color.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaConvertTo8Color.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaConvertTo8Color not exported " +
+        sys.stderr.write("Warning - function pixaConvertTo8Color not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12476,7 +12477,7 @@ class pixafunc2(object):
         leptonica.pixaDisplayUnsplit.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixaDisplayUnsplit.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaDisplayUnsplit not exported " +
+        sys.stderr.write("Warning - function pixaDisplayUnsplit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12519,7 +12520,7 @@ class pixafunc2(object):
         leptonica.pixaConvertTo8.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaConvertTo8.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaConvertTo8 not exported " +
+        sys.stderr.write("Warning - function pixaConvertTo8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12548,7 +12549,7 @@ class pixafunc2(object):
         leptonica.pixaDisplayRandomCmap.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaDisplayRandomCmap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaDisplayRandomCmap not exported " +
+        sys.stderr.write("Warning - function pixaDisplayRandomCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12582,7 +12583,7 @@ class pixafunc2(object):
         leptonica.pixaDisplayTiledAndScaled.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaDisplayTiledAndScaled.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaDisplayTiledAndScaled not exported " +
+        sys.stderr.write("Warning - function pixaDisplayTiledAndScaled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12628,7 +12629,7 @@ class pixafunc2(object):
         leptonica.pixaDisplayOnColor.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixaDisplayOnColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaDisplayOnColor not exported " +
+        sys.stderr.write("Warning - function pixaDisplayOnColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12667,7 +12668,7 @@ class pixafunc2(object):
         leptonica.pixaDisplay.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaDisplay.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaDisplay not exported " +
+        sys.stderr.write("Warning - function pixaDisplay not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12705,7 +12706,7 @@ class pixafunc2(object):
         leptonica.pixaConvertTo32.argtypes = [ctypes.c_void_p]
         leptonica.pixaConvertTo32.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaConvertTo32 not exported " +
+        sys.stderr.write("Warning - function pixaConvertTo32 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12732,7 +12733,7 @@ class pixafunc2(object):
         leptonica.pixaConvertTo1.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaConvertTo1.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaConvertTo1 not exported " +
+        sys.stderr.write("Warning - function pixaConvertTo1 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12758,7 +12759,7 @@ class pixafunc2(object):
         leptonica.pixaaDisplay.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaaDisplay.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaDisplay not exported " +
+        sys.stderr.write("Warning - function pixaaDisplay not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12845,7 +12846,7 @@ class pixafunc1(object):
         leptonica.pixaMakeSizeIndicator.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaMakeSizeIndicator.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaMakeSizeIndicator not exported " +
+        sys.stderr.write("Warning - function pixaMakeSizeIndicator not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12888,7 +12889,7 @@ class pixafunc1(object):
         leptonica.pixSelectByPerimToAreaRatio.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixSelectByPerimToAreaRatio.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSelectByPerimToAreaRatio not exported " +
+        sys.stderr.write("Warning - function pixSelectByPerimToAreaRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12932,7 +12933,7 @@ class pixafunc1(object):
         leptonica.pixaSelectBySize.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixaSelectBySize.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaSelectBySize not exported " +
+        sys.stderr.write("Warning - function pixaSelectBySize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -12978,7 +12979,7 @@ class pixafunc1(object):
         leptonica.pixaSizeRange.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaSizeRange.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaSizeRange not exported " +
+        sys.stderr.write("Warning - function pixaSizeRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13008,7 +13009,7 @@ class pixafunc1(object):
         leptonica.pixaSortByIndex.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaSortByIndex.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaSortByIndex not exported " +
+        sys.stderr.write("Warning - function pixaSortByIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13036,7 +13037,7 @@ class pixafunc1(object):
         leptonica.pixaSelectWithIndicator.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaSelectWithIndicator.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaSelectWithIndicator not exported " +
+        sys.stderr.write("Warning - function pixaSelectWithIndicator not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13071,7 +13072,7 @@ class pixafunc1(object):
         leptonica.pixaRenderComponent.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaRenderComponent.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaRenderComponent not exported " +
+        sys.stderr.write("Warning - function pixaRenderComponent not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13106,7 +13107,7 @@ class pixafunc1(object):
         leptonica.pixaaSelectRange.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaaSelectRange.restype = lambda address: PIXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaSelectRange not exported " +
+        sys.stderr.write("Warning - function pixaaSelectRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13141,7 +13142,7 @@ class pixafunc1(object):
         leptonica.pixRemoveWithIndicator.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixRemoveWithIndicator.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRemoveWithIndicator not exported " +
+        sys.stderr.write("Warning - function pixRemoveWithIndicator not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13173,7 +13174,7 @@ class pixafunc1(object):
         leptonica.pixaGetDepthInfo.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaGetDepthInfo.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetDepthInfo not exported " +
+        sys.stderr.write("Warning - function pixaGetDepthInfo not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13201,7 +13202,7 @@ class pixafunc1(object):
         leptonica.pixaConvertToSameDepth.argtypes = [ctypes.c_void_p]
         leptonica.pixaConvertToSameDepth.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaConvertToSameDepth not exported " +
+        sys.stderr.write("Warning - function pixaConvertToSameDepth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13231,7 +13232,7 @@ class pixafunc1(object):
         leptonica.pixSelectByPerimSizeRatio.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixSelectByPerimSizeRatio.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSelectByPerimSizeRatio not exported " +
+        sys.stderr.write("Warning - function pixSelectByPerimSizeRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13276,7 +13277,7 @@ class pixafunc1(object):
         leptonica.pixaaScaleToSize.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaaScaleToSize.restype = lambda address: PIXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaScaleToSize not exported " +
+        sys.stderr.write("Warning - function pixaaScaleToSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13313,7 +13314,7 @@ class pixafunc1(object):
         leptonica.pixaaFlattenToPixa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaaFlattenToPixa.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaFlattenToPixa not exported " +
+        sys.stderr.write("Warning - function pixaaFlattenToPixa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13347,7 +13348,7 @@ class pixafunc1(object):
         leptonica.pixaSort2dByIndex.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaSort2dByIndex.restype = lambda address: PIXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaSort2dByIndex not exported " +
+        sys.stderr.write("Warning - function pixaSort2dByIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13375,7 +13376,7 @@ class pixafunc1(object):
         leptonica.pixaaScaleToSizeVar.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaaScaleToSizeVar.restype = lambda address: PIXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaScaleToSizeVar not exported " +
+        sys.stderr.write("Warning - function pixaaScaleToSizeVar not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13414,7 +13415,7 @@ class pixafunc1(object):
         leptonica.pixAddWithIndicator.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixAddWithIndicator.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixAddWithIndicator not exported " +
+        sys.stderr.write("Warning - function pixAddWithIndicator not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13447,7 +13448,7 @@ class pixafunc1(object):
         leptonica.pixaSelectByPerimToAreaRatio.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixaSelectByPerimToAreaRatio.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaSelectByPerimToAreaRatio not exported " +
+        sys.stderr.write("Warning - function pixaSelectByPerimToAreaRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13483,7 +13484,7 @@ class pixafunc1(object):
         leptonica.pixSelectBySize.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixSelectBySize.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSelectBySize not exported " +
+        sys.stderr.write("Warning - function pixSelectBySize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13532,7 +13533,7 @@ class pixafunc1(object):
         leptonica.pixaSelectByWidthHeightRatio.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixaSelectByWidthHeightRatio.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaSelectByWidthHeightRatio not exported " +
+        sys.stderr.write("Warning - function pixaSelectByWidthHeightRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13572,7 +13573,7 @@ class pixafunc1(object):
         leptonica.pixaGetRenderingDepth.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaGetRenderingDepth.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetRenderingDepth not exported " +
+        sys.stderr.write("Warning - function pixaGetRenderingDepth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13599,7 +13600,7 @@ class pixafunc1(object):
         leptonica.pixSelectByAreaFraction.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixSelectByAreaFraction.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSelectByAreaFraction not exported " +
+        sys.stderr.write("Warning - function pixSelectByAreaFraction not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13643,7 +13644,7 @@ class pixafunc1(object):
         leptonica.pixaSelectByPerimSizeRatio.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixaSelectByPerimSizeRatio.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaSelectByPerimSizeRatio not exported " +
+        sys.stderr.write("Warning - function pixaSelectByPerimSizeRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13679,7 +13680,7 @@ class pixafunc1(object):
         leptonica.pixSelectByWidthHeightRatio.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixSelectByWidthHeightRatio.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSelectByWidthHeightRatio not exported " +
+        sys.stderr.write("Warning - function pixSelectByWidthHeightRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13722,7 +13723,7 @@ class pixafunc1(object):
         leptonica.pixaSelectRange.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaSelectRange.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaSelectRange not exported " +
+        sys.stderr.write("Warning - function pixaSelectRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13757,7 +13758,7 @@ class pixafunc1(object):
         leptonica.pixaSelectByAreaFraction.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixaSelectByAreaFraction.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaSelectByAreaFraction not exported " +
+        sys.stderr.write("Warning - function pixaSelectByAreaFraction not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13797,7 +13798,7 @@ class pixafunc1(object):
         leptonica.pixaClipToPix.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaClipToPix.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaClipToPix not exported " +
+        sys.stderr.write("Warning - function pixaClipToPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13836,7 +13837,7 @@ class pixafunc1(object):
         leptonica.pixaAnyColormaps.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaAnyColormaps.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaAnyColormaps not exported " +
+        sys.stderr.write("Warning - function pixaAnyColormaps not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13862,7 +13863,7 @@ class pixafunc1(object):
         leptonica.pixaSort.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaSort.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaSort not exported " +
+        sys.stderr.write("Warning - function pixaSort not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13905,7 +13906,7 @@ class pixafunc1(object):
         leptonica.pixaAddBorderGeneral.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixaAddBorderGeneral.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaAddBorderGeneral not exported " +
+        sys.stderr.write("Warning - function pixaAddBorderGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -13956,7 +13957,7 @@ class pixafunc1(object):
         leptonica.pixaEqual.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaEqual.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaEqual not exported " +
+        sys.stderr.write("Warning - function pixaEqual not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14004,7 +14005,7 @@ class pixafunc1(object):
         leptonica.pixaScaleToSize.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaScaleToSize.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaScaleToSize not exported " +
+        sys.stderr.write("Warning - function pixaScaleToSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14035,7 +14036,7 @@ class pixafunc1(object):
         leptonica.pixaHasColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaHasColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaHasColor not exported " +
+        sys.stderr.write("Warning - function pixaHasColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14062,7 +14063,7 @@ class pixafunc1(object):
         leptonica.pixaaSizeRange.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaaSizeRange.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaSizeRange not exported " +
+        sys.stderr.write("Warning - function pixaaSizeRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14092,7 +14093,7 @@ class pixafunc1(object):
         leptonica.pixaBinSort.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaBinSort.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaBinSort not exported " +
+        sys.stderr.write("Warning - function pixaBinSort not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14165,7 +14166,7 @@ class correlscore(object):
         leptonica.pixCorrelationScoreShifted.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCorrelationScoreShifted.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCorrelationScoreShifted not exported " +
+        sys.stderr.write("Warning - function pixCorrelationScoreShifted not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14221,7 +14222,7 @@ class correlscore(object):
         leptonica.pixCorrelationScoreSimple.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCorrelationScoreSimple.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCorrelationScoreSimple not exported " +
+        sys.stderr.write("Warning - function pixCorrelationScoreSimple not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14269,7 +14270,7 @@ class correlscore(object):
         leptonica.pixCorrelationScore.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCorrelationScore.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCorrelationScore not exported " +
+        sys.stderr.write("Warning - function pixCorrelationScore not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14359,7 +14360,7 @@ class correlscore(object):
         leptonica.pixCorrelationScoreThresholded.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixCorrelationScoreThresholded.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCorrelationScoreThresholded not exported " +
+        sys.stderr.write("Warning - function pixCorrelationScoreThresholded not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14466,7 +14467,7 @@ class shear(object):
         leptonica.pixHShearCorner.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixHShearCorner.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixHShearCorner not exported " +
+        sys.stderr.write("Warning - function pixHShearCorner not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14501,7 +14502,7 @@ class shear(object):
         leptonica.pixVShearCorner.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixVShearCorner.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixVShearCorner not exported " +
+        sys.stderr.write("Warning - function pixVShearCorner not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14536,7 +14537,7 @@ class shear(object):
         leptonica.pixVShearLI.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixVShearLI.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixVShearLI not exported " +
+        sys.stderr.write("Warning - function pixVShearLI not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14579,7 +14580,7 @@ class shear(object):
         leptonica.pixVShearIP.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixVShearIP.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixVShearIP not exported " +
+        sys.stderr.write("Warning - function pixVShearIP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14617,7 +14618,7 @@ class shear(object):
         leptonica.pixHShearIP.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixHShearIP.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixHShearIP not exported " +
+        sys.stderr.write("Warning - function pixHShearIP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14655,7 +14656,7 @@ class shear(object):
         leptonica.pixVShear.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixVShear.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixVShear not exported " +
+        sys.stderr.write("Warning - function pixVShear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14714,7 +14715,7 @@ class shear(object):
         leptonica.pixHShearLI.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixHShearLI.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixHShearLI not exported " +
+        sys.stderr.write("Warning - function pixHShearLI not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14757,7 +14758,7 @@ class shear(object):
         leptonica.pixHShear.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixHShear.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixHShear not exported " +
+        sys.stderr.write("Warning - function pixHShear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14816,7 +14817,7 @@ class shear(object):
         leptonica.pixHShearCenter.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixHShearCenter.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixHShearCenter not exported " +
+        sys.stderr.write("Warning - function pixHShearCenter not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14851,7 +14852,7 @@ class shear(object):
         leptonica.pixVShearCenter.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixVShearCenter.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixVShearCenter not exported " +
+        sys.stderr.write("Warning - function pixVShearCenter not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14931,7 +14932,7 @@ class boxfunc3(object):
         leptonica.pixBlendBoxaRandom.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixBlendBoxaRandom.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlendBoxaRandom not exported " +
+        sys.stderr.write("Warning - function pixBlendBoxaRandom not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -14967,7 +14968,7 @@ class boxfunc3(object):
         leptonica.pixDrawBoxaRandom.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixDrawBoxaRandom.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDrawBoxaRandom not exported " +
+        sys.stderr.write("Warning - function pixDrawBoxaRandom not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15001,7 +15002,7 @@ class boxfunc3(object):
         leptonica.pixSetBlackOrWhiteBoxa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSetBlackOrWhiteBoxa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSetBlackOrWhiteBoxa not exported " +
+        sys.stderr.write("Warning - function pixSetBlackOrWhiteBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15029,7 +15030,7 @@ class boxfunc3(object):
         leptonica.pixMaskConnComp.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixMaskConnComp.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMaskConnComp not exported " +
+        sys.stderr.write("Warning - function pixMaskConnComp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15062,7 +15063,7 @@ class boxfunc3(object):
         leptonica.pixPaintBoxa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixPaintBoxa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixPaintBoxa not exported " +
+        sys.stderr.write("Warning - function pixPaintBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15105,7 +15106,7 @@ class boxfunc3(object):
         leptonica.pixDrawBoxa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixDrawBoxa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDrawBoxa not exported " +
+        sys.stderr.write("Warning - function pixDrawBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15140,7 +15141,7 @@ class boxfunc3(object):
         leptonica.makeMosaicStrips.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.makeMosaicStrips.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function makeMosaicStrips not exported " +
+        sys.stderr.write("Warning - function makeMosaicStrips not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15178,7 +15179,7 @@ class boxfunc3(object):
         leptonica.boxaaDisplay.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32, ctypes.c_uint32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaaDisplay.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaaDisplay not exported " +
+        sys.stderr.write("Warning - function boxaaDisplay not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15214,7 +15215,7 @@ class boxfunc3(object):
         leptonica.boxaCompareRegions.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaCompareRegions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaCompareRegions not exported " +
+        sys.stderr.write("Warning - function boxaCompareRegions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15268,7 +15269,7 @@ class boxfunc3(object):
         leptonica.pixMaskBoxa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixMaskBoxa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMaskBoxa not exported " +
+        sys.stderr.write("Warning - function pixMaskBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15313,7 +15314,7 @@ class boxfunc3(object):
         leptonica.pixSplitIntoBoxa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSplitIntoBoxa.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSplitIntoBoxa not exported " +
+        sys.stderr.write("Warning - function pixSplitIntoBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15369,7 +15370,7 @@ class boxfunc3(object):
         leptonica.pixPaintBoxaRandom.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixPaintBoxaRandom.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixPaintBoxaRandom not exported " +
+        sys.stderr.write("Warning - function pixPaintBoxaRandom not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15401,7 +15402,7 @@ class boxfunc3(object):
         leptonica.pixSplitComponentIntoBoxa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSplitComponentIntoBoxa.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSplitComponentIntoBoxa not exported " +
+        sys.stderr.write("Warning - function pixSplitComponentIntoBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15531,7 +15532,7 @@ class boxfunc2(object):
         leptonica.boxaTransform.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.boxaTransform.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaTransform not exported " +
+        sys.stderr.write("Warning - function boxaTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15564,7 +15565,7 @@ class boxfunc2(object):
         leptonica.boxaSortByIndex.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaSortByIndex.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaSortByIndex not exported " +
+        sys.stderr.write("Warning - function boxaSortByIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15590,7 +15591,7 @@ class boxfunc2(object):
         leptonica.boxTransformOrdered.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.boxTransformOrdered.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxTransformOrdered not exported " +
+        sys.stderr.write("Warning - function boxTransformOrdered not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15665,7 +15666,7 @@ class boxfunc2(object):
         leptonica.boxaBinSort.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxaBinSort.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaBinSort not exported " +
+        sys.stderr.write("Warning - function boxaBinSort not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15704,7 +15705,7 @@ class boxfunc2(object):
         leptonica.boxaGetAverageSize.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaGetAverageSize.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaGetAverageSize not exported " +
+        sys.stderr.write("Warning - function boxaGetAverageSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15732,7 +15733,7 @@ class boxfunc2(object):
         leptonica.boxaRotateOrth.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaRotateOrth.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaRotateOrth not exported " +
+        sys.stderr.write("Warning - function boxaRotateOrth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15765,7 +15766,7 @@ class boxfunc2(object):
         leptonica.boxaaFlattenToBoxa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaaFlattenToBoxa.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaaFlattenToBoxa not exported " +
+        sys.stderr.write("Warning - function boxaaFlattenToBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15804,7 +15805,7 @@ class boxfunc2(object):
         leptonica.boxaTransformOrdered.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.boxaTransformOrdered.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaTransformOrdered not exported " +
+        sys.stderr.write("Warning - function boxaTransformOrdered not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15862,7 +15863,7 @@ class boxfunc2(object):
         leptonica.boxaaGetExtent.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaaGetExtent.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaGetExtent not exported " +
+        sys.stderr.write("Warning - function boxaaGetExtent not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15904,7 +15905,7 @@ class boxfunc2(object):
         leptonica.boxaaAlignBox.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxaaAlignBox.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaAlignBox not exported " +
+        sys.stderr.write("Warning - function boxaaAlignBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15940,7 +15941,7 @@ class boxfunc2(object):
         leptonica.boxRotateOrth.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxRotateOrth.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxRotateOrth not exported " +
+        sys.stderr.write("Warning - function boxRotateOrth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -15975,7 +15976,7 @@ class boxfunc2(object):
         leptonica.boxaSort.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxaSort.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaSort not exported " +
+        sys.stderr.write("Warning - function boxaSort not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16011,7 +16012,7 @@ class boxfunc2(object):
         leptonica.boxaEncapsulateAligned.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaEncapsulateAligned.restype = lambda address: BOXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaEncapsulateAligned not exported " +
+        sys.stderr.write("Warning - function boxaEncapsulateAligned not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16044,7 +16045,7 @@ class boxfunc2(object):
         leptonica.boxaExtractAsPta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaExtractAsPta.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaExtractAsPta not exported " +
+        sys.stderr.write("Warning - function boxaExtractAsPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16084,7 +16085,7 @@ class boxfunc2(object):
         leptonica.boxaaFlattenAligned.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaaFlattenAligned.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaaFlattenAligned not exported " +
+        sys.stderr.write("Warning - function boxaaFlattenAligned not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16122,7 +16123,7 @@ class boxfunc2(object):
         leptonica.boxTransform.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.boxTransform.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxTransform not exported " +
+        sys.stderr.write("Warning - function boxTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16156,7 +16157,7 @@ class boxfunc2(object):
         leptonica.boxaSort2dByIndex.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaSort2dByIndex.restype = lambda address: BOXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaSort2dByIndex not exported " +
+        sys.stderr.write("Warning - function boxaSort2dByIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16182,7 +16183,7 @@ class boxfunc2(object):
         leptonica.boxaGetMedian.argtypes = [ctypes.c_void_p]
         leptonica.boxaGetMedian.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaGetMedian not exported " +
+        sys.stderr.write("Warning - function boxaGetMedian not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16210,7 +16211,7 @@ class boxfunc2(object):
         leptonica.boxaSort2d.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaSort2d.restype = lambda address: BOXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaSort2d not exported " +
+        sys.stderr.write("Warning - function boxaSort2d not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16272,7 +16273,7 @@ class boxfunc2(object):
         leptonica.boxaGetRankSize.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.boxaGetRankSize.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaGetRankSize not exported " +
+        sys.stderr.write("Warning - function boxaGetRankSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16312,7 +16313,7 @@ class boxfunc2(object):
         leptonica.boxaExtractAsNuma.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaExtractAsNuma.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaExtractAsNuma not exported " +
+        sys.stderr.write("Warning - function boxaExtractAsNuma not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16388,7 +16389,7 @@ class boxfunc1(object):
         leptonica.boxaJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaJoin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaJoin not exported " +
+        sys.stderr.write("Warning - function boxaJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16424,7 +16425,7 @@ class boxfunc1(object):
         leptonica.boxaSplitEvenOdd.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaSplitEvenOdd.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaSplitEvenOdd not exported " +
+        sys.stderr.write("Warning - function boxaSplitEvenOdd not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16460,7 +16461,7 @@ class boxfunc1(object):
         leptonica.boxaAdjustHeightToTarget.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaAdjustHeightToTarget.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaAdjustHeightToTarget not exported " +
+        sys.stderr.write("Warning - function boxaAdjustHeightToTarget not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16501,7 +16502,7 @@ class boxfunc1(object):
         leptonica.boxOverlapArea.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxOverlapArea.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxOverlapArea not exported " +
+        sys.stderr.write("Warning - function boxOverlapArea not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16528,7 +16529,7 @@ class boxfunc1(object):
         leptonica.boxaGetNearestToPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaGetNearestToPt.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaGetNearestToPt not exported " +
+        sys.stderr.write("Warning - function boxaGetNearestToPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16559,7 +16560,7 @@ class boxfunc1(object):
         leptonica.boxClipToRectangle.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxClipToRectangle.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxClipToRectangle not exported " +
+        sys.stderr.write("Warning - function boxClipToRectangle not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16592,7 +16593,7 @@ class boxfunc1(object):
         leptonica.boxGetCenter.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxGetCenter.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxGetCenter not exported " +
+        sys.stderr.write("Warning - function boxGetCenter not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16619,7 +16620,7 @@ class boxfunc1(object):
         leptonica.boxaSimilar.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxaSimilar.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaSimilar not exported " +
+        sys.stderr.write("Warning - function boxaSimilar not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16659,7 +16660,7 @@ class boxfunc1(object):
         leptonica.boxaIntersectsBox.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaIntersectsBox.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaIntersectsBox not exported " +
+        sys.stderr.write("Warning - function boxaIntersectsBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16690,7 +16691,7 @@ class boxfunc1(object):
         leptonica.boxaSetSide.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaSetSide.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaSetSide not exported " +
+        sys.stderr.write("Warning - function boxaSetSide not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16729,7 +16730,7 @@ class boxfunc1(object):
         leptonica.boxClipToRectangleParams.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxClipToRectangleParams.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxClipToRectangleParams not exported " +
+        sys.stderr.write("Warning - function boxClipToRectangleParams not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16778,7 +16779,7 @@ class boxfunc1(object):
         leptonica.boxContainsPt.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_void_p]
         leptonica.boxContainsPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxContainsPt not exported " +
+        sys.stderr.write("Warning - function boxContainsPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16807,7 +16808,7 @@ class boxfunc1(object):
         leptonica.boxBoundingRegion.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxBoundingRegion.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxBoundingRegion not exported " +
+        sys.stderr.write("Warning - function boxBoundingRegion not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16836,7 +16837,7 @@ class boxfunc1(object):
         leptonica.boxIntersects.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxIntersects.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxIntersects not exported " +
+        sys.stderr.write("Warning - function boxIntersects not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16864,7 +16865,7 @@ class boxfunc1(object):
         leptonica.boxOverlapFraction.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxOverlapFraction.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxOverlapFraction not exported " +
+        sys.stderr.write("Warning - function boxOverlapFraction not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16895,7 +16896,7 @@ class boxfunc1(object):
         leptonica.boxEqual.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxEqual.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxEqual not exported " +
+        sys.stderr.write("Warning - function boxEqual not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16923,7 +16924,7 @@ class boxfunc1(object):
         leptonica.boxaCombineOverlaps.argtypes = [ctypes.c_void_p]
         leptonica.boxaCombineOverlaps.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaCombineOverlaps not exported " +
+        sys.stderr.write("Warning - function boxaCombineOverlaps not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16961,7 +16962,7 @@ class boxfunc1(object):
         leptonica.boxaMergeEvenOdd.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaMergeEvenOdd.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaMergeEvenOdd not exported " +
+        sys.stderr.write("Warning - function boxaMergeEvenOdd not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -16996,7 +16997,7 @@ class boxfunc1(object):
         leptonica.boxaHandleOverlaps.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_void_p]
         leptonica.boxaHandleOverlaps.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaHandleOverlaps not exported " +
+        sys.stderr.write("Warning - function boxaHandleOverlaps not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17050,7 +17051,7 @@ class boxfunc1(object):
         leptonica.boxaClipToBox.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaClipToBox.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaClipToBox not exported " +
+        sys.stderr.write("Warning - function boxaClipToBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17081,7 +17082,7 @@ class boxfunc1(object):
         leptonica.boxaaJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaaJoin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaJoin not exported " +
+        sys.stderr.write("Warning - function boxaaJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17117,7 +17118,7 @@ class boxfunc1(object):
         leptonica.boxSeparationDistance.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxSeparationDistance.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxSeparationDistance not exported " +
+        sys.stderr.write("Warning - function boxSeparationDistance not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17152,7 +17153,7 @@ class boxfunc1(object):
         leptonica.boxaAdjustWidthToTarget.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaAdjustWidthToTarget.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaAdjustWidthToTarget not exported " +
+        sys.stderr.write("Warning - function boxaAdjustWidthToTarget not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17193,7 +17194,7 @@ class boxfunc1(object):
         leptonica.boxContains.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxContains.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxContains not exported " +
+        sys.stderr.write("Warning - function boxContains not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17221,7 +17222,7 @@ class boxfunc1(object):
         leptonica.boxOverlapRegion.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxOverlapRegion.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxOverlapRegion not exported " +
+        sys.stderr.write("Warning - function boxOverlapRegion not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17250,7 +17251,7 @@ class boxfunc1(object):
         leptonica.boxAdjustSides.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxAdjustSides.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxAdjustSides not exported " +
+        sys.stderr.write("Warning - function boxAdjustSides not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17295,7 +17296,7 @@ class boxfunc1(object):
         leptonica.boxaContainedInBox.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaContainedInBox.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaContainedInBox not exported " +
+        sys.stderr.write("Warning - function boxaContainedInBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17325,7 +17326,7 @@ class boxfunc1(object):
         leptonica.boxIntersectByLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxIntersectByLine.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxIntersectByLine not exported " +
+        sys.stderr.write("Warning - function boxIntersectByLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17367,7 +17368,7 @@ class boxfunc1(object):
         leptonica.boxRelocateOneSide.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxRelocateOneSide.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxRelocateOneSide not exported " +
+        sys.stderr.write("Warning - function boxRelocateOneSide not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17407,7 +17408,7 @@ class boxfunc1(object):
         leptonica.boxaEqual.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaEqual.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaEqual not exported " +
+        sys.stderr.write("Warning - function boxaEqual not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17455,7 +17456,7 @@ class boxfunc1(object):
         leptonica.boxSimilar.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxSimilar.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxSimilar not exported " +
+        sys.stderr.write("Warning - function boxSimilar not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17529,7 +17530,7 @@ class textops(object):
         leptonica.bmfGetWordWidths.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.bmfGetWordWidths.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function bmfGetWordWidths not exported " +
+        sys.stderr.write("Warning - function bmfGetWordWidths not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17558,7 +17559,7 @@ class textops(object):
         leptonica.splitStringToParagraphs.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.splitStringToParagraphs.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function splitStringToParagraphs not exported " +
+        sys.stderr.write("Warning - function splitStringToParagraphs not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17585,7 +17586,7 @@ class textops(object):
         leptonica.pixSetTextline.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSetTextline.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetTextline not exported " +
+        sys.stderr.write("Warning - function pixSetTextline not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17638,7 +17639,7 @@ class textops(object):
         leptonica.pixAddSingleTextblock.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixAddSingleTextblock.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddSingleTextblock not exported " +
+        sys.stderr.write("Warning - function pixAddSingleTextblock not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17688,7 +17689,7 @@ class textops(object):
         leptonica.bmfGetLineStrings.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.bmfGetLineStrings.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function bmfGetLineStrings not exported " +
+        sys.stderr.write("Warning - function bmfGetLineStrings not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17724,7 +17725,7 @@ class textops(object):
         leptonica.pixaAddTextline.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32]
         leptonica.pixaAddTextline.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaAddTextline not exported " +
+        sys.stderr.write("Warning - function pixaAddTextline not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17771,7 +17772,7 @@ class textops(object):
         leptonica.bmfGetStringWidth.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.bmfGetStringWidth.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function bmfGetStringWidth not exported " +
+        sys.stderr.write("Warning - function bmfGetStringWidth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17800,7 +17801,7 @@ class textops(object):
         leptonica.pixSetTextblock.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixSetTextblock.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetTextblock not exported " +
+        sys.stderr.write("Warning - function pixSetTextblock not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17855,7 +17856,7 @@ class textops(object):
         leptonica.pixaAddTextNumber.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32]
         leptonica.pixaAddTextNumber.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaAddTextNumber not exported " +
+        sys.stderr.write("Warning - function pixaAddTextNumber not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -17901,7 +17902,7 @@ class textops(object):
         leptonica.pixAddSingleTextline.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32]
         leptonica.pixAddSingleTextline.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddSingleTextline not exported " +
+        sys.stderr.write("Warning - function pixAddSingleTextline not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18093,7 +18094,7 @@ class colorquant2(object):
         leptonica.pixMedianCutQuantGeneral.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixMedianCutQuantGeneral.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMedianCutQuantGeneral not exported " +
+        sys.stderr.write("Warning - function pixMedianCutQuantGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18157,7 +18158,7 @@ class colorquant2(object):
         leptonica.pixMedianCutQuant.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixMedianCutQuant.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMedianCutQuant not exported " +
+        sys.stderr.write("Warning - function pixMedianCutQuant not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18187,7 +18188,7 @@ class colorquant2(object):
         leptonica.pixFewColorsMedianCutQuantMixed.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixFewColorsMedianCutQuantMixed.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFewColorsMedianCutQuantMixed not exported " +
+        sys.stderr.write("Warning - function pixFewColorsMedianCutQuantMixed not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18261,7 +18262,7 @@ class colorquant2(object):
         leptonica.pixMedianCutQuantMixed.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixMedianCutQuantMixed.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMedianCutQuantMixed not exported " +
+        sys.stderr.write("Warning - function pixMedianCutQuantMixed not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18326,7 +18327,7 @@ class colorquant2(object):
         leptonica.pixMedianCutHisto.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixMedianCutHisto.restype = ctypes.POINTER(ctypes.c_int32)
     except AttributeError:
-        os.stderr.write("Warning - function pixMedianCutHisto not exported " +
+        sys.stderr.write("Warning - function pixMedianCutHisto not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18451,7 +18452,7 @@ class colorquant1(object):
         leptonica.pixRemoveUnusedColors.argtypes = [ctypes.c_void_p]
         leptonica.pixRemoveUnusedColors.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRemoveUnusedColors not exported " +
+        sys.stderr.write("Warning - function pixRemoveUnusedColors not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18481,7 +18482,7 @@ class colorquant1(object):
         leptonica.pixFewColorsOctcubeQuant1.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixFewColorsOctcubeQuant1.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFewColorsOctcubeQuant1 not exported " +
+        sys.stderr.write("Warning - function pixFewColorsOctcubeQuant1 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18528,7 +18529,7 @@ class colorquant1(object):
         leptonica.getOctcubeIndexFromRGB.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.getOctcubeIndexFromRGB.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function getOctcubeIndexFromRGB not exported " +
+        sys.stderr.write("Warning - function getOctcubeIndexFromRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18562,7 +18563,7 @@ class colorquant1(object):
         leptonica.pixOctreeColorQuantGeneral.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.pixOctreeColorQuantGeneral.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOctreeColorQuantGeneral not exported " +
+        sys.stderr.write("Warning - function pixOctreeColorQuantGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18630,7 +18631,7 @@ class colorquant1(object):
         leptonica.pixFewColorsOctcubeQuant2.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixFewColorsOctcubeQuant2.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFewColorsOctcubeQuant2 not exported " +
+        sys.stderr.write("Warning - function pixFewColorsOctcubeQuant2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18693,7 +18694,7 @@ class colorquant1(object):
         leptonica.pixcmapToOctcubeLUT.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixcmapToOctcubeLUT.restype = ctypes.POINTER(ctypes.c_int32)
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapToOctcubeLUT not exported " +
+        sys.stderr.write("Warning - function pixcmapToOctcubeLUT not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18756,7 +18757,7 @@ class colorquant1(object):
         leptonica.makeRGBToIndexTables.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.makeRGBToIndexTables.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function makeRGBToIndexTables not exported " +
+        sys.stderr.write("Warning - function makeRGBToIndexTables not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18804,7 +18805,7 @@ class colorquant1(object):
         leptonica.pixFixedOctcubeQuantGenRGB.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixFixedOctcubeQuantGenRGB.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFixedOctcubeQuantGenRGB not exported " +
+        sys.stderr.write("Warning - function pixFixedOctcubeQuantGenRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18837,7 +18838,7 @@ class colorquant1(object):
         leptonica.pixNumberOccupiedOctcubes.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p]
         leptonica.pixNumberOccupiedOctcubes.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixNumberOccupiedOctcubes not exported " +
+        sys.stderr.write("Warning - function pixNumberOccupiedOctcubes not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18877,7 +18878,7 @@ class colorquant1(object):
         leptonica.pixOctreeQuantByPopulation.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOctreeQuantByPopulation.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOctreeQuantByPopulation not exported " +
+        sys.stderr.write("Warning - function pixOctreeQuantByPopulation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -18950,7 +18951,7 @@ class colorquant1(object):
         leptonica.pixOctcubeQuantFromCmap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOctcubeQuantFromCmap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOctcubeQuantFromCmap not exported " +
+        sys.stderr.write("Warning - function pixOctcubeQuantFromCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19032,7 +19033,7 @@ class colorquant1(object):
         leptonica.pixOctcubeHistogram.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixOctcubeHistogram.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOctcubeHistogram not exported " +
+        sys.stderr.write("Warning - function pixOctcubeHistogram not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19063,7 +19064,7 @@ class colorquant1(object):
         leptonica.pixQuantFromCmap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixQuantFromCmap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixQuantFromCmap not exported " +
+        sys.stderr.write("Warning - function pixQuantFromCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19104,7 +19105,7 @@ class colorquant1(object):
         leptonica.pixFixedOctcubeQuant256.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixFixedOctcubeQuant256.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFixedOctcubeQuant256 not exported " +
+        sys.stderr.write("Warning - function pixFixedOctcubeQuant256 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19183,7 +19184,7 @@ class colorquant1(object):
         leptonica.pixOctreeColorQuant.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOctreeColorQuant.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOctreeColorQuant not exported " +
+        sys.stderr.write("Warning - function pixOctreeColorQuant not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19459,7 +19460,7 @@ class colorquant1(object):
         leptonica.pixFewColorsOctcubeQuantMixed.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixFewColorsOctcubeQuantMixed.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFewColorsOctcubeQuantMixed not exported " +
+        sys.stderr.write("Warning - function pixFewColorsOctcubeQuantMixed not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19541,7 +19542,7 @@ class colorquant1(object):
         leptonica.pixOctcubeQuantMixedWithGray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOctcubeQuantMixedWithGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOctcubeQuantMixedWithGray not exported " +
+        sys.stderr.write("Warning - function pixOctcubeQuantMixedWithGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19589,7 +19590,7 @@ class colorquant1(object):
         leptonica.pixOctreeQuantNumColors.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOctreeQuantNumColors.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOctreeQuantNumColors not exported " +
+        sys.stderr.write("Warning - function pixOctreeQuantNumColors not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19696,7 +19697,7 @@ class colorquant1(object):
         leptonica.pixOctcubeQuantFromCmapLUT.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixOctcubeQuantFromCmapLUT.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOctcubeQuantFromCmapLUT not exported " +
+        sys.stderr.write("Warning - function pixOctcubeQuantFromCmapLUT not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19837,7 +19838,7 @@ class rank(object):
         leptonica.pixMedianFilter.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixMedianFilter.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMedianFilter not exported " +
+        sys.stderr.write("Warning - function pixMedianFilter not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19864,7 +19865,7 @@ class rank(object):
         leptonica.pixRankFilter.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.pixRankFilter.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRankFilter not exported " +
+        sys.stderr.write("Warning - function pixRankFilter not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19903,7 +19904,7 @@ class rank(object):
         leptonica.pixRankFilterRGB.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.pixRankFilterRGB.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRankFilterRGB not exported " +
+        sys.stderr.write("Warning - function pixRankFilterRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19943,7 +19944,7 @@ class rank(object):
         leptonica.pixRankFilterWithScaling.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.pixRankFilterWithScaling.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRankFilterWithScaling not exported " +
+        sys.stderr.write("Warning - function pixRankFilterWithScaling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -19982,7 +19983,7 @@ class rank(object):
         leptonica.pixRankFilterGray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.pixRankFilterGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRankFilterGray not exported " +
+        sys.stderr.write("Warning - function pixRankFilterGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20099,7 +20100,7 @@ class fmorphauto(object):
         leptonica.fmorphautogen.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.fmorphautogen.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fmorphautogen not exported " +
+        sys.stderr.write("Warning - function fmorphautogen not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20132,7 +20133,7 @@ class fmorphauto(object):
         leptonica.fmorphautogen1.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.fmorphautogen1.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fmorphautogen1 not exported " +
+        sys.stderr.write("Warning - function fmorphautogen1 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20200,7 +20201,7 @@ class rotate(object):
         leptonica.pixRotateBySampling.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixRotateBySampling.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateBySampling not exported " +
+        sys.stderr.write("Warning - function pixRotateBySampling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20238,7 +20239,7 @@ class rotate(object):
         leptonica.pixEmbedForRotation.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixEmbedForRotation.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixEmbedForRotation not exported " +
+        sys.stderr.write("Warning - function pixEmbedForRotation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20300,7 +20301,7 @@ class rotate(object):
         leptonica.pixRotate.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRotate.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotate not exported " +
+        sys.stderr.write("Warning - function pixRotate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20353,7 +20354,7 @@ class rotate(object):
         leptonica.pixRotateWithAlpha.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixRotateWithAlpha.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateWithAlpha not exported " +
+        sys.stderr.write("Warning - function pixRotateWithAlpha not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20422,7 +20423,7 @@ class rotate(object):
         leptonica.pixRotateBinaryNice.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixRotateBinaryNice.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateBinaryNice not exported " +
+        sys.stderr.write("Warning - function pixRotateBinaryNice not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20500,7 +20501,7 @@ class regutils(object):
         leptonica.regTestCompareSimilarPix.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.regTestCompareSimilarPix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function regTestCompareSimilarPix not exported " +
+        sys.stderr.write("Warning - function regTestCompareSimilarPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20548,7 +20549,7 @@ class regutils(object):
         leptonica.regTestCleanup.argtypes = [ctypes.c_void_p]
         leptonica.regTestCleanup.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function regTestCleanup not exported " +
+        sys.stderr.write("Warning - function regTestCleanup not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20576,7 +20577,7 @@ class regutils(object):
         leptonica.regTestCompareStrings.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p, ctypes.c_size_t]
         leptonica.regTestCompareStrings.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function regTestCompareStrings not exported " +
+        sys.stderr.write("Warning - function regTestCompareStrings not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20608,7 +20609,7 @@ class regutils(object):
         leptonica.regTestCompareFiles.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.regTestCompareFiles.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function regTestCompareFiles not exported " +
+        sys.stderr.write("Warning - function regTestCompareFiles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20643,7 +20644,7 @@ class regutils(object):
         leptonica.regTestSetup.argtypes = [ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.regTestSetup.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function regTestSetup not exported " +
+        sys.stderr.write("Warning - function regTestSetup not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20699,7 +20700,7 @@ class regutils(object):
         leptonica.regTestCheckFile.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.regTestCheckFile.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function regTestCheckFile not exported " +
+        sys.stderr.write("Warning - function regTestCheckFile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20737,7 +20738,7 @@ class regutils(object):
         leptonica.regTestComparePix.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.regTestComparePix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function regTestComparePix not exported " +
+        sys.stderr.write("Warning - function regTestComparePix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20768,7 +20769,7 @@ class regutils(object):
         leptonica.regTestCompareValues.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.regTestCompareValues.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function regTestCompareValues not exported " +
+        sys.stderr.write("Warning - function regTestCompareValues not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20798,7 +20799,7 @@ class regutils(object):
         leptonica.regTestWritePixAndCheck.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.regTestWritePixAndCheck.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function regTestWritePixAndCheck not exported " +
+        sys.stderr.write("Warning - function regTestWritePixAndCheck not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20863,7 +20864,7 @@ class pageseg(object):
         leptonica.pixGenHalftoneMask.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGenHalftoneMask.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGenHalftoneMask not exported " +
+        sys.stderr.write("Warning - function pixGenHalftoneMask not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20893,7 +20894,7 @@ class pageseg(object):
         leptonica.pixSplitComponentWithProfile.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixSplitComponentWithProfile.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSplitComponentWithProfile not exported " +
+        sys.stderr.write("Warning - function pixSplitComponentWithProfile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20930,7 +20931,7 @@ class pageseg(object):
         leptonica.pixGenTextblockMask.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGenTextblockMask.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGenTextblockMask not exported " +
+        sys.stderr.write("Warning - function pixGenTextblockMask not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -20967,7 +20968,7 @@ class pageseg(object):
         leptonica.pixFindPageForeground.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixFindPageForeground.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFindPageForeground not exported " +
+        sys.stderr.write("Warning - function pixFindPageForeground not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21030,7 +21031,7 @@ class pageseg(object):
         leptonica.pixGenTextlineMask.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGenTextlineMask.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGenTextlineMask not exported " +
+        sys.stderr.write("Warning - function pixGenTextlineMask not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21066,7 +21067,7 @@ class pageseg(object):
         leptonica.pixGetRegionsBinary.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGetRegionsBinary.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRegionsBinary not exported " +
+        sys.stderr.write("Warning - function pixGetRegionsBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21104,7 +21105,7 @@ class pageseg(object):
         leptonica.pixSplitIntoCharacters.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSplitIntoCharacters.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSplitIntoCharacters not exported " +
+        sys.stderr.write("Warning - function pixSplitIntoCharacters not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21334,7 +21335,7 @@ class list(object):
         leptonica.listJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.listJoin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function listJoin not exported " +
+        sys.stderr.write("Warning - function listJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21364,7 +21365,7 @@ class list(object):
         leptonica.listInsertAfter.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.listInsertAfter.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function listInsertAfter not exported " +
+        sys.stderr.write("Warning - function listInsertAfter not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21404,7 +21405,7 @@ class list(object):
         leptonica.listAddToTail.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.listAddToTail.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function listAddToTail not exported " +
+        sys.stderr.write("Warning - function listAddToTail not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21445,7 +21446,7 @@ class list(object):
         leptonica.listFindElement.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.listFindElement.restype = lambda address: DLLIST(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function listFindElement not exported " +
+        sys.stderr.write("Warning - function listFindElement not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21480,7 +21481,7 @@ class list(object):
         leptonica.listRemoveElement.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.listRemoveElement.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function listRemoveElement not exported " +
+        sys.stderr.write("Warning - function listRemoveElement not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21512,7 +21513,7 @@ class list(object):
         leptonica.listAddToHead.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.listAddToHead.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function listAddToHead not exported " +
+        sys.stderr.write("Warning - function listAddToHead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21544,7 +21545,7 @@ class list(object):
         leptonica.listFindTail.argtypes = [ctypes.c_void_p]
         leptonica.listFindTail.restype = lambda address: DLLIST(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function listFindTail not exported " +
+        sys.stderr.write("Warning - function listFindTail not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21568,7 +21569,7 @@ class list(object):
         leptonica.listReverse.argtypes = [ctypes.c_void_p]
         leptonica.listReverse.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function listReverse not exported " +
+        sys.stderr.write("Warning - function listReverse not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21595,7 +21596,7 @@ class list(object):
         leptonica.listInsertBefore.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.listInsertBefore.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function listInsertBefore not exported " +
+        sys.stderr.write("Warning - function listInsertBefore not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21635,7 +21636,7 @@ class list(object):
         leptonica.listRemoveFromTail.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.listRemoveFromTail.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function listRemoveFromTail not exported " +
+        sys.stderr.write("Warning - function listRemoveFromTail not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21674,7 +21675,7 @@ class list(object):
         leptonica.listGetCount.argtypes = [ctypes.c_void_p]
         leptonica.listGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function listGetCount not exported " +
+        sys.stderr.write("Warning - function listGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21698,7 +21699,7 @@ class list(object):
         leptonica.listRemoveFromHead.argtypes = [ctypes.c_void_p]
         leptonica.listRemoveFromHead.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function listRemoveFromHead not exported " +
+        sys.stderr.write("Warning - function listRemoveFromHead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21728,7 +21729,7 @@ class list(object):
         leptonica.listDestroy.argtypes = [ctypes.c_void_p]
         leptonica.listDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function listDestroy not exported " +
+        sys.stderr.write("Warning - function listDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21900,7 +21901,7 @@ class flipdetect(object):
         leptonica.pixUpDownDetect.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixUpDownDetect.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixUpDownDetect not exported " +
+        sys.stderr.write("Warning - function pixUpDownDetect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21940,7 +21941,7 @@ class flipdetect(object):
         leptonica.pixMirrorDetect.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixMirrorDetect.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixMirrorDetect not exported " +
+        sys.stderr.write("Warning - function pixMirrorDetect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -21998,7 +21999,7 @@ class flipdetect(object):
         leptonica.pixUpDownDetectDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixUpDownDetectDwa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixUpDownDetectDwa not exported " +
+        sys.stderr.write("Warning - function pixUpDownDetectDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22040,7 +22041,7 @@ class flipdetect(object):
         leptonica.makeOrientDecision.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_int32]
         leptonica.makeOrientDecision.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function makeOrientDecision not exported " +
+        sys.stderr.write("Warning - function makeOrientDecision not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22090,7 +22091,7 @@ class flipdetect(object):
         leptonica.pixOrientDetect.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOrientDetect.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixOrientDetect not exported " +
+        sys.stderr.write("Warning - function pixOrientDetect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22168,7 +22169,7 @@ class flipdetect(object):
         leptonica.pixOrientDetectDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOrientDetectDwa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixOrientDetectDwa not exported " +
+        sys.stderr.write("Warning - function pixOrientDetectDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22209,7 +22210,7 @@ class flipdetect(object):
         leptonica.pixUpDownDetectGeneral.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixUpDownDetectGeneral.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixUpDownDetectGeneral not exported " +
+        sys.stderr.write("Warning - function pixUpDownDetectGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22267,7 +22268,7 @@ class flipdetect(object):
         leptonica.pixMirrorDetectDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixMirrorDetectDwa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixMirrorDetectDwa not exported " +
+        sys.stderr.write("Warning - function pixMirrorDetectDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22302,7 +22303,7 @@ class flipdetect(object):
         leptonica.pixUpDownDetectGeneralDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixUpDownDetectGeneralDwa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixUpDownDetectGeneralDwa not exported " +
+        sys.stderr.write("Warning - function pixUpDownDetectGeneralDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22403,7 +22404,7 @@ class fhmtauto(object):
         leptonica.fhmtautogen2.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.fhmtautogen2.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fhmtautogen2 not exported " +
+        sys.stderr.write("Warning - function fhmtautogen2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22442,7 +22443,7 @@ class fhmtauto(object):
         leptonica.fhmtautogen.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.fhmtautogen.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fhmtautogen not exported " +
+        sys.stderr.write("Warning - function fhmtautogen not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22475,7 +22476,7 @@ class fhmtauto(object):
         leptonica.fhmtautogen1.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.fhmtautogen1.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fhmtautogen1 not exported " +
+        sys.stderr.write("Warning - function fhmtautogen1 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22544,7 +22545,7 @@ class morphseq(object):
         leptonica.pixColorMorphSequence.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixColorMorphSequence.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixColorMorphSequence not exported " +
+        sys.stderr.write("Warning - function pixColorMorphSequence not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22606,7 +22607,7 @@ class morphseq(object):
         leptonica.pixMorphCompSequence.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixMorphCompSequence.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMorphCompSequence not exported " +
+        sys.stderr.write("Warning - function pixMorphCompSequence not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22667,7 +22668,7 @@ class morphseq(object):
         leptonica.pixGrayMorphSequence.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGrayMorphSequence.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGrayMorphSequence not exported " +
+        sys.stderr.write("Warning - function pixGrayMorphSequence not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22734,7 +22735,7 @@ class morphseq(object):
         leptonica.pixMorphSequence.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixMorphSequence.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMorphSequence not exported " +
+        sys.stderr.write("Warning - function pixMorphSequence not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22824,7 +22825,7 @@ class morphseq(object):
         leptonica.pixMorphCompSequenceDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixMorphCompSequenceDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMorphCompSequenceDwa not exported " +
+        sys.stderr.write("Warning - function pixMorphCompSequenceDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22866,7 +22867,7 @@ class morphseq(object):
         leptonica.morphSequenceVerify.argtypes = [ctypes.c_void_p]
         leptonica.morphSequenceVerify.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function morphSequenceVerify not exported " +
+        sys.stderr.write("Warning - function morphSequenceVerify not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -22896,7 +22897,7 @@ class morphseq(object):
         leptonica.pixMorphSequenceDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixMorphSequenceDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMorphSequenceDwa not exported " +
+        sys.stderr.write("Warning - function pixMorphSequenceDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23025,7 +23026,7 @@ class enhance(object):
         leptonica.pixGammaTRCMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGammaTRCMasked.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGammaTRCMasked not exported " +
+        sys.stderr.write("Warning - function pixGammaTRCMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23065,7 +23066,7 @@ class enhance(object):
         leptonica.pixContrastTRCMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixContrastTRCMasked.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixContrastTRCMasked not exported " +
+        sys.stderr.write("Warning - function pixContrastTRCMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23101,7 +23102,7 @@ class enhance(object):
         leptonica.pixUnsharpMaskingGray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.pixUnsharpMaskingGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixUnsharpMaskingGray not exported " +
+        sys.stderr.write("Warning - function pixUnsharpMaskingGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23137,7 +23138,7 @@ class enhance(object):
         leptonica.pixUnsharpMasking.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.pixUnsharpMasking.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixUnsharpMasking not exported " +
+        sys.stderr.write("Warning - function pixUnsharpMasking not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23173,7 +23174,7 @@ class enhance(object):
         leptonica.pixTRCMap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixTRCMap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixTRCMap not exported " +
+        sys.stderr.write("Warning - function pixTRCMap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23212,7 +23213,7 @@ class enhance(object):
         leptonica.pixUnsharpMaskingGrayFast.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixUnsharpMaskingGrayFast.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixUnsharpMaskingGrayFast not exported " +
+        sys.stderr.write("Warning - function pixUnsharpMaskingGrayFast not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23247,7 +23248,7 @@ class enhance(object):
         leptonica.numaEqualizeTRC.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.numaEqualizeTRC.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaEqualizeTRC not exported " +
+        sys.stderr.write("Warning - function numaEqualizeTRC not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23283,7 +23284,7 @@ class enhance(object):
         leptonica.numaGammaTRC.argtypes = [ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.numaGammaTRC.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaGammaTRC not exported " +
+        sys.stderr.write("Warning - function numaGammaTRC not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23320,7 +23321,7 @@ class enhance(object):
         leptonica.pixGammaTRCWithAlpha.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGammaTRCWithAlpha.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGammaTRCWithAlpha not exported " +
+        sys.stderr.write("Warning - function pixGammaTRCWithAlpha not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23357,7 +23358,7 @@ class enhance(object):
         leptonica.pixModifyBrightness.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixModifyBrightness.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixModifyBrightness not exported " +
+        sys.stderr.write("Warning - function pixModifyBrightness not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23396,7 +23397,7 @@ class enhance(object):
         leptonica.pixUnsharpMaskingGray1D.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixUnsharpMaskingGray1D.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixUnsharpMaskingGray1D not exported " +
+        sys.stderr.write("Warning - function pixUnsharpMaskingGray1D not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23431,7 +23432,7 @@ class enhance(object):
         leptonica.pixHalfEdgeByBandpass.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixHalfEdgeByBandpass.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixHalfEdgeByBandpass not exported " +
+        sys.stderr.write("Warning - function pixHalfEdgeByBandpass not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23483,7 +23484,7 @@ class enhance(object):
         leptonica.pixModifyHue.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixModifyHue.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixModifyHue not exported " +
+        sys.stderr.write("Warning - function pixModifyHue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23523,7 +23524,7 @@ class enhance(object):
         leptonica.pixGammaTRC.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGammaTRC.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGammaTRC not exported " +
+        sys.stderr.write("Warning - function pixGammaTRC not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23584,7 +23585,7 @@ class enhance(object):
         leptonica.pixEqualizeTRC.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixEqualizeTRC.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixEqualizeTRC not exported " +
+        sys.stderr.write("Warning - function pixEqualizeTRC not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23636,7 +23637,7 @@ class enhance(object):
         leptonica.pixMeasureSaturation.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixMeasureSaturation.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixMeasureSaturation not exported " +
+        sys.stderr.write("Warning - function pixMeasureSaturation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23664,7 +23665,7 @@ class enhance(object):
         leptonica.pixModifySaturation.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixModifySaturation.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixModifySaturation not exported " +
+        sys.stderr.write("Warning - function pixModifySaturation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23703,7 +23704,7 @@ class enhance(object):
         leptonica.pixUnsharpMaskingGray2D.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.pixUnsharpMaskingGray2D.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixUnsharpMaskingGray2D not exported " +
+        sys.stderr.write("Warning - function pixUnsharpMaskingGray2D not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23737,7 +23738,7 @@ class enhance(object):
         leptonica.numaContrastTRC.argtypes = [ctypes.c_float]
         leptonica.numaContrastTRC.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaContrastTRC not exported " +
+        sys.stderr.write("Warning - function numaContrastTRC not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23769,7 +23770,7 @@ class enhance(object):
         leptonica.pixContrastTRC.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixContrastTRC.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixContrastTRC not exported " +
+        sys.stderr.write("Warning - function pixContrastTRC not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23816,7 +23817,7 @@ class enhance(object):
         leptonica.pixUnsharpMaskingFast.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixUnsharpMaskingFast.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixUnsharpMaskingFast not exported " +
+        sys.stderr.write("Warning - function pixUnsharpMaskingFast not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -23873,7 +23874,7 @@ class enhance(object):
         leptonica.pixColorShiftRGB.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.pixColorShiftRGB.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixColorShiftRGB not exported " +
+        sys.stderr.write("Warning - function pixColorShiftRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24023,7 +24024,7 @@ class adaptmap(object):
         leptonica.pixBackgroundNormGrayArrayMorph.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixBackgroundNormGrayArrayMorph.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixBackgroundNormGrayArrayMorph not exported " +
+        sys.stderr.write("Warning - function pixBackgroundNormGrayArrayMorph not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24063,7 +24064,7 @@ class adaptmap(object):
         leptonica.pixContrastNorm.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixContrastNorm.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixContrastNorm not exported " +
+        sys.stderr.write("Warning - function pixContrastNorm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24124,7 +24125,7 @@ class adaptmap(object):
         leptonica.pixBackgroundNormRGBArrays.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixBackgroundNormRGBArrays.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixBackgroundNormRGBArrays not exported " +
+        sys.stderr.write("Warning - function pixBackgroundNormRGBArrays not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24177,7 +24178,7 @@ class adaptmap(object):
         leptonica.pixApplyInvBackgroundRGBMap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixApplyInvBackgroundRGBMap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixApplyInvBackgroundRGBMap not exported " +
+        sys.stderr.write("Warning - function pixApplyInvBackgroundRGBMap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24211,7 +24212,7 @@ class adaptmap(object):
         leptonica.pixThresholdSpreadNorm.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixThresholdSpreadNorm.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixThresholdSpreadNorm not exported " +
+        sys.stderr.write("Warning - function pixThresholdSpreadNorm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24279,7 +24280,7 @@ class adaptmap(object):
         leptonica.pixGlobalNormNoSatRGB.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.pixGlobalNormNoSatRGB.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGlobalNormNoSatRGB not exported " +
+        sys.stderr.write("Warning - function pixGlobalNormNoSatRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24334,7 +24335,7 @@ class adaptmap(object):
         leptonica.pixBackgroundNormRGBArraysMorph.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixBackgroundNormRGBArraysMorph.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixBackgroundNormRGBArraysMorph not exported " +
+        sys.stderr.write("Warning - function pixBackgroundNormRGBArraysMorph not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24378,7 +24379,7 @@ class adaptmap(object):
         leptonica.pixBackgroundNormFlex.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBackgroundNormFlex.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBackgroundNormFlex not exported " +
+        sys.stderr.write("Warning - function pixBackgroundNormFlex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24428,7 +24429,7 @@ class adaptmap(object):
         leptonica.pixMinMaxTiles.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixMinMaxTiles.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixMinMaxTiles not exported " +
+        sys.stderr.write("Warning - function pixMinMaxTiles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24470,7 +24471,7 @@ class adaptmap(object):
         leptonica.pixExtendByReplication.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixExtendByReplication.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixExtendByReplication not exported " +
+        sys.stderr.write("Warning - function pixExtendByReplication not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24501,7 +24502,7 @@ class adaptmap(object):
         leptonica.pixSetLowContrast.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSetLowContrast.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetLowContrast not exported " +
+        sys.stderr.write("Warning - function pixSetLowContrast not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24539,7 +24540,7 @@ class adaptmap(object):
         leptonica.pixBackgroundNormSimple.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixBackgroundNormSimple.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBackgroundNormSimple not exported " +
+        sys.stderr.write("Warning - function pixBackgroundNormSimple not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24573,7 +24574,7 @@ class adaptmap(object):
         leptonica.pixBackgroundNormGrayArray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixBackgroundNormGrayArray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixBackgroundNormGrayArray not exported " +
+        sys.stderr.write("Warning - function pixBackgroundNormGrayArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24620,7 +24621,7 @@ class adaptmap(object):
         leptonica.pixGetBackgroundRGBMapMorph.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetBackgroundRGBMapMorph.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetBackgroundRGBMapMorph not exported " +
+        sys.stderr.write("Warning - function pixGetBackgroundRGBMapMorph not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24657,7 +24658,7 @@ class adaptmap(object):
         leptonica.pixBackgroundNormMorph.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBackgroundNormMorph.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBackgroundNormMorph not exported " +
+        sys.stderr.write("Warning - function pixBackgroundNormMorph not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24716,7 +24717,7 @@ class adaptmap(object):
         leptonica.pixLinearTRCTiled.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixLinearTRCTiled.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixLinearTRCTiled not exported " +
+        sys.stderr.write("Warning - function pixLinearTRCTiled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24760,7 +24761,7 @@ class adaptmap(object):
         leptonica.pixSmoothConnectedRegions.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSmoothConnectedRegions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSmoothConnectedRegions not exported " +
+        sys.stderr.write("Warning - function pixSmoothConnectedRegions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24798,7 +24799,7 @@ class adaptmap(object):
         leptonica.pixApplyVariableGrayMap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixApplyVariableGrayMap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixApplyVariableGrayMap not exported " +
+        sys.stderr.write("Warning - function pixApplyVariableGrayMap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24842,7 +24843,7 @@ class adaptmap(object):
         leptonica.pixGetBackgroundRGBMap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetBackgroundRGBMap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetBackgroundRGBMap not exported " +
+        sys.stderr.write("Warning - function pixGetBackgroundRGBMap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24888,7 +24889,7 @@ class adaptmap(object):
         leptonica.pixGlobalNormRGB.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGlobalNormRGB.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGlobalNormRGB not exported " +
+        sys.stderr.write("Warning - function pixGlobalNormRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24943,7 +24944,7 @@ class adaptmap(object):
         leptonica.pixApplyInvBackgroundGrayMap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixApplyInvBackgroundGrayMap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixApplyInvBackgroundGrayMap not exported " +
+        sys.stderr.write("Warning - function pixApplyInvBackgroundGrayMap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -24973,7 +24974,7 @@ class adaptmap(object):
         leptonica.pixGetBackgroundGrayMapMorph.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGetBackgroundGrayMapMorph.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetBackgroundGrayMapMorph not exported " +
+        sys.stderr.write("Warning - function pixGetBackgroundGrayMapMorph not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25006,7 +25007,7 @@ class adaptmap(object):
         leptonica.pixGetBackgroundGrayMap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGetBackgroundGrayMap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetBackgroundGrayMap not exported " +
+        sys.stderr.write("Warning - function pixGetBackgroundGrayMap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25047,7 +25048,7 @@ class adaptmap(object):
         leptonica.pixBackgroundNorm.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBackgroundNorm.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBackgroundNorm not exported " +
+        sys.stderr.write("Warning - function pixBackgroundNorm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25130,7 +25131,7 @@ class adaptmap(object):
         leptonica.pixGetInvBackgroundMap.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGetInvBackgroundMap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetInvBackgroundMap not exported " +
+        sys.stderr.write("Warning - function pixGetInvBackgroundMap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25165,7 +25166,7 @@ class adaptmap(object):
         leptonica.pixFillMapHoles.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixFillMapHoles.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFillMapHoles not exported " +
+        sys.stderr.write("Warning - function pixFillMapHoles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25276,7 +25277,7 @@ class kernel(object):
         leptonica.kernelGetParameters.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.kernelGetParameters.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function kernelGetParameters not exported " +
+        sys.stderr.write("Warning - function kernelGetParameters not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25305,7 +25306,7 @@ class kernel(object):
         leptonica.kernelReadStream.argtypes = [ctypes.c_void_p]
         leptonica.kernelReadStream.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function kernelReadStream not exported " +
+        sys.stderr.write("Warning - function kernelReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25329,7 +25330,7 @@ class kernel(object):
         leptonica.kernelGetElement.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.kernelGetElement.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function kernelGetElement not exported " +
+        sys.stderr.write("Warning - function kernelGetElement not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25359,7 +25360,7 @@ class kernel(object):
         leptonica.kernelCopy.argtypes = [ctypes.c_void_p]
         leptonica.kernelCopy.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function kernelCopy not exported " +
+        sys.stderr.write("Warning - function kernelCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25383,7 +25384,7 @@ class kernel(object):
         leptonica.kernelDestroy.argtypes = [ctypes.c_void_p]
         leptonica.kernelDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function kernelDestroy not exported " +
+        sys.stderr.write("Warning - function kernelDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25407,7 +25408,7 @@ class kernel(object):
         leptonica.kernelNormalize.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.kernelNormalize.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function kernelNormalize not exported " +
+        sys.stderr.write("Warning - function kernelNormalize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25439,7 +25440,7 @@ class kernel(object):
         leptonica.makeGaussianKernelSep.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.makeGaussianKernelSep.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function makeGaussianKernelSep not exported " +
+        sys.stderr.write("Warning - function makeGaussianKernelSep not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25484,7 +25485,7 @@ class kernel(object):
         leptonica.makeFlatKernel.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.makeFlatKernel.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function makeFlatKernel not exported " +
+        sys.stderr.write("Warning - function makeFlatKernel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25521,7 +25522,7 @@ class kernel(object):
         leptonica.makeDoGKernel.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.makeDoGKernel.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function makeDoGKernel not exported " +
+        sys.stderr.write("Warning - function makeDoGKernel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25566,7 +25567,7 @@ class kernel(object):
         leptonica.kernelWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.kernelWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function kernelWrite not exported " +
+        sys.stderr.write("Warning - function kernelWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25592,7 +25593,7 @@ class kernel(object):
         leptonica.kernelCreateFromPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.kernelCreateFromPix.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function kernelCreateFromPix not exported " +
+        sys.stderr.write("Warning - function kernelCreateFromPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25622,7 +25623,7 @@ class kernel(object):
         leptonica.kernelCreate.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.kernelCreate.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function kernelCreate not exported " +
+        sys.stderr.write("Warning - function kernelCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25652,7 +25653,7 @@ class kernel(object):
         leptonica.makeGaussianKernel.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.makeGaussianKernel.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function makeGaussianKernel not exported " +
+        sys.stderr.write("Warning - function makeGaussianKernel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25690,7 +25691,7 @@ class kernel(object):
         leptonica.kernelWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.kernelWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function kernelWriteStream not exported " +
+        sys.stderr.write("Warning - function kernelWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25716,7 +25717,7 @@ class kernel(object):
         leptonica.kernelCreateFromFile.argtypes = [ctypes.c_void_p]
         leptonica.kernelCreateFromFile.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function kernelCreateFromFile not exported " +
+        sys.stderr.write("Warning - function kernelCreateFromFile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25765,7 +25766,7 @@ class kernel(object):
         leptonica.kernelCreateFromString.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.kernelCreateFromString.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function kernelCreateFromString not exported " +
+        sys.stderr.write("Warning - function kernelCreateFromString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25807,7 +25808,7 @@ class kernel(object):
         leptonica.kernelGetSum.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.kernelGetSum.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function kernelGetSum not exported " +
+        sys.stderr.write("Warning - function kernelGetSum not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25833,7 +25834,7 @@ class kernel(object):
         leptonica.kernelSetOrigin.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.kernelSetOrigin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function kernelSetOrigin not exported " +
+        sys.stderr.write("Warning - function kernelSetOrigin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25860,7 +25861,7 @@ class kernel(object):
         leptonica.kernelSetElement.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.kernelSetElement.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function kernelSetElement not exported " +
+        sys.stderr.write("Warning - function kernelSetElement not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25890,7 +25891,7 @@ class kernel(object):
         leptonica.kernelInvert.argtypes = [ctypes.c_void_p]
         leptonica.kernelInvert.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function kernelInvert not exported " +
+        sys.stderr.write("Warning - function kernelInvert not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25918,7 +25919,7 @@ class kernel(object):
         leptonica.create2dFloatArray.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.create2dFloatArray.restype = ctypes.POINTER(ctypes.POINTER(ctypes.c_float))
     except AttributeError:
-        os.stderr.write("Warning - function create2dFloatArray not exported " +
+        sys.stderr.write("Warning - function create2dFloatArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25949,7 +25950,7 @@ class kernel(object):
         leptonica.parseStringForNumbers.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.parseStringForNumbers.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function parseStringForNumbers not exported " +
+        sys.stderr.write("Warning - function parseStringForNumbers not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -25978,7 +25979,7 @@ class kernel(object):
         leptonica.kernelDisplayInPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.kernelDisplayInPix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function kernelDisplayInPix not exported " +
+        sys.stderr.write("Warning - function kernelDisplayInPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26022,7 +26023,7 @@ class kernel(object):
         leptonica.kernelGetMinMax.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.kernelGetMinMax.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function kernelGetMinMax not exported " +
+        sys.stderr.write("Warning - function kernelGetMinMax not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26050,7 +26051,7 @@ class kernel(object):
         leptonica.kernelRead.argtypes = [ctypes.c_void_p]
         leptonica.kernelRead.restype = lambda address: L_KERNEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function kernelRead not exported " +
+        sys.stderr.write("Warning - function kernelRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26133,7 +26134,7 @@ class pixarith(object):
         leptonica.pixAccumulate.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixAccumulate.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixAccumulate not exported " +
+        sys.stderr.write("Warning - function pixAccumulate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26167,7 +26168,7 @@ class pixarith(object):
         leptonica.pixMaxDynamicRange.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixMaxDynamicRange.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMaxDynamicRange not exported " +
+        sys.stderr.write("Warning - function pixMaxDynamicRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26197,7 +26198,7 @@ class pixarith(object):
         leptonica.pixMultConstantGray.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.pixMultConstantGray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixMultConstantGray not exported " +
+        sys.stderr.write("Warning - function pixMultConstantGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26228,7 +26229,7 @@ class pixarith(object):
         leptonica.pixFinalAccumulateThreshold.argtypes = [ctypes.c_void_p, ctypes.c_uint32, ctypes.c_uint32]
         leptonica.pixFinalAccumulateThreshold.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFinalAccumulateThreshold not exported " +
+        sys.stderr.write("Warning - function pixFinalAccumulateThreshold not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26260,7 +26261,7 @@ class pixarith(object):
         leptonica.pixFinalAccumulate.argtypes = [ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32]
         leptonica.pixFinalAccumulate.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFinalAccumulate not exported " +
+        sys.stderr.write("Warning - function pixFinalAccumulate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26294,7 +26295,7 @@ class pixarith(object):
         leptonica.pixMinOrMax.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixMinOrMax.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMinOrMax not exported " +
+        sys.stderr.write("Warning - function pixMinOrMax not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26335,7 +26336,7 @@ class pixarith(object):
         leptonica.pixThresholdToValue.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixThresholdToValue.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixThresholdToValue not exported " +
+        sys.stderr.write("Warning - function pixThresholdToValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26371,7 +26372,7 @@ class pixarith(object):
         leptonica.pixAddGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixAddGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddGray not exported " +
+        sys.stderr.write("Warning - function pixAddGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26412,7 +26413,7 @@ class pixarith(object):
         leptonica.pixAddRGB.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixAddRGB.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddRGB not exported " +
+        sys.stderr.write("Warning - function pixAddRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26445,7 +26446,7 @@ class pixarith(object):
         leptonica.pixMultConstAccumulate.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_uint32]
         leptonica.pixMultConstAccumulate.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixMultConstAccumulate not exported " +
+        sys.stderr.write("Warning - function pixMultConstAccumulate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26478,7 +26479,7 @@ class pixarith(object):
         leptonica.pixAbsDifference.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixAbsDifference.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAbsDifference not exported " +
+        sys.stderr.write("Warning - function pixAbsDifference not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26512,7 +26513,7 @@ class pixarith(object):
         leptonica.pixSubtractGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSubtractGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSubtractGray not exported " +
+        sys.stderr.write("Warning - function pixSubtractGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26553,7 +26554,7 @@ class pixarith(object):
         leptonica.pixAddConstantGray.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixAddConstantGray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixAddConstantGray not exported " +
+        sys.stderr.write("Warning - function pixAddConstantGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26586,7 +26587,7 @@ class pixarith(object):
         leptonica.pixInitAccumulate.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixInitAccumulate.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixInitAccumulate not exported " +
+        sys.stderr.write("Warning - function pixInitAccumulate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26663,7 +26664,7 @@ class bardecode(object):
         leptonica.barcodeDispatchDecoder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.barcodeDispatchDecoder.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function barcodeDispatchDecoder not exported " +
+        sys.stderr.write("Warning - function barcodeDispatchDecoder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26691,7 +26692,7 @@ class bardecode(object):
         leptonica.barcodeFormatIsSupported.argtypes = [ctypes.c_int32]
         leptonica.barcodeFormatIsSupported.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function barcodeFormatIsSupported not exported " +
+        sys.stderr.write("Warning - function barcodeFormatIsSupported not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26853,7 +26854,7 @@ class rotateshear(object):
         leptonica.pixRotate3Shear.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixRotate3Shear.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotate3Shear not exported " +
+        sys.stderr.write("Warning - function pixRotate3Shear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26904,7 +26905,7 @@ class rotateshear(object):
         leptonica.pixRotateShearIP.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixRotateShearIP.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateShearIP not exported " +
+        sys.stderr.write("Warning - function pixRotateShearIP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26951,7 +26952,7 @@ class rotateshear(object):
         leptonica.pixRotate2Shear.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixRotate2Shear.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotate2Shear not exported " +
+        sys.stderr.write("Warning - function pixRotate2Shear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -26996,7 +26997,7 @@ class rotateshear(object):
         leptonica.pixRotateShearCenter.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixRotateShearCenter.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateShearCenter not exported " +
+        sys.stderr.write("Warning - function pixRotateShearCenter not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27024,7 +27025,7 @@ class rotateshear(object):
         leptonica.pixRotateShearCenterIP.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixRotateShearCenterIP.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateShearCenterIP not exported " +
+        sys.stderr.write("Warning - function pixRotateShearCenterIP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27052,7 +27053,7 @@ class rotateshear(object):
         leptonica.pixRotateShear.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixRotateShear.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateShear not exported " +
+        sys.stderr.write("Warning - function pixRotateShear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27114,7 +27115,7 @@ class rop(object):
         leptonica.pixRasterop.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRasterop.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRasterop not exported " +
+        sys.stderr.write("Warning - function pixRasterop not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27278,7 +27279,7 @@ class rop(object):
         leptonica.pixRasteropIP.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRasteropIP.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRasteropIP not exported " +
+        sys.stderr.write("Warning - function pixRasteropIP not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27308,7 +27309,7 @@ class rop(object):
         leptonica.pixRasteropFullImage.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixRasteropFullImage.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRasteropFullImage not exported " +
+        sys.stderr.write("Warning - function pixRasteropFullImage not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27343,7 +27344,7 @@ class rop(object):
         leptonica.pixRasteropHip.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRasteropHip.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRasteropHip not exported " +
+        sys.stderr.write("Warning - function pixRasteropHip not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27383,7 +27384,7 @@ class rop(object):
         leptonica.pixRasteropVip.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRasteropVip.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRasteropVip not exported " +
+        sys.stderr.write("Warning - function pixRasteropVip not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27423,7 +27424,7 @@ class rop(object):
         leptonica.pixTranslate.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixTranslate.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixTranslate not exported " +
+        sys.stderr.write("Warning - function pixTranslate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27555,7 +27556,7 @@ class watershed(object):
         leptonica.wshedRenderColors.argtypes = [ctypes.c_void_p]
         leptonica.wshedRenderColors.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function wshedRenderColors not exported " +
+        sys.stderr.write("Warning - function wshedRenderColors not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27579,7 +27580,7 @@ class watershed(object):
         leptonica.wshedApply.argtypes = [ctypes.c_void_p]
         leptonica.wshedApply.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function wshedApply not exported " +
+        sys.stderr.write("Warning - function wshedApply not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27609,7 +27610,7 @@ class watershed(object):
         leptonica.wshedCreate.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.wshedCreate.restype = lambda address: L_WSHED(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function wshedCreate not exported " +
+        sys.stderr.write("Warning - function wshedCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27651,7 +27652,7 @@ class watershed(object):
         leptonica.wshedRenderFill.argtypes = [ctypes.c_void_p]
         leptonica.wshedRenderFill.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function wshedRenderFill not exported " +
+        sys.stderr.write("Warning - function wshedRenderFill not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27675,7 +27676,7 @@ class watershed(object):
         leptonica.wshedBasins.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.wshedBasins.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function wshedBasins not exported " +
+        sys.stderr.write("Warning - function wshedBasins not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27703,7 +27704,7 @@ class watershed(object):
         leptonica.wshedDestroy.argtypes = [ctypes.c_void_p]
         leptonica.wshedDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function wshedDestroy not exported " +
+        sys.stderr.write("Warning - function wshedDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27742,7 +27743,7 @@ class colormorph(object):
         leptonica.pixColorMorph.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixColorMorph.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixColorMorph not exported " +
+        sys.stderr.write("Warning - function pixColorMorph not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27865,7 +27866,7 @@ class bilinear(object):
         leptonica.pixBilinear.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixBilinear.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBilinear not exported " +
+        sys.stderr.write("Warning - function pixBilinear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27897,7 +27898,7 @@ class bilinear(object):
         leptonica.pixBilinearPtaColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixBilinearPtaColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBilinearPtaColor not exported " +
+        sys.stderr.write("Warning - function pixBilinearPtaColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27927,7 +27928,7 @@ class bilinear(object):
         leptonica.bilinearXformSampledPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.bilinearXformSampledPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function bilinearXformSampledPt not exported " +
+        sys.stderr.write("Warning - function bilinearXformSampledPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27961,7 +27962,7 @@ class bilinear(object):
         leptonica.pixBilinearSampled.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixBilinearSampled.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBilinearSampled not exported " +
+        sys.stderr.write("Warning - function pixBilinearSampled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -27996,7 +27997,7 @@ class bilinear(object):
         leptonica.pixBilinearPtaGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_ubyte]
         leptonica.pixBilinearPtaGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBilinearPtaGray not exported " +
+        sys.stderr.write("Warning - function pixBilinearPtaGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28026,7 +28027,7 @@ class bilinear(object):
         leptonica.pixBilinearGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_ubyte]
         leptonica.pixBilinearGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBilinearGray not exported " +
+        sys.stderr.write("Warning - function pixBilinearGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28054,7 +28055,7 @@ class bilinear(object):
         leptonica.getBilinearXformCoeffs.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.getBilinearXformCoeffs.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function getBilinearXformCoeffs not exported " +
+        sys.stderr.write("Warning - function getBilinearXformCoeffs not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28126,7 +28127,7 @@ class bilinear(object):
         leptonica.bilinearXformPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.bilinearXformPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function bilinearXformPt not exported " +
+        sys.stderr.write("Warning - function bilinearXformPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28160,7 +28161,7 @@ class bilinear(object):
         leptonica.pixBilinearPta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixBilinearPta.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBilinearPta not exported " +
+        sys.stderr.write("Warning - function pixBilinearPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28194,7 +28195,7 @@ class bilinear(object):
         leptonica.pixBilinearColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixBilinearColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBilinearColor not exported " +
+        sys.stderr.write("Warning - function pixBilinearColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28222,7 +28223,7 @@ class bilinear(object):
         leptonica.pixBilinearSampledPta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixBilinearSampledPta.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBilinearSampledPta not exported " +
+        sys.stderr.write("Warning - function pixBilinearSampledPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28260,7 +28261,7 @@ class bilinear(object):
         leptonica.pixBilinearPtaWithAlpha.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixBilinearPtaWithAlpha.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBilinearPtaWithAlpha not exported " +
+        sys.stderr.write("Warning - function pixBilinearPtaWithAlpha not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28412,7 +28413,7 @@ class scale(object):
         leptonica.pixScaleToGray16.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleToGray16.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleToGray16 not exported " +
+        sys.stderr.write("Warning - function pixScaleToGray16 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28437,7 +28438,7 @@ class scale(object):
         leptonica.pixExpandReplicate.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixExpandReplicate.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixExpandReplicate not exported " +
+        sys.stderr.write("Warning - function pixExpandReplicate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28463,7 +28464,7 @@ class scale(object):
         leptonica.pixScaleColor2xLI.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleColor2xLI.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleColor2xLI not exported " +
+        sys.stderr.write("Warning - function pixScaleColor2xLI not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28498,7 +28499,7 @@ class scale(object):
         leptonica.pixScaleGray2xLIDither.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleGray2xLIDither.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGray2xLIDither not exported " +
+        sys.stderr.write("Warning - function pixScaleGray2xLIDither not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28532,7 +28533,7 @@ class scale(object):
         leptonica.pixScaleWithAlpha.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixScaleWithAlpha.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleWithAlpha not exported " +
+        sys.stderr.write("Warning - function pixScaleWithAlpha not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28598,7 +28599,7 @@ class scale(object):
         leptonica.pixScaleGrayLI.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.pixScaleGrayLI.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGrayLI not exported " +
+        sys.stderr.write("Warning - function pixScaleGrayLI not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28692,7 +28693,7 @@ class scale(object):
         leptonica.pixScaleAndTransferAlpha.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.pixScaleAndTransferAlpha.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleAndTransferAlpha not exported " +
+        sys.stderr.write("Warning - function pixScaleAndTransferAlpha not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28724,7 +28725,7 @@ class scale(object):
         leptonica.pixScaleToSize.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixScaleToSize.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleToSize not exported " +
+        sys.stderr.write("Warning - function pixScaleToSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28761,7 +28762,7 @@ class scale(object):
         leptonica.pixScaleBySampling.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.pixScaleBySampling.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleBySampling not exported " +
+        sys.stderr.write("Warning - function pixScaleBySampling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28794,7 +28795,7 @@ class scale(object):
         leptonica.pixScaleLI.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.pixScaleLI.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleLI not exported " +
+        sys.stderr.write("Warning - function pixScaleLI not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28836,7 +28837,7 @@ class scale(object):
         leptonica.pixScaleByIntSampling.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixScaleByIntSampling.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleByIntSampling not exported " +
+        sys.stderr.write("Warning - function pixScaleByIntSampling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28867,7 +28868,7 @@ class scale(object):
         leptonica.pixScaleGrayToBinaryFast.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixScaleGrayToBinaryFast.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGrayToBinaryFast not exported " +
+        sys.stderr.write("Warning - function pixScaleGrayToBinaryFast not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28902,7 +28903,7 @@ class scale(object):
         leptonica.pixScaleToGrayMipmap.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.pixScaleToGrayMipmap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleToGrayMipmap not exported " +
+        sys.stderr.write("Warning - function pixScaleToGrayMipmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28950,7 +28951,7 @@ class scale(object):
         leptonica.pixScaleGrayRankCascade.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixScaleGrayRankCascade.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGrayRankCascade not exported " +
+        sys.stderr.write("Warning - function pixScaleGrayRankCascade not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -28983,7 +28984,7 @@ class scale(object):
         leptonica.pixScaleRGBToGray2.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.pixScaleRGBToGray2.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleRGBToGray2 not exported " +
+        sys.stderr.write("Warning - function pixScaleRGBToGray2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29011,7 +29012,7 @@ class scale(object):
         leptonica.pixScaleSmooth.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.pixScaleSmooth.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleSmooth not exported " +
+        sys.stderr.write("Warning - function pixScaleSmooth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29061,7 +29062,7 @@ class scale(object):
         leptonica.pixScaleGray4xLIDither.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleGray4xLIDither.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGray4xLIDither not exported " +
+        sys.stderr.write("Warning - function pixScaleGray4xLIDither not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29100,7 +29101,7 @@ class scale(object):
         leptonica.pixScaleColor4xLI.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleColor4xLI.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleColor4xLI not exported " +
+        sys.stderr.write("Warning - function pixScaleColor4xLI not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29135,7 +29136,7 @@ class scale(object):
         leptonica.pixScaleToGray.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.pixScaleToGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleToGray not exported " +
+        sys.stderr.write("Warning - function pixScaleToGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29218,7 +29219,7 @@ class scale(object):
         leptonica.pixScaleGray2xLIThresh.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixScaleGray2xLIThresh.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGray2xLIThresh not exported " +
+        sys.stderr.write("Warning - function pixScaleGray2xLIThresh not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29249,7 +29250,7 @@ class scale(object):
         leptonica.pixScale.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.pixScale.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScale not exported " +
+        sys.stderr.write("Warning - function pixScale not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29345,7 +29346,7 @@ class scale(object):
         leptonica.pixScaleAreaMap.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.pixScaleAreaMap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleAreaMap not exported " +
+        sys.stderr.write("Warning - function pixScaleAreaMap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29392,7 +29393,7 @@ class scale(object):
         leptonica.pixScaleBinary.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.pixScaleBinary.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleBinary not exported " +
+        sys.stderr.write("Warning - function pixScaleBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29424,7 +29425,7 @@ class scale(object):
         leptonica.pixScaleGeneral.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_int32]
         leptonica.pixScaleGeneral.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGeneral not exported " +
+        sys.stderr.write("Warning - function pixScaleGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29471,7 +29472,7 @@ class scale(object):
         leptonica.pixScaleRGBToGrayFast.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixScaleRGBToGrayFast.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleRGBToGrayFast not exported " +
+        sys.stderr.write("Warning - function pixScaleRGBToGrayFast not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29507,7 +29508,7 @@ class scale(object):
         leptonica.pixScaleMipmap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixScaleMipmap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleMipmap not exported " +
+        sys.stderr.write("Warning - function pixScaleMipmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29541,7 +29542,7 @@ class scale(object):
         leptonica.pixScaleGrayMinMax2.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixScaleGrayMinMax2.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGrayMinMax2 not exported " +
+        sys.stderr.write("Warning - function pixScaleGrayMinMax2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29584,7 +29585,7 @@ class scale(object):
         leptonica.pixScaleToGrayFast.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.pixScaleToGrayFast.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleToGrayFast not exported " +
+        sys.stderr.write("Warning - function pixScaleToGrayFast not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29623,7 +29624,7 @@ class scale(object):
         leptonica.pixScaleGray4xLIThresh.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixScaleGray4xLIThresh.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGray4xLIThresh not exported " +
+        sys.stderr.write("Warning - function pixScaleGray4xLIThresh not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29658,7 +29659,7 @@ class scale(object):
         leptonica.pixScaleRGBToBinaryFast.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixScaleRGBToBinaryFast.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleRGBToBinaryFast not exported " +
+        sys.stderr.write("Warning - function pixScaleRGBToBinaryFast not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29694,7 +29695,7 @@ class scale(object):
         leptonica.pixScaleColorLI.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.pixScaleColorLI.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleColorLI not exported " +
+        sys.stderr.write("Warning - function pixScaleColorLI not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29735,7 +29736,7 @@ class scale(object):
         leptonica.pixScaleToGray8.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleToGray8.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleToGray8 not exported " +
+        sys.stderr.write("Warning - function pixScaleToGray8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29760,7 +29761,7 @@ class scale(object):
         leptonica.pixScaleGray2xLI.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleGray2xLI.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGray2xLI not exported " +
+        sys.stderr.write("Warning - function pixScaleGray2xLI not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29791,7 +29792,7 @@ class scale(object):
         leptonica.pixScaleToGray4.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleToGray4.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleToGray4 not exported " +
+        sys.stderr.write("Warning - function pixScaleToGray4 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29819,7 +29820,7 @@ class scale(object):
         leptonica.pixScaleToGray6.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleToGray6.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleToGray6 not exported " +
+        sys.stderr.write("Warning - function pixScaleToGray6 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29847,7 +29848,7 @@ class scale(object):
         leptonica.pixScaleToGray2.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleToGray2.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleToGray2 not exported " +
+        sys.stderr.write("Warning - function pixScaleToGray2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29872,7 +29873,7 @@ class scale(object):
         leptonica.pixScaleToGray3.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleToGray3.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleToGray3 not exported " +
+        sys.stderr.write("Warning - function pixScaleToGray3 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29903,7 +29904,7 @@ class scale(object):
         leptonica.pixScaleAreaMap2.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleAreaMap2.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleAreaMap2 not exported " +
+        sys.stderr.write("Warning - function pixScaleAreaMap2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29944,7 +29945,7 @@ class scale(object):
         leptonica.pixScaleBySamplingToSize.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixScaleBySamplingToSize.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleBySamplingToSize not exported " +
+        sys.stderr.write("Warning - function pixScaleBySamplingToSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -29981,7 +29982,7 @@ class scale(object):
         leptonica.pixScaleGrayRank2.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixScaleGrayRank2.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGrayRank2 not exported " +
+        sys.stderr.write("Warning - function pixScaleGrayRank2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30020,7 +30021,7 @@ class scale(object):
         leptonica.pixScaleGrayMinMax.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixScaleGrayMinMax.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGrayMinMax not exported " +
+        sys.stderr.write("Warning - function pixScaleGrayMinMax not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30062,7 +30063,7 @@ class scale(object):
         leptonica.pixScaleGray4xLI.argtypes = [ctypes.c_void_p]
         leptonica.pixScaleGray4xLI.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixScaleGray4xLI not exported " +
+        sys.stderr.write("Warning - function pixScaleGray4xLI not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30151,7 +30152,7 @@ class convolve(object):
         leptonica.pixCensusTransform.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixCensusTransform.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCensusTransform not exported " +
+        sys.stderr.write("Warning - function pixCensusTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30197,7 +30198,7 @@ class convolve(object):
         leptonica.pixBlockconvAccum.argtypes = [ctypes.c_void_p]
         leptonica.pixBlockconvAccum.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlockconvAccum not exported " +
+        sys.stderr.write("Warning - function pixBlockconvAccum not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30229,7 +30230,7 @@ class convolve(object):
         leptonica.l_setConvolveSampling.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.l_setConvolveSampling.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_setConvolveSampling not exported " +
+        sys.stderr.write("Warning - function l_setConvolveSampling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30259,7 +30260,7 @@ class convolve(object):
         leptonica.pixBlockconvGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBlockconvGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlockconvGray not exported " +
+        sys.stderr.write("Warning - function pixBlockconvGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30297,7 +30298,7 @@ class convolve(object):
         leptonica.pixWindowedVariance.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWindowedVariance.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWindowedVariance not exported " +
+        sys.stderr.write("Warning - function pixWindowedVariance not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30340,7 +30341,7 @@ class convolve(object):
         leptonica.gaussDistribSampling.argtypes = []
         leptonica.gaussDistribSampling.restype = ctypes.c_float
     except AttributeError:
-        os.stderr.write("Warning - function gaussDistribSampling not exported " +
+        sys.stderr.write("Warning - function gaussDistribSampling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30371,7 +30372,7 @@ class convolve(object):
         leptonica.pixBlockconvTiled.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBlockconvTiled.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlockconvTiled not exported " +
+        sys.stderr.write("Warning - function pixBlockconvTiled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30421,7 +30422,7 @@ class convolve(object):
         leptonica.pixBlocksum.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBlocksum.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlocksum not exported " +
+        sys.stderr.write("Warning - function pixBlocksum not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30471,7 +30472,7 @@ class convolve(object):
         leptonica.pixConvolveRGB.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixConvolveRGB.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvolveRGB not exported " +
+        sys.stderr.write("Warning - function pixConvolveRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30512,7 +30513,7 @@ class convolve(object):
         leptonica.pixWindowedMean.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixWindowedMean.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixWindowedMean not exported " +
+        sys.stderr.write("Warning - function pixWindowedMean not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30563,7 +30564,7 @@ class convolve(object):
         leptonica.pixBlockconv.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBlockconv.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlockconv not exported " +
+        sys.stderr.write("Warning - function pixBlockconv not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30597,7 +30598,7 @@ class convolve(object):
         leptonica.pixAddGaussianNoise.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.pixAddGaussianNoise.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddGaussianNoise not exported " +
+        sys.stderr.write("Warning - function pixAddGaussianNoise not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30627,7 +30628,7 @@ class convolve(object):
         leptonica.pixConvolveRGBSep.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixConvolveRGBSep.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvolveRGBSep not exported " +
+        sys.stderr.write("Warning - function pixConvolveRGBSep not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30671,7 +30672,7 @@ class convolve(object):
         leptonica.pixConvolveWithBias.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixConvolveWithBias.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvolveWithBias not exported " +
+        sys.stderr.write("Warning - function pixConvolveWithBias not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30722,7 +30723,7 @@ class convolve(object):
         leptonica.pixConvolve.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixConvolve.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvolve not exported " +
+        sys.stderr.write("Warning - function pixConvolve not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30784,7 +30785,7 @@ class convolve(object):
         leptonica.pixBlockconvGrayUnnormalized.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBlockconvGrayUnnormalized.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlockconvGrayUnnormalized not exported " +
+        sys.stderr.write("Warning - function pixBlockconvGrayUnnormalized not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30838,7 +30839,7 @@ class convolve(object):
         leptonica.pixMeanSquareAccum.argtypes = [ctypes.c_void_p]
         leptonica.pixMeanSquareAccum.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMeanSquareAccum not exported " +
+        sys.stderr.write("Warning - function pixMeanSquareAccum not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30874,7 +30875,7 @@ class convolve(object):
         leptonica.pixBlockrank.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.pixBlockrank.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlockrank not exported " +
+        sys.stderr.write("Warning - function pixBlockrank not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30921,7 +30922,7 @@ class convolve(object):
         leptonica.fpixConvolve.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.fpixConvolve.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixConvolve not exported " +
+        sys.stderr.write("Warning - function fpixConvolve not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -30964,7 +30965,7 @@ class convolve(object):
         leptonica.fpixConvolveSep.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.fpixConvolveSep.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixConvolveSep not exported " +
+        sys.stderr.write("Warning - function fpixConvolveSep not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31012,7 +31013,7 @@ class convolve(object):
         leptonica.pixWindowedStats.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWindowedStats.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWindowedStats not exported " +
+        sys.stderr.write("Warning - function pixWindowedStats not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31074,7 +31075,7 @@ class convolve(object):
         leptonica.pixConvolveSep.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixConvolveSep.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvolveSep not exported " +
+        sys.stderr.write("Warning - function pixConvolveSep not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31137,7 +31138,7 @@ class convolve(object):
         leptonica.pixBlockconvGrayTile.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBlockconvGrayTile.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlockconvGrayTile not exported " +
+        sys.stderr.write("Warning - function pixBlockconvGrayTile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31177,7 +31178,7 @@ class convolve(object):
         leptonica.pixWindowedMeanSquare.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixWindowedMeanSquare.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixWindowedMeanSquare not exported " +
+        sys.stderr.write("Warning - function pixWindowedMeanSquare not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31298,7 +31299,7 @@ class grayquant(object):
         leptonica.pixGrayQuantFromCmap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGrayQuantFromCmap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGrayQuantFromCmap not exported " +
+        sys.stderr.write("Warning - function pixGrayQuantFromCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31331,7 +31332,7 @@ class grayquant(object):
         leptonica.makeGrayQuantTargetTable.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.makeGrayQuantTargetTable.restype = ctypes.POINTER(ctypes.c_int32)
     except AttributeError:
-        os.stderr.write("Warning - function makeGrayQuantTargetTable not exported " +
+        sys.stderr.write("Warning - function makeGrayQuantTargetTable not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31376,7 +31377,7 @@ class grayquant(object):
         leptonica.pixDitherToBinary.argtypes = [ctypes.c_void_p]
         leptonica.pixDitherToBinary.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDitherToBinary not exported " +
+        sys.stderr.write("Warning - function pixDitherToBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31424,7 +31425,7 @@ class grayquant(object):
         leptonica.pixGenerateMaskByValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGenerateMaskByValue.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGenerateMaskByValue not exported " +
+        sys.stderr.write("Warning - function pixGenerateMaskByValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31461,7 +31462,7 @@ class grayquant(object):
         leptonica.pixAdaptThresholdToBinary.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixAdaptThresholdToBinary.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAdaptThresholdToBinary not exported " +
+        sys.stderr.write("Warning - function pixAdaptThresholdToBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31506,7 +31507,7 @@ class grayquant(object):
         leptonica.pixThresholdGrayArb.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixThresholdGrayArb.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixThresholdGrayArb not exported " +
+        sys.stderr.write("Warning - function pixThresholdGrayArb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31570,7 +31571,7 @@ class grayquant(object):
         leptonica.pixThresholdToBinary.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixThresholdToBinary.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixThresholdToBinary not exported " +
+        sys.stderr.write("Warning - function pixThresholdToBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31600,7 +31601,7 @@ class grayquant(object):
         leptonica.pixVarThresholdToBinary.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixVarThresholdToBinary.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixVarThresholdToBinary not exported " +
+        sys.stderr.write("Warning - function pixVarThresholdToBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31630,7 +31631,7 @@ class grayquant(object):
         leptonica.pixDitherTo2bppSpec.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDitherTo2bppSpec.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDitherTo2bppSpec not exported " +
+        sys.stderr.write("Warning - function pixDitherTo2bppSpec not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31667,7 +31668,7 @@ class grayquant(object):
         leptonica.pixGrayQuantFromHisto.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixGrayQuantFromHisto.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGrayQuantFromHisto not exported " +
+        sys.stderr.write("Warning - function pixGrayQuantFromHisto not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31737,7 +31738,7 @@ class grayquant(object):
         leptonica.pixThresholdTo2bpp.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixThresholdTo2bpp.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixThresholdTo2bpp not exported " +
+        sys.stderr.write("Warning - function pixThresholdTo2bpp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31799,7 +31800,7 @@ class grayquant(object):
         leptonica.pixThresholdOn8bpp.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixThresholdOn8bpp.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixThresholdOn8bpp not exported " +
+        sys.stderr.write("Warning - function pixThresholdOn8bpp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31837,7 +31838,7 @@ class grayquant(object):
         leptonica.pixAdaptThresholdToBinaryGen.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixAdaptThresholdToBinaryGen.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAdaptThresholdToBinaryGen not exported " +
+        sys.stderr.write("Warning - function pixAdaptThresholdToBinaryGen not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31884,7 +31885,7 @@ class grayquant(object):
         leptonica.makeGrayQuantColormapArb.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.makeGrayQuantColormapArb.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function makeGrayQuantColormapArb not exported " +
+        sys.stderr.write("Warning - function makeGrayQuantColormapArb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31924,7 +31925,7 @@ class grayquant(object):
         leptonica.pixGenerateMaskByBand32.argtypes = [ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.pixGenerateMaskByBand32.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGenerateMaskByBand32 not exported " +
+        sys.stderr.write("Warning - function pixGenerateMaskByBand32 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -31971,7 +31972,7 @@ class grayquant(object):
         leptonica.pixDitherToBinaryLUT.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDitherToBinaryLUT.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDitherToBinaryLUT not exported " +
+        sys.stderr.write("Warning - function pixDitherToBinaryLUT not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32007,7 +32008,7 @@ class grayquant(object):
         leptonica.makeGrayQuantTableArb.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.makeGrayQuantTableArb.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function makeGrayQuantTableArb not exported " +
+        sys.stderr.write("Warning - function makeGrayQuantTableArb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32050,7 +32051,7 @@ class grayquant(object):
         leptonica.pixThresholdTo4bpp.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixThresholdTo4bpp.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixThresholdTo4bpp not exported " +
+        sys.stderr.write("Warning - function pixThresholdTo4bpp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32114,7 +32115,7 @@ class grayquant(object):
         leptonica.pixGenerateMaskByBand.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGenerateMaskByBand.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGenerateMaskByBand not exported " +
+        sys.stderr.write("Warning - function pixGenerateMaskByBand not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32160,7 +32161,7 @@ class grayquant(object):
         leptonica.pixGenerateMaskByDiscr32.argtypes = [ctypes.c_void_p, ctypes.c_uint32, ctypes.c_uint32, ctypes.c_int32]
         leptonica.pixGenerateMaskByDiscr32.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGenerateMaskByDiscr32 not exported " +
+        sys.stderr.write("Warning - function pixGenerateMaskByDiscr32 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32200,7 +32201,7 @@ class grayquant(object):
         leptonica.makeGrayQuantIndexTable.argtypes = [ctypes.c_int32]
         leptonica.makeGrayQuantIndexTable.restype = ctypes.POINTER(ctypes.c_int32)
     except AttributeError:
-        os.stderr.write("Warning - function makeGrayQuantIndexTable not exported " +
+        sys.stderr.write("Warning - function makeGrayQuantIndexTable not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32229,7 +32230,7 @@ class grayquant(object):
         leptonica.pixDitherTo2bpp.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixDitherTo2bpp.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDitherTo2bpp not exported " +
+        sys.stderr.write("Warning - function pixDitherTo2bpp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32287,7 +32288,7 @@ class grayquant(object):
         leptonica.pixDitherToBinarySpec.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDitherToBinarySpec.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDitherToBinarySpec not exported " +
+        sys.stderr.write("Warning - function pixDitherToBinarySpec not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32385,7 +32386,7 @@ class colormap(object):
         leptonica.pixcmapHasColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapHasColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapHasColor not exported " +
+        sys.stderr.write("Warning - function pixcmapHasColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32411,7 +32412,7 @@ class colormap(object):
         leptonica.pixcmapGetDepth.argtypes = [ctypes.c_void_p]
         leptonica.pixcmapGetDepth.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetDepth not exported " +
+        sys.stderr.write("Warning - function pixcmapGetDepth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32435,7 +32436,7 @@ class colormap(object):
         leptonica.pixcmapAddRGBA.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixcmapAddRGBA.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapAddRGBA not exported " +
+        sys.stderr.write("Warning - function pixcmapAddRGBA not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32468,7 +32469,7 @@ class colormap(object):
         leptonica.pixcmapGetIndex.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixcmapGetIndex.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetIndex not exported " +
+        sys.stderr.write("Warning - function pixcmapGetIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32499,7 +32500,7 @@ class colormap(object):
         leptonica.pixcmapAddColor.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixcmapAddColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapAddColor not exported " +
+        sys.stderr.write("Warning - function pixcmapAddColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32532,7 +32533,7 @@ class colormap(object):
         leptonica.pixcmapGrayToColor.argtypes = [ctypes.c_uint32]
         leptonica.pixcmapGrayToColor.restype = lambda address: PIXCMAP(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGrayToColor not exported " +
+        sys.stderr.write("Warning - function pixcmapGrayToColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32563,7 +32564,7 @@ class colormap(object):
         leptonica.pixcmapGetRGBA.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapGetRGBA.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetRGBA not exported " +
+        sys.stderr.write("Warning - function pixcmapGetRGBA not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32594,7 +32595,7 @@ class colormap(object):
         leptonica.pixcmapClear.argtypes = [ctypes.c_void_p]
         leptonica.pixcmapClear.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapClear not exported " +
+        sys.stderr.write("Warning - function pixcmapClear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32620,7 +32621,7 @@ class colormap(object):
         leptonica.pixcmapCreateLinear.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.pixcmapCreateLinear.restype = lambda address: PIXCMAP(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapCreateLinear not exported " +
+        sys.stderr.write("Warning - function pixcmapCreateLinear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32650,7 +32651,7 @@ class colormap(object):
         leptonica.pixcmapCountGrayColors.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapCountGrayColors.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapCountGrayColors not exported " +
+        sys.stderr.write("Warning - function pixcmapCountGrayColors not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32679,7 +32680,7 @@ class colormap(object):
         leptonica.pixcmapCreateRandom.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixcmapCreateRandom.restype = lambda address: PIXCMAP(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapCreateRandom not exported " +
+        sys.stderr.write("Warning - function pixcmapCreateRandom not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32723,7 +32724,7 @@ class colormap(object):
         leptonica.pixcmapColorToGray.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.pixcmapColorToGray.restype = lambda address: PIXCMAP(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapColorToGray not exported " +
+        sys.stderr.write("Warning - function pixcmapColorToGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32756,7 +32757,7 @@ class colormap(object):
         leptonica.pixcmapGetFreeCount.argtypes = [ctypes.c_void_p]
         leptonica.pixcmapGetFreeCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetFreeCount not exported " +
+        sys.stderr.write("Warning - function pixcmapGetFreeCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32780,7 +32781,7 @@ class colormap(object):
         leptonica.pixcmapUsableColor.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixcmapUsableColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapUsableColor not exported " +
+        sys.stderr.write("Warning - function pixcmapUsableColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32815,7 +32816,7 @@ class colormap(object):
         leptonica.pixcmapAddBlackOrWhite.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixcmapAddBlackOrWhite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapAddBlackOrWhite not exported " +
+        sys.stderr.write("Warning - function pixcmapAddBlackOrWhite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32850,7 +32851,7 @@ class colormap(object):
         leptonica.pixcmapGetNearestIndex.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixcmapGetNearestIndex.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetNearestIndex not exported " +
+        sys.stderr.write("Warning - function pixcmapGetNearestIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32887,7 +32888,7 @@ class colormap(object):
         leptonica.pixcmapGetRGBA32.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixcmapGetRGBA32.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetRGBA32 not exported " +
+        sys.stderr.write("Warning - function pixcmapGetRGBA32 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32915,7 +32916,7 @@ class colormap(object):
         leptonica.pixcmapGetNearestGrayIndex.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixcmapGetNearestGrayIndex.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetNearestGrayIndex not exported " +
+        sys.stderr.write("Warning - function pixcmapGetNearestGrayIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32949,7 +32950,7 @@ class colormap(object):
         leptonica.pixcmapSetBlackAndWhite.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixcmapSetBlackAndWhite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapSetBlackAndWhite not exported " +
+        sys.stderr.write("Warning - function pixcmapSetBlackAndWhite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -32977,7 +32978,7 @@ class colormap(object):
         leptonica.pixcmapGetCount.argtypes = [ctypes.c_void_p]
         leptonica.pixcmapGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetCount not exported " +
+        sys.stderr.write("Warning - function pixcmapGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33001,7 +33002,7 @@ class colormap(object):
         leptonica.pixcmapAddNearestColor.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixcmapAddNearestColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapAddNearestColor not exported " +
+        sys.stderr.write("Warning - function pixcmapAddNearestColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33038,7 +33039,7 @@ class colormap(object):
         leptonica.pixcmapWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapWriteStream not exported " +
+        sys.stderr.write("Warning - function pixcmapWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33063,7 +33064,7 @@ class colormap(object):
         leptonica.pixcmapGetComponentRange.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapGetComponentRange.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetComponentRange not exported " +
+        sys.stderr.write("Warning - function pixcmapGetComponentRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33098,7 +33099,7 @@ class colormap(object):
         leptonica.pixcmapToRGBTable.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapToRGBTable.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapToRGBTable not exported " +
+        sys.stderr.write("Warning - function pixcmapToRGBTable not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33126,7 +33127,7 @@ class colormap(object):
         leptonica.pixcmapDeserializeFromMemory.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixcmapDeserializeFromMemory.restype = lambda address: PIXCMAP(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapDeserializeFromMemory not exported " +
+        sys.stderr.write("Warning - function pixcmapDeserializeFromMemory not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33154,7 +33155,7 @@ class colormap(object):
         leptonica.pixcmapCopy.argtypes = [ctypes.c_void_p]
         leptonica.pixcmapCopy.restype = lambda address: PIXCMAP(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapCopy not exported " +
+        sys.stderr.write("Warning - function pixcmapCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33178,7 +33179,7 @@ class colormap(object):
         leptonica.pixcmapConvertToHex.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixcmapConvertToHex.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapConvertToHex not exported " +
+        sys.stderr.write("Warning - function pixcmapConvertToHex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33213,7 +33214,7 @@ class colormap(object):
         leptonica.pixcmapGetColor32.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixcmapGetColor32.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetColor32 not exported " +
+        sys.stderr.write("Warning - function pixcmapGetColor32 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33244,7 +33245,7 @@ class colormap(object):
         leptonica.pixcmapGetMinDepth.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapGetMinDepth.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetMinDepth not exported " +
+        sys.stderr.write("Warning - function pixcmapGetMinDepth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33273,7 +33274,7 @@ class colormap(object):
         leptonica.pixcmapGetRankIntensity.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p]
         leptonica.pixcmapGetRankIntensity.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetRankIntensity not exported " +
+        sys.stderr.write("Warning - function pixcmapGetRankIntensity not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33302,7 +33303,7 @@ class colormap(object):
         leptonica.pixcmapGammaTRC.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixcmapGammaTRC.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGammaTRC not exported " +
+        sys.stderr.write("Warning - function pixcmapGammaTRC not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33337,7 +33338,7 @@ class colormap(object):
         leptonica.pixcmapGetColor.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapGetColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetColor not exported " +
+        sys.stderr.write("Warning - function pixcmapGetColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33367,7 +33368,7 @@ class colormap(object):
         leptonica.pixcmapContrastTRC.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.pixcmapContrastTRC.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapContrastTRC not exported " +
+        sys.stderr.write("Warning - function pixcmapContrastTRC not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33399,7 +33400,7 @@ class colormap(object):
         leptonica.pixcmapDestroy.argtypes = [ctypes.c_void_p]
         leptonica.pixcmapDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapDestroy not exported " +
+        sys.stderr.write("Warning - function pixcmapDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33423,7 +33424,7 @@ class colormap(object):
         leptonica.pixcmapShiftIntensity.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.pixcmapShiftIntensity.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapShiftIntensity not exported " +
+        sys.stderr.write("Warning - function pixcmapShiftIntensity not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33459,7 +33460,7 @@ class colormap(object):
         leptonica.pixcmapAddNewColor.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixcmapAddNewColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapAddNewColor not exported " +
+        sys.stderr.write("Warning - function pixcmapAddNewColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33497,7 +33498,7 @@ class colormap(object):
         leptonica.pixcmapReadStream.argtypes = [ctypes.c_void_p]
         leptonica.pixcmapReadStream.restype = lambda address: PIXCMAP(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapReadStream not exported " +
+        sys.stderr.write("Warning - function pixcmapReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33521,7 +33522,7 @@ class colormap(object):
         leptonica.pixcmapToArrays.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapToArrays.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapToArrays not exported " +
+        sys.stderr.write("Warning - function pixcmapToArrays not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33551,7 +33552,7 @@ class colormap(object):
         leptonica.pixcmapSerializeToMemory.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapSerializeToMemory.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapSerializeToMemory not exported " +
+        sys.stderr.write("Warning - function pixcmapSerializeToMemory not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33584,7 +33585,7 @@ class colormap(object):
         leptonica.pixcmapIsOpaque.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapIsOpaque.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapIsOpaque not exported " +
+        sys.stderr.write("Warning - function pixcmapIsOpaque not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33610,7 +33611,7 @@ class colormap(object):
         leptonica.pixcmapGetExtremeValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcmapGetExtremeValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapGetExtremeValue not exported " +
+        sys.stderr.write("Warning - function pixcmapGetExtremeValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33647,7 +33648,7 @@ class colormap(object):
         leptonica.pixcmapResetColor.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixcmapResetColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapResetColor not exported " +
+        sys.stderr.write("Warning - function pixcmapResetColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33683,7 +33684,7 @@ class colormap(object):
         leptonica.pixcmapCreate.argtypes = [ctypes.c_int32]
         leptonica.pixcmapCreate.restype = lambda address: PIXCMAP(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapCreate not exported " +
+        sys.stderr.write("Warning - function pixcmapCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33707,7 +33708,7 @@ class colormap(object):
         leptonica.pixcmapShiftByComponent.argtypes = [ctypes.c_void_p, ctypes.c_uint32, ctypes.c_uint32]
         leptonica.pixcmapShiftByComponent.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcmapShiftByComponent not exported " +
+        sys.stderr.write("Warning - function pixcmapShiftByComponent not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33856,7 +33857,7 @@ class jpegio(object):
         leptonica.freadHeaderJpeg.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.freadHeaderJpeg.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function freadHeaderJpeg not exported " +
+        sys.stderr.write("Warning - function freadHeaderJpeg not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33890,7 +33891,7 @@ class jpegio(object):
         leptonica.pixReadJpeg.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixReadJpeg.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadJpeg not exported " +
+        sys.stderr.write("Warning - function pixReadJpeg not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33947,7 +33948,7 @@ class jpegio(object):
         leptonica.pixWriteJpeg.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixWriteJpeg.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteJpeg not exported " +
+        sys.stderr.write("Warning - function pixWriteJpeg not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -33977,7 +33978,7 @@ class jpegio(object):
         leptonica.pixWriteMemJpeg.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixWriteMemJpeg.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteMemJpeg not exported " +
+        sys.stderr.write("Warning - function pixWriteMemJpeg not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34013,7 +34014,7 @@ class jpegio(object):
         leptonica.readHeaderMemJpeg.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.readHeaderMemJpeg.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function readHeaderMemJpeg not exported " +
+        sys.stderr.write("Warning - function readHeaderMemJpeg not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34049,7 +34050,7 @@ class jpegio(object):
         leptonica.pixWriteStreamJpeg.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixWriteStreamJpeg.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStreamJpeg not exported " +
+        sys.stderr.write("Warning - function pixWriteStreamJpeg not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34101,7 +34102,7 @@ class jpegio(object):
         leptonica.pixReadStreamJpeg.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixReadStreamJpeg.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadStreamJpeg not exported " +
+        sys.stderr.write("Warning - function pixReadStreamJpeg not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34139,7 +34140,7 @@ class jpegio(object):
         leptonica.readHeaderJpeg.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.readHeaderJpeg.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function readHeaderJpeg not exported " +
+        sys.stderr.write("Warning - function readHeaderJpeg not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34173,7 +34174,7 @@ class jpegio(object):
         leptonica.pixSetChromaSampling.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSetChromaSampling.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetChromaSampling not exported " +
+        sys.stderr.write("Warning - function pixSetChromaSampling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34205,7 +34206,7 @@ class jpegio(object):
         leptonica.pixReadMemJpeg.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixReadMemJpeg.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadMemJpeg not exported " +
+        sys.stderr.write("Warning - function pixReadMemJpeg not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34264,7 +34265,7 @@ class binreduce(object):
         leptonica.pixReduceRankBinaryCascade.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixReduceRankBinaryCascade.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReduceRankBinaryCascade not exported " +
+        sys.stderr.write("Warning - function pixReduceRankBinaryCascade not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34297,7 +34298,7 @@ class binreduce(object):
         leptonica.makeSubsampleTab2x.argtypes = []
         leptonica.makeSubsampleTab2x.restype = ctypes.POINTER(ctypes.c_ubyte)
     except AttributeError:
-        os.stderr.write("Warning - function makeSubsampleTab2x not exported " +
+        sys.stderr.write("Warning - function makeSubsampleTab2x not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34323,7 +34324,7 @@ class binreduce(object):
         leptonica.pixReduceBinary2.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixReduceBinary2.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReduceBinary2 not exported " +
+        sys.stderr.write("Warning - function pixReduceBinary2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34360,7 +34361,7 @@ class binreduce(object):
         leptonica.pixReduceRankBinary2.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixReduceRankBinary2.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReduceRankBinary2 not exported " +
+        sys.stderr.write("Warning - function pixReduceRankBinary2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34437,7 +34438,7 @@ class pixacc(object):
         leptonica.pixaccDestroy.argtypes = [ctypes.c_void_p]
         leptonica.pixaccDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function pixaccDestroy not exported " +
+        sys.stderr.write("Warning - function pixaccDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34464,7 +34465,7 @@ class pixacc(object):
         leptonica.pixaccSubtract.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaccSubtract.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaccSubtract not exported " +
+        sys.stderr.write("Warning - function pixaccSubtract not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34490,7 +34491,7 @@ class pixacc(object):
         leptonica.pixaccMultConstAccumulate.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixaccMultConstAccumulate.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaccMultConstAccumulate not exported " +
+        sys.stderr.write("Warning - function pixaccMultConstAccumulate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34522,7 +34523,7 @@ class pixacc(object):
         leptonica.pixaccFinal.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaccFinal.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaccFinal not exported " +
+        sys.stderr.write("Warning - function pixaccFinal not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34548,7 +34549,7 @@ class pixacc(object):
         leptonica.pixaccMultConst.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.pixaccMultConst.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaccMultConst not exported " +
+        sys.stderr.write("Warning - function pixaccMultConst not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34574,7 +34575,7 @@ class pixacc(object):
         leptonica.pixaccGetOffset.argtypes = [ctypes.c_void_p]
         leptonica.pixaccGetOffset.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaccGetOffset not exported " +
+        sys.stderr.write("Warning - function pixaccGetOffset not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34598,7 +34599,7 @@ class pixacc(object):
         leptonica.pixaccGetPix.argtypes = [ctypes.c_void_p]
         leptonica.pixaccGetPix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaccGetPix not exported " +
+        sys.stderr.write("Warning - function pixaccGetPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34622,7 +34623,7 @@ class pixacc(object):
         leptonica.pixaccCreate.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaccCreate.restype = lambda address: PIXACC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaccCreate not exported " +
+        sys.stderr.write("Warning - function pixaccCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34658,7 +34659,7 @@ class pixacc(object):
         leptonica.pixaccCreateFromPix.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaccCreateFromPix.restype = lambda address: PIXACC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaccCreateFromPix not exported " +
+        sys.stderr.write("Warning - function pixaccCreateFromPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34688,7 +34689,7 @@ class pixacc(object):
         leptonica.pixaccAdd.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaccAdd.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaccAdd not exported " +
+        sys.stderr.write("Warning - function pixaccAdd not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34756,7 +34757,7 @@ class affinecompose(object):
         leptonica.ptaScale.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.ptaScale.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaScale not exported " +
+        sys.stderr.write("Warning - function ptaScale not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34787,7 +34788,7 @@ class affinecompose(object):
         leptonica.boxaTranslate.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.boxaTranslate.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaTranslate not exported " +
+        sys.stderr.write("Warning - function boxaTranslate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34818,7 +34819,7 @@ class affinecompose(object):
         leptonica.boxaAffineTransform.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaAffineTransform.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaAffineTransform not exported " +
+        sys.stderr.write("Warning - function boxaAffineTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34844,7 +34845,7 @@ class affinecompose(object):
         leptonica.l_productMat3.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_productMat3.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function l_productMat3 not exported " +
+        sys.stderr.write("Warning - function l_productMat3 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34876,7 +34877,7 @@ class affinecompose(object):
         leptonica.ptaAffineTransform.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaAffineTransform.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaAffineTransform not exported " +
+        sys.stderr.write("Warning - function ptaAffineTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34902,7 +34903,7 @@ class affinecompose(object):
         leptonica.boxaScale.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.boxaScale.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaScale not exported " +
+        sys.stderr.write("Warning - function boxaScale not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34933,7 +34934,7 @@ class affinecompose(object):
         leptonica.l_productMatVec.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_productMatVec.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function l_productMatVec not exported " +
+        sys.stderr.write("Warning - function l_productMatVec not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -34963,7 +34964,7 @@ class affinecompose(object):
         leptonica.createMatrix2dTranslate.argtypes = [ctypes.c_float, ctypes.c_float]
         leptonica.createMatrix2dTranslate.restype = ctypes.POINTER(ctypes.c_float)
     except AttributeError:
-        os.stderr.write("Warning - function createMatrix2dTranslate not exported " +
+        sys.stderr.write("Warning - function createMatrix2dTranslate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35004,7 +35005,7 @@ class affinecompose(object):
         leptonica.ptaTranslate.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.ptaTranslate.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaTranslate not exported " +
+        sys.stderr.write("Warning - function ptaTranslate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35035,7 +35036,7 @@ class affinecompose(object):
         leptonica.createMatrix2dScale.argtypes = [ctypes.c_float, ctypes.c_float]
         leptonica.createMatrix2dScale.restype = ctypes.POINTER(ctypes.c_float)
     except AttributeError:
-        os.stderr.write("Warning - function createMatrix2dScale not exported " +
+        sys.stderr.write("Warning - function createMatrix2dScale not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35075,7 +35076,7 @@ class affinecompose(object):
         leptonica.ptaRotate.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.ptaRotate.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaRotate not exported " +
+        sys.stderr.write("Warning - function ptaRotate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35119,7 +35120,7 @@ class affinecompose(object):
         leptonica.boxaRotate.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.boxaRotate.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaRotate not exported " +
+        sys.stderr.write("Warning - function boxaRotate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35151,7 +35152,7 @@ class affinecompose(object):
         leptonica.l_productMat4.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_productMat4.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function l_productMat4 not exported " +
+        sys.stderr.write("Warning - function l_productMat4 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35185,7 +35186,7 @@ class affinecompose(object):
         leptonica.createMatrix2dRotate.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.createMatrix2dRotate.restype = ctypes.POINTER(ctypes.c_float)
     except AttributeError:
-        os.stderr.write("Warning - function createMatrix2dRotate not exported " +
+        sys.stderr.write("Warning - function createMatrix2dRotate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35238,7 +35239,7 @@ class affinecompose(object):
         leptonica.l_productMat2.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_productMat2.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function l_productMat2 not exported " +
+        sys.stderr.write("Warning - function l_productMat2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35307,7 +35308,7 @@ class queue(object):
         leptonica.lqueuePrint.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lqueuePrint.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lqueuePrint not exported " +
+        sys.stderr.write("Warning - function lqueuePrint not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35333,7 +35334,7 @@ class queue(object):
         leptonica.lqueueRemove.argtypes = [ctypes.c_void_p]
         leptonica.lqueueRemove.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function lqueueRemove not exported " +
+        sys.stderr.write("Warning - function lqueueRemove not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35362,7 +35363,7 @@ class queue(object):
         leptonica.lqueueGetCount.argtypes = [ctypes.c_void_p]
         leptonica.lqueueGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lqueueGetCount not exported " +
+        sys.stderr.write("Warning - function lqueueGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35386,7 +35387,7 @@ class queue(object):
         leptonica.lqueueAdd.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lqueueAdd.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lqueueAdd not exported " +
+        sys.stderr.write("Warning - function lqueueAdd not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35420,7 +35421,7 @@ class queue(object):
         leptonica.lqueueCreate.argtypes = [ctypes.c_int32]
         leptonica.lqueueCreate.restype = lambda address: L_QUEUE(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function lqueueCreate not exported " +
+        sys.stderr.write("Warning - function lqueueCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35447,7 +35448,7 @@ class queue(object):
         leptonica.lqueueDestroy.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.lqueueDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function lqueueDestroy not exported " +
+        sys.stderr.write("Warning - function lqueueDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35623,7 +35624,7 @@ class morph(object):
         leptonica.pixCloseSafeBrick.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCloseSafeBrick.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCloseSafeBrick not exported " +
+        sys.stderr.write("Warning - function pixCloseSafeBrick not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35673,7 +35674,7 @@ class morph(object):
         leptonica.pixOpenBrick.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOpenBrick.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOpenBrick not exported " +
+        sys.stderr.write("Warning - function pixOpenBrick not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35718,7 +35719,7 @@ class morph(object):
         leptonica.pixDilateBrick.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDilateBrick.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDilateBrick not exported " +
+        sys.stderr.write("Warning - function pixDilateBrick not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35763,7 +35764,7 @@ class morph(object):
         leptonica.pixOpenGeneralized.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixOpenGeneralized.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOpenGeneralized not exported " +
+        sys.stderr.write("Warning - function pixOpenGeneralized not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35807,7 +35808,7 @@ class morph(object):
         leptonica.getMorphBorderPixelColor.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.getMorphBorderPixelColor.restype = ctypes.c_uint32
     except AttributeError:
-        os.stderr.write("Warning - function getMorphBorderPixelColor not exported " +
+        sys.stderr.write("Warning - function getMorphBorderPixelColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35833,7 +35834,7 @@ class morph(object):
         leptonica.pixHMT.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixHMT.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixHMT not exported " +
+        sys.stderr.write("Warning - function pixHMT not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35876,7 +35877,7 @@ class morph(object):
         leptonica.resetMorphBoundaryCondition.argtypes = [ctypes.c_int32]
         leptonica.resetMorphBoundaryCondition.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function resetMorphBoundaryCondition not exported " +
+        sys.stderr.write("Warning - function resetMorphBoundaryCondition not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35900,7 +35901,7 @@ class morph(object):
         leptonica.pixCloseSafe.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCloseSafe.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCloseSafe not exported " +
+        sys.stderr.write("Warning - function pixCloseSafe not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -35948,7 +35949,7 @@ class morph(object):
         leptonica.pixDilateCompBrick.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDilateCompBrick.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDilateCompBrick not exported " +
+        sys.stderr.write("Warning - function pixDilateCompBrick not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36007,7 +36008,7 @@ class morph(object):
         leptonica.pixCloseCompBrick.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCloseCompBrick.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCloseCompBrick not exported " +
+        sys.stderr.write("Warning - function pixCloseCompBrick not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36066,7 +36067,7 @@ class morph(object):
         leptonica.selectComposableSizes.argtypes = [ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.selectComposableSizes.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selectComposableSizes not exported " +
+        sys.stderr.write("Warning - function selectComposableSizes not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36105,7 +36106,7 @@ class morph(object):
         leptonica.pixCloseSafeCompBrick.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCloseSafeCompBrick.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCloseSafeCompBrick not exported " +
+        sys.stderr.write("Warning - function pixCloseSafeCompBrick not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36169,7 +36170,7 @@ class morph(object):
         leptonica.pixOpen.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixOpen.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOpen not exported " +
+        sys.stderr.write("Warning - function pixOpen not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36210,7 +36211,7 @@ class morph(object):
         leptonica.pixCloseGeneralized.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCloseGeneralized.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCloseGeneralized not exported " +
+        sys.stderr.write("Warning - function pixCloseGeneralized not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36255,7 +36256,7 @@ class morph(object):
         leptonica.pixErode.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixErode.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixErode not exported " +
+        sys.stderr.write("Warning - function pixErode not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36296,7 +36297,7 @@ class morph(object):
         leptonica.pixClose.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixClose.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixClose not exported " +
+        sys.stderr.write("Warning - function pixClose not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36340,7 +36341,7 @@ class morph(object):
         leptonica.pixOpenCompBrick.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOpenCompBrick.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOpenCompBrick not exported " +
+        sys.stderr.write("Warning - function pixOpenCompBrick not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36399,7 +36400,7 @@ class morph(object):
         leptonica.pixDilate.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixDilate.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDilate not exported " +
+        sys.stderr.write("Warning - function pixDilate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36440,7 +36441,7 @@ class morph(object):
         leptonica.pixCloseBrick.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCloseBrick.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCloseBrick not exported " +
+        sys.stderr.write("Warning - function pixCloseBrick not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36485,7 +36486,7 @@ class morph(object):
         leptonica.pixErodeBrick.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixErodeBrick.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixErodeBrick not exported " +
+        sys.stderr.write("Warning - function pixErodeBrick not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36530,7 +36531,7 @@ class morph(object):
         leptonica.pixErodeCompBrick.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixErodeCompBrick.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixErodeCompBrick not exported " +
+        sys.stderr.write("Warning - function pixErodeCompBrick not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36616,7 +36617,7 @@ class rotateorth(object):
         leptonica.pixRotateOrth.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixRotateOrth.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateOrth not exported " +
+        sys.stderr.write("Warning - function pixRotateOrth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36642,7 +36643,7 @@ class rotateorth(object):
         leptonica.pixFlipLR.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFlipLR.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFlipLR not exported " +
+        sys.stderr.write("Warning - function pixFlipLR not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36702,7 +36703,7 @@ class rotateorth(object):
         leptonica.pixRotate180.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixRotate180.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotate180 not exported " +
+        sys.stderr.write("Warning - function pixRotate180 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36743,7 +36744,7 @@ class rotateorth(object):
         leptonica.pixRotate90.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixRotate90.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotate90 not exported " +
+        sys.stderr.write("Warning - function pixRotate90 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36774,7 +36775,7 @@ class rotateorth(object):
         leptonica.pixFlipTB.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFlipTB.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFlipTB not exported " +
+        sys.stderr.write("Warning - function pixFlipTB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36858,7 +36859,7 @@ class warper(object):
         leptonica.pixWarpStereoscopic.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixWarpStereoscopic.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixWarpStereoscopic not exported " +
+        sys.stderr.write("Warning - function pixWarpStereoscopic not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -36969,7 +36970,7 @@ class warper(object):
         leptonica.pixStretchHorizontal.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixStretchHorizontal.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixStretchHorizontal not exported " +
+        sys.stderr.write("Warning - function pixStretchHorizontal not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37018,7 +37019,7 @@ class warper(object):
         leptonica.pixStereoFromPair.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.pixStereoFromPair.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixStereoFromPair not exported " +
+        sys.stderr.write("Warning - function pixStereoFromPair not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37068,7 +37069,7 @@ class warper(object):
         leptonica.pixStretchHorizontalSampled.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixStretchHorizontalSampled.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixStretchHorizontalSampled not exported " +
+        sys.stderr.write("Warning - function pixStretchHorizontalSampled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37103,7 +37104,7 @@ class warper(object):
         leptonica.pixQuadraticVShearLI.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixQuadraticVShearLI.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixQuadraticVShearLI not exported " +
+        sys.stderr.write("Warning - function pixQuadraticVShearLI not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37138,7 +37139,7 @@ class warper(object):
         leptonica.pixRandomHarmonicWarp.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32, ctypes.c_int32]
         leptonica.pixRandomHarmonicWarp.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRandomHarmonicWarp not exported " +
+        sys.stderr.write("Warning - function pixRandomHarmonicWarp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37197,7 +37198,7 @@ class warper(object):
         leptonica.pixSimpleCaptcha.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32, ctypes.c_uint32, ctypes.c_int32]
         leptonica.pixSimpleCaptcha.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSimpleCaptcha not exported " +
+        sys.stderr.write("Warning - function pixSimpleCaptcha not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37237,7 +37238,7 @@ class warper(object):
         leptonica.pixQuadraticVShear.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixQuadraticVShear.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixQuadraticVShear not exported " +
+        sys.stderr.write("Warning - function pixQuadraticVShear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37287,7 +37288,7 @@ class warper(object):
         leptonica.pixQuadraticVShearSampled.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixQuadraticVShearSampled.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixQuadraticVShearSampled not exported " +
+        sys.stderr.write("Warning - function pixQuadraticVShearSampled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37322,7 +37323,7 @@ class warper(object):
         leptonica.pixStretchHorizontalLI.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixStretchHorizontalLI.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixStretchHorizontalLI not exported " +
+        sys.stderr.write("Warning - function pixStretchHorizontalLI not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37435,7 +37436,7 @@ class bbuffer(object):
         leptonica.bbufferCreate.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.bbufferCreate.restype = lambda address: BBUFFER(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function bbufferCreate not exported " +
+        sys.stderr.write("Warning - function bbufferCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37467,7 +37468,7 @@ class bbuffer(object):
         leptonica.bbufferReadStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.bbufferReadStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function bbufferReadStream not exported " +
+        sys.stderr.write("Warning - function bbufferReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37495,7 +37496,7 @@ class bbuffer(object):
         leptonica.bbufferRead.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.bbufferRead.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function bbufferRead not exported " +
+        sys.stderr.write("Warning - function bbufferRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37532,7 +37533,7 @@ class bbuffer(object):
         leptonica.bbufferBytesToWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.bbufferBytesToWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function bbufferBytesToWrite not exported " +
+        sys.stderr.write("Warning - function bbufferBytesToWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37558,7 +37559,7 @@ class bbuffer(object):
         leptonica.bbufferWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p]
         leptonica.bbufferWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function bbufferWriteStream not exported " +
+        sys.stderr.write("Warning - function bbufferWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37588,7 +37589,7 @@ class bbuffer(object):
         leptonica.bbufferExtendArray.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.bbufferExtendArray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function bbufferExtendArray not exported " +
+        sys.stderr.write("Warning - function bbufferExtendArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37618,7 +37619,7 @@ class bbuffer(object):
         leptonica.bbufferDestroy.argtypes = [ctypes.c_void_p]
         leptonica.bbufferDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function bbufferDestroy not exported " +
+        sys.stderr.write("Warning - function bbufferDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37646,7 +37647,7 @@ class bbuffer(object):
         leptonica.bbufferWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p]
         leptonica.bbufferWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function bbufferWrite not exported " +
+        sys.stderr.write("Warning - function bbufferWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37676,7 +37677,7 @@ class bbuffer(object):
         leptonica.bbufferDestroyAndSaveData.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.bbufferDestroyAndSaveData.restype = ctypes.POINTER(ctypes.c_ubyte)
     except AttributeError:
-        os.stderr.write("Warning - function bbufferDestroyAndSaveData not exported " +
+        sys.stderr.write("Warning - function bbufferDestroyAndSaveData not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37928,7 +37929,7 @@ class ccbord(object):
         leptonica.ccbaGenerateStepChains.argtypes = [ctypes.c_void_p]
         leptonica.ccbaGenerateStepChains.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ccbaGenerateStepChains not exported " +
+        sys.stderr.write("Warning - function ccbaGenerateStepChains not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -37966,7 +37967,7 @@ class ccbord(object):
         leptonica.ccbaGenerateSPGlobalLocs.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.ccbaGenerateSPGlobalLocs.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ccbaGenerateSPGlobalLocs not exported " +
+        sys.stderr.write("Warning - function ccbaGenerateSPGlobalLocs not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38002,7 +38003,7 @@ class ccbord(object):
         leptonica.ccbaCreate.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.ccbaCreate.restype = lambda address: CCBORDA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ccbaCreate not exported " +
+        sys.stderr.write("Warning - function ccbaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38028,7 +38029,7 @@ class ccbord(object):
         leptonica.ccbaDisplayBorder.argtypes = [ctypes.c_void_p]
         leptonica.ccbaDisplayBorder.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ccbaDisplayBorder not exported " +
+        sys.stderr.write("Warning - function ccbaDisplayBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38057,7 +38058,7 @@ class ccbord(object):
         leptonica.ccbaGetCcb.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.ccbaGetCcb.restype = lambda address: CCBORD(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ccbaGetCcb not exported " +
+        sys.stderr.write("Warning - function ccbaGetCcb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38082,7 +38083,7 @@ class ccbord(object):
         leptonica.findNextBorderPixel.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.findNextBorderPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function findNextBorderPixel not exported " +
+        sys.stderr.write("Warning - function findNextBorderPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38123,7 +38124,7 @@ class ccbord(object):
         leptonica.ccbaGetCount.argtypes = [ctypes.c_void_p]
         leptonica.ccbaGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ccbaGetCount not exported " +
+        sys.stderr.write("Warning - function ccbaGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38147,7 +38148,7 @@ class ccbord(object):
         leptonica.ccbaStepChainsToPixCoords.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.ccbaStepChainsToPixCoords.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ccbaStepChainsToPixCoords not exported " +
+        sys.stderr.write("Warning - function ccbaStepChainsToPixCoords not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38180,7 +38181,7 @@ class ccbord(object):
         leptonica.locateOutsideSeedPixel.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.locateOutsideSeedPixel.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function locateOutsideSeedPixel not exported " +
+        sys.stderr.write("Warning - function locateOutsideSeedPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38219,7 +38220,7 @@ class ccbord(object):
         leptonica.pixGetAllCCBorders.argtypes = [ctypes.c_void_p]
         leptonica.pixGetAllCCBorders.restype = lambda address: CCBORDA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetAllCCBorders not exported " +
+        sys.stderr.write("Warning - function pixGetAllCCBorders not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38243,7 +38244,7 @@ class ccbord(object):
         leptonica.ccbaWriteSVG.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ccbaWriteSVG.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ccbaWriteSVG not exported " +
+        sys.stderr.write("Warning - function ccbaWriteSVG not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38269,7 +38270,7 @@ class ccbord(object):
         leptonica.pixGetHoleBorder.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGetHoleBorder.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetHoleBorder not exported " +
+        sys.stderr.write("Warning - function pixGetHoleBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38308,7 +38309,7 @@ class ccbord(object):
         leptonica.ccbaGenerateSinglePath.argtypes = [ctypes.c_void_p]
         leptonica.ccbaGenerateSinglePath.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ccbaGenerateSinglePath not exported " +
+        sys.stderr.write("Warning - function ccbaGenerateSinglePath not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38359,7 +38360,7 @@ class ccbord(object):
         leptonica.pixGetCCBorders.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetCCBorders.restype = lambda address: CCBORD(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetCCBorders not exported " +
+        sys.stderr.write("Warning - function pixGetCCBorders not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38402,7 +38403,7 @@ class ccbord(object):
         leptonica.pixGetOuterBordersPtaa.argtypes = [ctypes.c_void_p]
         leptonica.pixGetOuterBordersPtaa.restype = lambda address: PTAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetOuterBordersPtaa not exported " +
+        sys.stderr.write("Warning - function pixGetOuterBordersPtaa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38426,7 +38427,7 @@ class ccbord(object):
         leptonica.ccbaRead.argtypes = [ctypes.c_void_p]
         leptonica.ccbaRead.restype = lambda address: CCBORDA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ccbaRead not exported " +
+        sys.stderr.write("Warning - function ccbaRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38450,7 +38451,7 @@ class ccbord(object):
         leptonica.ccbaWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ccbaWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ccbaWrite not exported " +
+        sys.stderr.write("Warning - function ccbaWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38476,7 +38477,7 @@ class ccbord(object):
         leptonica.getCutPathForHole.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.getCutPathForHole.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function getCutPathForHole not exported " +
+        sys.stderr.write("Warning - function getCutPathForHole not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38521,7 +38522,7 @@ class ccbord(object):
         leptonica.pixGetOuterBorderPta.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetOuterBorderPta.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetOuterBorderPta not exported " +
+        sys.stderr.write("Warning - function pixGetOuterBorderPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38555,7 +38556,7 @@ class ccbord(object):
         leptonica.ccbaGenerateGlobalLocs.argtypes = [ctypes.c_void_p]
         leptonica.ccbaGenerateGlobalLocs.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ccbaGenerateGlobalLocs not exported " +
+        sys.stderr.write("Warning - function ccbaGenerateGlobalLocs not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38583,7 +38584,7 @@ class ccbord(object):
         leptonica.ccbCreate.argtypes = [ctypes.c_void_p]
         leptonica.ccbCreate.restype = lambda address: CCBORD(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ccbCreate not exported " +
+        sys.stderr.write("Warning - function ccbCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38607,7 +38608,7 @@ class ccbord(object):
         leptonica.ccbaWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ccbaWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ccbaWriteStream not exported " +
+        sys.stderr.write("Warning - function ccbaWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38649,7 +38650,7 @@ class ccbord(object):
         leptonica.ccbaWriteSVGString.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ccbaWriteSVGString.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function ccbaWriteSVGString not exported " +
+        sys.stderr.write("Warning - function ccbaWriteSVGString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38676,7 +38677,7 @@ class ccbord(object):
         leptonica.pixGetOuterBorder.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetOuterBorder.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetOuterBorder not exported " +
+        sys.stderr.write("Warning - function pixGetOuterBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38714,7 +38715,7 @@ class ccbord(object):
         leptonica.ccbDestroy.argtypes = [ctypes.c_void_p]
         leptonica.ccbDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function ccbDestroy not exported " +
+        sys.stderr.write("Warning - function ccbDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38738,7 +38739,7 @@ class ccbord(object):
         leptonica.ccbaReadStream.argtypes = [ctypes.c_void_p]
         leptonica.ccbaReadStream.restype = lambda address: CCBORDA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ccbaReadStream not exported " +
+        sys.stderr.write("Warning - function ccbaReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38778,7 +38779,7 @@ class ccbord(object):
         leptonica.ccbaDisplayImage1.argtypes = [ctypes.c_void_p]
         leptonica.ccbaDisplayImage1.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ccbaDisplayImage1 not exported " +
+        sys.stderr.write("Warning - function ccbaDisplayImage1 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38850,7 +38851,7 @@ class ccbord(object):
         leptonica.ccbaDisplayImage2.argtypes = [ctypes.c_void_p]
         leptonica.ccbaDisplayImage2.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ccbaDisplayImage2 not exported " +
+        sys.stderr.write("Warning - function ccbaDisplayImage2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38887,7 +38888,7 @@ class ccbord(object):
         leptonica.ccbaAddCcb.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ccbaAddCcb.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ccbaAddCcb not exported " +
+        sys.stderr.write("Warning - function ccbaAddCcb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38913,7 +38914,7 @@ class ccbord(object):
         leptonica.ccbaDisplaySPBorder.argtypes = [ctypes.c_void_p]
         leptonica.ccbaDisplaySPBorder.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ccbaDisplaySPBorder not exported " +
+        sys.stderr.write("Warning - function ccbaDisplaySPBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -38942,7 +38943,7 @@ class ccbord(object):
         leptonica.ccbaDestroy.argtypes = [ctypes.c_void_p]
         leptonica.ccbaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function ccbaDestroy not exported " +
+        sys.stderr.write("Warning - function ccbaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39013,7 +39014,7 @@ class readfile(object):
         leptonica.pixReadMem.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
         leptonica.pixReadMem.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadMem not exported " +
+        sys.stderr.write("Warning - function pixReadMem not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39050,7 +39051,7 @@ class readfile(object):
         leptonica.pixRead.argtypes = [ctypes.c_void_p]
         leptonica.pixRead.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRead not exported " +
+        sys.stderr.write("Warning - function pixRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39077,7 +39078,7 @@ class readfile(object):
         leptonica.pixaReadFilesSA.argtypes = [ctypes.c_void_p]
         leptonica.pixaReadFilesSA.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaReadFilesSA not exported " +
+        sys.stderr.write("Warning - function pixaReadFilesSA not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39101,7 +39102,7 @@ class readfile(object):
         leptonica.findFileFormat.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.findFileFormat.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function findFileFormat not exported " +
+        sys.stderr.write("Warning - function findFileFormat not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39127,7 +39128,7 @@ class readfile(object):
         leptonica.pixReadHeader.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixReadHeader.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixReadHeader not exported " +
+        sys.stderr.write("Warning - function pixReadHeader not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39167,7 +39168,7 @@ class readfile(object):
         leptonica.fileFormatIsTiff.argtypes = [ctypes.c_void_p]
         leptonica.fileFormatIsTiff.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fileFormatIsTiff not exported " +
+        sys.stderr.write("Warning - function fileFormatIsTiff not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39191,7 +39192,7 @@ class readfile(object):
         leptonica.pixReadWithHint.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixReadWithHint.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadWithHint not exported " +
+        sys.stderr.write("Warning - function pixReadWithHint not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39221,7 +39222,7 @@ class readfile(object):
         leptonica.findFileFormatBuffer.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.findFileFormatBuffer.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function findFileFormatBuffer not exported " +
+        sys.stderr.write("Warning - function findFileFormatBuffer not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39253,7 +39254,7 @@ class readfile(object):
         leptonica.ioFormatTest.argtypes = [ctypes.c_void_p]
         leptonica.ioFormatTest.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ioFormatTest not exported " +
+        sys.stderr.write("Warning - function ioFormatTest not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39291,7 +39292,7 @@ class readfile(object):
         leptonica.pixReadStream.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixReadStream.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadStream not exported " +
+        sys.stderr.write("Warning - function pixReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39320,7 +39321,7 @@ class readfile(object):
         leptonica.pixReadIndexed.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixReadIndexed.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadIndexed not exported " +
+        sys.stderr.write("Warning - function pixReadIndexed not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39365,7 +39366,7 @@ class readfile(object):
         leptonica.findFileFormatStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.findFileFormatStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function findFileFormatStream not exported " +
+        sys.stderr.write("Warning - function findFileFormatStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39394,7 +39395,7 @@ class readfile(object):
         leptonica.pixReadHeaderMem.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixReadHeaderMem.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixReadHeaderMem not exported " +
+        sys.stderr.write("Warning - function pixReadHeaderMem not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39442,7 +39443,7 @@ class readfile(object):
         leptonica.pixaReadFiles.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaReadFiles.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaReadFiles not exported " +
+        sys.stderr.write("Warning - function pixaReadFiles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39511,7 +39512,7 @@ class classapp(object):
         leptonica.numaaCompareImagesByBoxes.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaaCompareImagesByBoxes.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function numaaCompareImagesByBoxes not exported " +
+        sys.stderr.write("Warning - function numaaCompareImagesByBoxes not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39580,7 +39581,7 @@ class classapp(object):
         leptonica.pixGetWordsInTextlines.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetWordsInTextlines.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetWordsInTextlines not exported " +
+        sys.stderr.write("Warning - function pixGetWordsInTextlines not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39652,7 +39653,7 @@ class classapp(object):
         leptonica.pixGetWordBoxesInTextlines.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetWordBoxesInTextlines.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetWordBoxesInTextlines not exported " +
+        sys.stderr.write("Warning - function pixGetWordBoxesInTextlines not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39697,7 +39698,7 @@ class classapp(object):
         leptonica.boxaExtractSortedPattern.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaExtractSortedPattern.restype = lambda address: NUMAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaExtractSortedPattern not exported " +
+        sys.stderr.write("Warning - function boxaExtractSortedPattern not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39731,7 +39732,7 @@ class classapp(object):
         leptonica.jbWordsInTextlines.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.jbWordsInTextlines.restype = lambda address: JBCLASSER(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function jbWordsInTextlines not exported " +
+        sys.stderr.write("Warning - function jbWordsInTextlines not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39780,7 +39781,7 @@ class classapp(object):
         leptonica.jbRankHaus.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.jbRankHaus.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function jbRankHaus not exported " +
+        sys.stderr.write("Warning - function jbRankHaus not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39822,7 +39823,7 @@ class classapp(object):
         leptonica.jbCorrelation.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.jbCorrelation.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function jbCorrelation not exported " +
+        sys.stderr.write("Warning - function jbCorrelation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -39977,7 +39978,7 @@ class pixcomp(object):
         leptonica.pixacompGetPixcomp.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixacompGetPixcomp.restype = lambda address: PIXC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompGetPixcomp not exported " +
+        sys.stderr.write("Warning - function pixacompGetPixcomp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40009,7 +40010,7 @@ class pixcomp(object):
         leptonica.pixacompWriteStreamInfo.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixacompWriteStreamInfo.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompWriteStreamInfo not exported " +
+        sys.stderr.write("Warning - function pixacompWriteStreamInfo not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40037,7 +40038,7 @@ class pixcomp(object):
         leptonica.pixaCreateFromPixacomp.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaCreateFromPixacomp.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaCreateFromPixacomp not exported " +
+        sys.stderr.write("Warning - function pixaCreateFromPixacomp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40063,7 +40064,7 @@ class pixcomp(object):
         leptonica.pixacompRead.argtypes = [ctypes.c_void_p]
         leptonica.pixacompRead.restype = lambda address: PIXAC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompRead not exported " +
+        sys.stderr.write("Warning - function pixacompRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40092,7 +40093,7 @@ class pixcomp(object):
         leptonica.pixacompAddPixcomp.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixacompAddPixcomp.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompAddPixcomp not exported " +
+        sys.stderr.write("Warning - function pixacompAddPixcomp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40118,7 +40119,7 @@ class pixcomp(object):
         leptonica.pixCreateFromPixcomp.argtypes = [ctypes.c_void_p]
         leptonica.pixCreateFromPixcomp.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCreateFromPixcomp not exported " +
+        sys.stderr.write("Warning - function pixCreateFromPixcomp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40142,7 +40143,7 @@ class pixcomp(object):
         leptonica.pixacompGetPix.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixacompGetPix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompGetPix not exported " +
+        sys.stderr.write("Warning - function pixacompGetPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40172,7 +40173,7 @@ class pixcomp(object):
         leptonica.pixacompGetBoxGeometry.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixacompGetBoxGeometry.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompGetBoxGeometry not exported " +
+        sys.stderr.write("Warning - function pixacompGetBoxGeometry not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40207,7 +40208,7 @@ class pixcomp(object):
         leptonica.pixcompCreateFromString.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_int32]
         leptonica.pixcompCreateFromString.restype = lambda address: PIXC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixcompCreateFromString not exported " +
+        sys.stderr.write("Warning - function pixcompCreateFromString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40240,7 +40241,7 @@ class pixcomp(object):
         leptonica.pixacompGetBoxaCount.argtypes = [ctypes.c_void_p]
         leptonica.pixacompGetBoxaCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompGetBoxaCount not exported " +
+        sys.stderr.write("Warning - function pixacompGetBoxaCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40264,7 +40265,7 @@ class pixcomp(object):
         leptonica.pixacompGetBox.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixacompGetBox.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompGetBox not exported " +
+        sys.stderr.write("Warning - function pixacompGetBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40304,7 +40305,7 @@ class pixcomp(object):
         leptonica.pixacompAddPix.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixacompAddPix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompAddPix not exported " +
+        sys.stderr.write("Warning - function pixacompAddPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40337,7 +40338,7 @@ class pixcomp(object):
         leptonica.pixacompDisplayTiledAndScaled.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixacompDisplayTiledAndScaled.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompDisplayTiledAndScaled not exported " +
+        sys.stderr.write("Warning - function pixacompDisplayTiledAndScaled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40386,7 +40387,7 @@ class pixcomp(object):
         leptonica.pixacompConvertToPdfData.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixacompConvertToPdfData.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompConvertToPdfData not exported " +
+        sys.stderr.write("Warning - function pixacompConvertToPdfData not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40428,7 +40429,7 @@ class pixcomp(object):
         leptonica.pixacompGetCount.argtypes = [ctypes.c_void_p]
         leptonica.pixacompGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompGetCount not exported " +
+        sys.stderr.write("Warning - function pixacompGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40452,7 +40453,7 @@ class pixcomp(object):
         leptonica.pixacompCreate.argtypes = [ctypes.c_int32]
         leptonica.pixacompCreate.restype = lambda address: PIXAC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompCreate not exported " +
+        sys.stderr.write("Warning - function pixacompCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40476,7 +40477,7 @@ class pixcomp(object):
         leptonica.pixacompAddBox.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixacompAddBox.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompAddBox not exported " +
+        sys.stderr.write("Warning - function pixacompAddBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40504,7 +40505,7 @@ class pixcomp(object):
         leptonica.pixacompConvertToPdf.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixacompConvertToPdf.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompConvertToPdf not exported " +
+        sys.stderr.write("Warning - function pixacompConvertToPdf not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40552,7 +40553,7 @@ class pixcomp(object):
         leptonica.pixacompWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixacompWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompWriteStream not exported " +
+        sys.stderr.write("Warning - function pixacompWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40578,7 +40579,7 @@ class pixcomp(object):
         leptonica.pixacompWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixacompWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompWrite not exported " +
+        sys.stderr.write("Warning - function pixacompWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40609,7 +40610,7 @@ class pixcomp(object):
         leptonica.pixcompGetDimensions.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcompGetDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcompGetDimensions not exported " +
+        sys.stderr.write("Warning - function pixcompGetDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40637,7 +40638,7 @@ class pixcomp(object):
         leptonica.pixacompDestroy.argtypes = [ctypes.c_void_p]
         leptonica.pixacompDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function pixacompDestroy not exported " +
+        sys.stderr.write("Warning - function pixacompDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40664,7 +40665,7 @@ class pixcomp(object):
         leptonica.pixacompReadStream.argtypes = [ctypes.c_void_p]
         leptonica.pixacompReadStream.restype = lambda address: PIXAC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompReadStream not exported " +
+        sys.stderr.write("Warning - function pixacompReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40688,7 +40689,7 @@ class pixcomp(object):
         leptonica.pixacompCreateFromSA.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixacompCreateFromSA.restype = lambda address: PIXAC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompCreateFromSA not exported " +
+        sys.stderr.write("Warning - function pixacompCreateFromSA not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40720,7 +40721,7 @@ class pixcomp(object):
         leptonica.pixacompCreateFromFiles.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixacompCreateFromFiles.restype = lambda address: PIXAC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompCreateFromFiles not exported " +
+        sys.stderr.write("Warning - function pixacompCreateFromFiles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40759,7 +40760,7 @@ class pixcomp(object):
         leptonica.pixacompCreateWithInit.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixacompCreateWithInit.restype = lambda address: PIXAC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompCreateWithInit not exported " +
+        sys.stderr.write("Warning - function pixacompCreateWithInit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40816,7 +40817,7 @@ class pixcomp(object):
         leptonica.pixacompCreateFromPixa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixacompCreateFromPixa.restype = lambda address: PIXAC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompCreateFromPixa not exported " +
+        sys.stderr.write("Warning - function pixacompCreateFromPixa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40852,7 +40853,7 @@ class pixcomp(object):
         leptonica.pixacompGetBoxa.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixacompGetBoxa.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixacompGetBoxa not exported " +
+        sys.stderr.write("Warning - function pixacompGetBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40878,7 +40879,7 @@ class pixcomp(object):
         leptonica.pixacompReplacePix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixacompReplacePix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompReplacePix not exported " +
+        sys.stderr.write("Warning - function pixacompReplacePix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40914,7 +40915,7 @@ class pixcomp(object):
         leptonica.pixcompCreateFromFile.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixcompCreateFromFile.restype = lambda address: PIXC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixcompCreateFromFile not exported " +
+        sys.stderr.write("Warning - function pixcompCreateFromFile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40946,7 +40947,7 @@ class pixcomp(object):
         leptonica.pixacompSetOffset.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixacompSetOffset.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompSetOffset not exported " +
+        sys.stderr.write("Warning - function pixacompSetOffset not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -40977,7 +40978,7 @@ class pixcomp(object):
         leptonica.pixcompCreateFromPix.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixcompCreateFromPix.restype = lambda address: PIXC(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixcompCreateFromPix not exported " +
+        sys.stderr.write("Warning - function pixcompCreateFromPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41007,7 +41008,7 @@ class pixcomp(object):
         leptonica.pixcompDetermineFormat.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixcompDetermineFormat.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcompDetermineFormat not exported " +
+        sys.stderr.write("Warning - function pixcompDetermineFormat not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41046,7 +41047,7 @@ class pixcomp(object):
         leptonica.pixacompGetOffset.argtypes = [ctypes.c_void_p]
         leptonica.pixacompGetOffset.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompGetOffset not exported " +
+        sys.stderr.write("Warning - function pixacompGetOffset not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41075,7 +41076,7 @@ class pixcomp(object):
         leptonica.pixacompReplacePixcomp.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixacompReplacePixcomp.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompReplacePixcomp not exported " +
+        sys.stderr.write("Warning - function pixacompReplacePixcomp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41109,7 +41110,7 @@ class pixcomp(object):
         leptonica.pixacompGetPixDimensions.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixacompGetPixDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixacompGetPixDimensions not exported " +
+        sys.stderr.write("Warning - function pixacompGetPixDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41143,7 +41144,7 @@ class pixcomp(object):
         leptonica.pixcompDestroy.argtypes = [ctypes.c_void_p]
         leptonica.pixcompDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function pixcompDestroy not exported " +
+        sys.stderr.write("Warning - function pixcompDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41170,7 +41171,7 @@ class pixcomp(object):
         leptonica.pixcompWriteStreamInfo.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixcompWriteStreamInfo.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixcompWriteStreamInfo not exported " +
+        sys.stderr.write("Warning - function pixcompWriteStreamInfo not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41331,7 +41332,7 @@ class seedfill(object):
         leptonica.pixSeedfillBinaryRestricted.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSeedfillBinaryRestricted.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfillBinaryRestricted not exported " +
+        sys.stderr.write("Warning - function pixSeedfillBinaryRestricted not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41385,7 +41386,7 @@ class seedfill(object):
         leptonica.pixRemoveBorderConnComps.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixRemoveBorderConnComps.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRemoveBorderConnComps not exported " +
+        sys.stderr.write("Warning - function pixRemoveBorderConnComps not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41415,7 +41416,7 @@ class seedfill(object):
         leptonica.pixSelectMinInConnComp.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSelectMinInConnComp.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSelectMinInConnComp not exported " +
+        sys.stderr.write("Warning - function pixSelectMinInConnComp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41455,7 +41456,7 @@ class seedfill(object):
         leptonica.pixFillClosedBorders.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixFillClosedBorders.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFillClosedBorders not exported " +
+        sys.stderr.write("Warning - function pixFillClosedBorders not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41494,7 +41495,7 @@ class seedfill(object):
         leptonica.pixSeedfillGrayBasin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSeedfillGrayBasin.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfillGrayBasin not exported " +
+        sys.stderr.write("Warning - function pixSeedfillGrayBasin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41544,7 +41545,7 @@ class seedfill(object):
         leptonica.pixFillHolesToBoundingRect.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.pixFillHolesToBoundingRect.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFillHolesToBoundingRect not exported " +
+        sys.stderr.write("Warning - function pixFillHolesToBoundingRect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41594,7 +41595,7 @@ class seedfill(object):
         leptonica.pixSeedfillGraySimple.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSeedfillGraySimple.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfillGraySimple not exported " +
+        sys.stderr.write("Warning - function pixSeedfillGraySimple not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41636,7 +41637,7 @@ class seedfill(object):
         leptonica.pixDistanceFunction.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDistanceFunction.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDistanceFunction not exported " +
+        sys.stderr.write("Warning - function pixDistanceFunction not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41698,7 +41699,7 @@ class seedfill(object):
         leptonica.pixHolesByFilling.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixHolesByFilling.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixHolesByFilling not exported " +
+        sys.stderr.write("Warning - function pixHolesByFilling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41737,7 +41738,7 @@ class seedfill(object):
         leptonica.pixSeedspread.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSeedspread.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedspread not exported " +
+        sys.stderr.write("Warning - function pixSeedspread not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41794,7 +41795,7 @@ class seedfill(object):
         leptonica.pixExtractBorderConnComps.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixExtractBorderConnComps.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixExtractBorderConnComps not exported " +
+        sys.stderr.write("Warning - function pixExtractBorderConnComps not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41821,7 +41822,7 @@ class seedfill(object):
         leptonica.pixFindEqualValues.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindEqualValues.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFindEqualValues not exported " +
+        sys.stderr.write("Warning - function pixFindEqualValues not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41852,7 +41853,7 @@ class seedfill(object):
         leptonica.pixFillBgFromBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixFillBgFromBorder.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFillBgFromBorder not exported " +
+        sys.stderr.write("Warning - function pixFillBgFromBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41895,7 +41896,7 @@ class seedfill(object):
         leptonica.pixSeedfillGrayInvSimple.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSeedfillGrayInvSimple.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfillGrayInvSimple not exported " +
+        sys.stderr.write("Warning - function pixSeedfillGrayInvSimple not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41936,7 +41937,7 @@ class seedfill(object):
         leptonica.pixLocalExtrema.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixLocalExtrema.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixLocalExtrema not exported " +
+        sys.stderr.write("Warning - function pixLocalExtrema not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -41993,7 +41994,7 @@ class seedfill(object):
         leptonica.pixSeedfillBinary.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSeedfillBinary.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfillBinary not exported " +
+        sys.stderr.write("Warning - function pixSeedfillBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42043,7 +42044,7 @@ class seedfill(object):
         leptonica.pixRemoveSeededComponents.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRemoveSeededComponents.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRemoveSeededComponents not exported " +
+        sys.stderr.write("Warning - function pixRemoveSeededComponents not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42086,7 +42087,7 @@ class seedfill(object):
         leptonica.pixSelectedLocalExtrema.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSelectedLocalExtrema.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSelectedLocalExtrema not exported " +
+        sys.stderr.write("Warning - function pixSelectedLocalExtrema not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42137,7 +42138,7 @@ class seedfill(object):
         leptonica.pixSeedfillGrayInv.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSeedfillGrayInv.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfillGrayInv not exported " +
+        sys.stderr.write("Warning - function pixSeedfillGrayInv not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42182,7 +42183,7 @@ class seedfill(object):
         leptonica.pixSeedfillGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSeedfillGray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfillGray not exported " +
+        sys.stderr.write("Warning - function pixSeedfillGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42328,7 +42329,7 @@ class skew(object):
         leptonica.pixDeskewGeneral.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixDeskewGeneral.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDeskewGeneral not exported " +
+        sys.stderr.write("Warning - function pixDeskewGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42376,7 +42377,7 @@ class skew(object):
         leptonica.pixDeskew.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixDeskew.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDeskew not exported " +
+        sys.stderr.write("Warning - function pixDeskew not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42408,7 +42409,7 @@ class skew(object):
         leptonica.pixFindSkew.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindSkew.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindSkew not exported " +
+        sys.stderr.write("Warning - function pixFindSkew not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42443,7 +42444,7 @@ class skew(object):
         leptonica.pixFindSkewSweepAndSearchScorePivot.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_int32]
         leptonica.pixFindSkewSweepAndSearchScorePivot.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindSkewSweepAndSearchScorePivot not exported " +
+        sys.stderr.write("Warning - function pixFindSkewSweepAndSearchScorePivot not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42498,7 +42499,7 @@ class skew(object):
         leptonica.pixFindNormalizedSquareSum.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindNormalizedSquareSum.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindNormalizedSquareSum not exported " +
+        sys.stderr.write("Warning - function pixFindNormalizedSquareSum not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42540,7 +42541,7 @@ class skew(object):
         leptonica.pixFindSkewSweepAndSearch.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.pixFindSkewSweepAndSearch.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindSkewSweepAndSearch not exported " +
+        sys.stderr.write("Warning - function pixFindSkewSweepAndSearch not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42591,7 +42592,7 @@ class skew(object):
         leptonica.pixFindSkewSweep.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.pixFindSkewSweep.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindSkewSweep not exported " +
+        sys.stderr.write("Warning - function pixFindSkewSweep not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42627,7 +42628,7 @@ class skew(object):
         leptonica.pixFindDifferentialSquareSum.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindDifferentialSquareSum.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindDifferentialSquareSum not exported " +
+        sys.stderr.write("Warning - function pixFindDifferentialSquareSum not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42659,7 +42660,7 @@ class skew(object):
         leptonica.pixFindSkewAndDeskew.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindSkewAndDeskew.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFindSkewAndDeskew not exported " +
+        sys.stderr.write("Warning - function pixFindSkewAndDeskew not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42697,7 +42698,7 @@ class skew(object):
         leptonica.pixFindSkewSweepAndSearchScore.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.pixFindSkewSweepAndSearchScore.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindSkewSweepAndSearchScore not exported " +
+        sys.stderr.write("Warning - function pixFindSkewSweepAndSearchScore not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42800,7 +42801,7 @@ class maze(object):
         leptonica.pixSearchBinaryMaze.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixSearchBinaryMaze.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSearchBinaryMaze not exported " +
+        sys.stderr.write("Warning - function pixSearchBinaryMaze not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42866,7 +42867,7 @@ class maze(object):
         leptonica.pixFindLargestRectangle.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindLargestRectangle.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindLargestRectangle not exported " +
+        sys.stderr.write("Warning - function pixFindLargestRectangle not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42936,7 +42937,7 @@ class maze(object):
         leptonica.generateBinaryMaze.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.generateBinaryMaze.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function generateBinaryMaze not exported " +
+        sys.stderr.write("Warning - function generateBinaryMaze not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -42999,7 +43000,7 @@ class maze(object):
         leptonica.pixSearchGrayMaze.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixSearchGrayMaze.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSearchGrayMaze not exported " +
+        sys.stderr.write("Warning - function pixSearchGrayMaze not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43270,7 +43271,7 @@ class pixabasic(object):
         leptonica.pixaGetBoxGeometry.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaGetBoxGeometry.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetBoxGeometry not exported " +
+        sys.stderr.write("Warning - function pixaGetBoxGeometry not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43301,7 +43302,7 @@ class pixabasic(object):
         leptonica.pixaGetCount.argtypes = [ctypes.c_void_p]
         leptonica.pixaGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetCount not exported " +
+        sys.stderr.write("Warning - function pixaGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43325,7 +43326,7 @@ class pixabasic(object):
         leptonica.pixaChangeRefcount.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaChangeRefcount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaChangeRefcount not exported " +
+        sys.stderr.write("Warning - function pixaChangeRefcount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43350,7 +43351,7 @@ class pixabasic(object):
         leptonica.pixaVerifyDepth.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaVerifyDepth.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaVerifyDepth not exported " +
+        sys.stderr.write("Warning - function pixaVerifyDepth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43379,7 +43380,7 @@ class pixabasic(object):
         leptonica.pixaRead.argtypes = [ctypes.c_void_p]
         leptonica.pixaRead.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaRead not exported " +
+        sys.stderr.write("Warning - function pixaRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43407,7 +43408,7 @@ class pixabasic(object):
         leptonica.pixaGetPixArray.argtypes = [ctypes.c_void_p]
         leptonica.pixaGetPixArray.restype = ctypes.c_void_p
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetPixArray not exported " +
+        sys.stderr.write("Warning - function pixaGetPixArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43437,7 +43438,7 @@ class pixabasic(object):
         leptonica.pixaClear.argtypes = [ctypes.c_void_p]
         leptonica.pixaClear.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaClear not exported " +
+        sys.stderr.write("Warning - function pixaClear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43466,7 +43467,7 @@ class pixabasic(object):
         leptonica.pixaaDestroy.argtypes = [ctypes.c_void_p]
         leptonica.pixaaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function pixaaDestroy not exported " +
+        sys.stderr.write("Warning - function pixaaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43490,7 +43491,7 @@ class pixabasic(object):
         leptonica.pixaaGetCount.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaaGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaGetCount not exported " +
+        sys.stderr.write("Warning - function pixaaGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43519,7 +43520,7 @@ class pixabasic(object):
         leptonica.pixaAddBox.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaAddBox.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaAddBox not exported " +
+        sys.stderr.write("Warning - function pixaAddBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43547,7 +43548,7 @@ class pixabasic(object):
         leptonica.pixaaCreateFromPixa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaaCreateFromPixa.restype = lambda address: PIXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaCreateFromPixa not exported " +
+        sys.stderr.write("Warning - function pixaaCreateFromPixa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43586,7 +43587,7 @@ class pixabasic(object):
         leptonica.pixaaReadStream.argtypes = [ctypes.c_void_p]
         leptonica.pixaaReadStream.restype = lambda address: PIXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaReadStream not exported " +
+        sys.stderr.write("Warning - function pixaaReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43614,7 +43615,7 @@ class pixabasic(object):
         leptonica.pixaaRead.argtypes = [ctypes.c_void_p]
         leptonica.pixaaRead.restype = lambda address: PIXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaRead not exported " +
+        sys.stderr.write("Warning - function pixaaRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43642,7 +43643,7 @@ class pixabasic(object):
         leptonica.pixaaTruncate.argtypes = [ctypes.c_void_p]
         leptonica.pixaaTruncate.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaTruncate not exported " +
+        sys.stderr.write("Warning - function pixaaTruncate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43671,7 +43672,7 @@ class pixabasic(object):
         leptonica.pixaaReplacePixa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixaaReplacePixa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaReplacePixa not exported " +
+        sys.stderr.write("Warning - function pixaaReplacePixa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43706,7 +43707,7 @@ class pixabasic(object):
         leptonica.pixaGetPixDimensions.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaGetPixDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetPixDimensions not exported " +
+        sys.stderr.write("Warning - function pixaGetPixDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43736,7 +43737,7 @@ class pixabasic(object):
         leptonica.pixaaReadFromFiles.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaaReadFromFiles.restype = lambda address: PIXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaReadFromFiles not exported " +
+        sys.stderr.write("Warning - function pixaaReadFromFiles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43775,7 +43776,7 @@ class pixabasic(object):
         leptonica.pixaDestroy.argtypes = [ctypes.c_void_p]
         leptonica.pixaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function pixaDestroy not exported " +
+        sys.stderr.write("Warning - function pixaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43803,7 +43804,7 @@ class pixabasic(object):
         leptonica.pixaCreate.argtypes = [ctypes.c_int32]
         leptonica.pixaCreate.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaCreate not exported " +
+        sys.stderr.write("Warning - function pixaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43827,7 +43828,7 @@ class pixabasic(object):
         leptonica.pixaRemovePixAndSave.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaRemovePixAndSave.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaRemovePixAndSave not exported " +
+        sys.stderr.write("Warning - function pixaRemovePixAndSave not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43864,7 +43865,7 @@ class pixabasic(object):
         leptonica.pixaaWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaaWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaWriteStream not exported " +
+        sys.stderr.write("Warning - function pixaaWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43894,7 +43895,7 @@ class pixabasic(object):
         leptonica.pixaaIsFull.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaaIsFull.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaIsFull not exported " +
+        sys.stderr.write("Warning - function pixaaIsFull not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43923,7 +43924,7 @@ class pixabasic(object):
         leptonica.pixaaClear.argtypes = [ctypes.c_void_p]
         leptonica.pixaaClear.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaClear not exported " +
+        sys.stderr.write("Warning - function pixaaClear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43951,7 +43952,7 @@ class pixabasic(object):
         leptonica.pixaaGetPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaaGetPix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaGetPix not exported " +
+        sys.stderr.write("Warning - function pixaaGetPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -43981,7 +43982,7 @@ class pixabasic(object):
         leptonica.pixaGetBoxaCount.argtypes = [ctypes.c_void_p]
         leptonica.pixaGetBoxaCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetBoxaCount not exported " +
+        sys.stderr.write("Warning - function pixaGetBoxaCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44005,7 +44006,7 @@ class pixabasic(object):
         leptonica.pixaReadStream.argtypes = [ctypes.c_void_p]
         leptonica.pixaReadStream.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaReadStream not exported " +
+        sys.stderr.write("Warning - function pixaReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44033,7 +44034,7 @@ class pixabasic(object):
         leptonica.pixaRemovePix.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaRemovePix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaRemovePix not exported " +
+        sys.stderr.write("Warning - function pixaRemovePix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44065,7 +44066,7 @@ class pixabasic(object):
         leptonica.pixaaGetBoxa.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaaGetBoxa.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaGetBoxa not exported " +
+        sys.stderr.write("Warning - function pixaaGetBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44095,7 +44096,7 @@ class pixabasic(object):
         leptonica.pixaGetBox.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaGetBox.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetBox not exported " +
+        sys.stderr.write("Warning - function pixaGetBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44133,7 +44134,7 @@ class pixabasic(object):
         leptonica.pixaGetBoxa.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaGetBoxa.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetBoxa not exported " +
+        sys.stderr.write("Warning - function pixaGetBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44159,7 +44160,7 @@ class pixabasic(object):
         leptonica.pixaaInitFull.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaaInitFull.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaInitFull not exported " +
+        sys.stderr.write("Warning - function pixaaInitFull not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44197,7 +44198,7 @@ class pixabasic(object):
         leptonica.pixaaAddPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaaAddPix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaAddPix not exported " +
+        sys.stderr.write("Warning - function pixaaAddPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44229,7 +44230,7 @@ class pixabasic(object):
         leptonica.pixaGetPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaGetPix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetPix not exported " +
+        sys.stderr.write("Warning - function pixaGetPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44257,7 +44258,7 @@ class pixabasic(object):
         leptonica.pixaJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaJoin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaJoin not exported " +
+        sys.stderr.write("Warning - function pixaJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44293,7 +44294,7 @@ class pixabasic(object):
         leptonica.pixaaCreate.argtypes = [ctypes.c_int32]
         leptonica.pixaaCreate.restype = lambda address: PIXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaCreate not exported " +
+        sys.stderr.write("Warning - function pixaaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44331,7 +44332,7 @@ class pixabasic(object):
         leptonica.pixaAddPix.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaAddPix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaAddPix not exported " +
+        sys.stderr.write("Warning - function pixaAddPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44359,7 +44360,7 @@ class pixabasic(object):
         leptonica.pixaSetBoxa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaSetBoxa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaSetBoxa not exported " +
+        sys.stderr.write("Warning - function pixaSetBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44390,7 +44391,7 @@ class pixabasic(object):
         leptonica.pixaGetLinePtrs.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaGetLinePtrs.restype = ctypes.POINTER(ctypes.POINTER(ctypes.POINTER(ctypes.c_void_p)))
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetLinePtrs not exported " +
+        sys.stderr.write("Warning - function pixaGetLinePtrs not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44426,7 +44427,7 @@ class pixabasic(object):
         leptonica.pixaReplacePix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaReplacePix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaReplacePix not exported " +
+        sys.stderr.write("Warning - function pixaReplacePix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44460,7 +44461,7 @@ class pixabasic(object):
         leptonica.pixaaWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaaWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaWrite not exported " +
+        sys.stderr.write("Warning - function pixaaWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44490,7 +44491,7 @@ class pixabasic(object):
         leptonica.pixaWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaWrite not exported " +
+        sys.stderr.write("Warning - function pixaWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44520,7 +44521,7 @@ class pixabasic(object):
         leptonica.pixaaExtendArray.argtypes = [ctypes.c_void_p]
         leptonica.pixaaExtendArray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaExtendArray not exported " +
+        sys.stderr.write("Warning - function pixaaExtendArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44544,7 +44545,7 @@ class pixabasic(object):
         leptonica.pixaInitFull.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaInitFull.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaInitFull not exported " +
+        sys.stderr.write("Warning - function pixaInitFull not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44597,7 +44598,7 @@ class pixabasic(object):
         leptonica.pixaaAddPixa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaaAddPixa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaAddPixa not exported " +
+        sys.stderr.write("Warning - function pixaaAddPixa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44630,7 +44631,7 @@ class pixabasic(object):
         leptonica.pixaIsFull.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaIsFull.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaIsFull not exported " +
+        sys.stderr.write("Warning - function pixaIsFull not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44662,7 +44663,7 @@ class pixabasic(object):
         leptonica.pixaaJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaaJoin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaJoin not exported " +
+        sys.stderr.write("Warning - function pixaaJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44697,7 +44698,7 @@ class pixabasic(object):
         leptonica.pixaaAddBox.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaaAddBox.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaAddBox not exported " +
+        sys.stderr.write("Warning - function pixaaAddBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44729,7 +44730,7 @@ class pixabasic(object):
         leptonica.pixaaGetPixa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaaGetPixa.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaaGetPixa not exported " +
+        sys.stderr.write("Warning - function pixaaGetPixa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44767,7 +44768,7 @@ class pixabasic(object):
         leptonica.pixaaVerifyDepth.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaaVerifyDepth.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaaVerifyDepth not exported " +
+        sys.stderr.write("Warning - function pixaaVerifyDepth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44793,7 +44794,7 @@ class pixabasic(object):
         leptonica.pixaCreateFromPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaCreateFromPix.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaCreateFromPix not exported " +
+        sys.stderr.write("Warning - function pixaCreateFromPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44827,7 +44828,7 @@ class pixabasic(object):
         leptonica.pixaSplitPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixaSplitPix.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaSplitPix not exported " +
+        sys.stderr.write("Warning - function pixaSplitPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44871,7 +44872,7 @@ class pixabasic(object):
         leptonica.pixaWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaWriteStream not exported " +
+        sys.stderr.write("Warning - function pixaWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44901,7 +44902,7 @@ class pixabasic(object):
         leptonica.pixaExtendArrayToSize.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaExtendArrayToSize.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaExtendArrayToSize not exported " +
+        sys.stderr.write("Warning - function pixaExtendArrayToSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44930,7 +44931,7 @@ class pixabasic(object):
         leptonica.pixaInsertPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaInsertPix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaInsertPix not exported " +
+        sys.stderr.write("Warning - function pixaInsertPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44968,7 +44969,7 @@ class pixabasic(object):
         leptonica.pixaCountText.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaCountText.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaCountText not exported " +
+        sys.stderr.write("Warning - function pixaCountText not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -44998,7 +44999,7 @@ class pixabasic(object):
         leptonica.pixaCreateFromBoxa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaCreateFromBoxa.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaCreateFromBoxa not exported " +
+        sys.stderr.write("Warning - function pixaCreateFromBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45036,7 +45037,7 @@ class pixabasic(object):
         leptonica.pixaCopy.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaCopy.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaCopy not exported " +
+        sys.stderr.write("Warning - function pixaCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45107,7 +45108,7 @@ class bmf(object):
         leptonica.pixaGetFont.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaGetFont.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetFont not exported " +
+        sys.stderr.write("Warning - function pixaGetFont not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45142,7 +45143,7 @@ class bmf(object):
         leptonica.bmfCreate.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.bmfCreate.restype = lambda address: L_BMF(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function bmfCreate not exported " +
+        sys.stderr.write("Warning - function bmfCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45174,7 +45175,7 @@ class bmf(object):
         leptonica.bmfGetWidth.argtypes = [ctypes.c_void_p, ctypes.c_char, ctypes.c_void_p]
         leptonica.bmfGetWidth.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function bmfGetWidth not exported " +
+        sys.stderr.write("Warning - function bmfGetWidth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45202,7 +45203,7 @@ class bmf(object):
         leptonica.pixaGenerateFont.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaGenerateFont.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaGenerateFont not exported " +
+        sys.stderr.write("Warning - function pixaGenerateFont not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45251,7 +45252,7 @@ class bmf(object):
         leptonica.pixaSaveFont.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaSaveFont.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaSaveFont not exported " +
+        sys.stderr.write("Warning - function pixaSaveFont not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45285,7 +45286,7 @@ class bmf(object):
         leptonica.bmfGetPix.argtypes = [ctypes.c_void_p, ctypes.c_char]
         leptonica.bmfGetPix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function bmfGetPix not exported " +
+        sys.stderr.write("Warning - function bmfGetPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45311,7 +45312,7 @@ class bmf(object):
         leptonica.bmfGetBaseline.argtypes = [ctypes.c_void_p, ctypes.c_char, ctypes.c_void_p]
         leptonica.bmfGetBaseline.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function bmfGetBaseline not exported " +
+        sys.stderr.write("Warning - function bmfGetBaseline not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45339,7 +45340,7 @@ class bmf(object):
         leptonica.bmfDestroy.argtypes = [ctypes.c_void_p]
         leptonica.bmfDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function bmfDestroy not exported " +
+        sys.stderr.write("Warning - function bmfDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45427,7 +45428,7 @@ class pix5(object):
         leptonica.pixScanForForeground.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixScanForForeground.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixScanForForeground not exported " +
+        sys.stderr.write("Warning - function pixScanForForeground not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45462,7 +45463,7 @@ class pix5(object):
         leptonica.pixaFindWidthHeightRatio.argtypes = [ctypes.c_void_p]
         leptonica.pixaFindWidthHeightRatio.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaFindWidthHeightRatio not exported " +
+        sys.stderr.write("Warning - function pixaFindWidthHeightRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45490,7 +45491,7 @@ class pix5(object):
         leptonica.pixRankRowTransform.argtypes = [ctypes.c_void_p]
         leptonica.pixRankRowTransform.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRankRowTransform not exported " +
+        sys.stderr.write("Warning - function pixRankRowTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45519,7 +45520,7 @@ class pix5(object):
         leptonica.pixFindRectangleComps.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixFindRectangleComps.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFindRectangleComps not exported " +
+        sys.stderr.write("Warning - function pixFindRectangleComps not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45558,7 +45559,7 @@ class pix5(object):
         leptonica.pixClipMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixClipMasked.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixClipMasked not exported " +
+        sys.stderr.write("Warning - function pixClipMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45607,7 +45608,7 @@ class pix5(object):
         leptonica.pixaFindWidthHeightProduct.argtypes = [ctypes.c_void_p]
         leptonica.pixaFindWidthHeightProduct.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaFindWidthHeightProduct not exported " +
+        sys.stderr.write("Warning - function pixaFindWidthHeightProduct not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45635,7 +45636,7 @@ class pix5(object):
         leptonica.pixClipBoxToForeground.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixClipBoxToForeground.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixClipBoxToForeground not exported " +
+        sys.stderr.write("Warning - function pixClipBoxToForeground not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45671,7 +45672,7 @@ class pix5(object):
         leptonica.pixRankColumnTransform.argtypes = [ctypes.c_void_p]
         leptonica.pixRankColumnTransform.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRankColumnTransform not exported " +
+        sys.stderr.write("Warning - function pixRankColumnTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45700,7 +45701,7 @@ class pix5(object):
         leptonica.pixaFindAreaFractionMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaFindAreaFractionMasked.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaFindAreaFractionMasked not exported " +
+        sys.stderr.write("Warning - function pixaFindAreaFractionMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45737,7 +45738,7 @@ class pix5(object):
         leptonica.pixAverageIntensityProfile.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixAverageIntensityProfile.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAverageIntensityProfile not exported " +
+        sys.stderr.write("Warning - function pixAverageIntensityProfile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45788,7 +45789,7 @@ class pix5(object):
         leptonica.pixFindAreaFractionMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindAreaFractionMasked.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindAreaFractionMasked not exported " +
+        sys.stderr.write("Warning - function pixFindAreaFractionMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45832,7 +45833,7 @@ class pix5(object):
         leptonica.pixaFindPerimToAreaRatio.argtypes = [ctypes.c_void_p]
         leptonica.pixaFindPerimToAreaRatio.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaFindPerimToAreaRatio not exported " +
+        sys.stderr.write("Warning - function pixaFindPerimToAreaRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45860,7 +45861,7 @@ class pix5(object):
         leptonica.pixFindPerimSizeRatio.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindPerimSizeRatio.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindPerimSizeRatio not exported " +
+        sys.stderr.write("Warning - function pixFindPerimSizeRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45900,7 +45901,7 @@ class pix5(object):
         leptonica.pixaFindAreaFraction.argtypes = [ctypes.c_void_p]
         leptonica.pixaFindAreaFraction.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaFindAreaFraction not exported " +
+        sys.stderr.write("Warning - function pixaFindAreaFraction not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45928,7 +45929,7 @@ class pix5(object):
         leptonica.pixFindOverlapFraction.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindOverlapFraction.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindOverlapFraction not exported " +
+        sys.stderr.write("Warning - function pixFindOverlapFraction not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45966,7 +45967,7 @@ class pix5(object):
         leptonica.pixaFindPerimSizeRatio.argtypes = [ctypes.c_void_p]
         leptonica.pixaFindPerimSizeRatio.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaFindPerimSizeRatio not exported " +
+        sys.stderr.write("Warning - function pixaFindPerimSizeRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -45998,7 +45999,7 @@ class pix5(object):
         leptonica.pixClipToForeground.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixClipToForeground.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixClipToForeground not exported " +
+        sys.stderr.write("Warning - function pixClipToForeground not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46030,7 +46031,7 @@ class pix5(object):
         leptonica.pixCropToSize.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCropToSize.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCropToSize not exported " +
+        sys.stderr.write("Warning - function pixCropToSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46062,7 +46063,7 @@ class pix5(object):
         leptonica.pixMinMaxNearLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixMinMaxNearLine.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixMinMaxNearLine not exported " +
+        sys.stderr.write("Warning - function pixMinMaxNearLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46118,7 +46119,7 @@ class pix5(object):
         leptonica.pixTestClipToForeground.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixTestClipToForeground.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixTestClipToForeground not exported " +
+        sys.stderr.write("Warning - function pixTestClipToForeground not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46149,7 +46150,7 @@ class pix5(object):
         leptonica.pixCropToMatch.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCropToMatch.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCropToMatch not exported " +
+        sys.stderr.write("Warning - function pixCropToMatch not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46185,7 +46186,7 @@ class pix5(object):
         leptonica.pixFindPerimToAreaRatio.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindPerimToAreaRatio.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindPerimToAreaRatio not exported " +
+        sys.stderr.write("Warning - function pixFindPerimToAreaRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46225,7 +46226,7 @@ class pix5(object):
         leptonica.pixReversalProfile.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixReversalProfile.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReversalProfile not exported " +
+        sys.stderr.write("Warning - function pixReversalProfile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46285,7 +46286,7 @@ class pix5(object):
         leptonica.pixClipBoxToEdges.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixClipBoxToEdges.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixClipBoxToEdges not exported " +
+        sys.stderr.write("Warning - function pixClipBoxToEdges not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46341,7 +46342,7 @@ class pix5(object):
         leptonica.pixResizeToMatch.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixResizeToMatch.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixResizeToMatch not exported " +
+        sys.stderr.write("Warning - function pixResizeToMatch not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46384,7 +46385,7 @@ class pix5(object):
         leptonica.pixFindAreaPerimRatio.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindAreaPerimRatio.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindAreaPerimRatio not exported " +
+        sys.stderr.write("Warning - function pixFindAreaPerimRatio not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46419,7 +46420,7 @@ class pix5(object):
         leptonica.pixScanForEdge.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixScanForEdge.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixScanForEdge not exported " +
+        sys.stderr.write("Warning - function pixScanForEdge not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46471,7 +46472,7 @@ class pix5(object):
         leptonica.pixAverageOnLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixAverageOnLine.restype = ctypes.c_float
     except AttributeError:
-        os.stderr.write("Warning - function pixAverageOnLine not exported " +
+        sys.stderr.write("Warning - function pixAverageOnLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46511,7 +46512,7 @@ class pix5(object):
         leptonica.pixClipRectangles.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixClipRectangles.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixClipRectangles not exported " +
+        sys.stderr.write("Warning - function pixClipRectangles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46541,7 +46542,7 @@ class pix5(object):
         leptonica.pixFindAreaFraction.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindAreaFraction.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindAreaFraction not exported " +
+        sys.stderr.write("Warning - function pixFindAreaFraction not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46574,7 +46575,7 @@ class pix5(object):
         leptonica.pixExtractOnLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixExtractOnLine.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixExtractOnLine not exported " +
+        sys.stderr.write("Warning - function pixExtractOnLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46616,7 +46617,7 @@ class pix5(object):
         leptonica.pixConformsToRectangle.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixConformsToRectangle.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixConformsToRectangle not exported " +
+        sys.stderr.write("Warning - function pixConformsToRectangle not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46671,7 +46672,7 @@ class pix5(object):
         leptonica.pixaFindDimensions.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixaFindDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaFindDimensions not exported " +
+        sys.stderr.write("Warning - function pixaFindDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46699,7 +46700,7 @@ class pix5(object):
         leptonica.pixWindowedVarianceOnLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixWindowedVarianceOnLine.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWindowedVarianceOnLine not exported " +
+        sys.stderr.write("Warning - function pixWindowedVarianceOnLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46744,7 +46745,7 @@ class pix5(object):
         leptonica.pixClipRectangle.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixClipRectangle.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixClipRectangle not exported " +
+        sys.stderr.write("Warning - function pixClipRectangle not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46850,7 +46851,7 @@ class pix4(object):
         leptonica.pixGetRankValueMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetRankValueMasked.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRankValueMasked not exported " +
+        sys.stderr.write("Warning - function pixGetRankValueMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46905,7 +46906,7 @@ class pix4(object):
         leptonica.pixGetColumnStats.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGetColumnStats.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetColumnStats not exported " +
+        sys.stderr.write("Warning - function pixGetColumnStats not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -46952,7 +46953,7 @@ class pix4(object):
         leptonica.pixColumnStats.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixColumnStats.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixColumnStats not exported " +
+        sys.stderr.write("Warning - function pixColumnStats not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47001,7 +47002,7 @@ class pix4(object):
         leptonica.pixaExtractColumnFromEachPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixaExtractColumnFromEachPix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaExtractColumnFromEachPix not exported " +
+        sys.stderr.write("Warning - function pixaExtractColumnFromEachPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47029,7 +47030,7 @@ class pix4(object):
         leptonica.pixDisplayColorArray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixDisplayColorArray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayColorArray not exported " +
+        sys.stderr.write("Warning - function pixDisplayColorArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47061,7 +47062,7 @@ class pix4(object):
         leptonica.pixRowStats.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixRowStats.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRowStats not exported " +
+        sys.stderr.write("Warning - function pixRowStats not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47109,7 +47110,7 @@ class pix4(object):
         leptonica.pixGetCmapHistogramMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGetCmapHistogramMasked.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetCmapHistogramMasked not exported " +
+        sys.stderr.write("Warning - function pixGetCmapHistogramMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47148,7 +47149,7 @@ class pix4(object):
         leptonica.pixaGetAlignedStats.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixaGetAlignedStats.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaGetAlignedStats not exported " +
+        sys.stderr.write("Warning - function pixaGetAlignedStats not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47188,7 +47189,7 @@ class pix4(object):
         leptonica.pixGetAverageMaskedRGB.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetAverageMaskedRGB.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetAverageMaskedRGB not exported " +
+        sys.stderr.write("Warning - function pixGetAverageMaskedRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47235,7 +47236,7 @@ class pix4(object):
         leptonica.pixThresholdForFgBg.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixThresholdForFgBg.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixThresholdForFgBg not exported " +
+        sys.stderr.write("Warning - function pixThresholdForFgBg not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47267,7 +47268,7 @@ class pix4(object):
         leptonica.pixGetAverageMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGetAverageMasked.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetAverageMasked not exported " +
+        sys.stderr.write("Warning - function pixGetAverageMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47321,7 +47322,7 @@ class pix4(object):
         leptonica.pixGetGrayHistogramMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGetGrayHistogramMasked.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetGrayHistogramMasked not exported " +
+        sys.stderr.write("Warning - function pixGetGrayHistogramMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47363,7 +47364,7 @@ class pix4(object):
         leptonica.pixGetAverageTiled.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGetAverageTiled.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetAverageTiled not exported " +
+        sys.stderr.write("Warning - function pixGetAverageTiled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47400,7 +47401,7 @@ class pix4(object):
         leptonica.pixGetColorHistogramMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetColorHistogramMasked.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetColorHistogramMasked not exported " +
+        sys.stderr.write("Warning - function pixGetColorHistogramMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47445,7 +47446,7 @@ class pix4(object):
         leptonica.pixGetExtremeValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetExtremeValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetExtremeValue not exported " +
+        sys.stderr.write("Warning - function pixGetExtremeValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47487,7 +47488,7 @@ class pix4(object):
         leptonica.pixGetComponentRange.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetComponentRange.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetComponentRange not exported " +
+        sys.stderr.write("Warning - function pixGetComponentRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47522,7 +47523,7 @@ class pix4(object):
         leptonica.pixGetBinnedColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGetBinnedColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetBinnedColor not exported " +
+        sys.stderr.write("Warning - function pixGetBinnedColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47572,7 +47573,7 @@ class pix4(object):
         leptonica.pixGetGrayHistogramInRect.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGetGrayHistogramInRect.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetGrayHistogramInRect not exported " +
+        sys.stderr.write("Warning - function pixGetGrayHistogramInRect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47608,7 +47609,7 @@ class pix4(object):
         leptonica.pixGetCmapHistogramInRect.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGetCmapHistogramInRect.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetCmapHistogramInRect not exported " +
+        sys.stderr.write("Warning - function pixGetCmapHistogramInRect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47643,7 +47644,7 @@ class pix4(object):
         leptonica.pixGetAverageTiledRGB.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetAverageTiledRGB.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetAverageTiledRGB not exported " +
+        sys.stderr.write("Warning - function pixGetAverageTiledRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47683,7 +47684,7 @@ class pix4(object):
         leptonica.pixGetBinnedComponentRange.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetBinnedComponentRange.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetBinnedComponentRange not exported " +
+        sys.stderr.write("Warning - function pixGetBinnedComponentRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47726,7 +47727,7 @@ class pix4(object):
         leptonica.pixGetGrayHistogram.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGetGrayHistogram.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetGrayHistogram not exported " +
+        sys.stderr.write("Warning - function pixGetGrayHistogram not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47761,7 +47762,7 @@ class pix4(object):
         leptonica.pixGetRankValueMaskedRGB.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetRankValueMaskedRGB.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRankValueMaskedRGB not exported " +
+        sys.stderr.write("Warning - function pixGetRankValueMaskedRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47812,7 +47813,7 @@ class pix4(object):
         leptonica.pixGetRowStats.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGetRowStats.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRowStats not exported " +
+        sys.stderr.write("Warning - function pixGetRowStats not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47864,7 +47865,7 @@ class pix4(object):
         leptonica.pixGetMaxValueInRect.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetMaxValueInRect.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetMaxValueInRect not exported " +
+        sys.stderr.write("Warning - function pixGetMaxValueInRect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47903,7 +47904,7 @@ class pix4(object):
         leptonica.pixRankBinByStrip.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRankBinByStrip.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRankBinByStrip not exported " +
+        sys.stderr.write("Warning - function pixRankBinByStrip not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47951,7 +47952,7 @@ class pix4(object):
         leptonica.pixGetRankValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p]
         leptonica.pixGetRankValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRankValue not exported " +
+        sys.stderr.write("Warning - function pixGetRankValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -47987,7 +47988,7 @@ class pix4(object):
         leptonica.pixGetRankColorArray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGetRankColorArray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRankColorArray not exported " +
+        sys.stderr.write("Warning - function pixGetRankColorArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48043,7 +48044,7 @@ class pix4(object):
         leptonica.pixSetPixelColumn.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixSetPixelColumn.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetPixelColumn not exported " +
+        sys.stderr.write("Warning - function pixSetPixelColumn not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48071,7 +48072,7 @@ class pix4(object):
         leptonica.pixGetColorHistogram.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetColorHistogram.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetColorHistogram not exported " +
+        sys.stderr.write("Warning - function pixGetColorHistogram not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48108,7 +48109,7 @@ class pix4(object):
         leptonica.pixGetCmapHistogram.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGetCmapHistogram.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetCmapHistogram not exported " +
+        sys.stderr.write("Warning - function pixGetCmapHistogram not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48139,7 +48140,7 @@ class pix4(object):
         leptonica.pixSplitDistributionFgBg.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSplitDistributionFgBg.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSplitDistributionFgBg not exported " +
+        sys.stderr.write("Warning - function pixSplitDistributionFgBg not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48180,7 +48181,7 @@ class pix4(object):
         leptonica.pixGetAverageValue.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGetAverageValue.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetAverageValue not exported " +
+        sys.stderr.write("Warning - function pixGetAverageValue not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48379,7 +48380,7 @@ class pix1(object):
         leptonica.pixCopySpp.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCopySpp.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCopySpp not exported " +
+        sys.stderr.write("Warning - function pixCopySpp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48405,7 +48406,7 @@ class pix1(object):
         leptonica.pixExtractData.argtypes = [ctypes.c_void_p]
         leptonica.pixExtractData.restype = ctypes.POINTER(ctypes.c_uint32)
     except AttributeError:
-        os.stderr.write("Warning - function pixExtractData not exported " +
+        sys.stderr.write("Warning - function pixExtractData not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48434,7 +48435,7 @@ class pix1(object):
         leptonica.pixCreate.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCreate.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCreate not exported " +
+        sys.stderr.write("Warning - function pixCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48461,7 +48462,7 @@ class pix1(object):
         leptonica.pixGetResolution.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetResolution.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetResolution not exported " +
+        sys.stderr.write("Warning - function pixGetResolution not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48488,7 +48489,7 @@ class pix1(object):
         leptonica.pixGetDimensions.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetDimensions not exported " +
+        sys.stderr.write("Warning - function pixGetDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48516,7 +48517,7 @@ class pix1(object):
         leptonica.pixSwapAndDestroy.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSwapAndDestroy.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSwapAndDestroy not exported " +
+        sys.stderr.write("Warning - function pixSwapAndDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48567,7 +48568,7 @@ class pix1(object):
         leptonica.pixCreateNoInit.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCreateNoInit.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCreateNoInit not exported " +
+        sys.stderr.write("Warning - function pixCreateNoInit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48598,7 +48599,7 @@ class pix1(object):
         leptonica.pixFreeData.argtypes = [ctypes.c_void_p]
         leptonica.pixFreeData.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFreeData not exported " +
+        sys.stderr.write("Warning - function pixFreeData not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48625,7 +48626,7 @@ class pix1(object):
         leptonica.pixCreateTemplate.argtypes = [ctypes.c_void_p]
         leptonica.pixCreateTemplate.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCreateTemplate not exported " +
+        sys.stderr.write("Warning - function pixCreateTemplate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48654,7 +48655,7 @@ class pix1(object):
         leptonica.pixCreateTemplateNoInit.argtypes = [ctypes.c_void_p]
         leptonica.pixCreateTemplateNoInit.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCreateTemplateNoInit not exported " +
+        sys.stderr.write("Warning - function pixCreateTemplateNoInit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48683,7 +48684,7 @@ class pix1(object):
         leptonica.pixCreateHeader.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCreateHeader.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCreateHeader not exported " +
+        sys.stderr.write("Warning - function pixCreateHeader not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48720,7 +48721,7 @@ class pix1(object):
         leptonica.pixDestroyColormap.argtypes = [ctypes.c_void_p]
         leptonica.pixDestroyColormap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixDestroyColormap not exported " +
+        sys.stderr.write("Warning - function pixDestroyColormap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48744,7 +48745,7 @@ class pix1(object):
         leptonica.pixSetResolution.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSetResolution.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetResolution not exported " +
+        sys.stderr.write("Warning - function pixSetResolution not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48771,7 +48772,7 @@ class pix1(object):
         leptonica.pixSetText.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSetText.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetText not exported " +
+        sys.stderr.write("Warning - function pixSetText not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48801,7 +48802,7 @@ class pix1(object):
         leptonica.pixSetDimensions.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSetDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetDimensions not exported " +
+        sys.stderr.write("Warning - function pixSetDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48829,7 +48830,7 @@ class pix1(object):
         leptonica.pixGetText.argtypes = [ctypes.c_void_p]
         leptonica.pixGetText.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function pixGetText not exported " +
+        sys.stderr.write("Warning - function pixGetText not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48857,7 +48858,7 @@ class pix1(object):
         leptonica.pixDestroy.argtypes = [ctypes.c_void_p]
         leptonica.pixDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function pixDestroy not exported " +
+        sys.stderr.write("Warning - function pixDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48885,7 +48886,7 @@ class pix1(object):
         leptonica.pixCopyColormap.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCopyColormap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCopyColormap not exported " +
+        sys.stderr.write("Warning - function pixCopyColormap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48914,7 +48915,7 @@ class pix1(object):
         leptonica.pixSizesEqual.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSizesEqual.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSizesEqual not exported " +
+        sys.stderr.write("Warning - function pixSizesEqual not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48939,7 +48940,7 @@ class pix1(object):
         leptonica.pixGetData.argtypes = [ctypes.c_void_p]
         leptonica.pixGetData.restype = ctypes.POINTER(ctypes.c_uint32)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetData not exported " +
+        sys.stderr.write("Warning - function pixGetData not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -48964,7 +48965,7 @@ class pix1(object):
         leptonica.pixClone.argtypes = [ctypes.c_void_p]
         leptonica.pixClone.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixClone not exported " +
+        sys.stderr.write("Warning - function pixClone not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49004,7 +49005,7 @@ class pix1(object):
         leptonica.pixSetColormap.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSetColormap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetColormap not exported " +
+        sys.stderr.write("Warning - function pixSetColormap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49036,7 +49037,7 @@ class pix1(object):
         leptonica.pixSetData.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSetData.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetData not exported " +
+        sys.stderr.write("Warning - function pixSetData not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49062,7 +49063,7 @@ class pix1(object):
         leptonica.pixGetLinePtrs.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetLinePtrs.restype = ctypes.POINTER(ctypes.POINTER(ctypes.c_void_p))
     except AttributeError:
-        os.stderr.write("Warning - function pixGetLinePtrs not exported " +
+        sys.stderr.write("Warning - function pixGetLinePtrs not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49149,7 +49150,7 @@ class pix1(object):
         leptonica.pixTransferAllData.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixTransferAllData.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixTransferAllData not exported " +
+        sys.stderr.write("Warning - function pixTransferAllData not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49217,7 +49218,7 @@ class pix1(object):
         leptonica.pixResizeImageData.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixResizeImageData.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixResizeImageData not exported " +
+        sys.stderr.write("Warning - function pixResizeImageData not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49248,7 +49249,7 @@ class pix1(object):
         leptonica.pixCopy.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCopy.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCopy not exported " +
+        sys.stderr.write("Warning - function pixCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49295,7 +49296,7 @@ class pix1(object):
         leptonica.pixAddText.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixAddText.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixAddText not exported " +
+        sys.stderr.write("Warning - function pixAddText not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49326,7 +49327,7 @@ class pix1(object):
         leptonica.pixPrintStreamInfo.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixPrintStreamInfo.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixPrintStreamInfo not exported " +
+        sys.stderr.write("Warning - function pixPrintStreamInfo not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49354,7 +49355,7 @@ class pix1(object):
         leptonica.pixCopyDimensions.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCopyDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCopyDimensions not exported " +
+        sys.stderr.write("Warning - function pixCopyDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49453,7 +49454,7 @@ class pix3(object):
         leptonica.pixAbsDiffByColumn.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixAbsDiffByColumn.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAbsDiffByColumn not exported " +
+        sys.stderr.write("Warning - function pixAbsDiffByColumn not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49486,7 +49487,7 @@ class pix3(object):
         leptonica.pixSubtract.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSubtract.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSubtract not exported " +
+        sys.stderr.write("Warning - function pixSubtract not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49536,7 +49537,7 @@ class pix3(object):
         leptonica.pixCountPixelsByColumn.argtypes = [ctypes.c_void_p]
         leptonica.pixCountPixelsByColumn.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCountPixelsByColumn not exported " +
+        sys.stderr.write("Warning - function pixCountPixelsByColumn not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49560,7 +49561,7 @@ class pix3(object):
         leptonica.pixVarianceInRect.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixVarianceInRect.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixVarianceInRect not exported " +
+        sys.stderr.write("Warning - function pixVarianceInRect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49588,7 +49589,7 @@ class pix3(object):
         leptonica.pixAverageByColumn.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixAverageByColumn.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAverageByColumn not exported " +
+        sys.stderr.write("Warning - function pixAverageByColumn not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49622,7 +49623,7 @@ class pix3(object):
         leptonica.pixSetUnderTransparency.argtypes = [ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32]
         leptonica.pixSetUnderTransparency.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSetUnderTransparency not exported " +
+        sys.stderr.write("Warning - function pixSetUnderTransparency not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49693,7 +49694,7 @@ class pix3(object):
         leptonica.pixThresholdPixelSum.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixThresholdPixelSum.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixThresholdPixelSum not exported " +
+        sys.stderr.write("Warning - function pixThresholdPixelSum not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49731,7 +49732,7 @@ class pix3(object):
         leptonica.pixCountPixelsInRow.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCountPixelsInRow.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCountPixelsInRow not exported " +
+        sys.stderr.write("Warning - function pixCountPixelsInRow not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49761,7 +49762,7 @@ class pix3(object):
         leptonica.makePixelCentroidTab8.argtypes = []
         leptonica.makePixelCentroidTab8.restype = ctypes.POINTER(ctypes.c_int32)
     except AttributeError:
-        os.stderr.write("Warning - function makePixelCentroidTab8 not exported " +
+        sys.stderr.write("Warning - function makePixelCentroidTab8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49795,7 +49796,7 @@ class pix3(object):
         leptonica.pixCountPixelsByRow.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCountPixelsByRow.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCountPixelsByRow not exported " +
+        sys.stderr.write("Warning - function pixCountPixelsByRow not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49821,7 +49822,7 @@ class pix3(object):
         leptonica.pixVarianceByColumn.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixVarianceByColumn.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixVarianceByColumn not exported " +
+        sys.stderr.write("Warning - function pixVarianceByColumn not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49853,7 +49854,7 @@ class pix3(object):
         leptonica.pixaCountPixels.argtypes = [ctypes.c_void_p]
         leptonica.pixaCountPixels.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixaCountPixels not exported " +
+        sys.stderr.write("Warning - function pixaCountPixels not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49877,7 +49878,7 @@ class pix3(object):
         leptonica.pixSetMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixSetMasked.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetMasked not exported " +
+        sys.stderr.write("Warning - function pixSetMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49926,7 +49927,7 @@ class pix3(object):
         leptonica.pixVarianceByRow.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixVarianceByRow.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixVarianceByRow not exported " +
+        sys.stderr.write("Warning - function pixVarianceByRow not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -49958,7 +49959,7 @@ class pix3(object):
         leptonica.pixOr.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixOr.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOr not exported " +
+        sys.stderr.write("Warning - function pixOr not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50007,7 +50008,7 @@ class pix3(object):
         leptonica.pixZero.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixZero.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixZero not exported " +
+        sys.stderr.write("Warning - function pixZero not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50042,7 +50043,7 @@ class pix3(object):
         leptonica.pixPaintSelfThroughMask.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixPaintSelfThroughMask.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixPaintSelfThroughMask not exported " +
+        sys.stderr.write("Warning - function pixPaintSelfThroughMask not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50092,7 +50093,7 @@ class pix3(object):
         leptonica.pixAbsDiffOnLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixAbsDiffOnLine.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixAbsDiffOnLine not exported " +
+        sys.stderr.write("Warning - function pixAbsDiffOnLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50130,7 +50131,7 @@ class pix3(object):
         leptonica.pixAnd.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixAnd.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAnd not exported " +
+        sys.stderr.write("Warning - function pixAnd not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50179,7 +50180,7 @@ class pix3(object):
         leptonica.pixAbsDiffInRect.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixAbsDiffInRect.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixAbsDiffInRect not exported " +
+        sys.stderr.write("Warning - function pixAbsDiffInRect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50215,7 +50216,7 @@ class pix3(object):
         leptonica.pixAverageByRow.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixAverageByRow.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAverageByRow not exported " +
+        sys.stderr.write("Warning - function pixAverageByRow not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50249,7 +50250,7 @@ class pix3(object):
         leptonica.pixCountArbInRect.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixCountArbInRect.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCountArbInRect not exported " +
+        sys.stderr.write("Warning - function pixCountArbInRect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50288,7 +50289,7 @@ class pix3(object):
         leptonica.pixMirroredTiling.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixMirroredTiling.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMirroredTiling not exported " +
+        sys.stderr.write("Warning - function pixMirroredTiling not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50327,7 +50328,7 @@ class pix3(object):
         leptonica.pixForegroundFraction.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixForegroundFraction.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixForegroundFraction not exported " +
+        sys.stderr.write("Warning - function pixForegroundFraction not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50353,7 +50354,7 @@ class pix3(object):
         leptonica.pixMakeMaskFromLUT.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixMakeMaskFromLUT.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMakeMaskFromLUT not exported " +
+        sys.stderr.write("Warning - function pixMakeMaskFromLUT not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50385,7 +50386,7 @@ class pix3(object):
         leptonica.pixPaintThroughMask.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixPaintThroughMask.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixPaintThroughMask not exported " +
+        sys.stderr.write("Warning - function pixPaintThroughMask not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50448,7 +50449,7 @@ class pix3(object):
         leptonica.pixSetMaskedGeneral.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSetMaskedGeneral.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetMaskedGeneral not exported " +
+        sys.stderr.write("Warning - function pixSetMaskedGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50497,7 +50498,7 @@ class pix3(object):
         leptonica.makePixelSumTab8.argtypes = []
         leptonica.makePixelSumTab8.restype = ctypes.POINTER(ctypes.c_int32)
     except AttributeError:
-        os.stderr.write("Warning - function makePixelSumTab8 not exported " +
+        sys.stderr.write("Warning - function makePixelSumTab8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50525,7 +50526,7 @@ class pix3(object):
         leptonica.pixCombineMasked.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCombineMasked.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCombineMasked not exported " +
+        sys.stderr.write("Warning - function pixCombineMasked not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50572,7 +50573,7 @@ class pix3(object):
         leptonica.pixXor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixXor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixXor not exported " +
+        sys.stderr.write("Warning - function pixXor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50621,7 +50622,7 @@ class pix3(object):
         leptonica.pixAbsDiffByRow.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixAbsDiffByRow.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAbsDiffByRow not exported " +
+        sys.stderr.write("Warning - function pixAbsDiffByRow not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50653,7 +50654,7 @@ class pix3(object):
         leptonica.pixCountPixels.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCountPixels.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCountPixels not exported " +
+        sys.stderr.write("Warning - function pixCountPixels not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50681,7 +50682,7 @@ class pix3(object):
         leptonica.pixCountByRow.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCountByRow.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCountByRow not exported " +
+        sys.stderr.write("Warning - function pixCountByRow not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50711,7 +50712,7 @@ class pix3(object):
         leptonica.pixInvert.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixInvert.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixInvert not exported " +
+        sys.stderr.write("Warning - function pixInvert not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50749,7 +50750,7 @@ class pix3(object):
         leptonica.pixAverageInRect.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixAverageInRect.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixAverageInRect not exported " +
+        sys.stderr.write("Warning - function pixAverageInRect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50777,7 +50778,7 @@ class pix3(object):
         leptonica.pixGetMomentByColumn.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGetMomentByColumn.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetMomentByColumn not exported " +
+        sys.stderr.write("Warning - function pixGetMomentByColumn not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50803,7 +50804,7 @@ class pix3(object):
         leptonica.pixCombineMaskedGeneral.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCombineMaskedGeneral.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCombineMaskedGeneral not exported " +
+        sys.stderr.write("Warning - function pixCombineMaskedGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50863,7 +50864,7 @@ class pix3(object):
         leptonica.pixCountByColumn.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCountByColumn.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCountByColumn not exported " +
+        sys.stderr.write("Warning - function pixCountByColumn not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -50997,7 +50998,7 @@ class pix2(object):
         leptonica.l_setAlphaMaskBorder.argtypes = [ctypes.c_float, ctypes.c_float]
         leptonica.l_setAlphaMaskBorder.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_setAlphaMaskBorder not exported " +
+        sys.stderr.write("Warning - function l_setAlphaMaskBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51036,7 +51037,7 @@ class pix2(object):
         leptonica.pixSetMirroredBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSetMirroredBorder.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetMirroredBorder not exported " +
+        sys.stderr.write("Warning - function pixSetMirroredBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51073,7 +51074,7 @@ class pix2(object):
         leptonica.pixSetPadBits.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSetPadBits.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetPadBits not exported " +
+        sys.stderr.write("Warning - function pixSetPadBits not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51108,7 +51109,7 @@ class pix2(object):
         leptonica.pixGetRGBComponentCmap.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGetRGBComponentCmap.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRGBComponentCmap not exported " +
+        sys.stderr.write("Warning - function pixGetRGBComponentCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51138,7 +51139,7 @@ class pix2(object):
         leptonica.pixGetBlackOrWhiteVal.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGetBlackOrWhiteVal.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetBlackOrWhiteVal not exported " +
+        sys.stderr.write("Warning - function pixGetBlackOrWhiteVal not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51172,7 +51173,7 @@ class pix2(object):
         leptonica.pixRemoveBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixRemoveBorder.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRemoveBorder not exported " +
+        sys.stderr.write("Warning - function pixRemoveBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51198,7 +51199,7 @@ class pix2(object):
         leptonica.pixBlendInRect.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_float]
         leptonica.pixBlendInRect.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixBlendInRect not exported " +
+        sys.stderr.write("Warning - function pixBlendInRect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51233,7 +51234,7 @@ class pix2(object):
         leptonica.pixClearAll.argtypes = [ctypes.c_void_p]
         leptonica.pixClearAll.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixClearAll not exported " +
+        sys.stderr.write("Warning - function pixClearAll not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51263,7 +51264,7 @@ class pix2(object):
         leptonica.setPixelLow.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.setPixelLow.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function setPixelLow not exported " +
+        sys.stderr.write("Warning - function setPixelLow not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51296,7 +51297,7 @@ class pix2(object):
         leptonica.pixGetRasterData.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetRasterData.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRasterData not exported " +
+        sys.stderr.write("Warning - function pixGetRasterData not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51330,7 +51331,7 @@ class pix2(object):
         leptonica.pixCopyBorder.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCopyBorder.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCopyBorder not exported " +
+        sys.stderr.write("Warning - function pixCopyBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51368,7 +51369,7 @@ class pix2(object):
         leptonica.pixCopyRGBComponent.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixCopyRGBComponent.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCopyRGBComponent not exported " +
+        sys.stderr.write("Warning - function pixCopyRGBComponent not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51401,7 +51402,7 @@ class pix2(object):
         leptonica.pixSetAllArbitrary.argtypes = [ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixSetAllArbitrary.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetAllArbitrary not exported " +
+        sys.stderr.write("Warning - function pixSetAllArbitrary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51433,7 +51434,7 @@ class pix2(object):
         leptonica.pixSetPadBitsBand.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSetPadBitsBand.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetPadBitsBand not exported " +
+        sys.stderr.write("Warning - function pixSetPadBitsBand not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51473,7 +51474,7 @@ class pix2(object):
         leptonica.pixSetAllGray.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSetAllGray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetAllGray not exported " +
+        sys.stderr.write("Warning - function pixSetAllGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51511,7 +51512,7 @@ class pix2(object):
         leptonica.pixEndianTwoByteSwapNew.argtypes = [ctypes.c_void_p]
         leptonica.pixEndianTwoByteSwapNew.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixEndianTwoByteSwapNew not exported " +
+        sys.stderr.write("Warning - function pixEndianTwoByteSwapNew not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51546,7 +51547,7 @@ class pix2(object):
         leptonica.pixSetBorderRingVal.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixSetBorderRingVal.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetBorderRingVal not exported " +
+        sys.stderr.write("Warning - function pixSetBorderRingVal not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51579,7 +51580,7 @@ class pix2(object):
         leptonica.lineEndianByteSwap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.lineEndianByteSwap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lineEndianByteSwap not exported " +
+        sys.stderr.write("Warning - function lineEndianByteSwap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51617,7 +51618,7 @@ class pix2(object):
         leptonica.pixClearPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixClearPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixClearPixel not exported " +
+        sys.stderr.write("Warning - function pixClearPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51644,7 +51645,7 @@ class pix2(object):
         leptonica.pixGetRandomPixel.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetRandomPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRandomPixel not exported " +
+        sys.stderr.write("Warning - function pixGetRandomPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51677,7 +51678,7 @@ class pix2(object):
         leptonica.pixGetRGBPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetRGBPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRGBPixel not exported " +
+        sys.stderr.write("Warning - function pixGetRGBPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51710,7 +51711,7 @@ class pix2(object):
         leptonica.pixSetInRect.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSetInRect.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetInRect not exported " +
+        sys.stderr.write("Warning - function pixSetInRect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51743,7 +51744,7 @@ class pix2(object):
         leptonica.pixAddBlackOrWhiteBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixAddBlackOrWhiteBorder.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddBlackOrWhiteBorder not exported " +
+        sys.stderr.write("Warning - function pixAddBlackOrWhiteBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51789,7 +51790,7 @@ class pix2(object):
         leptonica.composeRGBPixel.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.composeRGBPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function composeRGBPixel not exported " +
+        sys.stderr.write("Warning - function composeRGBPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51826,7 +51827,7 @@ class pix2(object):
         leptonica.pixSetInRectArbitrary.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixSetInRectArbitrary.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetInRectArbitrary not exported " +
+        sys.stderr.write("Warning - function pixSetInRectArbitrary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51861,7 +51862,7 @@ class pix2(object):
         leptonica.pixSetOrClearBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSetOrClearBorder.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetOrClearBorder not exported " +
+        sys.stderr.write("Warning - function pixSetOrClearBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51902,7 +51903,7 @@ class pix2(object):
         leptonica.pixEndianByteSwapNew.argtypes = [ctypes.c_void_p]
         leptonica.pixEndianByteSwapNew.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixEndianByteSwapNew not exported " +
+        sys.stderr.write("Warning - function pixEndianByteSwapNew not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51942,7 +51943,7 @@ class pix2(object):
         leptonica.extractRGBValues.argtypes = [ctypes.c_uint32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.extractRGBValues.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function extractRGBValues not exported " +
+        sys.stderr.write("Warning - function extractRGBValues not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -51978,7 +51979,7 @@ class pix2(object):
         leptonica.pixShiftAndTransferAlpha.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.pixShiftAndTransferAlpha.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixShiftAndTransferAlpha not exported " +
+        sys.stderr.write("Warning - function pixShiftAndTransferAlpha not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52007,7 +52008,7 @@ class pix2(object):
         leptonica.pixAddMirroredBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixAddMirroredBorder.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddMirroredBorder not exported " +
+        sys.stderr.write("Warning - function pixAddMirroredBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52051,7 +52052,7 @@ class pix2(object):
         leptonica.pixGetRGBLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetRGBLine.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRGBLine not exported " +
+        sys.stderr.write("Warning - function pixGetRGBLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52087,7 +52088,7 @@ class pix2(object):
         leptonica.pixCreateRGBImage.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCreateRGBImage.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCreateRGBImage not exported " +
+        sys.stderr.write("Warning - function pixCreateRGBImage not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52128,7 +52129,7 @@ class pix2(object):
         leptonica.pixClearInRect.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixClearInRect.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixClearInRect not exported " +
+        sys.stderr.write("Warning - function pixClearInRect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52160,7 +52161,7 @@ class pix2(object):
         leptonica.pixAddBorderGeneral.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixAddBorderGeneral.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddBorderGeneral not exported " +
+        sys.stderr.write("Warning - function pixAddBorderGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52213,7 +52214,7 @@ class pix2(object):
         leptonica.pixRemoveBorderGeneral.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRemoveBorderGeneral.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRemoveBorderGeneral not exported " +
+        sys.stderr.write("Warning - function pixRemoveBorderGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52242,7 +52243,7 @@ class pix2(object):
         leptonica.pixEndianTwoByteSwap.argtypes = [ctypes.c_void_p]
         leptonica.pixEndianTwoByteSwap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixEndianTwoByteSwap not exported " +
+        sys.stderr.write("Warning - function pixEndianTwoByteSwap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52273,7 +52274,7 @@ class pix2(object):
         leptonica.pixGetPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGetPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetPixel not exported " +
+        sys.stderr.write("Warning - function pixGetPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52313,7 +52314,7 @@ class pix2(object):
         leptonica.pixAddContinuedBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixAddContinuedBorder.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddContinuedBorder not exported " +
+        sys.stderr.write("Warning - function pixAddContinuedBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52346,7 +52347,7 @@ class pix2(object):
         leptonica.extractMinMaxComponent.argtypes = [ctypes.c_uint32, ctypes.c_int32]
         leptonica.extractMinMaxComponent.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function extractMinMaxComponent not exported " +
+        sys.stderr.write("Warning - function extractMinMaxComponent not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52372,7 +52373,7 @@ class pix2(object):
         leptonica.pixCleanupByteProcessing.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCleanupByteProcessing.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCleanupByteProcessing not exported " +
+        sys.stderr.write("Warning - function pixCleanupByteProcessing not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52402,7 +52403,7 @@ class pix2(object):
         leptonica.pixSetBlackOrWhite.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSetBlackOrWhite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetBlackOrWhite not exported " +
+        sys.stderr.write("Warning - function pixSetBlackOrWhite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52436,7 +52437,7 @@ class pix2(object):
         leptonica.pixAddRepeatedBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixAddRepeatedBorder.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddRepeatedBorder not exported " +
+        sys.stderr.write("Warning - function pixAddRepeatedBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52472,7 +52473,7 @@ class pix2(object):
         leptonica.pixSetRGBPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSetRGBPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetRGBPixel not exported " +
+        sys.stderr.write("Warning - function pixSetRGBPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52505,7 +52506,7 @@ class pix2(object):
         leptonica.pixSetupByteProcessing.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSetupByteProcessing.restype = ctypes.POINTER(ctypes.POINTER(ctypes.c_ubyte))
     except AttributeError:
-        os.stderr.write("Warning - function pixSetupByteProcessing not exported " +
+        sys.stderr.write("Warning - function pixSetupByteProcessing not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52549,7 +52550,7 @@ class pix2(object):
         leptonica.composeRGBAPixel.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.composeRGBAPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function composeRGBAPixel not exported " +
+        sys.stderr.write("Warning - function composeRGBAPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52583,7 +52584,7 @@ class pix2(object):
         leptonica.pixFlipPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixFlipPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFlipPixel not exported " +
+        sys.stderr.write("Warning - function pixFlipPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52610,7 +52611,7 @@ class pix2(object):
         leptonica.pixSetAll.argtypes = [ctypes.c_void_p]
         leptonica.pixSetAll.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetAll not exported " +
+        sys.stderr.write("Warning - function pixSetAll not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52641,7 +52642,7 @@ class pix2(object):
         leptonica.pixSetPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixSetPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetPixel not exported " +
+        sys.stderr.write("Warning - function pixSetPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52678,7 +52679,7 @@ class pix2(object):
         leptonica.pixSetRGBComponent.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSetRGBComponent.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetRGBComponent not exported " +
+        sys.stderr.write("Warning - function pixSetRGBComponent not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52713,7 +52714,7 @@ class pix2(object):
         leptonica.pixRemoveBorderToSize.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRemoveBorderToSize.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRemoveBorderToSize not exported " +
+        sys.stderr.write("Warning - function pixRemoveBorderToSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52747,7 +52748,7 @@ class pix2(object):
         leptonica.pixAlphaIsOpaque.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixAlphaIsOpaque.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixAlphaIsOpaque not exported " +
+        sys.stderr.write("Warning - function pixAlphaIsOpaque not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52776,7 +52777,7 @@ class pix2(object):
         leptonica.pixSetBorderVal.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixSetBorderVal.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetBorderVal not exported " +
+        sys.stderr.write("Warning - function pixSetBorderVal not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52819,7 +52820,7 @@ class pix2(object):
         leptonica.extractRGBAValues.argtypes = [ctypes.c_uint32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.extractRGBAValues.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function extractRGBAValues not exported " +
+        sys.stderr.write("Warning - function extractRGBAValues not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52851,7 +52852,7 @@ class pix2(object):
         leptonica.pixSetComponentArbitrary.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSetComponentArbitrary.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetComponentArbitrary not exported " +
+        sys.stderr.write("Warning - function pixSetComponentArbitrary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52883,7 +52884,7 @@ class pix2(object):
         leptonica.pixAddBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixAddBorder.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddBorder not exported " +
+        sys.stderr.write("Warning - function pixAddBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52914,7 +52915,7 @@ class pix2(object):
         leptonica.pixDisplayLayersRGBA.argtypes = [ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32]
         leptonica.pixDisplayLayersRGBA.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayLayersRGBA not exported " +
+        sys.stderr.write("Warning - function pixDisplayLayersRGBA not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52949,7 +52950,7 @@ class pix2(object):
         leptonica.pixEndianByteSwap.argtypes = [ctypes.c_void_p]
         leptonica.pixEndianByteSwap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixEndianByteSwap not exported " +
+        sys.stderr.write("Warning - function pixEndianByteSwap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -52987,7 +52988,7 @@ class pix2(object):
         leptonica.pixGetRGBComponent.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGetRGBComponent.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRGBComponent not exported " +
+        sys.stderr.write("Warning - function pixGetRGBComponent not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53023,7 +53024,7 @@ class pix2(object):
         leptonica.pixAddMixedBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixAddMixedBorder.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddMixedBorder not exported " +
+        sys.stderr.write("Warning - function pixAddMixedBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53147,7 +53148,7 @@ class pngio(object):
         leptonica.pixReadMemPng.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
         leptonica.pixReadMemPng.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadMemPng not exported " +
+        sys.stderr.write("Warning - function pixReadMemPng not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53176,7 +53177,7 @@ class pngio(object):
         leptonica.readHeaderMemPng.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.readHeaderMemPng.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function readHeaderMemPng not exported " +
+        sys.stderr.write("Warning - function readHeaderMemPng not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53224,7 +53225,7 @@ class pngio(object):
         leptonica.pixWriteStreamPng.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixWriteStreamPng.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStreamPng not exported " +
+        sys.stderr.write("Warning - function pixWriteStreamPng not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53315,7 +53316,7 @@ class pngio(object):
         leptonica.l_pngSetReadStrip16To8.argtypes = [ctypes.c_int32]
         leptonica.l_pngSetReadStrip16To8.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_pngSetReadStrip16To8 not exported " +
+        sys.stderr.write("Warning - function l_pngSetReadStrip16To8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53340,7 +53341,7 @@ class pngio(object):
         leptonica.freadHeaderPng.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.freadHeaderPng.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function freadHeaderPng not exported " +
+        sys.stderr.write("Warning - function freadHeaderPng not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53377,7 +53378,7 @@ class pngio(object):
         leptonica.readHeaderPng.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.readHeaderPng.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function readHeaderPng not exported " +
+        sys.stderr.write("Warning - function readHeaderPng not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53417,7 +53418,7 @@ class pngio(object):
         leptonica.pixReadStreamPng.argtypes = [ctypes.c_void_p]
         leptonica.pixReadStreamPng.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadStreamPng not exported " +
+        sys.stderr.write("Warning - function pixReadStreamPng not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53464,7 +53465,7 @@ class pngio(object):
         leptonica.pixSetZlibCompression.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSetZlibCompression.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSetZlibCompression not exported " +
+        sys.stderr.write("Warning - function pixSetZlibCompression not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53502,7 +53503,7 @@ class pngio(object):
         leptonica.pixWritePng.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixWritePng.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWritePng not exported " +
+        sys.stderr.write("Warning - function pixWritePng not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53534,7 +53535,7 @@ class pngio(object):
         leptonica.pixWriteMemPng.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.pixWriteMemPng.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteMemPng not exported " +
+        sys.stderr.write("Warning - function pixWriteMemPng not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53568,7 +53569,7 @@ class pngio(object):
         leptonica.isPngInterlaced.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.isPngInterlaced.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function isPngInterlaced not exported " +
+        sys.stderr.write("Warning - function isPngInterlaced not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53645,7 +53646,7 @@ class heap(object):
         leptonica.lheapSwapUp.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.lheapSwapUp.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lheapSwapUp not exported " +
+        sys.stderr.write("Warning - function lheapSwapUp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53679,7 +53680,7 @@ class heap(object):
         leptonica.lheapDestroy.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.lheapDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function lheapDestroy not exported " +
+        sys.stderr.write("Warning - function lheapDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53714,7 +53715,7 @@ class heap(object):
         leptonica.lheapAdd.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lheapAdd.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lheapAdd not exported " +
+        sys.stderr.write("Warning - function lheapAdd not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53740,7 +53741,7 @@ class heap(object):
         leptonica.lheapSort.argtypes = [ctypes.c_void_p]
         leptonica.lheapSort.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lheapSort not exported " +
+        sys.stderr.write("Warning - function lheapSort not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53768,7 +53769,7 @@ class heap(object):
         leptonica.lheapGetCount.argtypes = [ctypes.c_void_p]
         leptonica.lheapGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lheapGetCount not exported " +
+        sys.stderr.write("Warning - function lheapGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53792,7 +53793,7 @@ class heap(object):
         leptonica.lheapSortStrictOrder.argtypes = [ctypes.c_void_p]
         leptonica.lheapSortStrictOrder.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lheapSortStrictOrder not exported " +
+        sys.stderr.write("Warning - function lheapSortStrictOrder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53825,7 +53826,7 @@ class heap(object):
         leptonica.lheapRemove.argtypes = [ctypes.c_void_p]
         leptonica.lheapRemove.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function lheapRemove not exported " +
+        sys.stderr.write("Warning - function lheapRemove not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53850,7 +53851,7 @@ class heap(object):
         leptonica.lheapCreate.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.lheapCreate.restype = lambda address: L_HEAP(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function lheapCreate not exported " +
+        sys.stderr.write("Warning - function lheapCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53876,7 +53877,7 @@ class heap(object):
         leptonica.lheapSwapDown.argtypes = [ctypes.c_void_p]
         leptonica.lheapSwapDown.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lheapSwapDown not exported " +
+        sys.stderr.write("Warning - function lheapSwapDown not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53913,7 +53914,7 @@ class heap(object):
         leptonica.lheapPrint.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lheapPrint.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lheapPrint not exported " +
+        sys.stderr.write("Warning - function lheapPrint not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -53976,7 +53977,7 @@ class gifio(object):
         leptonica.pixReadMemGif.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
         leptonica.pixReadMemGif.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadMemGif not exported " +
+        sys.stderr.write("Warning - function pixReadMemGif not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54023,7 +54024,7 @@ class gifio(object):
         leptonica.pixWriteMemGif.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWriteMemGif.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteMemGif not exported " +
+        sys.stderr.write("Warning - function pixWriteMemGif not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54054,7 +54055,7 @@ class gifio(object):
         leptonica.pixWriteStreamGif.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWriteStreamGif.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStreamGif not exported " +
+        sys.stderr.write("Warning - function pixWriteStreamGif not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54088,7 +54089,7 @@ class gifio(object):
         leptonica.pixReadStreamGif.argtypes = [ctypes.c_void_p]
         leptonica.pixReadStreamGif.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadStreamGif not exported " +
+        sys.stderr.write("Warning - function pixReadStreamGif not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54197,7 +54198,7 @@ class projective(object):
         leptonica.pixProjectiveSampledPta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixProjectiveSampledPta.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixProjectiveSampledPta not exported " +
+        sys.stderr.write("Warning - function pixProjectiveSampledPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54235,7 +54236,7 @@ class projective(object):
         leptonica.pixProjectivePtaWithAlpha.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixProjectivePtaWithAlpha.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixProjectivePtaWithAlpha not exported " +
+        sys.stderr.write("Warning - function pixProjectivePtaWithAlpha not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54300,7 +54301,7 @@ class projective(object):
         leptonica.projectiveXformPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.projectiveXformPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function projectiveXformPt not exported " +
+        sys.stderr.write("Warning - function projectiveXformPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54334,7 +54335,7 @@ class projective(object):
         leptonica.pixProjectivePtaColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixProjectivePtaColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixProjectivePtaColor not exported " +
+        sys.stderr.write("Warning - function pixProjectivePtaColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54364,7 +54365,7 @@ class projective(object):
         leptonica.pixProjectivePtaGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_ubyte]
         leptonica.pixProjectivePtaGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixProjectivePtaGray not exported " +
+        sys.stderr.write("Warning - function pixProjectivePtaGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54394,7 +54395,7 @@ class projective(object):
         leptonica.getProjectiveXformCoeffs.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.getProjectiveXformCoeffs.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function getProjectiveXformCoeffs not exported " +
+        sys.stderr.write("Warning - function getProjectiveXformCoeffs not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54466,7 +54467,7 @@ class projective(object):
         leptonica.projectiveXformSampledPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.projectiveXformSampledPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function projectiveXformSampledPt not exported " +
+        sys.stderr.write("Warning - function projectiveXformSampledPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54500,7 +54501,7 @@ class projective(object):
         leptonica.pixProjective.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixProjective.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixProjective not exported " +
+        sys.stderr.write("Warning - function pixProjective not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54532,7 +54533,7 @@ class projective(object):
         leptonica.pixProjectiveSampled.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixProjectiveSampled.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixProjectiveSampled not exported " +
+        sys.stderr.write("Warning - function pixProjectiveSampled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54567,7 +54568,7 @@ class projective(object):
         leptonica.pixProjectiveGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_ubyte]
         leptonica.pixProjectiveGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixProjectiveGray not exported " +
+        sys.stderr.write("Warning - function pixProjectiveGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54595,7 +54596,7 @@ class projective(object):
         leptonica.pixProjectivePta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixProjectivePta.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixProjectivePta not exported " +
+        sys.stderr.write("Warning - function pixProjectivePta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54629,7 +54630,7 @@ class projective(object):
         leptonica.pixProjectiveColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixProjectiveColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixProjectiveColor not exported " +
+        sys.stderr.write("Warning - function pixProjectiveColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54691,7 +54692,7 @@ class arrayaccess(object):
         leptonica.l_setDataBit.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_setDataBit.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_setDataBit not exported " +
+        sys.stderr.write("Warning - function l_setDataBit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54719,7 +54720,7 @@ class arrayaccess(object):
         leptonica.l_clearDataBit.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_clearDataBit.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_clearDataBit not exported " +
+        sys.stderr.write("Warning - function l_clearDataBit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54747,7 +54748,7 @@ class arrayaccess(object):
         leptonica.l_getDataFourBytes.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_getDataFourBytes.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function l_getDataFourBytes not exported " +
+        sys.stderr.write("Warning - function l_getDataFourBytes not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54773,7 +54774,7 @@ class arrayaccess(object):
         leptonica.l_setDataQbit.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.l_setDataQbit.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_setDataQbit not exported " +
+        sys.stderr.write("Warning - function l_setDataQbit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54801,7 +54802,7 @@ class arrayaccess(object):
         leptonica.l_setDataTwoBytes.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.l_setDataTwoBytes.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_setDataTwoBytes not exported " +
+        sys.stderr.write("Warning - function l_setDataTwoBytes not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54829,7 +54830,7 @@ class arrayaccess(object):
         leptonica.l_getDataBit.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_getDataBit.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function l_getDataBit not exported " +
+        sys.stderr.write("Warning - function l_getDataBit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54855,7 +54856,7 @@ class arrayaccess(object):
         leptonica.l_setDataFourBytes.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.l_setDataFourBytes.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_setDataFourBytes not exported " +
+        sys.stderr.write("Warning - function l_setDataFourBytes not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54883,7 +54884,7 @@ class arrayaccess(object):
         leptonica.l_setDataByte.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.l_setDataByte.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_setDataByte not exported " +
+        sys.stderr.write("Warning - function l_setDataByte not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54911,7 +54912,7 @@ class arrayaccess(object):
         leptonica.l_getDataDibit.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_getDataDibit.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function l_getDataDibit not exported " +
+        sys.stderr.write("Warning - function l_getDataDibit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54937,7 +54938,7 @@ class arrayaccess(object):
         leptonica.l_getDataByte.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_getDataByte.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function l_getDataByte not exported " +
+        sys.stderr.write("Warning - function l_getDataByte not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54963,7 +54964,7 @@ class arrayaccess(object):
         leptonica.l_getDataTwoBytes.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_getDataTwoBytes.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function l_getDataTwoBytes not exported " +
+        sys.stderr.write("Warning - function l_getDataTwoBytes not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -54989,7 +54990,7 @@ class arrayaccess(object):
         leptonica.l_clearDataDibit.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_clearDataDibit.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_clearDataDibit not exported " +
+        sys.stderr.write("Warning - function l_clearDataDibit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55017,7 +55018,7 @@ class arrayaccess(object):
         leptonica.l_clearDataQbit.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_clearDataQbit.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_clearDataQbit not exported " +
+        sys.stderr.write("Warning - function l_clearDataQbit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55045,7 +55046,7 @@ class arrayaccess(object):
         leptonica.l_setDataBitVal.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.l_setDataBitVal.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_setDataBitVal not exported " +
+        sys.stderr.write("Warning - function l_setDataBitVal not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55081,7 +55082,7 @@ class arrayaccess(object):
         leptonica.l_getDataQbit.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.l_getDataQbit.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function l_getDataQbit not exported " +
+        sys.stderr.write("Warning - function l_getDataQbit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55107,7 +55108,7 @@ class arrayaccess(object):
         leptonica.l_setDataDibit.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.l_setDataDibit.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_setDataDibit not exported " +
+        sys.stderr.write("Warning - function l_setDataDibit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55241,7 +55242,7 @@ class morphdwa(object):
         leptonica.pixDilateBrickDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDilateBrickDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDilateBrickDwa not exported " +
+        sys.stderr.write("Warning - function pixDilateBrickDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55292,7 +55293,7 @@ class morphdwa(object):
         leptonica.pixCloseCompBrickDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCloseCompBrickDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCloseCompBrickDwa not exported " +
+        sys.stderr.write("Warning - function pixCloseCompBrickDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55356,7 +55357,7 @@ class morphdwa(object):
         leptonica.pixCloseCompBrickExtendDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCloseCompBrickExtendDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCloseCompBrickExtendDwa not exported " +
+        sys.stderr.write("Warning - function pixCloseCompBrickExtendDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55394,7 +55395,7 @@ class morphdwa(object):
         leptonica.pixOpenCompBrickDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOpenCompBrickDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOpenCompBrickDwa not exported " +
+        sys.stderr.write("Warning - function pixOpenCompBrickDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55457,7 +55458,7 @@ class morphdwa(object):
         leptonica.pixCloseBrickDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCloseBrickDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCloseBrickDwa not exported " +
+        sys.stderr.write("Warning - function pixCloseBrickDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55513,7 +55514,7 @@ class morphdwa(object):
         leptonica.pixErodeBrickDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixErodeBrickDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixErodeBrickDwa not exported " +
+        sys.stderr.write("Warning - function pixErodeBrickDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55567,7 +55568,7 @@ class morphdwa(object):
         leptonica.pixDilateCompBrickDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDilateCompBrickDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDilateCompBrickDwa not exported " +
+        sys.stderr.write("Warning - function pixDilateCompBrickDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55630,7 +55631,7 @@ class morphdwa(object):
         leptonica.pixOpenCompBrickExtendDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOpenCompBrickExtendDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOpenCompBrickExtendDwa not exported " +
+        sys.stderr.write("Warning - function pixOpenCompBrickExtendDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55668,7 +55669,7 @@ class morphdwa(object):
         leptonica.getExtendedCompositeParameters.argtypes = [ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.getExtendedCompositeParameters.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function getExtendedCompositeParameters not exported " +
+        sys.stderr.write("Warning - function getExtendedCompositeParameters not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55730,7 +55731,7 @@ class morphdwa(object):
         leptonica.pixDilateCompBrickExtendDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDilateCompBrickExtendDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDilateCompBrickExtendDwa not exported " +
+        sys.stderr.write("Warning - function pixDilateCompBrickExtendDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55779,7 +55780,7 @@ class morphdwa(object):
         leptonica.pixErodeCompBrickDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixErodeCompBrickDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixErodeCompBrickDwa not exported " +
+        sys.stderr.write("Warning - function pixErodeCompBrickDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55842,7 +55843,7 @@ class morphdwa(object):
         leptonica.pixOpenBrickDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOpenBrickDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOpenBrickDwa not exported " +
+        sys.stderr.write("Warning - function pixOpenBrickDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55896,7 +55897,7 @@ class morphdwa(object):
         leptonica.pixErodeCompBrickExtendDwa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixErodeCompBrickExtendDwa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixErodeCompBrickExtendDwa not exported " +
+        sys.stderr.write("Warning - function pixErodeCompBrickExtendDwa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -55970,7 +55971,7 @@ class zlibmem(object):
         leptonica.zlibUncompress.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p]
         leptonica.zlibUncompress.restype = ctypes.POINTER(ctypes.c_ubyte)
     except AttributeError:
-        os.stderr.write("Warning - function zlibUncompress not exported " +
+        sys.stderr.write("Warning - function zlibUncompress not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56001,7 +56002,7 @@ class zlibmem(object):
         leptonica.zlibCompress.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p]
         leptonica.zlibCompress.restype = ctypes.POINTER(ctypes.c_ubyte)
     except AttributeError:
-        os.stderr.write("Warning - function zlibCompress not exported " +
+        sys.stderr.write("Warning - function zlibCompress not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56058,7 +56059,7 @@ class pixalloc(object):
         leptonica.pmsCreate.argtypes = [ctypes.c_size_t, ctypes.c_size_t, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pmsCreate.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pmsCreate not exported " +
+        sys.stderr.write("Warning - function pmsCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56105,7 +56106,7 @@ class pixalloc(object):
         leptonica.pmsGetLevelForDealloc.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pmsGetLevelForDealloc.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pmsGetLevelForDealloc not exported " +
+        sys.stderr.write("Warning - function pmsGetLevelForDealloc not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56132,7 +56133,7 @@ class pixalloc(object):
         leptonica.pmsGetLevelForAlloc.argtypes = [ctypes.c_size_t, ctypes.c_void_p]
         leptonica.pmsGetLevelForAlloc.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pmsGetLevelForAlloc not exported " +
+        sys.stderr.write("Warning - function pmsGetLevelForAlloc not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56158,7 +56159,7 @@ class pixalloc(object):
         leptonica.pmsCustomAlloc.argtypes = [ctypes.c_size_t]
         leptonica.pmsCustomAlloc.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function pmsCustomAlloc not exported " +
+        sys.stderr.write("Warning - function pmsCustomAlloc not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56189,7 +56190,7 @@ class pixalloc(object):
         leptonica.pmsDestroy.argtypes = []
         leptonica.pmsDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function pmsDestroy not exported " +
+        sys.stderr.write("Warning - function pmsDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56217,7 +56218,7 @@ class pixalloc(object):
         leptonica.pmsCustomDealloc.argtypes = [ctypes.c_void_p]
         leptonica.pmsCustomDealloc.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function pmsCustomDealloc not exported " +
+        sys.stderr.write("Warning - function pmsCustomDealloc not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56241,7 +56242,7 @@ class pixalloc(object):
         leptonica.pmsGetAlloc.argtypes = [ctypes.c_size_t]
         leptonica.pmsGetAlloc.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function pmsGetAlloc not exported " +
+        sys.stderr.write("Warning - function pmsGetAlloc not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56276,7 +56277,7 @@ class pixalloc(object):
         leptonica.pmsLogInfo.argtypes = []
         leptonica.pmsLogInfo.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function pmsLogInfo not exported " +
+        sys.stderr.write("Warning - function pmsLogInfo not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56386,7 +56387,7 @@ class fpix2(object):
         leptonica.fpixRotate180.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixRotate180.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixRotate180 not exported " +
+        sys.stderr.write("Warning - function fpixRotate180 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56427,7 +56428,7 @@ class fpix2(object):
         leptonica.fpixAddSlopeBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.fpixAddSlopeBorder.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixAddSlopeBorder not exported " +
+        sys.stderr.write("Warning - function fpixAddSlopeBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56461,7 +56462,7 @@ class fpix2(object):
         leptonica.fpixDisplayMaxDynamicRange.argtypes = [ctypes.c_void_p]
         leptonica.fpixDisplayMaxDynamicRange.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixDisplayMaxDynamicRange not exported " +
+        sys.stderr.write("Warning - function fpixDisplayMaxDynamicRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56485,7 +56486,7 @@ class fpix2(object):
         leptonica.dpixAddMultConstant.argtypes = [ctypes.c_void_p, ctypes.c_double, ctypes.c_double]
         leptonica.dpixAddMultConstant.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function dpixAddMultConstant not exported " +
+        sys.stderr.write("Warning - function dpixAddMultConstant not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56519,7 +56520,7 @@ class fpix2(object):
         leptonica.fpixLinearCombination.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.fpixLinearCombination.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixLinearCombination not exported " +
+        sys.stderr.write("Warning - function fpixLinearCombination not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56561,7 +56562,7 @@ class fpix2(object):
         leptonica.fpixRotate90.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.fpixRotate90.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixRotate90 not exported " +
+        sys.stderr.write("Warning - function fpixRotate90 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56592,7 +56593,7 @@ class fpix2(object):
         leptonica.dpixSetAllArbitrary.argtypes = [ctypes.c_void_p, ctypes.c_double]
         leptonica.dpixSetAllArbitrary.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function dpixSetAllArbitrary not exported " +
+        sys.stderr.write("Warning - function dpixSetAllArbitrary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56618,7 +56619,7 @@ class fpix2(object):
         leptonica.dpixLinearCombination.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.dpixLinearCombination.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function dpixLinearCombination not exported " +
+        sys.stderr.write("Warning - function dpixLinearCombination not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56660,7 +56661,7 @@ class fpix2(object):
         leptonica.fpixGetMin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixGetMin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixGetMin not exported " +
+        sys.stderr.write("Warning - function fpixGetMin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56690,7 +56691,7 @@ class fpix2(object):
         leptonica.fpixAffinePta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.fpixAffinePta.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixAffinePta not exported " +
+        sys.stderr.write("Warning - function fpixAffinePta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56732,7 +56733,7 @@ class fpix2(object):
         leptonica.fpixGetMax.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixGetMax.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixGetMax not exported " +
+        sys.stderr.write("Warning - function fpixGetMax not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56762,7 +56763,7 @@ class fpix2(object):
         leptonica.fpixAddContinuedBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.fpixAddContinuedBorder.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixAddContinuedBorder not exported " +
+        sys.stderr.write("Warning - function fpixAddContinuedBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56795,7 +56796,7 @@ class fpix2(object):
         leptonica.fpixScaleByInteger.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.fpixScaleByInteger.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixScaleByInteger not exported " +
+        sys.stderr.write("Warning - function fpixScaleByInteger not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56832,7 +56833,7 @@ class fpix2(object):
         leptonica.fpixRemoveBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.fpixRemoveBorder.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixRemoveBorder not exported " +
+        sys.stderr.write("Warning - function fpixRemoveBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56861,7 +56862,7 @@ class fpix2(object):
         leptonica.fpixFlipLR.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixFlipLR.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixFlipLR not exported " +
+        sys.stderr.write("Warning - function fpixFlipLR not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56903,7 +56904,7 @@ class fpix2(object):
         leptonica.fpixRotateOrth.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.fpixRotateOrth.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixRotateOrth not exported " +
+        sys.stderr.write("Warning - function fpixRotateOrth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56929,7 +56930,7 @@ class fpix2(object):
         leptonica.pixConvertToFPix.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvertToFPix.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertToFPix not exported " +
+        sys.stderr.write("Warning - function pixConvertToFPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -56961,7 +56962,7 @@ class fpix2(object):
         leptonica.pixComponentFunction.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.pixComponentFunction.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixComponentFunction not exported " +
+        sys.stderr.write("Warning - function pixComponentFunction not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57005,7 +57006,7 @@ class fpix2(object):
         leptonica.fpixProjective.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.fpixProjective.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixProjective not exported " +
+        sys.stderr.write("Warning - function fpixProjective not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57033,7 +57034,7 @@ class fpix2(object):
         leptonica.dpixConvertToFPix.argtypes = [ctypes.c_void_p]
         leptonica.dpixConvertToFPix.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function dpixConvertToFPix not exported " +
+        sys.stderr.write("Warning - function dpixConvertToFPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57057,7 +57058,7 @@ class fpix2(object):
         leptonica.pixConvertToDPix.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConvertToDPix.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConvertToDPix not exported " +
+        sys.stderr.write("Warning - function pixConvertToDPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57089,7 +57090,7 @@ class fpix2(object):
         leptonica.dpixGetMin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.dpixGetMin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function dpixGetMin not exported " +
+        sys.stderr.write("Warning - function dpixGetMin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57119,7 +57120,7 @@ class fpix2(object):
         leptonica.fpixConvertToDPix.argtypes = [ctypes.c_void_p]
         leptonica.fpixConvertToDPix.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixConvertToDPix not exported " +
+        sys.stderr.write("Warning - function fpixConvertToDPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57143,7 +57144,7 @@ class fpix2(object):
         leptonica.dpixScaleByInteger.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.dpixScaleByInteger.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function dpixScaleByInteger not exported " +
+        sys.stderr.write("Warning - function dpixScaleByInteger not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57180,7 +57181,7 @@ class fpix2(object):
         leptonica.fpixAddMirroredBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.fpixAddMirroredBorder.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixAddMirroredBorder not exported " +
+        sys.stderr.write("Warning - function fpixAddMirroredBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57212,7 +57213,7 @@ class fpix2(object):
         leptonica.fpixAddBorder.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.fpixAddBorder.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixAddBorder not exported " +
+        sys.stderr.write("Warning - function fpixAddBorder not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57244,7 +57245,7 @@ class fpix2(object):
         leptonica.fpixProjectivePta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.fpixProjectivePta.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixProjectivePta not exported " +
+        sys.stderr.write("Warning - function fpixProjectivePta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57286,7 +57287,7 @@ class fpix2(object):
         leptonica.fpixFlipTB.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixFlipTB.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixFlipTB not exported " +
+        sys.stderr.write("Warning - function fpixFlipTB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57328,7 +57329,7 @@ class fpix2(object):
         leptonica.fpixConvertToPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.fpixConvertToPix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixConvertToPix not exported " +
+        sys.stderr.write("Warning - function fpixConvertToPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57370,7 +57371,7 @@ class fpix2(object):
         leptonica.fpixThresholdToPix.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.fpixThresholdToPix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixThresholdToPix not exported " +
+        sys.stderr.write("Warning - function fpixThresholdToPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57400,7 +57401,7 @@ class fpix2(object):
         leptonica.dpixGetMax.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.dpixGetMax.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function dpixGetMax not exported " +
+        sys.stderr.write("Warning - function dpixGetMax not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57430,7 +57431,7 @@ class fpix2(object):
         leptonica.fpixSetAllArbitrary.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.fpixSetAllArbitrary.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixSetAllArbitrary not exported " +
+        sys.stderr.write("Warning - function fpixSetAllArbitrary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57456,7 +57457,7 @@ class fpix2(object):
         leptonica.dpixConvertToPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.dpixConvertToPix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function dpixConvertToPix not exported " +
+        sys.stderr.write("Warning - function dpixConvertToPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57498,7 +57499,7 @@ class fpix2(object):
         leptonica.fpixAffine.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.fpixAffine.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixAffine not exported " +
+        sys.stderr.write("Warning - function fpixAffine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57526,7 +57527,7 @@ class fpix2(object):
         leptonica.fpixRasterop.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.fpixRasterop.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixRasterop not exported " +
+        sys.stderr.write("Warning - function fpixRasterop not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57574,7 +57575,7 @@ class fpix2(object):
         leptonica.linearInterpolatePixelFloat.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_void_p]
         leptonica.linearInterpolatePixelFloat.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function linearInterpolatePixelFloat not exported " +
+        sys.stderr.write("Warning - function linearInterpolatePixelFloat not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57615,7 +57616,7 @@ class fpix2(object):
         leptonica.fpixAddMultConstant.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.fpixAddMultConstant.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixAddMultConstant not exported " +
+        sys.stderr.write("Warning - function fpixAddMultConstant not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57750,7 +57751,7 @@ class fpix1(object):
         leptonica.dpixReadStream.argtypes = [ctypes.c_void_p]
         leptonica.dpixReadStream.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function dpixReadStream not exported " +
+        sys.stderr.write("Warning - function dpixReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57774,7 +57775,7 @@ class fpix1(object):
         leptonica.fpixaGetPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.fpixaGetPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixaGetPixel not exported " +
+        sys.stderr.write("Warning - function fpixaGetPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57805,7 +57806,7 @@ class fpix1(object):
         leptonica.dpixSetPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_double]
         leptonica.dpixSetPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function dpixSetPixel not exported " +
+        sys.stderr.write("Warning - function dpixSetPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57834,7 +57835,7 @@ class fpix1(object):
         leptonica.fpixaDestroy.argtypes = [ctypes.c_void_p]
         leptonica.fpixaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function fpixaDestroy not exported " +
+        sys.stderr.write("Warning - function fpixaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57862,7 +57863,7 @@ class fpix1(object):
         leptonica.fpixaChangeRefcount.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.fpixaChangeRefcount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixaChangeRefcount not exported " +
+        sys.stderr.write("Warning - function fpixaChangeRefcount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57887,7 +57888,7 @@ class fpix1(object):
         leptonica.dpixRead.argtypes = [ctypes.c_void_p]
         leptonica.dpixRead.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function dpixRead not exported " +
+        sys.stderr.write("Warning - function dpixRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57911,7 +57912,7 @@ class fpix1(object):
         leptonica.fpixRead.argtypes = [ctypes.c_void_p]
         leptonica.fpixRead.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixRead not exported " +
+        sys.stderr.write("Warning - function fpixRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57935,7 +57936,7 @@ class fpix1(object):
         leptonica.dpixGetPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.dpixGetPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function dpixGetPixel not exported " +
+        sys.stderr.write("Warning - function dpixGetPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57964,7 +57965,7 @@ class fpix1(object):
         leptonica.dpixCreate.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.dpixCreate.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function dpixCreate not exported " +
+        sys.stderr.write("Warning - function dpixCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -57994,7 +57995,7 @@ class fpix1(object):
         leptonica.fpixSetPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.fpixSetPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixSetPixel not exported " +
+        sys.stderr.write("Warning - function fpixSetPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58023,7 +58024,7 @@ class fpix1(object):
         leptonica.dpixWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.dpixWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function dpixWrite not exported " +
+        sys.stderr.write("Warning - function dpixWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58049,7 +58050,7 @@ class fpix1(object):
         leptonica.fpixWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixWriteStream not exported " +
+        sys.stderr.write("Warning - function fpixWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58075,7 +58076,7 @@ class fpix1(object):
         leptonica.fpixReadStream.argtypes = [ctypes.c_void_p]
         leptonica.fpixReadStream.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixReadStream not exported " +
+        sys.stderr.write("Warning - function fpixReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58099,7 +58100,7 @@ class fpix1(object):
         leptonica.dpixCopy.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.dpixCopy.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function dpixCopy not exported " +
+        sys.stderr.write("Warning - function dpixCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58146,7 +58147,7 @@ class fpix1(object):
         leptonica.fpixGetPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.fpixGetPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixGetPixel not exported " +
+        sys.stderr.write("Warning - function fpixGetPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58175,7 +58176,7 @@ class fpix1(object):
         leptonica.fpixPrintStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.fpixPrintStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixPrintStream not exported " +
+        sys.stderr.write("Warning - function fpixPrintStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58206,7 +58207,7 @@ class fpix1(object):
         leptonica.fpixSetDimensions.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.fpixSetDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixSetDimensions not exported " +
+        sys.stderr.write("Warning - function fpixSetDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58233,7 +58234,7 @@ class fpix1(object):
         leptonica.fpixCopy.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixCopy.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixCopy not exported " +
+        sys.stderr.write("Warning - function fpixCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58280,7 +58281,7 @@ class fpix1(object):
         leptonica.dpixEndianByteSwap.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.dpixEndianByteSwap.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function dpixEndianByteSwap not exported " +
+        sys.stderr.write("Warning - function dpixEndianByteSwap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58316,7 +58317,7 @@ class fpix1(object):
         leptonica.dpixWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.dpixWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function dpixWriteStream not exported " +
+        sys.stderr.write("Warning - function dpixWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58342,7 +58343,7 @@ class fpix1(object):
         leptonica.fpixaGetFPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.fpixaGetFPix.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixaGetFPix not exported " +
+        sys.stderr.write("Warning - function fpixaGetFPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58370,7 +58371,7 @@ class fpix1(object):
         leptonica.fpixaCopy.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.fpixaCopy.restype = lambda address: FPIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixaCopy not exported " +
+        sys.stderr.write("Warning - function fpixaCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58399,7 +58400,7 @@ class fpix1(object):
         leptonica.dpixClone.argtypes = [ctypes.c_void_p]
         leptonica.dpixClone.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function dpixClone not exported " +
+        sys.stderr.write("Warning - function dpixClone not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58426,7 +58427,7 @@ class fpix1(object):
         leptonica.fpixEndianByteSwap.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixEndianByteSwap.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixEndianByteSwap not exported " +
+        sys.stderr.write("Warning - function fpixEndianByteSwap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58462,7 +58463,7 @@ class fpix1(object):
         leptonica.fpixaGetCount.argtypes = [ctypes.c_void_p]
         leptonica.fpixaGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixaGetCount not exported " +
+        sys.stderr.write("Warning - function fpixaGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58486,7 +58487,7 @@ class fpix1(object):
         leptonica.dpixSetDimensions.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.dpixSetDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function dpixSetDimensions not exported " +
+        sys.stderr.write("Warning - function dpixSetDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58513,7 +58514,7 @@ class fpix1(object):
         leptonica.fpixCreateTemplate.argtypes = [ctypes.c_void_p]
         leptonica.fpixCreateTemplate.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixCreateTemplate not exported " +
+        sys.stderr.write("Warning - function fpixCreateTemplate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58542,7 +58543,7 @@ class fpix1(object):
         leptonica.dpixCreateTemplate.argtypes = [ctypes.c_void_p]
         leptonica.dpixCreateTemplate.restype = lambda address: DPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function dpixCreateTemplate not exported " +
+        sys.stderr.write("Warning - function dpixCreateTemplate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58571,7 +58572,7 @@ class fpix1(object):
         leptonica.fpixClone.argtypes = [ctypes.c_void_p]
         leptonica.fpixClone.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixClone not exported " +
+        sys.stderr.write("Warning - function fpixClone not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58598,7 +58599,7 @@ class fpix1(object):
         leptonica.fpixDestroy.argtypes = [ctypes.c_void_p]
         leptonica.fpixDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function fpixDestroy not exported " +
+        sys.stderr.write("Warning - function fpixDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58626,7 +58627,7 @@ class fpix1(object):
         leptonica.dpixGetDimensions.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.dpixGetDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function dpixGetDimensions not exported " +
+        sys.stderr.write("Warning - function dpixGetDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58653,7 +58654,7 @@ class fpix1(object):
         leptonica.dpixDestroy.argtypes = [ctypes.c_void_p]
         leptonica.dpixDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function dpixDestroy not exported " +
+        sys.stderr.write("Warning - function dpixDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58681,7 +58682,7 @@ class fpix1(object):
         leptonica.fpixaSetPixel.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.fpixaSetPixel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixaSetPixel not exported " +
+        sys.stderr.write("Warning - function fpixaSetPixel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58712,7 +58713,7 @@ class fpix1(object):
         leptonica.fpixCreate.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.fpixCreate.restype = lambda address: FPIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixCreate not exported " +
+        sys.stderr.write("Warning - function fpixCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58742,7 +58743,7 @@ class fpix1(object):
         leptonica.fpixWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixWrite not exported " +
+        sys.stderr.write("Warning - function fpixWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58768,7 +58769,7 @@ class fpix1(object):
         leptonica.fpixaCreate.argtypes = [ctypes.c_int32]
         leptonica.fpixaCreate.restype = lambda address: FPIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function fpixaCreate not exported " +
+        sys.stderr.write("Warning - function fpixaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58792,7 +58793,7 @@ class fpix1(object):
         leptonica.fpixaAddFPix.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.fpixaAddFPix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixaAddFPix not exported " +
+        sys.stderr.write("Warning - function fpixaAddFPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58820,7 +58821,7 @@ class fpix1(object):
         leptonica.dpixResizeImageData.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.dpixResizeImageData.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function dpixResizeImageData not exported " +
+        sys.stderr.write("Warning - function dpixResizeImageData not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58845,7 +58846,7 @@ class fpix1(object):
         leptonica.fpixaGetFPixDimensions.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixaGetFPixDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixaGetFPixDimensions not exported " +
+        sys.stderr.write("Warning - function fpixaGetFPixDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58874,7 +58875,7 @@ class fpix1(object):
         leptonica.fpixResizeImageData.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixResizeImageData.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixResizeImageData not exported " +
+        sys.stderr.write("Warning - function fpixResizeImageData not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58905,7 +58906,7 @@ class fpix1(object):
         leptonica.fpixGetDimensions.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fpixGetDimensions.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fpixGetDimensions not exported " +
+        sys.stderr.write("Warning - function fpixGetDimensions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -58989,7 +58990,7 @@ class ptafunc1(object):
         leptonica.ptaaSortByIndex.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaaSortByIndex.restype = lambda address: PTAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaaSortByIndex not exported " +
+        sys.stderr.write("Warning - function ptaaSortByIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59015,7 +59016,7 @@ class ptafunc1(object):
         leptonica.pixDisplayPtaaPattern.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDisplayPtaaPattern.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayPtaaPattern not exported " +
+        sys.stderr.write("Warning - function pixDisplayPtaaPattern not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59061,7 +59062,7 @@ class ptafunc1(object):
         leptonica.applyLinearFit.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_void_p]
         leptonica.applyLinearFit.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function applyLinearFit not exported " +
+        sys.stderr.write("Warning - function applyLinearFit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59090,7 +59091,7 @@ class ptafunc1(object):
         leptonica.ptaGetPixelsFromPix.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaGetPixelsFromPix.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetPixelsFromPix not exported " +
+        sys.stderr.write("Warning - function ptaGetPixelsFromPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59120,7 +59121,7 @@ class ptafunc1(object):
         leptonica.ptaNoisyLinearLSF.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaNoisyLinearLSF.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaNoisyLinearLSF not exported " +
+        sys.stderr.write("Warning - function ptaNoisyLinearLSF not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59167,7 +59168,7 @@ class ptafunc1(object):
         leptonica.ptaJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptaJoin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaJoin not exported " +
+        sys.stderr.write("Warning - function ptaJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59202,7 +59203,7 @@ class ptafunc1(object):
         leptonica.ptaGetBoundingRegion.argtypes = [ctypes.c_void_p]
         leptonica.ptaGetBoundingRegion.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetBoundingRegion not exported " +
+        sys.stderr.write("Warning - function ptaGetBoundingRegion not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59231,7 +59232,7 @@ class ptafunc1(object):
         leptonica.ptaaGetBoundaryPixels.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaaGetBoundaryPixels.restype = lambda address: PTAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaaGetBoundaryPixels not exported " +
+        sys.stderr.write("Warning - function ptaaGetBoundaryPixels not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59274,7 +59275,7 @@ class ptafunc1(object):
         leptonica.l_angleBetweenVectors.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.l_angleBetweenVectors.restype = ctypes.c_float
     except AttributeError:
-        os.stderr.write("Warning - function l_angleBetweenVectors not exported " +
+        sys.stderr.write("Warning - function l_angleBetweenVectors not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59308,7 +59309,7 @@ class ptafunc1(object):
         leptonica.ptaGetBoundaryPixels.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptaGetBoundaryPixels.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetBoundaryPixels not exported " +
+        sys.stderr.write("Warning - function ptaGetBoundaryPixels not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59337,7 +59338,7 @@ class ptafunc1(object):
         leptonica.ptaCyclicPerm.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptaCyclicPerm.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaCyclicPerm not exported " +
+        sys.stderr.write("Warning - function ptaCyclicPerm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59371,7 +59372,7 @@ class ptafunc1(object):
         leptonica.ptaGetLinearLSF.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaGetLinearLSF.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetLinearLSF not exported " +
+        sys.stderr.write("Warning - function ptaGetLinearLSF not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59422,7 +59423,7 @@ class ptafunc1(object):
         leptonica.applyQuadraticFit.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_void_p]
         leptonica.applyQuadraticFit.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function applyQuadraticFit not exported " +
+        sys.stderr.write("Warning - function applyQuadraticFit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59452,7 +59453,7 @@ class ptafunc1(object):
         leptonica.ptaReverse.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptaReverse.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaReverse not exported " +
+        sys.stderr.write("Warning - function ptaReverse not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59478,7 +59479,7 @@ class ptafunc1(object):
         leptonica.pixPlotAlongPta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixPlotAlongPta.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixPlotAlongPta not exported " +
+        sys.stderr.write("Warning - function pixPlotAlongPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59515,7 +59516,7 @@ class ptafunc1(object):
         leptonica.ptaaJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptaaJoin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaaJoin not exported " +
+        sys.stderr.write("Warning - function ptaaJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59550,7 +59551,7 @@ class ptafunc1(object):
         leptonica.ptaSortByIndex.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaSortByIndex.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaSortByIndex not exported " +
+        sys.stderr.write("Warning - function ptaSortByIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59576,7 +59577,7 @@ class ptafunc1(object):
         leptonica.pixDisplayPta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixDisplayPta.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayPta not exported " +
+        sys.stderr.write("Warning - function pixDisplayPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59613,7 +59614,7 @@ class ptafunc1(object):
         leptonica.ptaGetSortIndex.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.ptaGetSortIndex.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetSortIndex not exported " +
+        sys.stderr.write("Warning - function ptaGetSortIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59644,7 +59645,7 @@ class ptafunc1(object):
         leptonica.ptaContainsPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptaContainsPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaContainsPt not exported " +
+        sys.stderr.write("Warning - function ptaContainsPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59671,7 +59672,7 @@ class ptafunc1(object):
         leptonica.pixFindCornerPixels.argtypes = [ctypes.c_void_p]
         leptonica.pixFindCornerPixels.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFindCornerPixels not exported " +
+        sys.stderr.write("Warning - function pixFindCornerPixels not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59699,7 +59700,7 @@ class ptafunc1(object):
         leptonica.pixGenerateFromPta.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGenerateFromPta.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGenerateFromPta not exported " +
+        sys.stderr.write("Warning - function pixGenerateFromPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59731,7 +59732,7 @@ class ptafunc1(object):
         leptonica.ptaReplicatePattern.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptaReplicatePattern.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaReplicatePattern not exported " +
+        sys.stderr.write("Warning - function ptaReplicatePattern not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59772,7 +59773,7 @@ class ptafunc1(object):
         leptonica.ptaRemoveDuplicates.argtypes = [ctypes.c_void_p, ctypes.c_uint32]
         leptonica.ptaRemoveDuplicates.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaRemoveDuplicates not exported " +
+        sys.stderr.write("Warning - function ptaRemoveDuplicates not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59799,7 +59800,7 @@ class ptafunc1(object):
         leptonica.applyCubicFit.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_void_p]
         leptonica.applyCubicFit.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function applyCubicFit not exported " +
+        sys.stderr.write("Warning - function applyCubicFit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59830,7 +59831,7 @@ class ptafunc1(object):
         leptonica.ptaTranspose.argtypes = [ctypes.c_void_p]
         leptonica.ptaTranspose.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaTranspose not exported " +
+        sys.stderr.write("Warning - function ptaTranspose not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59854,7 +59855,7 @@ class ptafunc1(object):
         leptonica.ptaGetQuadraticLSF.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaGetQuadraticLSF.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetQuadraticLSF not exported " +
+        sys.stderr.write("Warning - function ptaGetQuadraticLSF not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59905,7 +59906,7 @@ class ptafunc1(object):
         leptonica.ptaPtInsidePolygon.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_void_p]
         leptonica.ptaPtInsidePolygon.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaPtInsidePolygon not exported " +
+        sys.stderr.write("Warning - function ptaPtInsidePolygon not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59939,7 +59940,7 @@ class ptafunc1(object):
         leptonica.ptaNoisyQuadraticLSF.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaNoisyQuadraticLSF.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaNoisyQuadraticLSF not exported " +
+        sys.stderr.write("Warning - function ptaNoisyQuadraticLSF not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -59984,7 +59985,7 @@ class ptafunc1(object):
         leptonica.pixDisplayPtaPattern.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixDisplayPtaPattern.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayPtaPattern not exported " +
+        sys.stderr.write("Warning - function pixDisplayPtaPattern not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60031,7 +60032,7 @@ class ptafunc1(object):
         leptonica.ptaGetRange.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaGetRange.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetRange not exported " +
+        sys.stderr.write("Warning - function ptaGetRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60068,7 +60069,7 @@ class ptafunc1(object):
         leptonica.ptaGetCubicLSF.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaGetCubicLSF.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetCubicLSF not exported " +
+        sys.stderr.write("Warning - function ptaGetCubicLSF not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60123,7 +60124,7 @@ class ptafunc1(object):
         leptonica.ptaGetInsideBox.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaGetInsideBox.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetInsideBox not exported " +
+        sys.stderr.write("Warning - function ptaGetInsideBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60149,7 +60150,7 @@ class ptafunc1(object):
         leptonica.ptaTestIntersection.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaTestIntersection.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaTestIntersection not exported " +
+        sys.stderr.write("Warning - function ptaTestIntersection not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60175,7 +60176,7 @@ class ptafunc1(object):
         leptonica.ptaSubsample.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptaSubsample.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaSubsample not exported " +
+        sys.stderr.write("Warning - function ptaSubsample not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60201,7 +60202,7 @@ class ptafunc1(object):
         leptonica.ptaGetQuarticLSF.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaGetQuarticLSF.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetQuarticLSF not exported " +
+        sys.stderr.write("Warning - function ptaGetQuarticLSF not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60260,7 +60261,7 @@ class ptafunc1(object):
         leptonica.ptaSort.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.ptaSort.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaSort not exported " +
+        sys.stderr.write("Warning - function ptaSort not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60291,7 +60292,7 @@ class ptafunc1(object):
         leptonica.pixDisplayPtaa.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixDisplayPtaa.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayPtaa not exported " +
+        sys.stderr.write("Warning - function pixDisplayPtaa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60318,7 +60319,7 @@ class ptafunc1(object):
         leptonica.applyQuarticFit.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_void_p]
         leptonica.applyQuarticFit.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function applyQuarticFit not exported " +
+        sys.stderr.write("Warning - function applyQuarticFit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60350,7 +60351,7 @@ class ptafunc1(object):
         leptonica.ptaTransform.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.ptaTransform.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaTransform not exported " +
+        sys.stderr.write("Warning - function ptaTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60416,7 +60417,7 @@ class runlength(object):
         leptonica.runlengthMembershipOnLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.runlengthMembershipOnLine.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function runlengthMembershipOnLine not exported " +
+        sys.stderr.write("Warning - function runlengthMembershipOnLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60456,7 +60457,7 @@ class runlength(object):
         leptonica.pixFindMaxVerticalRunOnLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindMaxVerticalRunOnLine.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindMaxVerticalRunOnLine not exported " +
+        sys.stderr.write("Warning - function pixFindMaxVerticalRunOnLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60491,7 +60492,7 @@ class runlength(object):
         leptonica.pixStrokeWidthTransform.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixStrokeWidthTransform.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixStrokeWidthTransform not exported " +
+        sys.stderr.write("Warning - function pixStrokeWidthTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60539,7 +60540,7 @@ class runlength(object):
         leptonica.makeMSBitLocTab.argtypes = [ctypes.c_int32]
         leptonica.makeMSBitLocTab.restype = ctypes.POINTER(ctypes.c_int32)
     except AttributeError:
-        os.stderr.write("Warning - function makeMSBitLocTab not exported " +
+        sys.stderr.write("Warning - function makeMSBitLocTab not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60571,7 +60572,7 @@ class runlength(object):
         leptonica.pixFindMaxHorizontalRunOnLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindMaxHorizontalRunOnLine.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindMaxHorizontalRunOnLine not exported " +
+        sys.stderr.write("Warning - function pixFindMaxHorizontalRunOnLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60606,7 +60607,7 @@ class runlength(object):
         leptonica.pixFindMaxRuns.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixFindMaxRuns.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFindMaxRuns not exported " +
+        sys.stderr.write("Warning - function pixFindMaxRuns not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60639,7 +60640,7 @@ class runlength(object):
         leptonica.pixFindVerticalRuns.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindVerticalRuns.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindVerticalRuns not exported " +
+        sys.stderr.write("Warning - function pixFindVerticalRuns not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60679,7 +60680,7 @@ class runlength(object):
         leptonica.pixRunlengthTransform.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixRunlengthTransform.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRunlengthTransform not exported " +
+        sys.stderr.write("Warning - function pixRunlengthTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60720,7 +60721,7 @@ class runlength(object):
         leptonica.pixFindHorizontalRuns.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixFindHorizontalRuns.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixFindHorizontalRuns not exported " +
+        sys.stderr.write("Warning - function pixFindHorizontalRuns not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60806,7 +60807,7 @@ class compare(object):
         leptonica.pixGetDifferenceStats.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGetDifferenceStats.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetDifferenceStats not exported " +
+        sys.stderr.write("Warning - function pixGetDifferenceStats not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60866,7 +60867,7 @@ class compare(object):
         leptonica.pixCompareGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCompareGray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCompareGray not exported " +
+        sys.stderr.write("Warning - function pixCompareGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60908,7 +60909,7 @@ class compare(object):
         leptonica.pixUsesCmapColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixUsesCmapColor.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixUsesCmapColor not exported " +
+        sys.stderr.write("Warning - function pixUsesCmapColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -60943,7 +60944,7 @@ class compare(object):
         leptonica.pixBestCorrelation.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixBestCorrelation.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixBestCorrelation not exported " +
+        sys.stderr.write("Warning - function pixBestCorrelation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61010,7 +61011,7 @@ class compare(object):
         leptonica.pixEqual.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixEqual.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixEqual not exported " +
+        sys.stderr.write("Warning - function pixEqual not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61058,7 +61059,7 @@ class compare(object):
         leptonica.pixEqualWithCmap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixEqualWithCmap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixEqualWithCmap not exported " +
+        sys.stderr.write("Warning - function pixEqualWithCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61096,7 +61097,7 @@ class compare(object):
         leptonica.pixGetPSNR.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGetPSNR.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetPSNR not exported " +
+        sys.stderr.write("Warning - function pixGetPSNR not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61146,7 +61147,7 @@ class compare(object):
         leptonica.pixEqualWithAlpha.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixEqualWithAlpha.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixEqualWithAlpha not exported " +
+        sys.stderr.write("Warning - function pixEqualWithAlpha not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61182,7 +61183,7 @@ class compare(object):
         leptonica.pixTestForSimilarity.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixTestForSimilarity.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixTestForSimilarity not exported " +
+        sys.stderr.write("Warning - function pixTestForSimilarity not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61253,7 +61254,7 @@ class compare(object):
         leptonica.pixCompareWithTranslation.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixCompareWithTranslation.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCompareWithTranslation not exported " +
+        sys.stderr.write("Warning - function pixCompareWithTranslation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61305,7 +61306,7 @@ class compare(object):
         leptonica.pixGetDifferenceHistogram.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixGetDifferenceHistogram.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetDifferenceHistogram not exported " +
+        sys.stderr.write("Warning - function pixGetDifferenceHistogram not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61342,7 +61343,7 @@ class compare(object):
         leptonica.pixCompareRGB.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCompareRGB.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCompareRGB not exported " +
+        sys.stderr.write("Warning - function pixCompareRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61383,7 +61384,7 @@ class compare(object):
         leptonica.pixGetPerceptualDiff.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetPerceptualDiff.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetPerceptualDiff not exported " +
+        sys.stderr.write("Warning - function pixGetPerceptualDiff not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61454,7 +61455,7 @@ class compare(object):
         leptonica.pixCorrelationBinary.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCorrelationBinary.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCorrelationBinary not exported " +
+        sys.stderr.write("Warning - function pixCorrelationBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61495,7 +61496,7 @@ class compare(object):
         leptonica.pixCompareTiled.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixCompareTiled.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCompareTiled not exported " +
+        sys.stderr.write("Warning - function pixCompareTiled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61540,7 +61541,7 @@ class compare(object):
         leptonica.pixCompareGrayOrRGB.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCompareGrayOrRGB.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCompareGrayOrRGB not exported " +
+        sys.stderr.write("Warning - function pixCompareGrayOrRGB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61600,7 +61601,7 @@ class compare(object):
         leptonica.pixDisplayDiffBinary.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixDisplayDiffBinary.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayDiffBinary not exported " +
+        sys.stderr.write("Warning - function pixDisplayDiffBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61636,7 +61637,7 @@ class compare(object):
         leptonica.pixCompareRankDifference.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixCompareRankDifference.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCompareRankDifference not exported " +
+        sys.stderr.write("Warning - function pixCompareRankDifference not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61680,7 +61681,7 @@ class compare(object):
         leptonica.pixCompareBinary.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixCompareBinary.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCompareBinary not exported " +
+        sys.stderr.write("Warning - function pixCompareBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61783,7 +61784,7 @@ class conncomp(object):
         leptonica.pixSeedfill4.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSeedfill4.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfill4 not exported " +
+        sys.stderr.write("Warning - function pixSeedfill4 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61819,7 +61820,7 @@ class conncomp(object):
         leptonica.pixSeedfill.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSeedfill.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfill not exported " +
+        sys.stderr.write("Warning - function pixSeedfill not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61854,7 +61855,7 @@ class conncomp(object):
         leptonica.nextOnPixelInRaster.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.nextOnPixelInRaster.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function nextOnPixelInRaster not exported " +
+        sys.stderr.write("Warning - function nextOnPixelInRaster not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61884,7 +61885,7 @@ class conncomp(object):
         leptonica.pixSeedfillBB.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSeedfillBB.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfillBB not exported " +
+        sys.stderr.write("Warning - function pixSeedfillBB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61919,7 +61920,7 @@ class conncomp(object):
         leptonica.pixCountConnComp.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixCountConnComp.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixCountConnComp not exported " +
+        sys.stderr.write("Warning - function pixCountConnComp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61953,7 +61954,7 @@ class conncomp(object):
         leptonica.pixConnCompBB.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConnCompBB.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConnCompBB not exported " +
+        sys.stderr.write("Warning - function pixConnCompBB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -61986,7 +61987,7 @@ class conncomp(object):
         leptonica.pixConnComp.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConnComp.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConnComp not exported " +
+        sys.stderr.write("Warning - function pixConnComp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62019,7 +62020,7 @@ class conncomp(object):
         leptonica.pixSeedfill4BB.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSeedfill4BB.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfill4BB not exported " +
+        sys.stderr.write("Warning - function pixSeedfill4BB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62069,7 +62070,7 @@ class conncomp(object):
         leptonica.pixSeedfill8BB.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSeedfill8BB.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfill8BB not exported " +
+        sys.stderr.write("Warning - function pixSeedfill8BB not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62112,7 +62113,7 @@ class conncomp(object):
         leptonica.pixSeedfill8.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSeedfill8.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSeedfill8 not exported " +
+        sys.stderr.write("Warning - function pixSeedfill8 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62148,7 +62149,7 @@ class conncomp(object):
         leptonica.pixConnCompPixa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixConnCompPixa.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixConnCompPixa not exported " +
+        sys.stderr.write("Warning - function pixConnCompPixa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62334,7 +62335,7 @@ class utils(object):
         leptonica.stringCat.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p]
         leptonica.stringCat.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function stringCat not exported " +
+        sys.stderr.write("Warning - function stringCat not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62372,7 +62373,7 @@ class utils(object):
         leptonica.stringFindSubstr.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.stringFindSubstr.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function stringFindSubstr not exported " +
+        sys.stderr.write("Warning - function stringFindSubstr not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62407,7 +62408,7 @@ class utils(object):
         leptonica.l_binaryCopy.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
         leptonica.l_binaryCopy.restype = ctypes.POINTER(ctypes.c_ubyte)
     except AttributeError:
-        os.stderr.write("Warning - function l_binaryCopy not exported " +
+        sys.stderr.write("Warning - function l_binaryCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62439,7 +62440,7 @@ class utils(object):
         leptonica.stringReplaceSubstr.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.stringReplaceSubstr.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function stringReplaceSubstr not exported " +
+        sys.stderr.write("Warning - function stringReplaceSubstr not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62483,7 +62484,7 @@ class utils(object):
         leptonica.appendSubdirectory.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.appendSubdirectory.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function appendSubdirectory not exported " +
+        sys.stderr.write("Warning - function appendSubdirectory not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62514,7 +62515,7 @@ class utils(object):
         leptonica.fileAppendString.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fileAppendString.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fileAppendString not exported " +
+        sys.stderr.write("Warning - function fileAppendString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62540,7 +62541,7 @@ class utils(object):
         leptonica.fnbytesInFile.argtypes = [ctypes.c_void_p]
         leptonica.fnbytesInFile.restype = ctypes.c_size_t
     except AttributeError:
-        os.stderr.write("Warning - function fnbytesInFile not exported " +
+        sys.stderr.write("Warning - function fnbytesInFile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62564,7 +62565,7 @@ class utils(object):
         leptonica.genPathname.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.genPathname.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function genPathname not exported " +
+        sys.stderr.write("Warning - function genPathname not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62611,7 +62612,7 @@ class utils(object):
         leptonica.lept_rmfile.argtypes = [ctypes.c_void_p]
         leptonica.lept_rmfile.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lept_rmfile not exported " +
+        sys.stderr.write("Warning - function lept_rmfile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62642,7 +62643,7 @@ class utils(object):
         leptonica.l_binaryRead.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.l_binaryRead.restype = ctypes.POINTER(ctypes.c_ubyte)
     except AttributeError:
-        os.stderr.write("Warning - function l_binaryRead not exported " +
+        sys.stderr.write("Warning - function l_binaryRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62668,7 +62669,7 @@ class utils(object):
         leptonica.fileCopy.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fileCopy.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fileCopy not exported " +
+        sys.stderr.write("Warning - function fileCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62694,7 +62695,7 @@ class utils(object):
         leptonica.lept_rmdir.argtypes = [ctypes.c_void_p]
         leptonica.lept_rmdir.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lept_rmdir not exported " +
+        sys.stderr.write("Warning - function lept_rmdir not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62728,7 +62729,7 @@ class utils(object):
         leptonica.convertBinaryToGrayCode.argtypes = [ctypes.c_uint32]
         leptonica.convertBinaryToGrayCode.restype = ctypes.c_uint32
     except AttributeError:
-        os.stderr.write("Warning - function convertBinaryToGrayCode not exported " +
+        sys.stderr.write("Warning - function convertBinaryToGrayCode not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62756,7 +62757,7 @@ class utils(object):
         leptonica.l_binaryReadStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.l_binaryReadStream.restype = ctypes.POINTER(ctypes.c_ubyte)
     except AttributeError:
-        os.stderr.write("Warning - function l_binaryReadStream not exported " +
+        sys.stderr.write("Warning - function l_binaryReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62796,7 +62797,7 @@ class utils(object):
         leptonica.lept_rm_match.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lept_rm_match.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lept_rm_match not exported " +
+        sys.stderr.write("Warning - function lept_rm_match not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62837,7 +62838,7 @@ class utils(object):
         leptonica.splitPathAtDirectory.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.splitPathAtDirectory.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function splitPathAtDirectory not exported " +
+        sys.stderr.write("Warning - function splitPathAtDirectory not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62885,7 +62886,7 @@ class utils(object):
         leptonica.lept_roundftoi.argtypes = [ctypes.c_float]
         leptonica.lept_roundftoi.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lept_roundftoi not exported " +
+        sys.stderr.write("Warning - function lept_roundftoi not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62915,7 +62916,7 @@ class utils(object):
         leptonica.convertSepCharsInPath.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.convertSepCharsInPath.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertSepCharsInPath not exported " +
+        sys.stderr.write("Warning - function convertSepCharsInPath not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62948,7 +62949,7 @@ class utils(object):
         leptonica.l_binaryReadSelectStream.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_size_t, ctypes.c_void_p]
         leptonica.l_binaryReadSelectStream.restype = ctypes.POINTER(ctypes.c_ubyte)
     except AttributeError:
-        os.stderr.write("Warning - function l_binaryReadSelectStream not exported " +
+        sys.stderr.write("Warning - function l_binaryReadSelectStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -62987,7 +62988,7 @@ class utils(object):
         leptonica.pathJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pathJoin.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function pathJoin not exported " +
+        sys.stderr.write("Warning - function pathJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63042,7 +63043,7 @@ class utils(object):
         leptonica.stringSplitOnToken.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.stringSplitOnToken.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function stringSplitOnToken not exported " +
+        sys.stderr.write("Warning - function stringSplitOnToken not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63086,7 +63087,7 @@ class utils(object):
         leptonica.lept_fclose.argtypes = [ctypes.c_void_p]
         leptonica.lept_fclose.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lept_fclose not exported " +
+        sys.stderr.write("Warning - function lept_fclose not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63114,7 +63115,7 @@ class utils(object):
         leptonica.fileConcatenate.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fileConcatenate.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fileConcatenate not exported " +
+        sys.stderr.write("Warning - function fileConcatenate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63140,7 +63141,7 @@ class utils(object):
         leptonica.stringNew.argtypes = [ctypes.c_void_p]
         leptonica.stringNew.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function stringNew not exported " +
+        sys.stderr.write("Warning - function stringNew not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63164,7 +63165,7 @@ class utils(object):
         leptonica.l_getCurrentTime.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.l_getCurrentTime.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function l_getCurrentTime not exported " +
+        sys.stderr.write("Warning - function l_getCurrentTime not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63190,7 +63191,7 @@ class utils(object):
         leptonica.strtokSafe.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.strtokSafe.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function strtokSafe not exported " +
+        sys.stderr.write("Warning - function strtokSafe not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63240,7 +63241,7 @@ class utils(object):
         leptonica.stringRemoveChars.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.stringRemoveChars.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function stringRemoveChars not exported " +
+        sys.stderr.write("Warning - function stringRemoveChars not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63266,7 +63267,7 @@ class utils(object):
         leptonica.setMsgSeverity.argtypes = [ctypes.c_int32]
         leptonica.setMsgSeverity.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function setMsgSeverity not exported " +
+        sys.stderr.write("Warning - function setMsgSeverity not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63299,7 +63300,7 @@ class utils(object):
         leptonica.stringJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.stringJoin.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function stringJoin not exported " +
+        sys.stderr.write("Warning - function stringJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63330,7 +63331,7 @@ class utils(object):
         leptonica.genTempFilename.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.genTempFilename.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function genTempFilename not exported " +
+        sys.stderr.write("Warning - function genTempFilename not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63393,7 +63394,7 @@ class utils(object):
         leptonica.l_getFormattedDate.argtypes = []
         leptonica.l_getFormattedDate.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function l_getFormattedDate not exported " +
+        sys.stderr.write("Warning - function l_getFormattedDate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63417,7 +63418,7 @@ class utils(object):
         leptonica.getLeptonicaVersion.argtypes = []
         leptonica.getLeptonicaVersion.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function getLeptonicaVersion not exported " +
+        sys.stderr.write("Warning - function getLeptonicaVersion not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63443,7 +63444,7 @@ class utils(object):
         leptonica.lept_direxists.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lept_direxists.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function lept_direxists not exported " +
+        sys.stderr.write("Warning - function lept_direxists not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63474,7 +63475,7 @@ class utils(object):
         leptonica.stringReplaceEachSubstr.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.stringReplaceEachSubstr.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function stringReplaceEachSubstr not exported " +
+        sys.stderr.write("Warning - function stringReplaceEachSubstr not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63511,7 +63512,7 @@ class utils(object):
         leptonica.fopenReadStream.argtypes = [ctypes.c_void_p]
         leptonica.fopenReadStream.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function fopenReadStream not exported " +
+        sys.stderr.write("Warning - function fopenReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63542,7 +63543,7 @@ class utils(object):
         leptonica.startTimerNested.argtypes = []
         leptonica.startTimerNested.restype = L_TIMER
     except AttributeError:
-        os.stderr.write("Warning - function startTimerNested not exported " +
+        sys.stderr.write("Warning - function startTimerNested not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63573,7 +63574,7 @@ class utils(object):
         leptonica.arrayFindEachSequence.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p, ctypes.c_size_t]
         leptonica.arrayFindEachSequence.restype = lambda address: L_DNA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function arrayFindEachSequence not exported " +
+        sys.stderr.write("Warning - function arrayFindEachSequence not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63610,7 +63611,7 @@ class utils(object):
         leptonica.reallocNew.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.reallocNew.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function reallocNew not exported " +
+        sys.stderr.write("Warning - function reallocNew not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63654,7 +63655,7 @@ class utils(object):
         leptonica.genRandomIntegerInRange.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.genRandomIntegerInRange.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function genRandomIntegerInRange not exported " +
+        sys.stderr.write("Warning - function genRandomIntegerInRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63686,7 +63687,7 @@ class utils(object):
         leptonica.stringReplace.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.stringReplace.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function stringReplace not exported " +
+        sys.stderr.write("Warning - function stringReplace not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63717,7 +63718,7 @@ class utils(object):
         leptonica.splitPathAtExtension.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.splitPathAtExtension.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function splitPathAtExtension not exported " +
+        sys.stderr.write("Warning - function splitPathAtExtension not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63761,7 +63762,7 @@ class utils(object):
         leptonica.l_binaryReadSelect.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_size_t, ctypes.c_void_p]
         leptonica.l_binaryReadSelect.restype = ctypes.POINTER(ctypes.c_ubyte)
     except AttributeError:
-        os.stderr.write("Warning - function l_binaryReadSelect not exported " +
+        sys.stderr.write("Warning - function l_binaryReadSelect not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63795,7 +63796,7 @@ class utils(object):
         leptonica.fopenWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.fopenWriteStream.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function fopenWriteStream not exported " +
+        sys.stderr.write("Warning - function fopenWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63828,7 +63829,7 @@ class utils(object):
         leptonica.arrayFindSequence.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.arrayFindSequence.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function arrayFindSequence not exported " +
+        sys.stderr.write("Warning - function arrayFindSequence not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63873,7 +63874,7 @@ class utils(object):
         leptonica.lept_rm.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lept_rm.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lept_rm not exported " +
+        sys.stderr.write("Warning - function lept_rm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63907,7 +63908,7 @@ class utils(object):
         leptonica.stringCopy.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.stringCopy.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function stringCopy not exported " +
+        sys.stderr.write("Warning - function stringCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63943,7 +63944,7 @@ class utils(object):
         leptonica.startTimer.argtypes = []
         leptonica.startTimer.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function startTimer not exported " +
+        sys.stderr.write("Warning - function startTimer not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -63970,7 +63971,7 @@ class utils(object):
         leptonica.fileCorruptByDeletion.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_void_p]
         leptonica.fileCorruptByDeletion.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fileCorruptByDeletion not exported " +
+        sys.stderr.write("Warning - function fileCorruptByDeletion not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64009,7 +64010,7 @@ class utils(object):
         leptonica.filesAreIdentical.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.filesAreIdentical.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function filesAreIdentical not exported " +
+        sys.stderr.write("Warning - function filesAreIdentical not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64037,7 +64038,7 @@ class utils(object):
         leptonica.returnErrorInt.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.returnErrorInt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function returnErrorInt not exported " +
+        sys.stderr.write("Warning - function returnErrorInt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64065,7 +64066,7 @@ class utils(object):
         leptonica.stringReverse.argtypes = [ctypes.c_void_p]
         leptonica.stringReverse.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function stringReverse not exported " +
+        sys.stderr.write("Warning - function stringReverse not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64089,7 +64090,7 @@ class utils(object):
         leptonica.l_binaryWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_size_t]
         leptonica.l_binaryWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function l_binaryWrite not exported " +
+        sys.stderr.write("Warning - function l_binaryWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64119,7 +64120,7 @@ class utils(object):
         leptonica.extractNumberFromFilename.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.extractNumberFromFilename.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function extractNumberFromFilename not exported " +
+        sys.stderr.write("Warning - function extractNumberFromFilename not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64155,7 +64156,7 @@ class utils(object):
         leptonica.lept_free.argtypes = [ctypes.c_void_p]
         leptonica.lept_free.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function lept_free not exported " +
+        sys.stderr.write("Warning - function lept_free not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64183,7 +64184,7 @@ class utils(object):
         leptonica.lept_fopen.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lept_fopen.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function lept_fopen not exported " +
+        sys.stderr.write("Warning - function lept_fopen not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64213,7 +64214,7 @@ class utils(object):
         leptonica.lept_calloc.argtypes = [ctypes.c_size_t, ctypes.c_size_t]
         leptonica.lept_calloc.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function lept_calloc not exported " +
+        sys.stderr.write("Warning - function lept_calloc not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64244,7 +64245,7 @@ class utils(object):
         leptonica.lept_cp.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lept_cp.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lept_cp not exported " +
+        sys.stderr.write("Warning - function lept_cp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64296,7 +64297,7 @@ class utils(object):
         leptonica.returnErrorPtr.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.returnErrorPtr.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function returnErrorPtr not exported " +
+        sys.stderr.write("Warning - function returnErrorPtr not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64324,7 +64325,7 @@ class utils(object):
         leptonica.makeTempDirname.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p]
         leptonica.makeTempDirname.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function makeTempDirname not exported " +
+        sys.stderr.write("Warning - function makeTempDirname not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64363,7 +64364,7 @@ class utils(object):
         leptonica.lept_mv.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lept_mv.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lept_mv not exported " +
+        sys.stderr.write("Warning - function lept_mv not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64414,7 +64415,7 @@ class utils(object):
         leptonica.fileCorruptByMutation.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_void_p]
         leptonica.fileCorruptByMutation.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function fileCorruptByMutation not exported " +
+        sys.stderr.write("Warning - function fileCorruptByMutation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64453,7 +64454,7 @@ class utils(object):
         leptonica.stringLength.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
         leptonica.stringLength.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function stringLength not exported " +
+        sys.stderr.write("Warning - function stringLength not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64486,7 +64487,7 @@ class utils(object):
         leptonica.nbytesInFile.argtypes = [ctypes.c_void_p]
         leptonica.nbytesInFile.restype = ctypes.c_size_t
     except AttributeError:
-        os.stderr.write("Warning - function nbytesInFile not exported " +
+        sys.stderr.write("Warning - function nbytesInFile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64510,7 +64511,7 @@ class utils(object):
         leptonica.convertGrayCodeToBinary.argtypes = [ctypes.c_uint32]
         leptonica.convertGrayCodeToBinary.restype = ctypes.c_uint32
     except AttributeError:
-        os.stderr.write("Warning - function convertGrayCodeToBinary not exported " +
+        sys.stderr.write("Warning - function convertGrayCodeToBinary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64534,7 +64535,7 @@ class utils(object):
         leptonica.modifyTrailingSlash.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_int32]
         leptonica.modifyTrailingSlash.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function modifyTrailingSlash not exported " +
+        sys.stderr.write("Warning - function modifyTrailingSlash not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64565,7 +64566,7 @@ class utils(object):
         leptonica.returnErrorFloat.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.returnErrorFloat.restype = ctypes.c_float
     except AttributeError:
-        os.stderr.write("Warning - function returnErrorFloat not exported " +
+        sys.stderr.write("Warning - function returnErrorFloat not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64593,7 +64594,7 @@ class utils(object):
         leptonica.lept_mkdir.argtypes = [ctypes.c_void_p]
         leptonica.lept_mkdir.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lept_mkdir not exported " +
+        sys.stderr.write("Warning - function lept_mkdir not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64685,7 +64686,7 @@ class pnmio(object):
         leptonica.pixWriteStreamPnm.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWriteStreamPnm.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStreamPnm not exported " +
+        sys.stderr.write("Warning - function pixWriteStreamPnm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64719,7 +64720,7 @@ class pnmio(object):
         leptonica.pixWriteStreamAsciiPnm.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWriteStreamAsciiPnm.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStreamAsciiPnm not exported " +
+        sys.stderr.write("Warning - function pixWriteStreamAsciiPnm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64750,7 +64751,7 @@ class pnmio(object):
         leptonica.readHeaderPnm.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.readHeaderPnm.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function readHeaderPnm not exported " +
+        sys.stderr.write("Warning - function readHeaderPnm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64786,7 +64787,7 @@ class pnmio(object):
         leptonica.pixReadMemPnm.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
         leptonica.pixReadMemPnm.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadMemPnm not exported " +
+        sys.stderr.write("Warning - function pixReadMemPnm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64815,7 +64816,7 @@ class pnmio(object):
         leptonica.readHeaderMemPnm.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.readHeaderMemPnm.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function readHeaderMemPnm not exported " +
+        sys.stderr.write("Warning - function readHeaderMemPnm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64853,7 +64854,7 @@ class pnmio(object):
         leptonica.pixWriteMemPnm.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWriteMemPnm.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteMemPnm not exported " +
+        sys.stderr.write("Warning - function pixWriteMemPnm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64885,7 +64886,7 @@ class pnmio(object):
         leptonica.pixReadStreamPnm.argtypes = [ctypes.c_void_p]
         leptonica.pixReadStreamPnm.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadStreamPnm not exported " +
+        sys.stderr.write("Warning - function pixReadStreamPnm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64909,7 +64910,7 @@ class pnmio(object):
         leptonica.freadHeaderPnm.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.freadHeaderPnm.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function freadHeaderPnm not exported " +
+        sys.stderr.write("Warning - function freadHeaderPnm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -64989,7 +64990,7 @@ class selgen(object):
         leptonica.pixGenerateSelBoundary.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGenerateSelBoundary.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGenerateSelBoundary not exported " +
+        sys.stderr.write("Warning - function pixGenerateSelBoundary not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65055,7 +65056,7 @@ class selgen(object):
         leptonica.pixGenerateSelWithRuns.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGenerateSelWithRuns.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGenerateSelWithRuns not exported " +
+        sys.stderr.write("Warning - function pixGenerateSelWithRuns not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65129,7 +65130,7 @@ class selgen(object):
         leptonica.pixDisplayHitMissSel.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_uint32, ctypes.c_uint32]
         leptonica.pixDisplayHitMissSel.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayHitMissSel not exported " +
+        sys.stderr.write("Warning - function pixDisplayHitMissSel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65165,7 +65166,7 @@ class selgen(object):
         leptonica.adjacentOnPixelInRaster.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.adjacentOnPixelInRaster.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function adjacentOnPixelInRaster not exported " +
+        sys.stderr.write("Warning - function adjacentOnPixelInRaster not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65199,7 +65200,7 @@ class selgen(object):
         leptonica.pixGetRunsOnLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGetRunsOnLine.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRunsOnLine not exported " +
+        sys.stderr.write("Warning - function pixGetRunsOnLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65236,7 +65237,7 @@ class selgen(object):
         leptonica.pixGetRunCentersOnLine.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGetRunCentersOnLine.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRunCentersOnLine not exported " +
+        sys.stderr.write("Warning - function pixGetRunCentersOnLine not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65284,7 +65285,7 @@ class selgen(object):
         leptonica.pixSubsampleBoundaryPixels.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSubsampleBoundaryPixels.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSubsampleBoundaryPixels not exported " +
+        sys.stderr.write("Warning - function pixSubsampleBoundaryPixels not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65324,7 +65325,7 @@ class selgen(object):
         leptonica.pixGenerateSelRandom.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGenerateSelRandom.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGenerateSelRandom not exported " +
+        sys.stderr.write("Warning - function pixGenerateSelRandom not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65415,7 +65416,7 @@ class convertfiles(object):
         leptonica.convertFilesTo1bpp.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.convertFilesTo1bpp.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertFilesTo1bpp not exported " +
+        sys.stderr.write("Warning - function convertFilesTo1bpp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65485,7 +65486,7 @@ class spixio(object):
         leptonica.pixWriteMemSpix.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWriteMemSpix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteMemSpix not exported " +
+        sys.stderr.write("Warning - function pixWriteMemSpix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65513,7 +65514,7 @@ class spixio(object):
         leptonica.pixReadStreamSpix.argtypes = [ctypes.c_void_p]
         leptonica.pixReadStreamSpix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadStreamSpix not exported " +
+        sys.stderr.write("Warning - function pixReadStreamSpix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65541,7 +65542,7 @@ class spixio(object):
         leptonica.pixSerializeToMemory.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSerializeToMemory.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSerializeToMemory not exported " +
+        sys.stderr.write("Warning - function pixSerializeToMemory not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65583,7 +65584,7 @@ class spixio(object):
         leptonica.freadHeaderSpix.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.freadHeaderSpix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function freadHeaderSpix not exported " +
+        sys.stderr.write("Warning - function freadHeaderSpix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65620,7 +65621,7 @@ class spixio(object):
         leptonica.pixDeserializeFromMemory.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
         leptonica.pixDeserializeFromMemory.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDeserializeFromMemory not exported " +
+        sys.stderr.write("Warning - function pixDeserializeFromMemory not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65649,7 +65650,7 @@ class spixio(object):
         leptonica.pixReadMemSpix.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
         leptonica.pixReadMemSpix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadMemSpix not exported " +
+        sys.stderr.write("Warning - function pixReadMemSpix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65675,7 +65676,7 @@ class spixio(object):
         leptonica.readHeaderSpix.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.readHeaderSpix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function readHeaderSpix not exported " +
+        sys.stderr.write("Warning - function readHeaderSpix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65712,7 +65713,7 @@ class spixio(object):
         leptonica.pixWriteStreamSpix.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWriteStreamSpix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStreamSpix not exported " +
+        sys.stderr.write("Warning - function pixWriteStreamSpix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65738,7 +65739,7 @@ class spixio(object):
         leptonica.sreadHeaderSpix.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.sreadHeaderSpix.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sreadHeaderSpix not exported " +
+        sys.stderr.write("Warning - function sreadHeaderSpix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65799,7 +65800,7 @@ class baseline(object):
         leptonica.pixFindBaselines.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixFindBaselines.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFindBaselines not exported " +
+        sys.stderr.write("Warning - function pixFindBaselines not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65853,7 +65854,7 @@ class baseline(object):
         leptonica.pixDeskewLocal.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_float]
         leptonica.pixDeskewLocal.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDeskewLocal not exported " +
+        sys.stderr.write("Warning - function pixDeskewLocal not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65913,7 +65914,7 @@ class baseline(object):
         leptonica.pixGetLocalSkewTransform.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetLocalSkewTransform.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetLocalSkewTransform not exported " +
+        sys.stderr.write("Warning - function pixGetLocalSkewTransform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -65967,7 +65968,7 @@ class baseline(object):
         leptonica.pixGetLocalSkewAngles.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetLocalSkewAngles.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetLocalSkewAngles not exported " +
+        sys.stderr.write("Warning - function pixGetLocalSkewAngles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66091,7 +66092,7 @@ class ptabasic(object):
         leptonica.ptaaGetPta.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptaaGetPta.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaaGetPta not exported " +
+        sys.stderr.write("Warning - function ptaaGetPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66119,7 +66120,7 @@ class ptabasic(object):
         leptonica.ptaClone.argtypes = [ctypes.c_void_p]
         leptonica.ptaClone.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaClone not exported " +
+        sys.stderr.write("Warning - function ptaClone not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66143,7 +66144,7 @@ class ptabasic(object):
         leptonica.ptaaReplacePta.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.ptaaReplacePta.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaaReplacePta not exported " +
+        sys.stderr.write("Warning - function ptaaReplacePta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66176,7 +66177,7 @@ class ptabasic(object):
         leptonica.ptaaRead.argtypes = [ctypes.c_void_p]
         leptonica.ptaaRead.restype = lambda address: PTAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaaRead not exported " +
+        sys.stderr.write("Warning - function ptaaRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66200,7 +66201,7 @@ class ptabasic(object):
         leptonica.ptaaAddPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.ptaaAddPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaaAddPt not exported " +
+        sys.stderr.write("Warning - function ptaaAddPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66229,7 +66230,7 @@ class ptabasic(object):
         leptonica.ptaCreate.argtypes = [ctypes.c_int32]
         leptonica.ptaCreate.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaCreate not exported " +
+        sys.stderr.write("Warning - function ptaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66253,7 +66254,7 @@ class ptabasic(object):
         leptonica.ptaCopy.argtypes = [ctypes.c_void_p]
         leptonica.ptaCopy.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaCopy not exported " +
+        sys.stderr.write("Warning - function ptaCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66277,7 +66278,7 @@ class ptabasic(object):
         leptonica.ptaAddPt.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float]
         leptonica.ptaAddPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaAddPt not exported " +
+        sys.stderr.write("Warning - function ptaAddPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66304,7 +66305,7 @@ class ptabasic(object):
         leptonica.ptaSetPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.ptaSetPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaSetPt not exported " +
+        sys.stderr.write("Warning - function ptaSetPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66333,7 +66334,7 @@ class ptabasic(object):
         leptonica.ptaCopyRange.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptaCopyRange.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaCopyRange not exported " +
+        sys.stderr.write("Warning - function ptaCopyRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66361,7 +66362,7 @@ class ptabasic(object):
         leptonica.ptaGetCount.argtypes = [ctypes.c_void_p]
         leptonica.ptaGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetCount not exported " +
+        sys.stderr.write("Warning - function ptaGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66385,7 +66386,7 @@ class ptabasic(object):
         leptonica.ptaEmpty.argtypes = [ctypes.c_void_p]
         leptonica.ptaEmpty.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaEmpty not exported " +
+        sys.stderr.write("Warning - function ptaEmpty not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66411,7 +66412,7 @@ class ptabasic(object):
         leptonica.ptaWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptaWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaWrite not exported " +
+        sys.stderr.write("Warning - function ptaWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66439,7 +66440,7 @@ class ptabasic(object):
         leptonica.ptaaCreate.argtypes = [ctypes.c_int32]
         leptonica.ptaaCreate.restype = lambda address: PTAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaaCreate not exported " +
+        sys.stderr.write("Warning - function ptaaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66463,7 +66464,7 @@ class ptabasic(object):
         leptonica.ptaGetArrays.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaGetArrays.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetArrays not exported " +
+        sys.stderr.write("Warning - function ptaGetArrays not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66494,7 +66495,7 @@ class ptabasic(object):
         leptonica.ptaaDestroy.argtypes = [ctypes.c_void_p]
         leptonica.ptaaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function ptaaDestroy not exported " +
+        sys.stderr.write("Warning - function ptaaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66518,7 +66519,7 @@ class ptabasic(object):
         leptonica.ptaaInitFull.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaaInitFull.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaaInitFull not exported " +
+        sys.stderr.write("Warning - function ptaaInitFull not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66544,7 +66545,7 @@ class ptabasic(object):
         leptonica.ptaInsertPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptaInsertPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaInsertPt not exported " +
+        sys.stderr.write("Warning - function ptaInsertPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66573,7 +66574,7 @@ class ptabasic(object):
         leptonica.ptaaGetPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaaGetPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaaGetPt not exported " +
+        sys.stderr.write("Warning - function ptaaGetPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66605,7 +66606,7 @@ class ptabasic(object):
         leptonica.ptaWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptaWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaWriteStream not exported " +
+        sys.stderr.write("Warning - function ptaWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66633,7 +66634,7 @@ class ptabasic(object):
         leptonica.ptaaWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptaaWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaaWrite not exported " +
+        sys.stderr.write("Warning - function ptaaWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66661,7 +66662,7 @@ class ptabasic(object):
         leptonica.ptaRead.argtypes = [ctypes.c_void_p]
         leptonica.ptaRead.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaRead not exported " +
+        sys.stderr.write("Warning - function ptaRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66685,7 +66686,7 @@ class ptabasic(object):
         leptonica.ptaaGetCount.argtypes = [ctypes.c_void_p]
         leptonica.ptaaGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaaGetCount not exported " +
+        sys.stderr.write("Warning - function ptaaGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66709,7 +66710,7 @@ class ptabasic(object):
         leptonica.ptaDestroy.argtypes = [ctypes.c_void_p]
         leptonica.ptaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function ptaDestroy not exported " +
+        sys.stderr.write("Warning - function ptaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66737,7 +66738,7 @@ class ptabasic(object):
         leptonica.ptaGetPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaGetPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetPt not exported " +
+        sys.stderr.write("Warning - function ptaGetPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66767,7 +66768,7 @@ class ptabasic(object):
         leptonica.ptaaAddPta.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptaaAddPta.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaaAddPta not exported " +
+        sys.stderr.write("Warning - function ptaaAddPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66795,7 +66796,7 @@ class ptabasic(object):
         leptonica.ptaaReadStream.argtypes = [ctypes.c_void_p]
         leptonica.ptaaReadStream.restype = lambda address: PTAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaaReadStream not exported " +
+        sys.stderr.write("Warning - function ptaaReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66819,7 +66820,7 @@ class ptabasic(object):
         leptonica.ptaaTruncate.argtypes = [ctypes.c_void_p]
         leptonica.ptaaTruncate.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaaTruncate not exported " +
+        sys.stderr.write("Warning - function ptaaTruncate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66848,7 +66849,7 @@ class ptabasic(object):
         leptonica.ptaaWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptaaWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaaWriteStream not exported " +
+        sys.stderr.write("Warning - function ptaaWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66876,7 +66877,7 @@ class ptabasic(object):
         leptonica.ptaCreateFromNuma.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaCreateFromNuma.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaCreateFromNuma not exported " +
+        sys.stderr.write("Warning - function ptaCreateFromNuma not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66902,7 +66903,7 @@ class ptabasic(object):
         leptonica.ptaReadStream.argtypes = [ctypes.c_void_p]
         leptonica.ptaReadStream.restype = lambda address: PTA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptaReadStream not exported " +
+        sys.stderr.write("Warning - function ptaReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66926,7 +66927,7 @@ class ptabasic(object):
         leptonica.ptaRemovePt.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptaRemovePt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaRemovePt not exported " +
+        sys.stderr.write("Warning - function ptaRemovePt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -66957,7 +66958,7 @@ class ptabasic(object):
         leptonica.ptaGetIPt.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptaGetIPt.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptaGetIPt not exported " +
+        sys.stderr.write("Warning - function ptaGetIPt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67022,7 +67023,7 @@ class edge(object):
         leptonica.pixGetEdgeProfile.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixGetEdgeProfile.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetEdgeProfile not exported " +
+        sys.stderr.write("Warning - function pixGetEdgeProfile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67051,7 +67052,7 @@ class edge(object):
         leptonica.pixMeasureEdgeSmoothness.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixMeasureEdgeSmoothness.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixMeasureEdgeSmoothness not exported " +
+        sys.stderr.write("Warning - function pixMeasureEdgeSmoothness not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67109,7 +67110,7 @@ class edge(object):
         leptonica.pixSobelEdgeFilter.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixSobelEdgeFilter.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSobelEdgeFilter not exported " +
+        sys.stderr.write("Warning - function pixSobelEdgeFilter not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67149,7 +67150,7 @@ class edge(object):
         leptonica.pixTwoSidedEdgeFilter.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixTwoSidedEdgeFilter.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixTwoSidedEdgeFilter not exported " +
+        sys.stderr.write("Warning - function pixTwoSidedEdgeFilter not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67296,7 +67297,7 @@ class boxbasic(object):
         leptonica.boxaaGetCount.argtypes = [ctypes.c_void_p]
         leptonica.boxaaGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaGetCount not exported " +
+        sys.stderr.write("Warning - function boxaaGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67320,7 +67321,7 @@ class boxbasic(object):
         leptonica.boxaWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaWriteStream not exported " +
+        sys.stderr.write("Warning - function boxaWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67346,7 +67347,7 @@ class boxbasic(object):
         leptonica.boxaaAddBoxa.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaaAddBoxa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaAddBoxa not exported " +
+        sys.stderr.write("Warning - function boxaaAddBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67374,7 +67375,7 @@ class boxbasic(object):
         leptonica.boxaaReadFromFiles.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaaReadFromFiles.restype = lambda address: BOXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaaReadFromFiles not exported " +
+        sys.stderr.write("Warning - function boxaaReadFromFiles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67413,7 +67414,7 @@ class boxbasic(object):
         leptonica.boxPrintStreamInfo.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxPrintStreamInfo.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxPrintStreamInfo not exported " +
+        sys.stderr.write("Warning - function boxPrintStreamInfo not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67443,7 +67444,7 @@ class boxbasic(object):
         leptonica.boxaaGetBoxCount.argtypes = [ctypes.c_void_p]
         leptonica.boxaaGetBoxCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaGetBoxCount not exported " +
+        sys.stderr.write("Warning - function boxaaGetBoxCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67467,7 +67468,7 @@ class boxbasic(object):
         leptonica.boxaaExtendWithInit.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxaaExtendWithInit.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaExtendWithInit not exported " +
+        sys.stderr.write("Warning - function boxaaExtendWithInit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67501,7 +67502,7 @@ class boxbasic(object):
         leptonica.boxaGetCount.argtypes = [ctypes.c_void_p]
         leptonica.boxaGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaGetCount not exported " +
+        sys.stderr.write("Warning - function boxaGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67525,7 +67526,7 @@ class boxbasic(object):
         leptonica.boxaSaveValid.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaSaveValid.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaSaveValid not exported " +
+        sys.stderr.write("Warning - function boxaSaveValid not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67554,7 +67555,7 @@ class boxbasic(object):
         leptonica.boxaaInitFull.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaaInitFull.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaInitFull not exported " +
+        sys.stderr.write("Warning - function boxaaInitFull not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67600,7 +67601,7 @@ class boxbasic(object):
         leptonica.boxCreate.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxCreate.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxCreate not exported " +
+        sys.stderr.write("Warning - function boxCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67641,7 +67642,7 @@ class boxbasic(object):
         leptonica.boxaaCopy.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaaCopy.restype = lambda address: BOXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaaCopy not exported " +
+        sys.stderr.write("Warning - function boxaaCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67672,7 +67673,7 @@ class boxbasic(object):
         leptonica.boxaReplaceBox.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxaReplaceBox.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaReplaceBox not exported " +
+        sys.stderr.write("Warning - function boxaReplaceBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67704,7 +67705,7 @@ class boxbasic(object):
         leptonica.boxaCreate.argtypes = [ctypes.c_int32]
         leptonica.boxaCreate.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaCreate not exported " +
+        sys.stderr.write("Warning - function boxaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67728,7 +67729,7 @@ class boxbasic(object):
         leptonica.boxGetSideLocation.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxGetSideLocation.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxGetSideLocation not exported " +
+        sys.stderr.write("Warning - function boxGetSideLocation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67761,7 +67762,7 @@ class boxbasic(object):
         leptonica.boxaWriteMem.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaWriteMem.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaWriteMem not exported " +
+        sys.stderr.write("Warning - function boxaWriteMem not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67789,7 +67790,7 @@ class boxbasic(object):
         leptonica.boxaaCreate.argtypes = [ctypes.c_int32]
         leptonica.boxaaCreate.restype = lambda address: BOXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaaCreate not exported " +
+        sys.stderr.write("Warning - function boxaaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67813,7 +67814,7 @@ class boxbasic(object):
         leptonica.boxaaExtendArrayToSize.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaaExtendArrayToSize.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaExtendArrayToSize not exported " +
+        sys.stderr.write("Warning - function boxaaExtendArrayToSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67842,7 +67843,7 @@ class boxbasic(object):
         leptonica.boxaGetBoxGeometry.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaGetBoxGeometry.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaGetBoxGeometry not exported " +
+        sys.stderr.write("Warning - function boxaGetBoxGeometry not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67873,7 +67874,7 @@ class boxbasic(object):
         leptonica.boxaExtendArray.argtypes = [ctypes.c_void_p]
         leptonica.boxaExtendArray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaExtendArray not exported " +
+        sys.stderr.write("Warning - function boxaExtendArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67900,7 +67901,7 @@ class boxbasic(object):
         leptonica.boxaExtendArrayToSize.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaExtendArrayToSize.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaExtendArrayToSize not exported " +
+        sys.stderr.write("Warning - function boxaExtendArrayToSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67929,7 +67930,7 @@ class boxbasic(object):
         leptonica.boxaaDestroy.argtypes = [ctypes.c_void_p]
         leptonica.boxaaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function boxaaDestroy not exported " +
+        sys.stderr.write("Warning - function boxaaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67953,7 +67954,7 @@ class boxbasic(object):
         leptonica.boxaCopy.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaCopy.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaCopy not exported " +
+        sys.stderr.write("Warning - function boxaCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -67983,7 +67984,7 @@ class boxbasic(object):
         leptonica.boxDestroy.argtypes = [ctypes.c_void_p]
         leptonica.boxDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function boxDestroy not exported " +
+        sys.stderr.write("Warning - function boxDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68011,7 +68012,7 @@ class boxbasic(object):
         leptonica.boxaClear.argtypes = [ctypes.c_void_p]
         leptonica.boxaClear.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaClear not exported " +
+        sys.stderr.write("Warning - function boxaClear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68039,7 +68040,7 @@ class boxbasic(object):
         leptonica.boxCopy.argtypes = [ctypes.c_void_p]
         leptonica.boxCopy.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxCopy not exported " +
+        sys.stderr.write("Warning - function boxCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68063,7 +68064,7 @@ class boxbasic(object):
         leptonica.boxaAddBox.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaAddBox.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaAddBox not exported " +
+        sys.stderr.write("Warning - function boxaAddBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68091,7 +68092,7 @@ class boxbasic(object):
         leptonica.boxGetGeometry.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxGetGeometry.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxGetGeometry not exported " +
+        sys.stderr.write("Warning - function boxGetGeometry not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68120,7 +68121,7 @@ class boxbasic(object):
         leptonica.boxClone.argtypes = [ctypes.c_void_p]
         leptonica.boxClone.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxClone not exported " +
+        sys.stderr.write("Warning - function boxClone not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68144,7 +68145,7 @@ class boxbasic(object):
         leptonica.boxSetGeometry.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxSetGeometry.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxSetGeometry not exported " +
+        sys.stderr.write("Warning - function boxSetGeometry not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68173,7 +68174,7 @@ class boxbasic(object):
         leptonica.boxaReadMem.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
         leptonica.boxaReadMem.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaReadMem not exported " +
+        sys.stderr.write("Warning - function boxaReadMem not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68199,7 +68200,7 @@ class boxbasic(object):
         leptonica.boxaaGetBox.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaaGetBox.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaaGetBox not exported " +
+        sys.stderr.write("Warning - function boxaaGetBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68229,7 +68230,7 @@ class boxbasic(object):
         leptonica.boxaaRead.argtypes = [ctypes.c_void_p]
         leptonica.boxaaRead.restype = lambda address: BOXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaaRead not exported " +
+        sys.stderr.write("Warning - function boxaaRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68253,7 +68254,7 @@ class boxbasic(object):
         leptonica.boxaReadStream.argtypes = [ctypes.c_void_p]
         leptonica.boxaReadStream.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaReadStream not exported " +
+        sys.stderr.write("Warning - function boxaReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68277,7 +68278,7 @@ class boxbasic(object):
         leptonica.boxaInsertBox.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxaInsertBox.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaInsertBox not exported " +
+        sys.stderr.write("Warning - function boxaInsertBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68313,7 +68314,7 @@ class boxbasic(object):
         leptonica.boxaWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaWrite not exported " +
+        sys.stderr.write("Warning - function boxaWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68339,7 +68340,7 @@ class boxbasic(object):
         leptonica.boxaGetValidCount.argtypes = [ctypes.c_void_p]
         leptonica.boxaGetValidCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaGetValidCount not exported " +
+        sys.stderr.write("Warning - function boxaGetValidCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68363,7 +68364,7 @@ class boxbasic(object):
         leptonica.boxaaExtendArray.argtypes = [ctypes.c_void_p]
         leptonica.boxaaExtendArray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaExtendArray not exported " +
+        sys.stderr.write("Warning - function boxaaExtendArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68387,7 +68388,7 @@ class boxbasic(object):
         leptonica.boxCreateValid.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxCreateValid.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxCreateValid not exported " +
+        sys.stderr.write("Warning - function boxCreateValid not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68417,7 +68418,7 @@ class boxbasic(object):
         leptonica.boxaaWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaaWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaWriteStream not exported " +
+        sys.stderr.write("Warning - function boxaaWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68443,7 +68444,7 @@ class boxbasic(object):
         leptonica.boxaRead.argtypes = [ctypes.c_void_p]
         leptonica.boxaRead.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaRead not exported " +
+        sys.stderr.write("Warning - function boxaRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68467,7 +68468,7 @@ class boxbasic(object):
         leptonica.boxIsValid.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxIsValid.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxIsValid not exported " +
+        sys.stderr.write("Warning - function boxIsValid not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68493,7 +68494,7 @@ class boxbasic(object):
         leptonica.boxaGetValidBox.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaGetValidBox.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaGetValidBox not exported " +
+        sys.stderr.write("Warning - function boxaGetValidBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68529,7 +68530,7 @@ class boxbasic(object):
         leptonica.boxaaWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaaWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaWrite not exported " +
+        sys.stderr.write("Warning - function boxaaWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68555,7 +68556,7 @@ class boxbasic(object):
         leptonica.boxaaAddBox.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaaAddBox.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaAddBox not exported " +
+        sys.stderr.write("Warning - function boxaaAddBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68588,7 +68589,7 @@ class boxbasic(object):
         leptonica.boxaaReplaceBoxa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxaaReplaceBoxa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaReplaceBoxa not exported " +
+        sys.stderr.write("Warning - function boxaaReplaceBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68621,7 +68622,7 @@ class boxbasic(object):
         leptonica.boxaaRemoveBoxa.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaaRemoveBoxa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaRemoveBoxa not exported " +
+        sys.stderr.write("Warning - function boxaaRemoveBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68654,7 +68655,7 @@ class boxbasic(object):
         leptonica.boxaaReadStream.argtypes = [ctypes.c_void_p]
         leptonica.boxaaReadStream.restype = lambda address: BOXAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaaReadStream not exported " +
+        sys.stderr.write("Warning - function boxaaReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68678,7 +68679,7 @@ class boxbasic(object):
         leptonica.boxaIsFull.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaIsFull.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaIsFull not exported " +
+        sys.stderr.write("Warning - function boxaIsFull not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68704,7 +68705,7 @@ class boxbasic(object):
         leptonica.boxaaGetBoxa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaaGetBoxa.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaaGetBoxa not exported " +
+        sys.stderr.write("Warning - function boxaaGetBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68732,7 +68733,7 @@ class boxbasic(object):
         leptonica.boxaRemoveBoxAndSave.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxaRemoveBoxAndSave.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaRemoveBoxAndSave not exported " +
+        sys.stderr.write("Warning - function boxaRemoveBoxAndSave not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68766,7 +68767,7 @@ class boxbasic(object):
         leptonica.boxaInitFull.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.boxaInitFull.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaInitFull not exported " +
+        sys.stderr.write("Warning - function boxaInitFull not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68821,7 +68822,7 @@ class boxbasic(object):
         leptonica.boxaGetBox.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.boxaGetBox.restype = lambda address: BOX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaGetBox not exported " +
+        sys.stderr.write("Warning - function boxaGetBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68849,7 +68850,7 @@ class boxbasic(object):
         leptonica.boxaaInsertBoxa.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.boxaaInsertBoxa.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaaInsertBoxa not exported " +
+        sys.stderr.write("Warning - function boxaaInsertBoxa not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68885,7 +68886,7 @@ class boxbasic(object):
         leptonica.boxaDestroy.argtypes = [ctypes.c_void_p]
         leptonica.boxaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function boxaDestroy not exported " +
+        sys.stderr.write("Warning - function boxaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -68913,7 +68914,7 @@ class boxbasic(object):
         leptonica.boxaRemoveBox.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.boxaRemoveBox.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function boxaRemoveBox not exported " +
+        sys.stderr.write("Warning - function boxaRemoveBox not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69040,7 +69041,7 @@ class ptra(object):
         leptonica.ptraCreate.argtypes = [ctypes.c_int32]
         leptonica.ptraCreate.restype = lambda address: L_PTRA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptraCreate not exported " +
+        sys.stderr.write("Warning - function ptraCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69064,7 +69065,7 @@ class ptra(object):
         leptonica.ptraaDestroy.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptraaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function ptraaDestroy not exported " +
+        sys.stderr.write("Warning - function ptraaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69097,7 +69098,7 @@ class ptra(object):
         leptonica.ptraaGetSize.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptraaGetSize.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptraaGetSize not exported " +
+        sys.stderr.write("Warning - function ptraaGetSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69123,7 +69124,7 @@ class ptra(object):
         leptonica.ptraGetMaxIndex.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptraGetMaxIndex.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptraGetMaxIndex not exported " +
+        sys.stderr.write("Warning - function ptraGetMaxIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69162,7 +69163,7 @@ class ptra(object):
         leptonica.ptraaGetPtra.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptraaGetPtra.restype = lambda address: L_PTRA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptraaGetPtra not exported " +
+        sys.stderr.write("Warning - function ptraaGetPtra not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69199,7 +69200,7 @@ class ptra(object):
         leptonica.ptraCompactArray.argtypes = [ctypes.c_void_p]
         leptonica.ptraCompactArray.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptraCompactArray not exported " +
+        sys.stderr.write("Warning - function ptraCompactArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69227,7 +69228,7 @@ class ptra(object):
         leptonica.ptraDestroy.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptraDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function ptraDestroy not exported " +
+        sys.stderr.write("Warning - function ptraDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69269,7 +69270,7 @@ class ptra(object):
         leptonica.ptraRemoveLast.argtypes = [ctypes.c_void_p]
         leptonica.ptraRemoveLast.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function ptraRemoveLast not exported " +
+        sys.stderr.write("Warning - function ptraRemoveLast not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69293,7 +69294,7 @@ class ptra(object):
         leptonica.ptraGetActualCount.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptraGetActualCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptraGetActualCount not exported " +
+        sys.stderr.write("Warning - function ptraGetActualCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69323,7 +69324,7 @@ class ptra(object):
         leptonica.ptraGetPtrToItem.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptraGetPtrToItem.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function ptraGetPtrToItem not exported " +
+        sys.stderr.write("Warning - function ptraGetPtrToItem not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69356,7 +69357,7 @@ class ptra(object):
         leptonica.ptraaInsertPtra.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.ptraaInsertPtra.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptraaInsertPtra not exported " +
+        sys.stderr.write("Warning - function ptraaInsertPtra not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69389,7 +69390,7 @@ class ptra(object):
         leptonica.ptraSwap.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptraSwap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptraSwap not exported " +
+        sys.stderr.write("Warning - function ptraSwap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69417,7 +69418,7 @@ class ptra(object):
         leptonica.ptraRemove.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.ptraRemove.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function ptraRemove not exported " +
+        sys.stderr.write("Warning - function ptraRemove not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69455,7 +69456,7 @@ class ptra(object):
         leptonica.ptraReplace.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptraReplace.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function ptraReplace not exported " +
+        sys.stderr.write("Warning - function ptraReplace not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69486,7 +69487,7 @@ class ptra(object):
         leptonica.ptraaCreate.argtypes = [ctypes.c_int32]
         leptonica.ptraaCreate.restype = lambda address: L_PTRAA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptraaCreate not exported " +
+        sys.stderr.write("Warning - function ptraaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69514,7 +69515,7 @@ class ptra(object):
         leptonica.ptraReverse.argtypes = [ctypes.c_void_p]
         leptonica.ptraReverse.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptraReverse not exported " +
+        sys.stderr.write("Warning - function ptraReverse not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69538,7 +69539,7 @@ class ptra(object):
         leptonica.ptraaFlattenToPtra.argtypes = [ctypes.c_void_p]
         leptonica.ptraaFlattenToPtra.restype = lambda address: L_PTRA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function ptraaFlattenToPtra not exported " +
+        sys.stderr.write("Warning - function ptraaFlattenToPtra not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69568,7 +69569,7 @@ class ptra(object):
         leptonica.ptraJoin.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptraJoin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptraJoin not exported " +
+        sys.stderr.write("Warning - function ptraJoin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69594,7 +69595,7 @@ class ptra(object):
         leptonica.ptraInsert.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.ptraInsert.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptraInsert not exported " +
+        sys.stderr.write("Warning - function ptraInsert not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69660,7 +69661,7 @@ class ptra(object):
         leptonica.ptraAdd.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.ptraAdd.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function ptraAdd not exported " +
+        sys.stderr.write("Warning - function ptraAdd not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69805,7 +69806,7 @@ class sarray(object):
         leptonica.getNumberedPathnamesInDirectory.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.getNumberedPathnamesInDirectory.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function getNumberedPathnamesInDirectory not exported " +
+        sys.stderr.write("Warning - function getNumberedPathnamesInDirectory not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69865,7 +69866,7 @@ class sarray(object):
         leptonica.sarrayConcatenate.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.sarrayConcatenate.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayConcatenate not exported " +
+        sys.stderr.write("Warning - function sarrayConcatenate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69894,7 +69895,7 @@ class sarray(object):
         leptonica.sarrayCreate.argtypes = [ctypes.c_int32]
         leptonica.sarrayCreate.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarrayCreate not exported " +
+        sys.stderr.write("Warning - function sarrayCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69919,7 +69920,7 @@ class sarray(object):
         leptonica.sarrayGetArray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.sarrayGetArray.restype = ctypes.POINTER(ctypes.POINTER(ctypes.c_char))
     except AttributeError:
-        os.stderr.write("Warning - function sarrayGetArray not exported " +
+        sys.stderr.write("Warning - function sarrayGetArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69951,7 +69952,7 @@ class sarray(object):
         leptonica.sarrayCreateWordsFromString.argtypes = [ctypes.c_void_p]
         leptonica.sarrayCreateWordsFromString.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarrayCreateWordsFromString not exported " +
+        sys.stderr.write("Warning - function sarrayCreateWordsFromString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -69979,7 +69980,7 @@ class sarray(object):
         leptonica.sarrayParseRange.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.sarrayParseRange.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayParseRange not exported " +
+        sys.stderr.write("Warning - function sarrayParseRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70037,7 +70038,7 @@ class sarray(object):
         leptonica.sarrayToString.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.sarrayToString.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function sarrayToString not exported " +
+        sys.stderr.write("Warning - function sarrayToString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70075,7 +70076,7 @@ class sarray(object):
         leptonica.convertSortedToNumberedPathnames.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.convertSortedToNumberedPathnames.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function convertSortedToNumberedPathnames not exported " +
+        sys.stderr.write("Warning - function convertSortedToNumberedPathnames not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70110,7 +70111,7 @@ class sarray(object):
         leptonica.sarraySort.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.sarraySort.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarraySort not exported " +
+        sys.stderr.write("Warning - function sarraySort not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70143,7 +70144,7 @@ class sarray(object):
         leptonica.sarraySortByIndex.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.sarraySortByIndex.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarraySortByIndex not exported " +
+        sys.stderr.write("Warning - function sarraySortByIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70169,7 +70170,7 @@ class sarray(object):
         leptonica.sarrayChangeRefcount.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.sarrayChangeRefcount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayChangeRefcount not exported " +
+        sys.stderr.write("Warning - function sarrayChangeRefcount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70195,7 +70196,7 @@ class sarray(object):
         leptonica.sarrayCopy.argtypes = [ctypes.c_void_p]
         leptonica.sarrayCopy.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarrayCopy not exported " +
+        sys.stderr.write("Warning - function sarrayCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70219,7 +70220,7 @@ class sarray(object):
         leptonica.sarrayClear.argtypes = [ctypes.c_void_p]
         leptonica.sarrayClear.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayClear not exported " +
+        sys.stderr.write("Warning - function sarrayClear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70243,7 +70244,7 @@ class sarray(object):
         leptonica.sarrayClone.argtypes = [ctypes.c_void_p]
         leptonica.sarrayClone.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarrayClone not exported " +
+        sys.stderr.write("Warning - function sarrayClone not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70267,7 +70268,7 @@ class sarray(object):
         leptonica.sarrayCreateLinesFromString.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.sarrayCreateLinesFromString.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarrayCreateLinesFromString not exported " +
+        sys.stderr.write("Warning - function sarrayCreateLinesFromString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70299,7 +70300,7 @@ class sarray(object):
         leptonica.sarrayWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.sarrayWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayWriteStream not exported " +
+        sys.stderr.write("Warning - function sarrayWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70329,7 +70330,7 @@ class sarray(object):
         leptonica.sarrayRemoveString.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.sarrayRemoveString.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function sarrayRemoveString not exported " +
+        sys.stderr.write("Warning - function sarrayRemoveString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70355,7 +70356,7 @@ class sarray(object):
         leptonica.sarrayAppendRange.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.sarrayAppendRange.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayAppendRange not exported " +
+        sys.stderr.write("Warning - function sarrayAppendRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70390,7 +70391,7 @@ class sarray(object):
         leptonica.sarraySelectBySubstring.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.sarraySelectBySubstring.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarraySelectBySubstring not exported " +
+        sys.stderr.write("Warning - function sarraySelectBySubstring not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70422,7 +70423,7 @@ class sarray(object):
         leptonica.sarrayReadStream.argtypes = [ctypes.c_void_p]
         leptonica.sarrayReadStream.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarrayReadStream not exported " +
+        sys.stderr.write("Warning - function sarrayReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70452,7 +70453,7 @@ class sarray(object):
         leptonica.sarrayGetRefcount.argtypes = [ctypes.c_void_p]
         leptonica.sarrayGetRefcount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayGetRefcount not exported " +
+        sys.stderr.write("Warning - function sarrayGetRefcount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70476,7 +70477,7 @@ class sarray(object):
         leptonica.sarrayRead.argtypes = [ctypes.c_void_p]
         leptonica.sarrayRead.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarrayRead not exported " +
+        sys.stderr.write("Warning - function sarrayRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70500,7 +70501,7 @@ class sarray(object):
         leptonica.sarrayReplaceString.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.sarrayReplaceString.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayReplaceString not exported " +
+        sys.stderr.write("Warning - function sarrayReplaceString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70537,7 +70538,7 @@ class sarray(object):
         leptonica.getFilenamesInDirectory.argtypes = [ctypes.c_void_p]
         leptonica.getFilenamesInDirectory.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function getFilenamesInDirectory not exported " +
+        sys.stderr.write("Warning - function getFilenamesInDirectory not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70580,7 +70581,7 @@ class sarray(object):
         leptonica.sarrayPadToSameSize.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.sarrayPadToSameSize.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayPadToSameSize not exported " +
+        sys.stderr.write("Warning - function sarrayPadToSameSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70614,7 +70615,7 @@ class sarray(object):
         leptonica.getSortedPathnamesInDirectory.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.getSortedPathnamesInDirectory.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function getSortedPathnamesInDirectory not exported " +
+        sys.stderr.write("Warning - function getSortedPathnamesInDirectory not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70653,7 +70654,7 @@ class sarray(object):
         leptonica.sarrayGetString.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.sarrayGetString.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function sarrayGetString not exported " +
+        sys.stderr.write("Warning - function sarrayGetString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70693,7 +70694,7 @@ class sarray(object):
         leptonica.sarraySelectByRange.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.sarraySelectByRange.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarraySelectByRange not exported " +
+        sys.stderr.write("Warning - function sarraySelectByRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70727,7 +70728,7 @@ class sarray(object):
         leptonica.sarrayGetCount.argtypes = [ctypes.c_void_p]
         leptonica.sarrayGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayGetCount not exported " +
+        sys.stderr.write("Warning - function sarrayGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70751,7 +70752,7 @@ class sarray(object):
         leptonica.sarrayWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.sarrayWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayWrite not exported " +
+        sys.stderr.write("Warning - function sarrayWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70777,7 +70778,7 @@ class sarray(object):
         leptonica.sarrayToStringRange.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.sarrayToStringRange.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function sarrayToStringRange not exported " +
+        sys.stderr.write("Warning - function sarrayToStringRange not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70818,7 +70819,7 @@ class sarray(object):
         leptonica.stringCompareLexical.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.stringCompareLexical.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function stringCompareLexical not exported " +
+        sys.stderr.write("Warning - function stringCompareLexical not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70848,7 +70849,7 @@ class sarray(object):
         leptonica.sarrayConvertWordsToLines.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.sarrayConvertWordsToLines.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarrayConvertWordsToLines not exported " +
+        sys.stderr.write("Warning - function sarrayConvertWordsToLines not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70895,7 +70896,7 @@ class sarray(object):
         leptonica.sarrayAppend.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.sarrayAppend.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayAppend not exported " +
+        sys.stderr.write("Warning - function sarrayAppend not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70921,7 +70922,7 @@ class sarray(object):
         leptonica.sarrayCreateInitialized.argtypes = [ctypes.c_int32, ctypes.c_void_p]
         leptonica.sarrayCreateInitialized.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sarrayCreateInitialized not exported " +
+        sys.stderr.write("Warning - function sarrayCreateInitialized not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70947,7 +70948,7 @@ class sarray(object):
         leptonica.sarrayAddString.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.sarrayAddString.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sarrayAddString not exported " +
+        sys.stderr.write("Warning - function sarrayAddString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -70982,7 +70983,7 @@ class sarray(object):
         leptonica.sarrayDestroy.argtypes = [ctypes.c_void_p]
         leptonica.sarrayDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function sarrayDestroy not exported " +
+        sys.stderr.write("Warning - function sarrayDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71043,7 +71044,7 @@ class graymorph(object):
         leptonica.pixCloseGray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCloseGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCloseGray not exported " +
+        sys.stderr.write("Warning - function pixCloseGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71075,7 +71076,7 @@ class graymorph(object):
         leptonica.pixDilateGray3.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDilateGray3.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDilateGray3 not exported " +
+        sys.stderr.write("Warning - function pixDilateGray3 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71107,7 +71108,7 @@ class graymorph(object):
         leptonica.pixOpenGray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOpenGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOpenGray not exported " +
+        sys.stderr.write("Warning - function pixOpenGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71139,7 +71140,7 @@ class graymorph(object):
         leptonica.pixDilateGray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDilateGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDilateGray not exported " +
+        sys.stderr.write("Warning - function pixDilateGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71171,7 +71172,7 @@ class graymorph(object):
         leptonica.pixErodeGray3.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixErodeGray3.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixErodeGray3 not exported " +
+        sys.stderr.write("Warning - function pixErodeGray3 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71208,7 +71209,7 @@ class graymorph(object):
         leptonica.pixOpenGray3.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixOpenGray3.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOpenGray3 not exported " +
+        sys.stderr.write("Warning - function pixOpenGray3 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71242,7 +71243,7 @@ class graymorph(object):
         leptonica.pixCloseGray3.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixCloseGray3.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixCloseGray3 not exported " +
+        sys.stderr.write("Warning - function pixCloseGray3 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71274,7 +71275,7 @@ class graymorph(object):
         leptonica.pixErodeGray.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixErodeGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixErodeGray not exported " +
+        sys.stderr.write("Warning - function pixErodeGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71360,7 +71361,7 @@ class tiffio(object):
         leptonica.pixWriteMemTiff.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixWriteMemTiff.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteMemTiff not exported " +
+        sys.stderr.write("Warning - function pixWriteMemTiff not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71396,7 +71397,7 @@ class tiffio(object):
         leptonica.pixWriteTiff.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixWriteTiff.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteTiff not exported " +
+        sys.stderr.write("Warning - function pixWriteTiff not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71432,7 +71433,7 @@ class tiffio(object):
         leptonica.findTiffCompression.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.findTiffCompression.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function findTiffCompression not exported " +
+        sys.stderr.write("Warning - function findTiffCompression not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71468,7 +71469,7 @@ class tiffio(object):
         leptonica.pixReadStreamTiff.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixReadStreamTiff.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadStreamTiff not exported " +
+        sys.stderr.write("Warning - function pixReadStreamTiff not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71494,7 +71495,7 @@ class tiffio(object):
         leptonica.pixWriteTiffCustom.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWriteTiffCustom.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteTiffCustom not exported " +
+        sys.stderr.write("Warning - function pixWriteTiffCustom not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71565,7 +71566,7 @@ class tiffio(object):
         leptonica.freadHeaderTiff.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.freadHeaderTiff.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function freadHeaderTiff not exported " +
+        sys.stderr.write("Warning - function freadHeaderTiff not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71609,7 +71610,7 @@ class tiffio(object):
         leptonica.pixWriteMemTiffCustom.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWriteMemTiffCustom.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteMemTiffCustom not exported " +
+        sys.stderr.write("Warning - function pixWriteMemTiffCustom not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71654,7 +71655,7 @@ class tiffio(object):
         leptonica.readHeaderTiff.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.readHeaderTiff.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function readHeaderTiff not exported " +
+        sys.stderr.write("Warning - function readHeaderTiff not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71698,7 +71699,7 @@ class tiffio(object):
         leptonica.extractG4DataFromFile.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.extractG4DataFromFile.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function extractG4DataFromFile not exported " +
+        sys.stderr.write("Warning - function extractG4DataFromFile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71732,7 +71733,7 @@ class tiffio(object):
         leptonica.pixReadTiff.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixReadTiff.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadTiff not exported " +
+        sys.stderr.write("Warning - function pixReadTiff not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71762,7 +71763,7 @@ class tiffio(object):
         leptonica.readHeaderMemTiff.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.readHeaderMemTiff.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function readHeaderMemTiff not exported " +
+        sys.stderr.write("Warning - function readHeaderMemTiff not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71807,7 +71808,7 @@ class tiffio(object):
         leptonica.pixReadMemTiff.argtypes = [ctypes.c_void_p, ctypes.c_size_t, ctypes.c_int32]
         leptonica.pixReadMemTiff.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadMemTiff not exported " +
+        sys.stderr.write("Warning - function pixReadMemTiff not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71840,7 +71841,7 @@ class tiffio(object):
         leptonica.pixWriteStreamTiff.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixWriteStreamTiff.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStreamTiff not exported " +
+        sys.stderr.write("Warning - function pixWriteStreamTiff not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -71989,7 +71990,7 @@ class colorcontent(object):
         leptonica.pixColorFraction.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixColorFraction.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixColorFraction not exported " +
+        sys.stderr.write("Warning - function pixColorFraction not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72066,7 +72067,7 @@ class colorcontent(object):
         leptonica.pixColorsForQuantization.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixColorsForQuantization.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixColorsForQuantization not exported " +
+        sys.stderr.write("Warning - function pixColorsForQuantization not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72158,7 +72159,7 @@ class colorcontent(object):
         leptonica.pixGetMostPopulatedColors.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixGetMostPopulatedColors.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixGetMostPopulatedColors not exported " +
+        sys.stderr.write("Warning - function pixGetMostPopulatedColors not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72200,7 +72201,7 @@ class colorcontent(object):
         leptonica.pixColorContent.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixColorContent.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixColorContent not exported " +
+        sys.stderr.write("Warning - function pixColorContent not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72255,7 +72256,7 @@ class colorcontent(object):
         leptonica.pixHasHighlightRed.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixHasHighlightRed.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixHasHighlightRed not exported " +
+        sys.stderr.write("Warning - function pixHasHighlightRed not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72305,7 +72306,7 @@ class colorcontent(object):
         leptonica.pixSimpleColorQuantize.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSimpleColorQuantize.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSimpleColorQuantize not exported " +
+        sys.stderr.write("Warning - function pixSimpleColorQuantize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72350,7 +72351,7 @@ class colorcontent(object):
         leptonica.makeRGBIndexTables.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.makeRGBIndexTables.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function makeRGBIndexTables not exported " +
+        sys.stderr.write("Warning - function makeRGBIndexTables not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72386,7 +72387,7 @@ class colorcontent(object):
         leptonica.pixNumSignificantGrayColors.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixNumSignificantGrayColors.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixNumSignificantGrayColors not exported " +
+        sys.stderr.write("Warning - function pixNumSignificantGrayColors not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72438,7 +72439,7 @@ class colorcontent(object):
         leptonica.pixNumColors.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixNumColors.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixNumColors not exported " +
+        sys.stderr.write("Warning - function pixNumColors not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72478,7 +72479,7 @@ class colorcontent(object):
         leptonica.pixGetRGBHistogram.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixGetRGBHistogram.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixGetRGBHistogram not exported " +
+        sys.stderr.write("Warning - function pixGetRGBHistogram not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72513,7 +72514,7 @@ class colorcontent(object):
         leptonica.pixColorMagnitude.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixColorMagnitude.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixColorMagnitude not exported " +
+        sys.stderr.write("Warning - function pixColorMagnitude not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72583,7 +72584,7 @@ class colorcontent(object):
         leptonica.getRGBFromIndex.argtypes = [ctypes.c_uint32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.getRGBFromIndex.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function getRGBFromIndex not exported " +
+        sys.stderr.write("Warning - function getRGBFromIndex not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72621,7 +72622,7 @@ class colorcontent(object):
         leptonica.pixMaskOverColorPixels.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixMaskOverColorPixels.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMaskOverColorPixels not exported " +
+        sys.stderr.write("Warning - function pixMaskOverColorPixels not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72801,7 +72802,7 @@ class rotateam(object):
         leptonica.pixRotateAMColor.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_uint32]
         leptonica.pixRotateAMColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateAMColor not exported " +
+        sys.stderr.write("Warning - function pixRotateAMColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72834,7 +72835,7 @@ class rotateam(object):
         leptonica.pixRotateAMColorFast.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_uint32]
         leptonica.pixRotateAMColorFast.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateAMColorFast not exported " +
+        sys.stderr.write("Warning - function pixRotateAMColorFast not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72875,7 +72876,7 @@ class rotateam(object):
         leptonica.pixRotateAMGrayCorner.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_ubyte]
         leptonica.pixRotateAMGrayCorner.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateAMGrayCorner not exported " +
+        sys.stderr.write("Warning - function pixRotateAMGrayCorner not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72908,7 +72909,7 @@ class rotateam(object):
         leptonica.pixRotateAMGray.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_ubyte]
         leptonica.pixRotateAMGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateAMGray not exported " +
+        sys.stderr.write("Warning - function pixRotateAMGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72941,7 +72942,7 @@ class rotateam(object):
         leptonica.pixRotateAM.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixRotateAM.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateAM not exported " +
+        sys.stderr.write("Warning - function pixRotateAM not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -72974,7 +72975,7 @@ class rotateam(object):
         leptonica.pixRotateAMColorCorner.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_uint32]
         leptonica.pixRotateAMColorCorner.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateAMColorCorner not exported " +
+        sys.stderr.write("Warning - function pixRotateAMColorCorner not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73007,7 +73008,7 @@ class rotateam(object):
         leptonica.pixRotateAMCorner.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixRotateAMCorner.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixRotateAMCorner not exported " +
+        sys.stderr.write("Warning - function pixRotateAMCorner not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73094,7 +73095,7 @@ class writefile(object):
         leptonica.pixWriteMem.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixWriteMem.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteMem not exported " +
+        sys.stderr.write("Warning - function pixWriteMem not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73131,7 +73132,7 @@ class writefile(object):
         leptonica.pixWriteTempfile.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixWriteTempfile.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteTempfile not exported " +
+        sys.stderr.write("Warning - function pixWriteTempfile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73172,7 +73173,7 @@ class writefile(object):
         leptonica.getImpliedFileFormat.argtypes = [ctypes.c_void_p]
         leptonica.getImpliedFileFormat.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function getImpliedFileFormat not exported " +
+        sys.stderr.write("Warning - function getImpliedFileFormat not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73200,7 +73201,7 @@ class writefile(object):
         leptonica.pixaWriteFiles.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixaWriteFiles.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixaWriteFiles not exported " +
+        sys.stderr.write("Warning - function pixaWriteFiles not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73232,7 +73233,7 @@ class writefile(object):
         leptonica.pixDisplay.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDisplay.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplay not exported " +
+        sys.stderr.write("Warning - function pixDisplay not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73281,7 +73282,7 @@ class writefile(object):
         leptonica.pixWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWrite not exported " +
+        sys.stderr.write("Warning - function pixWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73326,7 +73327,7 @@ class writefile(object):
         leptonica.pixDisplayWriteFormat.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixDisplayWriteFormat.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayWriteFormat not exported " +
+        sys.stderr.write("Warning - function pixDisplayWriteFormat not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73377,7 +73378,7 @@ class writefile(object):
         leptonica.pixDisplayMultiple.argtypes = [ctypes.c_void_p]
         leptonica.pixDisplayMultiple.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayMultiple not exported " +
+        sys.stderr.write("Warning - function pixDisplayMultiple not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73407,7 +73408,7 @@ class writefile(object):
         leptonica.pixWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStream not exported " +
+        sys.stderr.write("Warning - function pixWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73435,7 +73436,7 @@ class writefile(object):
         leptonica.pixSaveTiledWithText.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_int32]
         leptonica.pixSaveTiledWithText.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSaveTiledWithText not exported " +
+        sys.stderr.write("Warning - function pixSaveTiledWithText not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73496,7 +73497,7 @@ class writefile(object):
         leptonica.pixWriteImpliedFormat.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixWriteImpliedFormat.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteImpliedFormat not exported " +
+        sys.stderr.write("Warning - function pixWriteImpliedFormat not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73531,7 +73532,7 @@ class writefile(object):
         leptonica.pixSaveTiled.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSaveTiled.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSaveTiled not exported " +
+        sys.stderr.write("Warning - function pixSaveTiled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73565,7 +73566,7 @@ class writefile(object):
         leptonica.pixSaveTiledOutline.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixSaveTiledOutline.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSaveTiledOutline not exported " +
+        sys.stderr.write("Warning - function pixSaveTiledOutline not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73625,7 +73626,7 @@ class writefile(object):
         leptonica.pixDisplayWithTitle.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixDisplayWithTitle.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayWithTitle not exported " +
+        sys.stderr.write("Warning - function pixDisplayWithTitle not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73660,7 +73661,7 @@ class writefile(object):
         leptonica.pixDisplayWrite.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixDisplayWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixDisplayWrite not exported " +
+        sys.stderr.write("Warning - function pixDisplayWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73693,7 +73694,7 @@ class writefile(object):
         leptonica.getFormatExtension.argtypes = [ctypes.c_int32]
         leptonica.getFormatExtension.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function getFormatExtension not exported " +
+        sys.stderr.write("Warning - function getFormatExtension not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73721,7 +73722,7 @@ class writefile(object):
         leptonica.pixChooseOutputFormat.argtypes = [ctypes.c_void_p]
         leptonica.pixChooseOutputFormat.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixChooseOutputFormat not exported " +
+        sys.stderr.write("Warning - function pixChooseOutputFormat not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73807,7 +73808,7 @@ class readbarcode(object):
         leptonica.pixExtractBarcodes.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixExtractBarcodes.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixExtractBarcodes not exported " +
+        sys.stderr.write("Warning - function pixExtractBarcodes not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73834,7 +73835,7 @@ class readbarcode(object):
         leptonica.pixDeskewBarcode.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixDeskewBarcode.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixDeskewBarcode not exported " +
+        sys.stderr.write("Warning - function pixDeskewBarcode not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73874,7 +73875,7 @@ class readbarcode(object):
         leptonica.pixReadBarcodeWidths.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixReadBarcodeWidths.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadBarcodeWidths not exported " +
+        sys.stderr.write("Warning - function pixReadBarcodeWidths not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73902,7 +73903,7 @@ class readbarcode(object):
         leptonica.pixLocateBarcodes.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixLocateBarcodes.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixLocateBarcodes not exported " +
+        sys.stderr.write("Warning - function pixLocateBarcodes not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73932,7 +73933,7 @@ class readbarcode(object):
         leptonica.numaQuantizeCrossingsByWidth.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaQuantizeCrossingsByWidth.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaQuantizeCrossingsByWidth not exported " +
+        sys.stderr.write("Warning - function numaQuantizeCrossingsByWidth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -73975,7 +73976,7 @@ class readbarcode(object):
         leptonica.pixProcessBarcodes.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixProcessBarcodes.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixProcessBarcodes not exported " +
+        sys.stderr.write("Warning - function pixProcessBarcodes not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74007,7 +74008,7 @@ class readbarcode(object):
         leptonica.pixExtractBarcodeWidths2.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixExtractBarcodeWidths2.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixExtractBarcodeWidths2 not exported " +
+        sys.stderr.write("Warning - function pixExtractBarcodeWidths2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74053,7 +74054,7 @@ class readbarcode(object):
         leptonica.pixExtractBarcodeWidths1.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixExtractBarcodeWidths1.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixExtractBarcodeWidths1 not exported " +
+        sys.stderr.write("Warning - function pixExtractBarcodeWidths1 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74097,7 +74098,7 @@ class readbarcode(object):
         leptonica.pixReadBarcodes.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixReadBarcodes.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadBarcodes not exported " +
+        sys.stderr.write("Warning - function pixReadBarcodes not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74130,7 +74131,7 @@ class readbarcode(object):
         leptonica.pixExtractBarcodeCrossings.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixExtractBarcodeCrossings.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixExtractBarcodeCrossings not exported " +
+        sys.stderr.write("Warning - function pixExtractBarcodeCrossings not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74159,7 +74160,7 @@ class readbarcode(object):
         leptonica.numaQuantizeCrossingsByWindow.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.numaQuantizeCrossingsByWindow.restype = lambda address: NUMA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function numaQuantizeCrossingsByWindow not exported " +
+        sys.stderr.write("Warning - function numaQuantizeCrossingsByWindow not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74220,7 +74221,7 @@ class binexpand(object):
         leptonica.pixExpandBinaryReplicate.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixExpandBinaryReplicate.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixExpandBinaryReplicate not exported " +
+        sys.stderr.write("Warning - function pixExpandBinaryReplicate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74246,7 +74247,7 @@ class binexpand(object):
         leptonica.pixExpandBinaryPower2.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixExpandBinaryPower2.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixExpandBinaryPower2 not exported " +
+        sys.stderr.write("Warning - function pixExpandBinaryPower2 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74305,7 +74306,7 @@ class stack(object):
         leptonica.lstackDestroy.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.lstackDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function lstackDestroy not exported " +
+        sys.stderr.write("Warning - function lstackDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74341,7 +74342,7 @@ class stack(object):
         leptonica.lstackPrint.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lstackPrint.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lstackPrint not exported " +
+        sys.stderr.write("Warning - function lstackPrint not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74367,7 +74368,7 @@ class stack(object):
         leptonica.lstackGetCount.argtypes = [ctypes.c_void_p]
         leptonica.lstackGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lstackGetCount not exported " +
+        sys.stderr.write("Warning - function lstackGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74391,7 +74392,7 @@ class stack(object):
         leptonica.lstackAdd.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.lstackAdd.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function lstackAdd not exported " +
+        sys.stderr.write("Warning - function lstackAdd not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74417,7 +74418,7 @@ class stack(object):
         leptonica.lstackRemove.argtypes = [ctypes.c_void_p]
         leptonica.lstackRemove.restype = ctypes.POINTER(ctypes.c_void_p)
     except AttributeError:
-        os.stderr.write("Warning - function lstackRemove not exported " +
+        sys.stderr.write("Warning - function lstackRemove not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74442,7 +74443,7 @@ class stack(object):
         leptonica.lstackCreate.argtypes = [ctypes.c_int32]
         leptonica.lstackCreate.restype = lambda address: L_STACK(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function lstackCreate not exported " +
+        sys.stderr.write("Warning - function lstackCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74481,7 +74482,7 @@ class finditalic(object):
         leptonica.pixItalicWords.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixItalicWords.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixItalicWords not exported " +
+        sys.stderr.write("Warning - function pixItalicWords not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74647,7 +74648,7 @@ class sudoku(object):
         leptonica.sudokuOutput.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.sudokuOutput.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sudokuOutput not exported " +
+        sys.stderr.write("Warning - function sudokuOutput not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74677,7 +74678,7 @@ class sudoku(object):
         leptonica.sudokuCreate.argtypes = [ctypes.c_void_p]
         leptonica.sudokuCreate.restype = lambda address: L_SUDOKU(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sudokuCreate not exported " +
+        sys.stderr.write("Warning - function sudokuCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74707,7 +74708,7 @@ class sudoku(object):
         leptonica.sudokuTestUniqueness.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.sudokuTestUniqueness.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sudokuTestUniqueness not exported " +
+        sys.stderr.write("Warning - function sudokuTestUniqueness not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74740,7 +74741,7 @@ class sudoku(object):
         leptonica.sudokuReadFile.argtypes = [ctypes.c_void_p]
         leptonica.sudokuReadFile.restype = ctypes.POINTER(ctypes.c_int32)
     except AttributeError:
-        os.stderr.write("Warning - function sudokuReadFile not exported " +
+        sys.stderr.write("Warning - function sudokuReadFile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74770,7 +74771,7 @@ class sudoku(object):
         leptonica.sudokuGenerate.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.sudokuGenerate.restype = lambda address: L_SUDOKU(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function sudokuGenerate not exported " +
+        sys.stderr.write("Warning - function sudokuGenerate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74809,7 +74810,7 @@ class sudoku(object):
         leptonica.sudokuReadString.argtypes = [ctypes.c_void_p]
         leptonica.sudokuReadString.restype = ctypes.POINTER(ctypes.c_int32)
     except AttributeError:
-        os.stderr.write("Warning - function sudokuReadString not exported " +
+        sys.stderr.write("Warning - function sudokuReadString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74837,7 +74838,7 @@ class sudoku(object):
         leptonica.sudokuDestroy.argtypes = [ctypes.c_void_p]
         leptonica.sudokuDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function sudokuDestroy not exported " +
+        sys.stderr.write("Warning - function sudokuDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -74861,7 +74862,7 @@ class sudoku(object):
         leptonica.sudokuSolve.argtypes = [ctypes.c_void_p]
         leptonica.sudokuSolve.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function sudokuSolve not exported " +
+        sys.stderr.write("Warning - function sudokuSolve not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75067,7 +75068,7 @@ class jbclass(object):
         leptonica.jbGetLLCorners.argtypes = [ctypes.c_void_p]
         leptonica.jbGetLLCorners.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function jbGetLLCorners not exported " +
+        sys.stderr.write("Warning - function jbGetLLCorners not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75109,7 +75110,7 @@ class jbclass(object):
         leptonica.pixHaustest.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixHaustest.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixHaustest not exported " +
+        sys.stderr.write("Warning - function pixHaustest not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75158,7 +75159,7 @@ class jbclass(object):
         leptonica.jbCorrelationInitWithoutComponents.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.jbCorrelationInitWithoutComponents.restype = lambda address: JBCLASSER(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function jbCorrelationInitWithoutComponents not exported " +
+        sys.stderr.write("Warning - function jbCorrelationInitWithoutComponents not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75189,7 +75190,7 @@ class jbclass(object):
         leptonica.jbDataRender.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.jbDataRender.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function jbDataRender not exported " +
+        sys.stderr.write("Warning - function jbDataRender not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75217,7 +75218,7 @@ class jbclass(object):
         leptonica.jbAccumulateComposites.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.jbAccumulateComposites.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function jbAccumulateComposites not exported " +
+        sys.stderr.write("Warning - function jbAccumulateComposites not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75247,7 +75248,7 @@ class jbclass(object):
         leptonica.jbGetULCorners.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.jbGetULCorners.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function jbGetULCorners not exported " +
+        sys.stderr.write("Warning - function jbGetULCorners not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75290,7 +75291,7 @@ class jbclass(object):
         leptonica.jbClasserCreate.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.jbClasserCreate.restype = lambda address: JBCLASSER(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function jbClasserCreate not exported " +
+        sys.stderr.write("Warning - function jbClasserCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75316,7 +75317,7 @@ class jbclass(object):
         leptonica.jbAddPages.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.jbAddPages.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function jbAddPages not exported " +
+        sys.stderr.write("Warning - function jbAddPages not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75346,7 +75347,7 @@ class jbclass(object):
         leptonica.jbRankHausInit.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.jbRankHausInit.restype = lambda address: JBCLASSER(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function jbRankHausInit not exported " +
+        sys.stderr.write("Warning - function jbRankHausInit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75382,7 +75383,7 @@ class jbclass(object):
         leptonica.jbDataRead.argtypes = [ctypes.c_void_p]
         leptonica.jbDataRead.restype = lambda address: JBDATA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function jbDataRead not exported " +
+        sys.stderr.write("Warning - function jbDataRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75406,7 +75407,7 @@ class jbclass(object):
         leptonica.jbDataSave.argtypes = [ctypes.c_void_p]
         leptonica.jbDataSave.restype = lambda address: JBDATA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function jbDataSave not exported " +
+        sys.stderr.write("Warning - function jbDataSave not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75441,7 +75442,7 @@ class jbclass(object):
         leptonica.jbClassifyRankHaus.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.jbClassifyRankHaus.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function jbClassifyRankHaus not exported " +
+        sys.stderr.write("Warning - function jbClassifyRankHaus not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75469,7 +75470,7 @@ class jbclass(object):
         leptonica.jbDataWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.jbDataWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function jbDataWrite not exported " +
+        sys.stderr.write("Warning - function jbDataWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75498,7 +75499,7 @@ class jbclass(object):
         leptonica.jbAddPageComponents.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.jbAddPageComponents.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function jbAddPageComponents not exported " +
+        sys.stderr.write("Warning - function jbAddPageComponents not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75532,7 +75533,7 @@ class jbclass(object):
         leptonica.jbAddPage.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.jbAddPage.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function jbAddPage not exported " +
+        sys.stderr.write("Warning - function jbAddPage not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75558,7 +75559,7 @@ class jbclass(object):
         leptonica.pixWordMaskByDilation.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWordMaskByDilation.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWordMaskByDilation not exported " +
+        sys.stderr.write("Warning - function pixWordMaskByDilation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75597,7 +75598,7 @@ class jbclass(object):
         leptonica.jbGetComponents.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.jbGetComponents.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function jbGetComponents not exported " +
+        sys.stderr.write("Warning - function jbGetComponents not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75630,7 +75631,7 @@ class jbclass(object):
         leptonica.jbTemplatesFromComposites.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.jbTemplatesFromComposites.restype = lambda address: PIXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function jbTemplatesFromComposites not exported " +
+        sys.stderr.write("Warning - function jbTemplatesFromComposites not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75657,7 +75658,7 @@ class jbclass(object):
         leptonica.jbCorrelationInit.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float]
         leptonica.jbCorrelationInit.restype = lambda address: JBCLASSER(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function jbCorrelationInit not exported " +
+        sys.stderr.write("Warning - function jbCorrelationInit not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75697,7 +75698,7 @@ class jbclass(object):
         leptonica.pixRankHaustest.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p]
         leptonica.pixRankHaustest.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixRankHaustest not exported " +
+        sys.stderr.write("Warning - function pixRankHaustest not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75757,7 +75758,7 @@ class jbclass(object):
         leptonica.pixWordBoxesByDilation.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWordBoxesByDilation.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWordBoxesByDilation not exported " +
+        sys.stderr.write("Warning - function pixWordBoxesByDilation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75797,7 +75798,7 @@ class jbclass(object):
         leptonica.jbClassifyCorrelation.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.jbClassifyCorrelation.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function jbClassifyCorrelation not exported " +
+        sys.stderr.write("Warning - function jbClassifyCorrelation not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75847,7 +75848,7 @@ class bmpio(object):
         leptonica.pixWriteStreamBmp.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWriteStreamBmp.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStreamBmp not exported " +
+        sys.stderr.write("Warning - function pixWriteStreamBmp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75879,7 +75880,7 @@ class bmpio(object):
         leptonica.pixReadMemBmp.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
         leptonica.pixReadMemBmp.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadMemBmp not exported " +
+        sys.stderr.write("Warning - function pixReadMemBmp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75908,7 +75909,7 @@ class bmpio(object):
         leptonica.pixReadStreamBmp.argtypes = [ctypes.c_void_p]
         leptonica.pixReadStreamBmp.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixReadStreamBmp not exported " +
+        sys.stderr.write("Warning - function pixReadStreamBmp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75937,7 +75938,7 @@ class bmpio(object):
         leptonica.pixWriteMemBmp.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWriteMemBmp.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteMemBmp not exported " +
+        sys.stderr.write("Warning - function pixWriteMemBmp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -75980,7 +75981,7 @@ class ccthin(object):
         leptonica.pixThinExamples.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.pixThinExamples.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixThinExamples not exported " +
+        sys.stderr.write("Warning - function pixThinExamples not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76032,7 +76033,7 @@ class ccthin(object):
         leptonica.pixThinGeneral.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixThinGeneral.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixThinGeneral not exported " +
+        sys.stderr.write("Warning - function pixThinGeneral not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76071,7 +76072,7 @@ class ccthin(object):
         leptonica.pixThin.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixThin.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixThin not exported " +
+        sys.stderr.write("Warning - function pixThin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76147,7 +76148,7 @@ class partition(object):
         leptonica.boxaPruneSortedOnOverlap.argtypes = [ctypes.c_void_p, ctypes.c_float]
         leptonica.boxaPruneSortedOnOverlap.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaPruneSortedOnOverlap not exported " +
+        sys.stderr.write("Warning - function boxaPruneSortedOnOverlap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76182,7 +76183,7 @@ class partition(object):
         leptonica.boxaGetWhiteblocks.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.boxaGetWhiteblocks.restype = lambda address: BOXA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function boxaGetWhiteblocks not exported " +
+        sys.stderr.write("Warning - function boxaGetWhiteblocks not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76372,7 +76373,7 @@ class binarize(object):
         leptonica.pixSauvolaBinarizeTiled.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSauvolaBinarizeTiled.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSauvolaBinarizeTiled not exported " +
+        sys.stderr.write("Warning - function pixSauvolaBinarizeTiled not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76423,7 +76424,7 @@ class binarize(object):
         leptonica.pixOtsuAdaptiveThreshold.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixOtsuAdaptiveThreshold.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixOtsuAdaptiveThreshold not exported " +
+        sys.stderr.write("Warning - function pixOtsuAdaptiveThreshold not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76501,7 +76502,7 @@ class binarize(object):
         leptonica.pixThresholdByConnComp.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixThresholdByConnComp.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixThresholdByConnComp not exported " +
+        sys.stderr.write("Warning - function pixThresholdByConnComp not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76580,7 +76581,7 @@ class binarize(object):
         leptonica.pixSauvolaBinarize.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixSauvolaBinarize.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixSauvolaBinarize not exported " +
+        sys.stderr.write("Warning - function pixSauvolaBinarize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76641,7 +76642,7 @@ class binarize(object):
         leptonica.pixApplyLocalThreshold.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.pixApplyLocalThreshold.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixApplyLocalThreshold not exported " +
+        sys.stderr.write("Warning - function pixApplyLocalThreshold not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76669,7 +76670,7 @@ class binarize(object):
         leptonica.pixMaskedThreshOnBackgroundNorm.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p]
         leptonica.pixMaskedThreshOnBackgroundNorm.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMaskedThreshOnBackgroundNorm not exported " +
+        sys.stderr.write("Warning - function pixMaskedThreshOnBackgroundNorm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76733,7 +76734,7 @@ class binarize(object):
         leptonica.pixSauvolaGetThreshold.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_void_p]
         leptonica.pixSauvolaGetThreshold.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSauvolaGetThreshold not exported " +
+        sys.stderr.write("Warning - function pixSauvolaGetThreshold not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76789,7 +76790,7 @@ class binarize(object):
         leptonica.pixOtsuThreshOnBackgroundNorm.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p]
         leptonica.pixOtsuThreshOnBackgroundNorm.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixOtsuThreshOnBackgroundNorm not exported " +
+        sys.stderr.write("Warning - function pixOtsuThreshOnBackgroundNorm not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76912,7 +76913,7 @@ class pixtiling(object):
         leptonica.pixTilingDestroy.argtypes = [ctypes.c_void_p]
         leptonica.pixTilingDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function pixTilingDestroy not exported " +
+        sys.stderr.write("Warning - function pixTilingDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76936,7 +76937,7 @@ class pixtiling(object):
         leptonica.pixTilingCreate.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixTilingCreate.restype = lambda address: PIXTILING(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixTilingCreate not exported " +
+        sys.stderr.write("Warning - function pixTilingCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -76986,7 +76987,7 @@ class pixtiling(object):
         leptonica.pixTilingGetSize.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixTilingGetSize.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixTilingGetSize not exported " +
+        sys.stderr.write("Warning - function pixTilingGetSize not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77014,7 +77015,7 @@ class pixtiling(object):
         leptonica.pixTilingGetTile.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixTilingGetTile.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixTilingGetTile not exported " +
+        sys.stderr.write("Warning - function pixTilingGetTile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77043,7 +77044,7 @@ class pixtiling(object):
         leptonica.pixTilingPaintTile.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixTilingPaintTile.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixTilingPaintTile not exported " +
+        sys.stderr.write("Warning - function pixTilingPaintTile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77075,7 +77076,7 @@ class pixtiling(object):
         leptonica.pixTilingGetCount.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixTilingGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixTilingGetCount not exported " +
+        sys.stderr.write("Warning - function pixTilingGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77103,7 +77104,7 @@ class pixtiling(object):
         leptonica.pixTilingNoStripOnPaint.argtypes = [ctypes.c_void_p]
         leptonica.pixTilingNoStripOnPaint.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixTilingNoStripOnPaint not exported " +
+        sys.stderr.write("Warning - function pixTilingNoStripOnPaint not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77295,7 +77296,7 @@ class psio2(object):
         leptonica.convertJpegToPS.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.convertJpegToPS.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertJpegToPS not exported " +
+        sys.stderr.write("Warning - function convertJpegToPS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77385,7 +77386,7 @@ class psio2(object):
         leptonica.decodeAscii85.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.decodeAscii85.restype = ctypes.POINTER(ctypes.c_ubyte)
     except AttributeError:
-        os.stderr.write("Warning - function decodeAscii85 not exported " +
+        sys.stderr.write("Warning - function decodeAscii85 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77419,7 +77420,7 @@ class psio2(object):
         leptonica.pixWriteMemPS.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.pixWriteMemPS.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteMemPS not exported " +
+        sys.stderr.write("Warning - function pixWriteMemPS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77458,7 +77459,7 @@ class psio2(object):
         leptonica.convertByteToHexAscii.argtypes = [ctypes.c_ubyte, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.convertByteToHexAscii.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function convertByteToHexAscii not exported " +
+        sys.stderr.write("Warning - function convertByteToHexAscii not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77485,7 +77486,7 @@ class psio2(object):
         leptonica.pixWriteStreamPS.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.pixWriteStreamPS.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStreamPS not exported " +
+        sys.stderr.write("Warning - function pixWriteStreamPS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77523,7 +77524,7 @@ class psio2(object):
         leptonica.encodeAscii85.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_void_p]
         leptonica.encodeAscii85.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function encodeAscii85 not exported " +
+        sys.stderr.write("Warning - function encodeAscii85 not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77556,7 +77557,7 @@ class psio2(object):
         leptonica.convertG4ToPSEmbed.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.convertG4ToPSEmbed.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertG4ToPSEmbed not exported " +
+        sys.stderr.write("Warning - function convertG4ToPSEmbed not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77592,7 +77593,7 @@ class psio2(object):
         leptonica.convertG4ToPSString.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.convertG4ToPSString.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertG4ToPSString not exported " +
+        sys.stderr.write("Warning - function convertG4ToPSString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77644,7 +77645,7 @@ class psio2(object):
         leptonica.convertFlateToPSEmbed.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.convertFlateToPSEmbed.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertFlateToPSEmbed not exported " +
+        sys.stderr.write("Warning - function convertFlateToPSEmbed not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77678,7 +77679,7 @@ class psio2(object):
         leptonica.getScaledParametersPS.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.getScaledParametersPS.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function getScaledParametersPS not exported " +
+        sys.stderr.write("Warning - function getScaledParametersPS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77724,7 +77725,7 @@ class psio2(object):
         leptonica.convertJpegToPSEmbed.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.convertJpegToPSEmbed.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertJpegToPSEmbed not exported " +
+        sys.stderr.write("Warning - function convertJpegToPSEmbed not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77758,7 +77759,7 @@ class psio2(object):
         leptonica.generateJpegPS.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.generateJpegPS.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function generateJpegPS not exported " +
+        sys.stderr.write("Warning - function generateJpegPS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77801,7 +77802,7 @@ class psio2(object):
         leptonica.convertFlateToPSString.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.convertFlateToPSString.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertFlateToPSString not exported " +
+        sys.stderr.write("Warning - function convertFlateToPSString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77857,7 +77858,7 @@ class psio2(object):
         leptonica.generateFlatePS.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.generateFlatePS.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function generateFlatePS not exported " +
+        sys.stderr.write("Warning - function generateFlatePS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77897,7 +77898,7 @@ class psio2(object):
         leptonica.convertJpegToPSString.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.convertJpegToPSString.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertJpegToPSString not exported " +
+        sys.stderr.write("Warning - function convertJpegToPSString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77945,7 +77946,7 @@ class psio2(object):
         leptonica.generateUncompressedPS.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_int32]
         leptonica.generateUncompressedPS.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function generateUncompressedPS not exported " +
+        sys.stderr.write("Warning - function generateUncompressedPS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -77991,7 +77992,7 @@ class psio2(object):
         leptonica.convertG4ToPS.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.convertG4ToPS.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertG4ToPS not exported " +
+        sys.stderr.write("Warning - function convertG4ToPS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78074,7 +78075,7 @@ class psio2(object):
         leptonica.convertTiffMultipageToPS.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float]
         leptonica.convertTiffMultipageToPS.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertTiffMultipageToPS not exported " +
+        sys.stderr.write("Warning - function convertTiffMultipageToPS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78113,7 +78114,7 @@ class psio2(object):
         leptonica.getResLetterPage.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.getResLetterPage.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function getResLetterPage not exported " +
+        sys.stderr.write("Warning - function getResLetterPage not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78142,7 +78143,7 @@ class psio2(object):
         leptonica.getResA4Page.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.getResA4Page.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function getResA4Page not exported " +
+        sys.stderr.write("Warning - function getResA4Page not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78171,7 +78172,7 @@ class psio2(object):
         leptonica.pixWritePSEmbed.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.pixWritePSEmbed.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixWritePSEmbed not exported " +
+        sys.stderr.write("Warning - function pixWritePSEmbed not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78205,7 +78206,7 @@ class psio2(object):
         leptonica.pixWriteStringPS.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_float]
         leptonica.pixWriteStringPS.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function pixWriteStringPS not exported " +
+        sys.stderr.write("Warning - function pixWriteStringPS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78283,7 +78284,7 @@ class psio2(object):
         leptonica.generateG4PS.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.generateG4PS.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function generateG4PS not exported " +
+        sys.stderr.write("Warning - function generateG4PS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78329,7 +78330,7 @@ class psio2(object):
         leptonica.convertFlateToPS.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.convertFlateToPS.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function convertFlateToPS not exported " +
+        sys.stderr.write("Warning - function convertFlateToPS not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78536,7 +78537,7 @@ class blend(object):
         leptonica.pixSetAlphaOverWhite.argtypes = [ctypes.c_void_p]
         leptonica.pixSetAlphaOverWhite.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixSetAlphaOverWhite not exported " +
+        sys.stderr.write("Warning - function pixSetAlphaOverWhite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78571,7 +78572,7 @@ class blend(object):
         leptonica.pixBlendGrayAdapt.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixBlendGrayAdapt.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlendGrayAdapt not exported " +
+        sys.stderr.write("Warning - function pixBlendGrayAdapt not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78636,7 +78637,7 @@ class blend(object):
         leptonica.pixFadeWithGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixFadeWithGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixFadeWithGray not exported " +
+        sys.stderr.write("Warning - function pixFadeWithGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78674,7 +78675,7 @@ class blend(object):
         leptonica.pixBlend.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.pixBlend.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlend not exported " +
+        sys.stderr.write("Warning - function pixBlend not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78710,7 +78711,7 @@ class blend(object):
         leptonica.pixBlendGray.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixBlendGray.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlendGray not exported " +
+        sys.stderr.write("Warning - function pixBlendGray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78774,7 +78775,7 @@ class blend(object):
         leptonica.pixBlendCmap.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBlendCmap.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function pixBlendCmap not exported " +
+        sys.stderr.write("Warning - function pixBlendCmap not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78821,7 +78822,7 @@ class blend(object):
         leptonica.pixBlendGrayInverse.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float]
         leptonica.pixBlendGrayInverse.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlendGrayInverse not exported " +
+        sys.stderr.write("Warning - function pixBlendGrayInverse not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78877,7 +78878,7 @@ class blend(object):
         leptonica.pixAddAlphaToBlend.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_int32]
         leptonica.pixAddAlphaToBlend.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAddAlphaToBlend not exported " +
+        sys.stderr.write("Warning - function pixAddAlphaToBlend not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78918,7 +78919,7 @@ class blend(object):
         leptonica.pixBlendMask.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32]
         leptonica.pixBlendMask.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlendMask not exported " +
+        sys.stderr.write("Warning - function pixBlendMask not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -78965,7 +78966,7 @@ class blend(object):
         leptonica.pixAlphaBlendUniform.argtypes = [ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixAlphaBlendUniform.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixAlphaBlendUniform not exported " +
+        sys.stderr.write("Warning - function pixAlphaBlendUniform not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79000,7 +79001,7 @@ class blend(object):
         leptonica.pixBlendWithGrayMask.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBlendWithGrayMask.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlendWithGrayMask not exported " +
+        sys.stderr.write("Warning - function pixBlendWithGrayMask not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79054,7 +79055,7 @@ class blend(object):
         leptonica.pixBlendColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_float, ctypes.c_int32, ctypes.c_uint32]
         leptonica.pixBlendColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlendColor not exported " +
+        sys.stderr.write("Warning - function pixBlendColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79106,7 +79107,7 @@ class blend(object):
         leptonica.pixBlendBackgroundToColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.pixBlendBackgroundToColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixBlendBackgroundToColor not exported " +
+        sys.stderr.write("Warning - function pixBlendBackgroundToColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79153,7 +79154,7 @@ class blend(object):
         leptonica.pixMultiplyByColor.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_uint32]
         leptonica.pixMultiplyByColor.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function pixMultiplyByColor not exported " +
+        sys.stderr.write("Warning - function pixMultiplyByColor not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79305,7 +79306,7 @@ class sel1(object):
         leptonica.selRead.argtypes = [ctypes.c_void_p]
         leptonica.selRead.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selRead not exported " +
+        sys.stderr.write("Warning - function selRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79329,7 +79330,7 @@ class sel1(object):
         leptonica.selCreateBrick.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.selCreateBrick.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selCreateBrick not exported " +
+        sys.stderr.write("Warning - function selCreateBrick not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79362,7 +79363,7 @@ class sel1(object):
         leptonica.selaGetCombName.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.selaGetCombName.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function selaGetCombName not exported " +
+        sys.stderr.write("Warning - function selaGetCombName not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79394,7 +79395,7 @@ class sel1(object):
         leptonica.selaFindSelByName.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.selaFindSelByName.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selaFindSelByName not exported " +
+        sys.stderr.write("Warning - function selaFindSelByName not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79424,7 +79425,7 @@ class sel1(object):
         leptonica.selCreateComb.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.selCreateComb.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selCreateComb not exported " +
+        sys.stderr.write("Warning - function selCreateComb not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79456,7 +79457,7 @@ class sel1(object):
         leptonica.selaGetCount.argtypes = [ctypes.c_void_p]
         leptonica.selaGetCount.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selaGetCount not exported " +
+        sys.stderr.write("Warning - function selaGetCount not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79480,7 +79481,7 @@ class sel1(object):
         leptonica.selaCreateFromFile.argtypes = [ctypes.c_void_p]
         leptonica.selaCreateFromFile.restype = lambda address: SELA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaCreateFromFile not exported " +
+        sys.stderr.write("Warning - function selaCreateFromFile not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79527,7 +79528,7 @@ class sel1(object):
         leptonica.selSetName.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.selSetName.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selSetName not exported " +
+        sys.stderr.write("Warning - function selSetName not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79557,7 +79558,7 @@ class sel1(object):
         leptonica.selReadFromColorImage.argtypes = [ctypes.c_void_p]
         leptonica.selReadFromColorImage.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selReadFromColorImage not exported " +
+        sys.stderr.write("Warning - function selReadFromColorImage not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79587,7 +79588,7 @@ class sel1(object):
         leptonica.selGetParameters.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.selGetParameters.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selGetParameters not exported " +
+        sys.stderr.write("Warning - function selGetParameters not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79616,7 +79617,7 @@ class sel1(object):
         leptonica.selGetElement.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.selGetElement.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selGetElement not exported " +
+        sys.stderr.write("Warning - function selGetElement not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79646,7 +79647,7 @@ class sel1(object):
         leptonica.selaReadStream.argtypes = [ctypes.c_void_p]
         leptonica.selaReadStream.restype = lambda address: SELA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaReadStream not exported " +
+        sys.stderr.write("Warning - function selaReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79670,7 +79671,7 @@ class sel1(object):
         leptonica.selSetElement.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.selSetElement.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selSetElement not exported " +
+        sys.stderr.write("Warning - function selSetElement not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79706,7 +79707,7 @@ class sel1(object):
         leptonica.selGetName.argtypes = [ctypes.c_void_p]
         leptonica.selGetName.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function selGetName not exported " +
+        sys.stderr.write("Warning - function selGetName not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79730,7 +79731,7 @@ class sel1(object):
         leptonica.selCopy.argtypes = [ctypes.c_void_p]
         leptonica.selCopy.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selCopy not exported " +
+        sys.stderr.write("Warning - function selCopy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79754,7 +79755,7 @@ class sel1(object):
         leptonica.selSetOrigin.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.selSetOrigin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selSetOrigin not exported " +
+        sys.stderr.write("Warning - function selSetOrigin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79781,7 +79782,7 @@ class sel1(object):
         leptonica.selDestroy.argtypes = [ctypes.c_void_p]
         leptonica.selDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function selDestroy not exported " +
+        sys.stderr.write("Warning - function selDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79805,7 +79806,7 @@ class sel1(object):
         leptonica.selCreate.argtypes = [ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.selCreate.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selCreate not exported " +
+        sys.stderr.write("Warning - function selCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79838,7 +79839,7 @@ class sel1(object):
         leptonica.selFindMaxTranslations.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.selFindMaxTranslations.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selFindMaxTranslations not exported " +
+        sys.stderr.write("Warning - function selFindMaxTranslations not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79871,7 +79872,7 @@ class sel1(object):
         leptonica.selWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.selWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selWriteStream not exported " +
+        sys.stderr.write("Warning - function selWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79897,7 +79898,7 @@ class sel1(object):
         leptonica.getCompositeParameters.argtypes = [ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
         leptonica.getCompositeParameters.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function getCompositeParameters not exported " +
+        sys.stderr.write("Warning - function getCompositeParameters not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79937,7 +79938,7 @@ class sel1(object):
         leptonica.selaGetBrickName.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.selaGetBrickName.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function selaGetBrickName not exported " +
+        sys.stderr.write("Warning - function selaGetBrickName not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -79964,7 +79965,7 @@ class sel1(object):
         leptonica.selDisplayInPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32]
         leptonica.selDisplayInPix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selDisplayInPix not exported " +
+        sys.stderr.write("Warning - function selDisplayInPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80000,7 +80001,7 @@ class sel1(object):
         leptonica.selaGetSel.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.selaGetSel.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaGetSel not exported " +
+        sys.stderr.write("Warning - function selaGetSel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80030,7 +80031,7 @@ class sel1(object):
         leptonica.selCreateFromString.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.selCreateFromString.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selCreateFromString not exported " +
+        sys.stderr.write("Warning - function selCreateFromString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80074,7 +80075,7 @@ class sel1(object):
         leptonica.selCreateFromPta.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.selCreateFromPta.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selCreateFromPta not exported " +
+        sys.stderr.write("Warning - function selCreateFromPta not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80106,7 +80107,7 @@ class sel1(object):
         leptonica.selaAddSel.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int32]
         leptonica.selaAddSel.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selaAddSel not exported " +
+        sys.stderr.write("Warning - function selaAddSel not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80143,7 +80144,7 @@ class sel1(object):
         leptonica.selaCreate.argtypes = [ctypes.c_int32]
         leptonica.selaCreate.restype = lambda address: SELA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaCreate not exported " +
+        sys.stderr.write("Warning - function selaCreate not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80167,7 +80168,7 @@ class sel1(object):
         leptonica.selaWriteStream.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.selaWriteStream.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selaWriteStream not exported " +
+        sys.stderr.write("Warning - function selaWriteStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80193,7 +80194,7 @@ class sel1(object):
         leptonica.selGetTypeAtOrigin.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.selGetTypeAtOrigin.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selGetTypeAtOrigin not exported " +
+        sys.stderr.write("Warning - function selGetTypeAtOrigin not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80219,7 +80220,7 @@ class sel1(object):
         leptonica.selaGetSelnames.argtypes = [ctypes.c_void_p]
         leptonica.selaGetSelnames.restype = lambda address: SARRAY(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaGetSelnames not exported " +
+        sys.stderr.write("Warning - function selaGetSelnames not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80243,7 +80244,7 @@ class sel1(object):
         leptonica.selPrintToString.argtypes = [ctypes.c_void_p]
         leptonica.selPrintToString.restype = lambda address: (ctypes.string_at(address), free(address))[0]
     except AttributeError:
-        os.stderr.write("Warning - function selPrintToString not exported " +
+        sys.stderr.write("Warning - function selPrintToString not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80278,7 +80279,7 @@ class sel1(object):
         leptonica.selRotateOrth.argtypes = [ctypes.c_void_p, ctypes.c_int32]
         leptonica.selRotateOrth.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selRotateOrth not exported " +
+        sys.stderr.write("Warning - function selRotateOrth not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80304,7 +80305,7 @@ class sel1(object):
         leptonica.selaDisplayInPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32, ctypes.c_int32]
         leptonica.selaDisplayInPix.restype = lambda address: PIX(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaDisplayInPix not exported " +
+        sys.stderr.write("Warning - function selaDisplayInPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80342,7 +80343,7 @@ class sel1(object):
         leptonica.selWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.selWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selWrite not exported " +
+        sys.stderr.write("Warning - function selWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80368,7 +80369,7 @@ class sel1(object):
         leptonica.create2dIntArray.argtypes = [ctypes.c_int32, ctypes.c_int32]
         leptonica.create2dIntArray.restype = ctypes.POINTER(ctypes.POINTER(ctypes.c_int32))
     except AttributeError:
-        os.stderr.write("Warning - function create2dIntArray not exported " +
+        sys.stderr.write("Warning - function create2dIntArray not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80399,7 +80400,7 @@ class sel1(object):
         leptonica.selReadStream.argtypes = [ctypes.c_void_p]
         leptonica.selReadStream.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selReadStream not exported " +
+        sys.stderr.write("Warning - function selReadStream not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80423,7 +80424,7 @@ class sel1(object):
         leptonica.selaWrite.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.selaWrite.restype = ctypes.c_int32
     except AttributeError:
-        os.stderr.write("Warning - function selaWrite not exported " +
+        sys.stderr.write("Warning - function selaWrite not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80449,7 +80450,7 @@ class sel1(object):
         leptonica.selCreateFromPix.argtypes = [ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         leptonica.selCreateFromPix.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selCreateFromPix not exported " +
+        sys.stderr.write("Warning - function selCreateFromPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80481,7 +80482,7 @@ class sel1(object):
         leptonica.selaRead.argtypes = [ctypes.c_void_p]
         leptonica.selaRead.restype = lambda address: SELA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaRead not exported " +
+        sys.stderr.write("Warning - function selaRead not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80505,7 +80506,7 @@ class sel1(object):
         leptonica.selaDestroy.argtypes = [ctypes.c_void_p]
         leptonica.selaDestroy.restype = None
     except AttributeError:
-        os.stderr.write("Warning - function selaDestroy not exported " +
+        sys.stderr.write("Warning - function selaDestroy not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80529,7 +80530,7 @@ class sel1(object):
         leptonica.selCreateFromColorPix.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
         leptonica.selCreateFromColorPix.restype = lambda address: SEL(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selCreateFromColorPix not exported " +
+        sys.stderr.write("Warning - function selCreateFromColorPix not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80594,7 +80595,7 @@ class sel2(object):
         leptonica.selaAddCrossJunctions.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.selaAddCrossJunctions.restype = lambda address: SELA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaAddCrossJunctions not exported " +
+        sys.stderr.write("Warning - function selaAddCrossJunctions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80640,7 +80641,7 @@ class sel2(object):
         leptonica.selaAddTJunctions.argtypes = [ctypes.c_void_p, ctypes.c_float, ctypes.c_float, ctypes.c_int32, ctypes.c_int32]
         leptonica.selaAddTJunctions.restype = lambda address: SELA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaAddTJunctions not exported " +
+        sys.stderr.write("Warning - function selaAddTJunctions not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80681,7 +80682,7 @@ class sel2(object):
         leptonica.selaAddHitMiss.argtypes = [ctypes.c_void_p]
         leptonica.selaAddHitMiss.restype = lambda address: SELA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaAddHitMiss not exported " +
+        sys.stderr.write("Warning - function selaAddHitMiss not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80705,7 +80706,7 @@ class sel2(object):
         leptonica.selaAddDwaCombs.argtypes = [ctypes.c_void_p]
         leptonica.selaAddDwaCombs.restype = lambda address: SELA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaAddDwaCombs not exported " +
+        sys.stderr.write("Warning - function selaAddDwaCombs not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80735,7 +80736,7 @@ class sel2(object):
         leptonica.selaAddDwaLinear.argtypes = [ctypes.c_void_p]
         leptonica.selaAddDwaLinear.restype = lambda address: SELA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaAddDwaLinear not exported " +
+        sys.stderr.write("Warning - function selaAddDwaLinear not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
@@ -80764,7 +80765,7 @@ class sel2(object):
         leptonica.selaAddBasic.argtypes = [ctypes.c_void_p]
         leptonica.selaAddBasic.restype = lambda address: SELA(from_address=address)
     except AttributeError:
-        os.stderr.write("Warning - function selaAddBasic not exported " +
+        sys.stderr.write("Warning - function selaAddBasic not exported " +
             "by libleptonica\n\tCalls to it won't work\n")
     
     @staticmethod
