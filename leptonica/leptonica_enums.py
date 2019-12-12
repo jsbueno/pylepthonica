@@ -2181,4 +2181,4 @@ del ConstType
 globals_copy = globals().copy()
 __all__ = [const for const in globals_copy if isinstance(const, Const)] + [find_siblings]
 
-del const, globals_copy
+del globals_copy
