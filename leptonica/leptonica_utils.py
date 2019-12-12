@@ -20,8 +20,9 @@
 This file puts some utility functions, mostly for converting from
 and to leptonica used types
 """
+from __future__ import absolute_import
 
-import leptonica_functions as lep
+from . import leptonica_functions as lep
 import ctypes
 import struct
 

@@ -24,15 +24,17 @@
 
         Subject to grow with time
 """
+from __future__ import absolute_import
 
-import leptonica_structures as structures
-from leptonica_functions import functions, pix3
+from builtins import range
+from . import leptonica_structures as structures
+from .leptonica_functions import functions, pix3
 import ctypes
 
 def _getitem(getter, obj, index):
     if isinstance(index, slice):
         lst = []
-        for n_index in xrange(*index.indices(obj.n)):
+        for n_index in range(*index.indices(obj.n)):
             lst.append(obj[n_index])
         return lst
     if not (-obj.n <= index < obj.n):

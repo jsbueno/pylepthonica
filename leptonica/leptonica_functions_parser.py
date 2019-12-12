@@ -21,9 +21,12 @@ This file parses the C language functions and
 generates a file that anotates calling parameteers and return types for all
 those functions
 """
+from __future__ import absolute_import
+from builtins import str
+from builtins import range
 import re
 import sys
-from leptonica_header_parser import lepton_types
+from .leptonica_header_parser import lepton_types
 from config import leptonica_home
 
 
@@ -128,7 +131,7 @@ def parse_prototype(prototype_text):
             break
         try:
             data_type, name = token.rsplit(None,1)
-        except Exception, error:
+        except Exception as error:
             sys.stderr.write("Unexpected preample/function declaration."
                 + " Parsing error:\n\n%s\n" % prototype_text)
             raise
@@ -187,7 +190,7 @@ def format_return_type(return_type):
     elif return_type in lepton_types:
         return_type = lepton_types[return_type]
         # MAYBE change these for c_void_p ? 
-        for i in xrange(indirections):
+        for i in range(indirections):
             return_type = "ctypes.POINTER(%s)" % return_type
     else: #Return type should be a pointer to one 
           #of the library defined structures

@@ -15,13 +15,14 @@
     #You should have received a copy of the Lesser GNU General Public License
     #along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from leptonica_structures import *
-from leptonica_functions import *
-from leptonica_utils import *
-import leptonica_enums as enums
+from __future__ import absolute_import
+from .leptonica_structures import *
+from .leptonica_functions import *
+from .leptonica_utils import *
+from . import leptonica_enums as enums
 
 #this file does some monkey patching on the structures upon running:
-import structures_patches
+from . import structures_patches
 
 del structures_patches
 

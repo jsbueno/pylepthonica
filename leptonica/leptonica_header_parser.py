@@ -28,6 +28,8 @@ check if your leptonica_structures work for your version
 of leptonica
 """
 
+from builtins import str
+from builtins import range
 import sys
 from config import leptonica_home
 
@@ -127,8 +129,8 @@ def parse_structs(code):
     sequence = enumerate(tokens)
     while True:
         try:
-            for _ in xrange(fwd):
-                index, token = sequence.next()
+            for _ in range(fwd):
+                index, token = next(sequence)
             fwd = 1
         except StopIteration:
             break

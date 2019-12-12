@@ -3,6 +3,7 @@
 # This is a generated file - do not edit!
 
 
+from builtins import str
 class Const(int):
     "Parent class to all constants"
     def __new__(cls, name, value, doc=""):

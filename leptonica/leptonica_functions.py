@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import absolute_import
+from builtins import object
 import sys
 import ctypes
-from leptonica_structures import *
-import leptonica_structures as structs
+from .leptonica_structures import *
+from . import leptonica_structures as structs
 
 try:
     leptonica = ctypes.cdll.LoadLibrary("liblept.so")

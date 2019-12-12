@@ -2,7 +2,10 @@
 # Author: João S. O. Bueno
 # This is a generated file - do not edit!
 
+from __future__ import absolute_import
+from builtins import object
 import ctypes
+from future.utils import with_metaclass
 #import weakref
 
 class LeptonObject(object):
@@ -16,7 +19,7 @@ class LeptonObject(object):
         """
         data = None
         if not kw or not "from_address" in kw:
-            from leptonica_functions import functions
+            from .leptonica_functions import functions
             if hasattr(functions, cls.__name__.lower() + "Create"):
                 constructor = getattr(functions, cls.__name__.lower() +
                     "Create")
@@ -73,7 +76,7 @@ class LeptonObject(object):
         #    del cls._instances_[self._address_.value]
         if not hasattr(cls, "refcount"):
             return
-        from leptonica_functions import functions
+        from .leptonica_functions import functions
         if self._needs_del and hasattr(functions, cls.__name__.lower() + "Destroy"):
             destrutor = getattr(functions, cls.__name__.lower() + "Destroy")
             destrutor(ctypes.c_void_p(ctypes.addressof(self._address_)))
@@ -108,8 +111,7 @@ class _SARRAY(ctypes.Structure):
         ("array", ctypes.POINTER(ctypes.POINTER(ctypes.c_char)))
     ]
 
-class SARRAY(LeptonObject):
-    __metaclass__ = MetaPointer
+class SARRAY(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _SARRAY
 
 
@@ -123,8 +125,7 @@ class _PIXCOLORMAP(ctypes.Structure):
         ("n", ctypes.c_int32)
     ]
 
-class PIXCOLORMAP(LeptonObject):
-    __metaclass__ = MetaPointer
+class PIXCOLORMAP(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _PIXCOLORMAP
 
 
@@ -138,8 +139,7 @@ class _L_BYTEA(ctypes.Structure):
         ("data", ctypes.POINTER(ctypes.c_ubyte))
     ]
 
-class L_BYTEA(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_BYTEA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_BYTEA
 
 
@@ -153,8 +153,7 @@ class _BYTEBUFFER(ctypes.Structure):
         ("array", ctypes.POINTER(ctypes.c_ubyte))
     ]
 
-class BYTEBUFFER(LeptonObject):
-    __metaclass__ = MetaPointer
+class BYTEBUFFER(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _BYTEBUFFER
 
 
@@ -171,8 +170,7 @@ class _FPIX(ctypes.Structure):
         ("data", ctypes.POINTER(ctypes.c_float))
     ]
 
-class FPIX(LeptonObject):
-    __metaclass__ = MetaPointer
+class FPIX(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _FPIX
 
 
@@ -186,8 +184,7 @@ class _RGBA_QUAD(ctypes.Structure):
         ("alpha", ctypes.c_ubyte)
     ]
 
-class RGBA_QUAD(LeptonObject):
-    __metaclass__ = MetaPointer
+class RGBA_QUAD(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _RGBA_QUAD
 
 
@@ -202,8 +199,7 @@ class _PTA(ctypes.Structure):
         ("y", ctypes.POINTER(ctypes.c_float))
     ]
 
-class PTA(LeptonObject):
-    __metaclass__ = MetaPointer
+class PTA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _PTA
 
 
@@ -226,8 +222,7 @@ class _PIX(ctypes.Structure):
         ("data", ctypes.POINTER(ctypes.c_uint32))
     ]
 
-class PIX(LeptonObject):
-    __metaclass__ = MetaPointer
+class PIX(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _PIX
 
 
@@ -243,8 +238,7 @@ class _L_DNA(ctypes.Structure):
         ("array", ctypes.POINTER(ctypes.c_double))
     ]
 
-class L_DNA(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_DNA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_DNA
 
 
@@ -260,8 +254,7 @@ class _SEL(ctypes.Structure):
         ("name", ctypes.POINTER(ctypes.c_char))
     ]
 
-class SEL(LeptonObject):
-    __metaclass__ = MetaPointer
+class SEL(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _SEL
 
 
@@ -280,8 +273,7 @@ class _L_REGPARAMS(ctypes.Structure):
     ]
 L_TIMER = ctypes.c_void_p
 
-class L_REGPARAMS(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_REGPARAMS(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_REGPARAMS
 
 
@@ -298,8 +290,7 @@ class _DPIX(ctypes.Structure):
         ("data", ctypes.POINTER(ctypes.c_double))
     ]
 
-class DPIX(LeptonObject):
-    __metaclass__ = MetaPointer
+class DPIX(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _DPIX
 
 
@@ -313,8 +304,7 @@ class _L_HEAP(ctypes.Structure):
         ("direction", ctypes.c_int32)
     ]
 
-class L_HEAP(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_HEAP(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_HEAP
 
 
@@ -329,8 +319,7 @@ _DOUBLELINKEDLIST._fields_ = [
         ("data", ctypes.c_void_p)
     ]
 
-class DOUBLELINKEDLIST(LeptonObject):
-    __metaclass__ = MetaPointer
+class DOUBLELINKEDLIST(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _DOUBLELINKEDLIST
 
 class _L_DNAA(ctypes.Structure):
@@ -342,8 +331,7 @@ class _L_DNAA(ctypes.Structure):
         ("dna", ctypes.POINTER(ctypes.POINTER(_L_DNA)))
     ]
 
-class L_DNAA(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_DNAA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_DNAA
 
 
@@ -361,8 +349,7 @@ class _L_SUDOKU(ctypes.Structure):
         ("failure", ctypes.c_int32)
     ]
 
-class L_SUDOKU(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_SUDOKU(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_SUDOKU
 
 
@@ -378,8 +365,7 @@ class _NUMA(ctypes.Structure):
         ("array", ctypes.POINTER(ctypes.c_float))
     ]
 
-class NUMA(LeptonObject):
-    __metaclass__ = MetaPointer
+class NUMA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _NUMA
 
 
@@ -393,8 +379,7 @@ class _FPIXA(ctypes.Structure):
         ("fpix", ctypes.POINTER(ctypes.POINTER(_FPIX)))
     ]
 
-class FPIXA(LeptonObject):
-    __metaclass__ = MetaPointer
+class FPIXA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _FPIXA
 
 
@@ -410,8 +395,7 @@ _L_STACK._fields_ = [
         ("auxstack", ctypes.POINTER(_L_STACK))
     ]
 
-class L_STACK(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_STACK(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_STACK
 
 class _L_PTRA(ctypes.Structure):
@@ -424,8 +408,7 @@ class _L_PTRA(ctypes.Structure):
         ("array", ctypes.POINTER(ctypes.c_void_p))
     ]
 
-class L_PTRA(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_PTRA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_PTRA
 
 
@@ -440,8 +423,7 @@ class _L_KERNEL(ctypes.Structure):
         ("data", ctypes.POINTER(ctypes.POINTER(ctypes.c_float)))
     ]
 
-class L_KERNEL(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_KERNEL(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_KERNEL
 
 
@@ -458,8 +440,7 @@ class _BMP_FILEHEADER(ctypes.Structure):
         ("bfFill2", ctypes.c_int16)
     ]
 
-class BMP_FILEHEADER(LeptonObject):
-    __metaclass__ = MetaPointer
+class BMP_FILEHEADER(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _BMP_FILEHEADER
 
 
@@ -471,8 +452,7 @@ class _L_PTRAA(ctypes.Structure):
         ("ptra", ctypes.POINTER(ctypes.POINTER(_L_PTRA)))
     ]
 
-class L_PTRAA(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_PTRAA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_PTRAA
 
 
@@ -485,8 +465,7 @@ class _SELA(ctypes.Structure):
         ("sel", ctypes.POINTER(ctypes.POINTER(_SEL)))
     ]
 
-class SELA(LeptonObject):
-    __metaclass__ = MetaPointer
+class SELA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _SELA
 
 
@@ -507,8 +486,7 @@ class _BMP_INFOHEADER(ctypes.Structure):
         ("biClrImportant", ctypes.c_int32)
     ]
 
-class BMP_INFOHEADER(LeptonObject):
-    __metaclass__ = MetaPointer
+class BMP_INFOHEADER(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _BMP_INFOHEADER
 
 
@@ -523,8 +501,7 @@ class _BOX(ctypes.Structure):
         ("refcount", ctypes.c_uint32)
     ]
 
-class BOX(LeptonObject):
-    __metaclass__ = MetaPointer
+class BOX(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _BOX
 
 
@@ -537,8 +514,7 @@ class _NUMAA(ctypes.Structure):
         ("numa", ctypes.POINTER(ctypes.POINTER(_NUMA)))
     ]
 
-class NUMAA(LeptonObject):
-    __metaclass__ = MetaPointer
+class NUMAA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _NUMAA
 
 
@@ -558,8 +534,7 @@ class _PIXCOMP(ctypes.Structure):
         ("size", ctypes.c_size_t)
     ]
 
-class PIXCOMP(LeptonObject):
-    __metaclass__ = MetaPointer
+class PIXCOMP(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _PIXCOMP
 
 
@@ -573,8 +548,7 @@ class _NUMA2D(ctypes.Structure):
         ("numa", ctypes.POINTER(ctypes.POINTER(ctypes.POINTER(_NUMA))))
     ]
 
-class NUMA2D(LeptonObject):
-    __metaclass__ = MetaPointer
+class NUMA2D(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _NUMA2D
 
 
@@ -587,8 +561,7 @@ class _PTAA(ctypes.Structure):
         ("pta", ctypes.POINTER(ctypes.POINTER(_PTA)))
     ]
 
-class PTAA(LeptonObject):
-    __metaclass__ = MetaPointer
+class PTAA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _PTAA
 
 
@@ -612,8 +585,7 @@ class _GPLOT(ctypes.Structure):
         ("ylabel", ctypes.POINTER(ctypes.c_char))
     ]
 
-class GPLOT(LeptonObject):
-    __metaclass__ = MetaPointer
+class GPLOT(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _GPLOT
 
 
@@ -626,8 +598,7 @@ class _NUMAHASH(ctypes.Structure):
         ("numa", ctypes.POINTER(ctypes.POINTER(_NUMA)))
     ]
 
-class NUMAHASH(LeptonObject):
-    __metaclass__ = MetaPointer
+class NUMAHASH(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _NUMAHASH
 
 
@@ -641,8 +612,7 @@ class _BOXA(ctypes.Structure):
         ("box", ctypes.POINTER(ctypes.POINTER(_BOX)))
     ]
 
-class BOXA(LeptonObject):
-    __metaclass__ = MetaPointer
+class BOXA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _BOXA
 
 
@@ -661,8 +631,7 @@ class _CCBORD(ctypes.Structure):
         ("spglobal", ctypes.POINTER(_PTA))
     ]
 
-class CCBORD(LeptonObject):
-    __metaclass__ = MetaPointer
+class CCBORD(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _CCBORD
 
 
@@ -680,8 +649,7 @@ class _PIXTILING(ctypes.Structure):
         ("strip", ctypes.c_int32)
     ]
 
-class PIXTILING(LeptonObject):
-    __metaclass__ = MetaPointer
+class PIXTILING(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _PIXTILING
 
 
@@ -696,8 +664,7 @@ class _PIXA(ctypes.Structure):
         ("boxa", ctypes.POINTER(_BOXA))
     ]
 
-class PIXA(LeptonObject):
-    __metaclass__ = MetaPointer
+class PIXA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _PIXA
 
 
@@ -711,8 +678,7 @@ class _PIXACC(ctypes.Structure):
         ("pix", ctypes.POINTER(_PIX))
     ]
 
-class PIXACC(LeptonObject):
-    __metaclass__ = MetaPointer
+class PIXACC(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _PIXACC
 
 
@@ -726,8 +692,7 @@ class _PIXAA(ctypes.Structure):
         ("boxa", ctypes.POINTER(_BOXA))
     ]
 
-class PIXAA(LeptonObject):
-    __metaclass__ = MetaPointer
+class PIXAA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _PIXAA
 
 
@@ -742,8 +707,7 @@ class _PIXACOMP(ctypes.Structure):
         ("boxa", ctypes.POINTER(_BOXA))
     ]
 
-class PIXACOMP(LeptonObject):
-    __metaclass__ = MetaPointer
+class PIXACOMP(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _PIXACOMP
 
 
@@ -763,8 +727,7 @@ class _JBDATA(ctypes.Structure):
         ("ptaul", ctypes.POINTER(_PTA))
     ]
 
-class JBDATA(LeptonObject):
-    __metaclass__ = MetaPointer
+class JBDATA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _JBDATA
 
 
@@ -779,8 +742,7 @@ class _L_QUEUE(ctypes.Structure):
         ("stack", ctypes.POINTER(_L_STACK))
     ]
 
-class L_QUEUE(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_QUEUE(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_QUEUE
 
 
@@ -793,8 +755,7 @@ class _BOXAA(ctypes.Structure):
         ("boxa", ctypes.POINTER(ctypes.POINTER(_BOXA)))
     ]
 
-class BOXAA(LeptonObject):
-    __metaclass__ = MetaPointer
+class BOXAA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _BOXAA
 
 
@@ -810,8 +771,7 @@ class _CCBORDA(ctypes.Structure):
         ("ccb", ctypes.POINTER(ctypes.POINTER(_CCBORD)))
     ]
 
-class CCBORDA(LeptonObject):
-    __metaclass__ = MetaPointer
+class CCBORDA(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _CCBORDA
 
 
@@ -842,8 +802,7 @@ class _L_WSHED(ctypes.Structure):
         ("debug", ctypes.c_int32)
     ]
 
-class L_WSHED(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_WSHED(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_WSHED
 
 
@@ -866,8 +825,7 @@ class _L_BMF(ctypes.Structure):
         ("widthtab", ctypes.POINTER(ctypes.c_int32))
     ]
 
-class L_BMF(LeptonObject):
-    __metaclass__ = MetaPointer
+class L_BMF(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _L_BMF
 
 
@@ -905,8 +863,7 @@ class _JBCLASSER(ctypes.Structure):
         ("ptall", ctypes.POINTER(_PTA))
     ]
 
-class JBCLASSER(LeptonObject):
-    __metaclass__ = MetaPointer
+class JBCLASSER(with_metaclass(MetaPointer, LeptonObject)):
     _type_ = _JBCLASSER
 
 
