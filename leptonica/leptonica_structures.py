@@ -1,5 +1,4 @@
-
-# coding: utf-8
+# -*- coding: utf-8 -*-
 # Author: João S. O. Bueno
 # This is a generated file - do not edit!
 

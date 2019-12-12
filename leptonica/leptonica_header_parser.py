@@ -246,7 +246,7 @@ def parse_file(file_name):
     return structs
 
 file_template = """
-# coding: utf-8
+# -*- coding: utf-8 -*-
 # Author: João S. O. Bueno
 # This is a generated file - do not edit!
 
