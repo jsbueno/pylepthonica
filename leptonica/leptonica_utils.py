@@ -20,8 +20,9 @@
 This file puts some utility functions, mostly for converting from
 and to leptonica used types
 """
+from __future__ import absolute_import
 
-import leptonica_functions as lep
+from . import leptonica_functions as lep
 import ctypes
 import struct
 
@@ -58,11 +59,11 @@ def PILImageToPix(pil_img):
     depth = 32
     lep_img = lep.PIX(w, h, depth)
     size = w * h
-    img_data = pil_img.tostring()
+    img_data = pil_img.tobytes()
     # ctypes miss a way to get the string buffer as  a memory read source
-    interm_buffer = ctypes.c_buffer(img_data)
-    ctypes.memmove(lep_img.data, interm_buffer, len(img_data))
-    lep.functions.pixEndianByteSwap(lep_img)    
+    intern_buffer = ctypes.c_buffer(img_data)
+    ctypes.memmove(lep_img.data, intern_buffer, len(img_data))
+    lep.functions.pixEndianByteSwap(lep_img)
     # Normally in Leptonica the alpha byte is set to "zero"
     # I am betting there is no problem leaving the same value
     # that comes from PIL (255 for opaque) for non transaprency use in

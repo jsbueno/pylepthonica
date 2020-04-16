@@ -41,7 +41,7 @@ def get_comment_before(text, index):
 def extract_enums(text):
     # Finds each enum block and up to 2 optional
     # comment blocks preceeding it
-    # I mean -- this should be the reguklar expression for it, but it is simply failing
+    # I mean -- this should be the regular expression for it, but it is simply failing
     # (as in IT DOES NOT WORK - it keeps being too greedy to retrieve the C comments
     # before the enums)
     #expr = re.compile(r"(/\*.*?\*/){0,1}[$\s]*?(/\*.*?\*/){0,1}[$\s]*?(enum\s+{.*?};)", re.MULTILINE | re.DOTALL)
@@ -71,19 +71,19 @@ def extract_enums(text):
     return enums
 
 def normalize_title(text):
-    return text.strip("/*\n- ").split("\n")[0].strip("/*\n- ").lower().replace(" ","_")
+    return text.strip("/*\n-! ").split("\n")[0].strip("/*\n-! ").lower().replace(" ","_")
 
-def strip_asteriscs(text):
+def strip_asterisks(text):
     new_text = ""
     for line in text.split("\n"):
-        if len(line) > 2:
-            new_text += line[2:] + "\n"
+        new_text += line.strip(' *').lstrip('!')
+        new_text += "\n"
     return new_text
 
 def extract_comment(text):
     if not "/*" in text or not "*/" in text:
         return ""
-    return text.split("/*")[1].split("*/")[0].strip()
+    return strip_asterisks(text.partition("/*")[2].rpartition("*/")[0].strip())
 
 def parse_enum(enum):
     constants = []
@@ -94,7 +94,12 @@ def parse_enum(enum):
         name, remainder = line.split("=", 1)
         const["name"] = name.strip()
         number = remainder.split(",")[0].split("/")[0].strip()
-        const["value"] = int(number[2:],16) if number.startswith("0x") else int(number)
+        if number.startswith("0x"):
+            const["value"] = int(number[2:],16)
+        elif number.isnumeric():
+            const["value"] = int(number)
+        else:
+            const["value"] = number
         const["doc"] = extract_comment(line)
         constants.append(const)
     return constants
@@ -127,11 +132,11 @@ def render_fields(field_list):
 def render_class(enum):
     contents = parse_enum(enum[2])
     if enum[0].strip():
-        name = normalize_title(enum[0])
-        doc = strip_asteriscs(enum[0]) + "\n" + strip_asteriscs(enum[1])
+        name = normalize_title(enum[1])
+        doc = extract_comment(enum[1]) + "\n" + extract_comment(enum[0])
     elif enum[1].strip():
         name = normalize_title(enum[1])
-        doc = strip_asteriscs(enum[1])
+        doc = extract_comment(enum[1])
     else:
         name = "generated_constants"
         doc = ""
@@ -146,7 +151,7 @@ def render_classes(enums):
     return "".join(classes)
 
 file_template = """
-# coding: utf-8
+# -*- coding: utf-8 -*-
 # Author: João S. O. Bueno
 # This is a generated file - do not edit!
 
@@ -178,9 +183,9 @@ def find_siblings(const, as_string=False):
 %s
 
 globals_copy = globals().copy()
-__all__ = [const for const in globals_copy if isinstance(const, Const)] + [find_siblings]
+__all__ = [const for const in globals_copy if isinstance(globals_copy[const], Const)] + ['find_siblings']
 
-del const, globals_copy
+del globals_copy
 """
 
 def render_file(enums):
@@ -196,7 +201,7 @@ def main():
         enums.extend(extract_enums(contents))
     render_file(enums)
         
-all_headers = ['array.h', 'bmf.h', 'ccbord.h', 'environ.h', 'gplot.h', 'imageio.h', 'jbclass.h', 'morph.h', 'pix.h', 'ptra.h', 'readbarcode.h', 'sudoku.h']
+all_headers = ['array.h', 'bmf.h', 'ccbord.h', 'environ.h', 'gplot.h', 'imageio.h', 'jbclass.h', 'morph.h', 'pix.h', 'ptra.h', 'readbarcode.h', 'sudoku.h', 'rbtree.h', 'recog.h', 'regutils.h', 'stringcode.h']
 
 if __name__ == "__main__":
     main ()

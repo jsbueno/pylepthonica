@@ -21,6 +21,9 @@ This file parses the C language functions and
 generates a file that anotates calling parameteers and return types for all
 those functions
 """
+from __future__ import absolute_import
+from builtins import str
+from builtins import range
 import re
 import sys
 from leptonica_header_parser import lepton_types
@@ -70,18 +73,39 @@ l_int32     i, j, w, h, d, x, y, wpls, wpld, color, cmapindex;
 
 def strip_comment(raw_comment):
     comment = ""
+    expr = re.compile(r"(\\(param[^ \t]+[ \t]+[^ \t]+))")
     for line in raw_comment.split("\n")[1:]:
-        comment += line[2:] + "\n"
+        line = line.strip(' *')
+        if line.startswith('\\brief') or line.startswith('\\file'):
+            continue
+        line = expr.sub(':\\2:', line)
+        line = line.replace('\\return', ':returns:')
+        comment += line
+        comment += "\n"
     return comment
 
-def parse_file_comment(text):
-    # Expression to capture file wide comment :
-    expr = re.compile(r"^(\/\*\s*$.*?)^\s\*\/", 
+def remove_copyright_comment(text):
+    expr = re.compile(r"^(/\*=.*?)^ \*=+\*/",
         re.MULTILINE | re.DOTALL)
-    comment = expr.findall(text)
-    if not comment:
-        return ""
-    return strip_comment(comment[0])
+    return expr.sub("", text, count=1)
+
+def parse_file_comment(text):
+    comment = ''
+    # Expression to capture file wide comment (in Doxygen style):
+    expr = re.compile(r"^(/\*![ \t\r\n\f\v*]*\\file.*?)^ \*/",
+        re.MULTILINE | re.DOTALL)
+    comments = expr.findall(text)
+    if comments:
+        comment += strip_comment(comments[0]) + '\n\n\n'
+        text = expr.sub("", text, count=1)
+    # Expression to capture section headers (as plain multi-line comments):
+    expr = re.compile(r"^(/\* *-+ *\* *$.*?^ *\* *-+ *\*/)",
+        re.MULTILINE | re.DOTALL)
+    comments = expr.findall(text)
+    if comments:
+        #comment += '\n\n'.join(map(strip_comment, comments))
+        text = expr.sub("", text)
+    return comment, text
 
 def parse_prototype(prototype_text):
     prototype = prototype_text.split("\n")
@@ -100,10 +124,12 @@ def parse_prototype(prototype_text):
             break
         counter += 1
         last_scaped = False
-    prototype = prototype[counter:]
+    prototype = list(filter(None, prototype[counter:]))
+    if len(prototype) < 2:
+        # struct or not adhering to newline convention
+        raise FunctionNotExported
     prototype_text = " ".join(prototype)
     return_type = prototype[0].strip()
-
     function_name = prototype[1].split("(")[0].strip()
     if return_type.startswith("static"):
         #print "Static function - not exported: ", function_name
@@ -128,8 +154,8 @@ def parse_prototype(prototype_text):
             break
         try:
             data_type, name = token.rsplit(None,1)
-        except Exception, error:
-            sys.stderr.write("Unexpected preample/function declaration."
+        except Exception as error:
+            sys.stderr.write("Unexpected preamble/function declaration."
                 + " Parsing error:\n\n%s\n" % prototype_text)
             raise
         parameters.append((data_type.strip(), name.strip()))
@@ -146,7 +172,7 @@ def parse_functions(text):
     """
     functions = {}
     # chop everything between a /*! starting line and  a { starting line 
-    doc_and_proto_expr = re.compile(r"^(\/\*\!.*?)^{",
+    doc_and_proto_expr = re.compile(r"^(/\*![ \t\r\n\f\v*]*\\brief.*?)^ *\{",
         re.MULTILINE | re.DOTALL)
     doc_and_proto = doc_and_proto_expr.findall(text)
     for function in doc_and_proto:
@@ -162,8 +188,10 @@ def parse_functions(text):
     return functions
 
 def parse_file(file_name):
+    print('parsing file "%s"' % file_name)
     text = get_file_contents(file_name)
-    comment = parse_file_comment(text)
+    text = remove_copyright_comment(text)
+    comment, text = parse_file_comment(text)
     functions = parse_functions(text)
     return comment, functions
 
@@ -187,12 +215,12 @@ def format_return_type(return_type):
     elif return_type in lepton_types:
         return_type = lepton_types[return_type]
         # MAYBE change these for c_void_p ? 
-        for i in xrange(indirections):
+        for i in range(indirections):
             return_type = "ctypes.POINTER(%s)" % return_type
     else: #Return type should be a pointer to one 
           #of the library defined structures
         if indirections == 1:
-            return_type = ("lambda address: %s(from_address=address)" % return_type)
+            return_type = ("lambda address: %s(from_address=address) if address else None" % return_type)
         # More than one indirection not promoted to the magic hybrid type:
         elif indirections > 1:
             return_type = "ctypes.c_void_p"
@@ -210,7 +238,10 @@ def format_args(arg_list):
         if arg_type in lepton_types:
             arg_type = lepton_types[arg_type]
         if indirections:
-            arg_type = "ctypes.c_void_p"
+            if arg_type == "ctypes.c_char":
+                arg_type = "ctypes.c_char_p"
+            else:
+                arg_type = "ctypes.c_void_p"
         #for i in xrange(indirections):
             #arg_type = "ctypes.POINTER(%s)" % arg_type
         final_args.append(arg_type)
@@ -228,7 +259,7 @@ function_template = '''
         leptonica.%(name)s.argtypes = [%(argtypes)s]
         leptonica.%(name)s.restype = %(restype)s
     except AttributeError:
-        os.stderr.write("Warning - function %(name)s not exported " +
+        sys.stderr.write("Warning - function %(name)s not exported " +
             "by libleptonica\\n\\tCalls to it won't work\\n")
     
     @staticmethod
@@ -254,7 +285,7 @@ def render_functions(functions_dict):
         try:
             return_type = format_return_type(return_type)
         except FunctionNotExported:
-            os.stderr.write("Function %s not exported. verify.\n" %
+            sys.stderr.write("Function %s not exported. verify.\n" %
                 name)
             continue
         function_doc = "       \n".join("%s" % str(args)
@@ -294,11 +325,13 @@ def render_modules(modules):
     return classes
 
 file_template = """
-#coding: utf-8
+# -*- coding: utf-8 -*-
 
+from __future__ import absolute_import
+import sys
 import ctypes
-from leptonica_structures import *
-import leptonica_structures as structs
+from .leptonica_structures import *
+from . import leptonica_structures as structs
 
 try:
     leptonica = ctypes.cdll.LoadLibrary("liblept.so")
@@ -318,6 +351,8 @@ def _convert_params(*args):
     for arg in args:
         if isinstance(arg, structs.LeptonObject):
             arg = arg._address_
+        elif isinstance(arg, str):
+            arg = arg.encode('utf-8')
         new_args.append(arg)
     return tuple(new_args)
 
@@ -354,10 +389,10 @@ files = ['adaptmap.c', 'colorcontent.c',
 'numafunc1.c', 'psio1stub.c', 'sel1.c', 'affine.c', 'colormap.c',
 'fpix1.c', 'numafunc2.c', 'psio2.c', 'sel2.c', 'affinecompose.c', 
 'colormorph.c', 'fpix2.c', 'pageseg.c', 'psio2stub.c', 'selgen.c',
- 'colorquant1.c', 'freetype.c', 'paintcmap.c',
+ 'colorquant1.c', 'paintcmap.c',
 'ptabasic.c', 'shear.c', 'arrayaccess.c', 'colorquant2.c', 'gifio.c',
 'parseprotos.c', 'ptafunc1.c', 'skew.c', 'arrayaccess.h.vc',
-'colorseg.c', 'gifiostub.c', 'partition.c', 'ptra.c',
+'colorseg.c', 'coloring.c', 'colorspace.c', 'colorinfo.c', 'gifiostub.c', 'partition.c', 'ptra.c',
 'spixio.c','bardecode.c', 'compare.c', 'gplot.c', 'pix1.c', 'queue.c',
 'stack.c', 'baseline.c', 'conncomp.c', 'graphics.c', 'pix2.c', 'rank.c',
 'sudoku.c', 'bbuffer.c', 'convertfiles.c', 'graymorph.c', 'pix3.c',
@@ -365,28 +400,41 @@ files = ['adaptmap.c', 'colorcontent.c',
 'pix4.c', 'readfile.c', 'tiffio.c', 'binarize.c',
 'grayquant.c', 'pix5.c', 'regutils.c', 'tiffiostub.c',
 'binexpand.c', 'correlscore.c', 'pixabasic.c',
-'rop.c', 'utils.c', 'heap.c', 'pixacc.c',
- 'viewfiles.c', 'binreduce.c', 'dwacomb.2.c', 'jbclass.c',
+'rop.c', 'utils1.c', 'utils2.c', 'heap.c', 'pixacc.c',
+'binreduce.c', 'dwacomb.2.c', 'jbclass.c',
 'pixafunc1.c', 'warper.c', 
 'dwacomblow.2.c', 'jpegio.c', 'pixafunc2.c', 'rotateam.c',
 'watershed.c', 'blend.c', 'edge.c', 'jpegiostub.c', 'pixalloc.c',
-'webpio.c', 'bmf.c', 'endiantest.c', 'kernel.c',
+'webpio.c', 'webpanimio.c', 'webpanimiostub.c', 'bmf.c', 'kernel.c',
 'pixarith.c', 'rotate.c', 'webpiostub.c', 'bmpio.c', 'enhance.c',
 'leptwin.c', 'pixcomp.c', 'rotateorth.c', 'writefile.c', 'bmpiostub.c',
 'fhmtauto.c', 'list.c', 'pixconv.c', 
-'xtractprotos.c', 'boxbasic.c', 'fhmtgen.1.c', 'makefile.static',
+'boxbasic.c', 'fhmtgen.1.c', 'makefile.static',
 'pixtiling.c', 'rotateshear.c', 'zlibmem.c', 'boxfunc1.c',
 'fhmtgenlow.1.c', 'maze.c', 'pngio.c', 'runlength.c', 'zlibmemstub.c',
-'boxfunc2.c', 'finditalic.c', 'morphapp.c', 'pngiostub.c', 'sarray.c',
-'boxfunc3.c', 'flipdetect.c', 'morph.c', 'pnmio.c', 'scale.c',
+'boxfunc2.c', 'finditalic.c', 'morphapp.c', 'pngiostub.c', 'sarray1.c', 'sarray2.c',
+'boxfunc3.c', 'boxfunc4.c', 'boxfunc5.c', 'flipdetect.c', 'morph.c', 'pnmio.c', 'scale1.c', 'scale2.c',
 'ccbord.c', 'fliphmtgen.c', 'morphdwa.c', 'pnmiostub.c',
 'ccthin.c', 'fmorphauto.c', 'morphseq.c', 'projective.c', 'seedfill.c',
-'classapp.c', 'fmorphgen.1.c', 'numabasic.c', 'psio1.c']
+'classapp.c', 'fmorphgen.1.c', 'numabasic.c', 'psio1.c',
+'strokes.c', 'dnafunc1.c', 'dnahash.c', 'dnabasic.c', 'ptafunc2.c', 'checkerboard.c', 'partify.c',
+'rbtree.c', 'quadtree.c', 'map.c', 'encoding.c', 'stringcode.c', 'bilateral.c', 'pixlabel.c',
+'bootnumgen1.c', 'bootnumgen2.c', 'bootnumgen3.c', 'bootnumgen4.c',
+'jp2kheader.c', 'jp2kheaderstub.c', 'jp2kio.c', 'jp2kiostub.c', 'pdfio2.c', 'pdfio2stub.c',
+'pdfio1.c', 'pdfio1stub.c', 'libversions.c', 'bytearray.c',
+'dewarp1.c', 'dewarp2.c', 'dewarp3.c', 'dewarp4.c', 'recogbasic.c', 'recogdid.c', 'recogident.c', 'recogtrain.c',
+]
 
-# Some "perfectly good" functions simply are not exported 
-# as of leptonica 1.6.7
-NOT_EXPORTED = set(["pixGetForegroundGrayMap",
-    "pixRandomHarmonicWarpLUT", "pixGetWindowsHBITMAP"])
+NOT_EXPORTED = {
+    # Some "perfectly good" functions simply are not exported 
+    # as of leptonica 1.6.7
+    "pixGetForegroundGrayMap", 
+    "pixRandomHarmonicWarpLUT",
+    "pixGetWindowsHBITMAP",
+    # Does not make sense from Python, plus we would
+    # need the allocator struct data types
+    "setPixMemoryManager"
+}
 
 if __name__ == "__main__":
     # FIXME:

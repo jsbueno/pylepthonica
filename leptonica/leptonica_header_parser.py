@@ -28,6 +28,8 @@ check if your leptonica_structures work for your version
 of leptonica
 """
 
+from builtins import str
+from builtins import range
 import sys
 from config import leptonica_home
 
@@ -45,10 +47,14 @@ lepton_types = {
     "l_uint16": "ctypes.c_uint16",
     "l_int32": "ctypes.c_int32",
     "l_uint32": "ctypes.c_uint32",
+    "l_int64": "ctypes.c_int64",
+    "l_uint64": "ctypes.c_uint64",
     "l_float32": "ctypes.c_float",
     "l_float64": "ctypes.c_double",
+    "l_ok": "ctypes.c_int",
     "char": "ctypes.c_char",
     "void": "ctypes.c_void_p",
+    "L_TIMER": "ctypes.c_void_p",
     "size_t": "ctypes.c_size_t",
     "FILE": "ctypes.c_void_p"
     }
@@ -119,7 +125,7 @@ def parse_structs(code):
     """
     tokens = "".join(code).split()
     struct_level = 0
-    kwd = "struct"
+    kwds = ["struct", "union"]
     
     bracket_level = 0
     structs = {}
@@ -127,12 +133,12 @@ def parse_structs(code):
     sequence = enumerate(tokens)
     while True:
         try:
-            for _ in xrange(fwd):
-                index, token = sequence.next()
+            for _ in range(fwd):
+                index, token = next(sequence)
             fwd = 1
         except StopIteration:
             break
-        if (token == kwd and struct_level == 0 and
+        if (token in kwds and struct_level == 0 and
             tokens[index + 2] == "{"):
             bracket_level += 1
             struct_name = tokens[index + 1]
@@ -160,7 +166,7 @@ def parse_structs(code):
                                 #separator to be joined to var_name
                 decl_line.pop()
             var_name = decl_line[-1].strip(";").strip(",")
-            if decl_line[0] == kwd:
+            if decl_line[0] in kwds:
                 # Convert inner structs  to typedefed names
                 var_type = decl_line[1].upper()
             else:
@@ -175,28 +181,21 @@ def parse_structs(code):
     return structs    
 
 # TODO: Parse the structures comments and add then as docstrings here.
-class_template = '''\
-class _%(name)s(ctypes.Structure):
-    """%(comments)s
-    """
-    _fields_ = [
-        %(rendered_fields)s
-    ]
+# If a  structure contains pointers to themselves,
+# or uses classes not yet declared (despite dependency
+# ordering; this is unavoidable with mutual/circular
+# dependencies), then we need to declare the class,
+# and set the fields afterwards. Let's simply always
+# do that:
 
-class %(name)s(LeptonObject):
-    __metaclass__ = MetaPointer
-    _type_ = _%(name)s
-
-'''
-#If a  structure contains pointers to themselves, we need
-# to declare the class, and set the fields afterwards
-
-class_recurse_template = '''\
+class_decl_template = '''\
 class _%(name)s(ctypes.Structure):
     """%(comments)s
     """
     pass
+'''
 
+class_defn_template = '''\
 _%(name)s._fields_ = [
         %(rendered_fields)s
     ]
@@ -204,13 +203,14 @@ _%(name)s._fields_ = [
 class %(name)s(LeptonObject):
     __metaclass__ = MetaPointer
     _type_ = _%(name)s
+
+    @classmethod
+    def from_param(cls, obj):
+        return cls._type_.from_param(obj)
 '''
 
 field_template = """("%(name)s", %(data_type)s)"""
-def render_class(struct_name, body, recursive=False):
-    template = class_template
-    if recursive:
-        template = class_recurse_template
+def render_class(struct_name, body):
     fields = []
     for field_name, data_type in body:
         if data_type in lepton_types:
@@ -234,10 +234,11 @@ def render_class(struct_name, body, recursive=False):
             "data_type": ("_" if not is_native_type else "") + data_type}
         fields.append(rendered)
     rendered_fields = ",\n        ".join(fields)
-    text = template % {"name": struct_name, 
-        "comments": "Comments not generated",
+    decl_text = class_decl_template % {"name": struct_name, 
+        "comments": "Comments not generated"}
+    defn_text = class_defn_template % {"name": struct_name,
         "rendered_fields": rendered_fields}
-    return text
+    return decl_text, defn_text
 
 def parse_file(file_name):
     text = get_file_contents(file_name)
@@ -246,11 +247,13 @@ def parse_file(file_name):
     return structs
 
 file_template = """
-# coding: utf-8
+# -*- coding: utf-8 -*-
 # Author: João S. O. Bueno
 # This is a generated file - do not edit!
 
+from __future__ import absolute_import
 import ctypes
+from future.utils import with_metaclass
 #import weakref
 
 class LeptonObject(object):
@@ -262,9 +265,9 @@ class LeptonObject(object):
         else it will try to automatically call Leptonica's
         constructor for this structure
         \"\"\"
+        from .leptonica_functions import functions
         data = None
         if not kw or not "from_address" in kw:
-            from leptonica_functions import functions
             if hasattr(functions, cls.__name__.lower() + "Create"):
                 constructor = getattr(functions, cls.__name__.lower() +
                     "Create")
@@ -279,6 +282,8 @@ class LeptonObject(object):
         #    return cls._instances_[address]()
         self = object.__new__(cls)
         self._needs_del = True
+        if  hasattr(functions, cls.__name__.lower() + "Destroy"):
+            self._destructor = getattr(functions, cls.__name__.lower() + "Destroy")
         self._address_ = ctypes.c_void_p(address)
         #cls._instances_[address] = weakref.ref(self)
         if data:
@@ -321,10 +326,8 @@ class LeptonObject(object):
         #    del cls._instances_[self._address_.value]
         if not hasattr(cls, "refcount"):
             return
-        from leptonica_functions import functions
-        if self._needs_del and hasattr(functions, cls.__name__.lower() + "Destroy"):
-            destrutor = getattr(functions, cls.__name__.lower() + "Destroy")
-            destrutor(ctypes.c_void_p(ctypes.addressof(self._address_)))
+        if self._needs_del and self._destructor:
+            self._destructor(ctypes.c_void_p(ctypes.addressof(self._address_)))
 
 def property_factory(raw_structure, field_name):
     return  property(lambda s: getattr(
@@ -348,47 +351,74 @@ class MetaPointer(type):
 
 %(classes)s
 
+%(attributes)s
+
 %(aliases)s
 
+__all__ = %(types)s + ["LeptonObject"]
+
 """
-def render_file(class_list, alias_list):
+def render_file(class_tuples, class_list, alias_list):
     aliases = "\n".join("%s = %s" % alias_pair 
         for alias_pair in alias_list)
+    decl_list, defn_list = zip(*class_tuples)
     with open(target_file, "wt") as outfile:
-        outfile.write(file_template % {"classes": "\n".join(class_list),
-            "aliases": aliases} )
+        outfile.write(file_template % {
+            "classes": "\n".join(decl_list),
+            "attributes": "\n".join(defn_list),
+            "aliases": aliases,
+            "types": (
+                [abbrev for abbrev, orig in alias_list] +
+                list(class_list))})
     
     
 
-def order_classes(structs):
+def order_classes(structs, alias_list):
     class_list = []
     rendered = set()
     count = 0
-    exceptions = set(("L_TIMER",))
+    aliases = dict(map(reversed,alias_list))
     while True:
         if not structs:
             break
+        waiting = dict()
         # copy keys to a real list for p3k compatibility
-        for struct in structs.keys()[:]:
-            recursive = False
-            pre_reqs = structs[struct][1] - exceptions
+        for struct in list(structs.keys()):
+            if '(' in struct or ')' in struct:
+                  # avoid macro-computed names, e.g. '__attribute((__packed__))'
+                  del structs[struct]
+                  continue
+            pre_reqs = structs[struct][1]
+            missing = pre_reqs.difference(rendered)
             if struct in pre_reqs:
-                pre_reqs = pre_reqs.copy()
-                pre_reqs.remove(struct)
-                recursive = True
-            if not rendered.issuperset(pre_reqs) :
+                missing.remove(struct)
+            if missing:
                 if count > 100:
-                    sys.stderr.write(str(pre_reqs) + "\n\n")
-                    sys.stderr.write(str(rendered) + "\n")
-                    raise Exception(
-                        "Could not get Struct classes in order")
-                continue
-            class_list.append(render_class(struct, structs[struct][0],
-                recursive))
+                    # give up
+                    raise Exception("Could not get struct classes in order. Missing prereqs {} for {}".format(
+                          missing, struct, rendered))
+                def find_transitive(req, target):
+                    for req2 in waiting.get(req, []):
+                        if (req2 == target or
+                            find_transitive(req2, target)):
+                            return True
+                    return False
+                for req in list(missing):
+                    if find_transitive(req, struct):
+                        # circular/mutual dependency
+                        print('cutting out circular dependency "%s" missing from "%s"' % (
+                            req, struct))
+                        missing.remove(req)
+                if missing:
+                    waiting[struct] = missing
+                    continue
+            class_list.append(render_class(struct, structs[struct][0]))
             rendered.add(struct)
+            if struct in aliases:
+                  rendered.add(aliases[struct])
             del structs[struct]
         count += 1
-    return class_list
+    return class_list, rendered
 
 def main(file_names):
     structs = {}
@@ -396,19 +426,27 @@ def main(file_names):
         structs.update(parse_file(lepton_source_dir + file_name))
     # we are not reading the typedefs, just  infering the typedefs from
     # the structure name, and there are  a few exceptions:
-    irregular_names = (("BBUFFER", "BYTEBUFFER"), 
-        ("DLLIST", "DOUBLELINKEDLIST"), 
-        ("PIXCMAP", "DOUBLELINKEDLIST"),
-        ("PIXAC", "PIXACOMP"), ("PIXC", "PIXCOMP")
+    irregular_names = (("L_BBUFFER", "L_BYTEBUFFER"), 
+                       ("DLLIST", "DOUBLELINKEDLIST"), 
+                       ("PIXCMAP", "PIXCOLORMAP"),
+                       ("BMP_FH", "BMP_FILEHEADER"),
+                       ("BMP_IH", "BMP_INFOHEADER"),
+                       ("L_AMAP", "L_RBTREE"),
+                       ("L_ASET", "L_RBTREE"),
+                       ("L_AMAP_NODE", "L_RBTREE_NODE"),
+                       ("L_ASET_NODE", "L_RBTREE_NODE"),
+                       ("PIXAC", "PIXACOMP"),
+                       ("PIXC", "PIXCOMP")
     )
-    class_list = order_classes(structs)
-    render_file(class_list, irregular_names)
+    class_list, class_names = order_classes(structs, irregular_names)
+    render_file(class_list, class_names, irregular_names)
 
 
 all_headers = ['array.h', 'bbuffer.h', 'gplot.h', 'pix.h', 
 'regutils.h', 'bmf.h', 'heap.h', 'ptra.h', 'stack.h', 'bmp.h',
 'list.h', 'queue.h', 'sudoku.h', 'array.h', 'ccbord.h', 'jbclass.h',
-'morph.h', 'watershed.h']
+'rbtree.h', 'bmfdata.h', 'bilateral.h', 'dewarp.h', 'imageio.h', 'recog.h', 'stringcode.h',
+'morph.h', 'watershed.h', 'endianness.h', 'colorinfo.h']
 
 
 if __name__ == "__main__":
